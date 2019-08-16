@@ -21,6 +21,11 @@ msgstr ""
 msgid "Sale Order"
 msgstr "销售订单"
 
+#. module: sale_brand
+#: model:ir.model,name:sale_brand.model_sale_advance_payment_inv
+msgid "Sales Advance Payment Invoice"
+msgstr ""
+
 #~ msgid "Brand"
 #~ msgstr "品牌"
 
