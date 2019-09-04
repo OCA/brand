@@ -10,6 +10,7 @@ setuptools.setup(
     install_requires=[
         'odoo12-addon-account_brand',
         'odoo12-addon-partner_brand',
+        'odoo12-addon-sale_brand',
     ],
     classifiers=[
         'Programming Language :: Python',
