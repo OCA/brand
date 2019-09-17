@@ -6,78 +6,80 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2019-09-17 16:24+0000\n"
+"Last-Translator: 黎伟杰 <674416404@qq.com>\n"
 "Language-Team: none\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.8\n"
 
 #. module: partner_brand
 #: model:ir.model.fields,field_description:partner_brand.field_res_partner__type
 #: model:ir.model.fields,field_description:partner_brand.field_res_users__type
 msgid "Address Type"
-msgstr ""
+msgstr "地址类型"
 
 #. module: partner_brand
 #: selection:res.partner,type:0
 msgid "Brand"
-msgstr ""
+msgstr "品牌"
 
 #. module: partner_brand
 #: model_terms:ir.ui.view,arch_db:partner_brand.filter_res_partner_brand
 msgid "Brands"
-msgstr ""
+msgstr "品牌"
 
 #. module: partner_brand
 #: model:ir.model,name:partner_brand.model_res_partner
 #: selection:res.partner,type:0
 msgid "Contact"
-msgstr ""
+msgstr "联系人"
 
 #. module: partner_brand
 #: model_terms:ir.ui.view,arch_db:partner_brand.external_layout_standard_footer
 msgid "Email:"
-msgstr ""
+msgstr "Email："
 
 #. module: partner_brand
 #: selection:res.partner,type:0
 msgid "Invoice address"
-msgstr ""
+msgstr "发票地址"
 
 #. module: partner_brand
 #: model_terms:ir.ui.view,arch_db:partner_brand.external_layout_standard_logo
 msgid "Logo"
-msgstr ""
+msgstr "Logo"
 
 #. module: partner_brand
 #: selection:res.partner,type:0
 msgid "Other address"
-msgstr ""
+msgstr "其它地址"
 
 #. module: partner_brand
 #: model_terms:ir.ui.view,arch_db:partner_brand.external_layout_standard_footer
 msgid "Phone:"
-msgstr ""
+msgstr "电话："
 
 #. module: partner_brand
 #: selection:res.partner,type:0
 msgid "Private Address"
-msgstr ""
+msgstr "私人地址"
 
 #. module: partner_brand
 #: selection:res.partner,type:0
 msgid "Shipping address"
-msgstr ""
+msgstr "送货地址"
 
 #. module: partner_brand
 #: model:ir.model.fields,help:partner_brand.field_res_partner__type
 #: model:ir.model.fields,help:partner_brand.field_res_users__type
 msgid "Used by Sales and Purchase Apps to select the relevant address depending on the context."
-msgstr ""
+msgstr "由销售和购买应用程序使用，以根据上下文选择相关地址。"
 
 #. module: partner_brand
 #: model_terms:ir.ui.view,arch_db:partner_brand.external_layout_standard_footer
 msgid "Web:"
-msgstr ""
+msgstr "网址："
