@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #  Copyright (C) 2019 Sunflower IT <sunflowerweb.nl>
 #  License GNU Affero General Public License <http://www.gnu.org/licenses/>.
 
@@ -11,7 +10,6 @@ class SaleOrder(models.Model):
     @api.multi
     def action_confirm(self):
         ret = super(SaleOrder, self).action_confirm()
-        for this in self:
-            for picking in this.picking_ids:
-                picking.brand_id = this.brand_id.id
+        for order in self:
+            order.picking_ids.write({'brand_id': order.brand_id.id})
         return ret

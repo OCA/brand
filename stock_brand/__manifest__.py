@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #  Copyright (C) 2019 Sunflower IT <sunflowerweb.nl>
 #  License GNU Affero General Public License <http://www.gnu.org/licenses/>.
 
@@ -11,7 +10,7 @@
     "author": "Sunflower IT, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "depends": [
-        'sale_brand',
+        'sale_stock',
     ],
     "data": [
         "views/sale_views.xml",
