@@ -11,7 +11,7 @@
     "license": "AGPL-3",
     "depends": [
         'account',
-        'partner_brand',
+        'brand',
     ],
     "data": [
         "views/account_invoice.xml",
