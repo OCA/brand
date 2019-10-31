@@ -10,8 +10,9 @@
     "author": "Open Source Integrators, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "depends": [
-        'account_brand',
         'sale',
+        'brand',
+        'account_brand',
     ],
     "data": [
         "views/sale_views.xml",
