@@ -1,10 +1,9 @@
 # Copyright (C) 2019 Open Source Integrators
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import fields, models
+from odoo import models
 
 
 class AccountInvoice(models.Model):
-    _inherit = 'account.invoice'
-
-    brand_id = fields.Many2one('res.brand', string='Brand')
+    _name = 'account.invoice'
+    _inherit = ['account.invoice', 'res.brand.mixin']
