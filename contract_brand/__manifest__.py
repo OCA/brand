@@ -9,7 +9,7 @@
         invoices.""",
     "version": "12.0.1.0.0",
     "license": "AGPL-3",
-    "author": "ACSONE SA/NV," 
+    "author": "ACSONE SA/NV,"
               "Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/contract",
     "depends": ["contract", "account_brand"],
