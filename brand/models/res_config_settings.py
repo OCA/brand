@@ -5,7 +5,7 @@ from odoo import fields, models
 
 from .res_company import (
     BRAND_USE_LEVEL_SELECTION,
-    BRAND_USE_LEVEL_DEFAULT_VALUE,
+    BRAND_USE_LEVEL_NO_USE_LEVEL,
 )
 
 
@@ -16,7 +16,7 @@ class ResConfigSetting(models.TransientModel):
     brand_use_level = fields.Selection(
         string="Brand Use Level",
         selection=BRAND_USE_LEVEL_SELECTION,
-        default=BRAND_USE_LEVEL_DEFAULT_VALUE,
+        default=BRAND_USE_LEVEL_NO_USE_LEVEL,
         related='company_id.brand_use_level',
         readonly=False,
     )
