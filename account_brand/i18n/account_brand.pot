@@ -14,11 +14,6 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: account_brand
-#: model:ir.model.fields,field_description:account_brand.field_account_invoice__brand_id
-msgid "Brand"
-msgstr ""
-
-#. module: account_brand
 #: model:ir.model,name:account_brand.model_account_invoice
 msgid "Invoice"
 msgstr ""
