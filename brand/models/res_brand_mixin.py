@@ -6,7 +6,7 @@ from odoo.osv import orm
 from odoo.exceptions import ValidationError
 from .res_company import (
     BRAND_USE_LEVEL_SELECTION,
-    BRAND_USE_LEVEL_DEFAULT_VALUE,
+    BRAND_USE_LEVEL_NO_USE_LEVEL,
     BRAND_USE_LEVEL_REQUIRED_LEVEL,
 )
 
@@ -22,7 +22,7 @@ class ResBrandMixin(models.AbstractModel):
     brand_use_level = fields.Selection(
         string="Brand Use Level",
         selection=BRAND_USE_LEVEL_SELECTION,
-        default=BRAND_USE_LEVEL_DEFAULT_VALUE,
+        default=BRAND_USE_LEVEL_NO_USE_LEVEL,
         related='company_id.brand_use_level',
     )
     company_id = fields.Many2one('res.company')
@@ -48,18 +48,15 @@ class ResBrandMixin(models.AbstractModel):
                 and rec.brand_id.company_id != rec.company_id
             ):
                 raise ValidationError(
-                    _(
-                        "Brand company is different then "
-                        "the selected company"
-                    )
+                    _("Brand must match document company for %s")
+                    % rec.display_name
                 )
 
     @api.onchange('brand_id')
     def _onchange_brand_id(self):
-        if 'company_id' in self._fields:
-            for rec in self.filtered('brand_id.company_id'):
-                if rec.brand_id and rec.brand_id.company_id:
-                    rec.company_id = rec.brand_id.company_id
+        for rec in self.filtered('brand_id.company_id'):
+            if rec.brand_id and rec.brand_id.company_id:
+                rec.company_id = rec.brand_id.company_id
 
     def fields_view_get(
         self, view_id=None, view_type='form', toolbar=False, submenu=False
@@ -86,10 +83,13 @@ class ResBrandMixin(models.AbstractModel):
                 node.set(
                     'attrs',
                     '{"invisible": '
-                    '[("brand_use_level", "=", "no")], '
+                    '[("brand_use_level", "=", "%s")], '
                     '"required": '
                     '[("brand_use_level", "=", "%s")]}'
-                    % BRAND_USE_LEVEL_REQUIRED_LEVEL,
+                    % (
+                        BRAND_USE_LEVEL_NO_USE_LEVEL,
+                        BRAND_USE_LEVEL_REQUIRED_LEVEL,
+                    ),
                 )
                 orm.setup_modifiers(node, result['fields']['brand_id'])
             result['arch'] = etree.tostring(doc, encoding='unicode')
