@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2019 ACSONE SA/NV
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record model="ir.ui.view" id="res_brand_document_template_form">
+        <field name="name">res.brand.document.template.form</field>
+        <field name="model">res.brand</field>
+        <field name="priority">9999</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <group>
+                    <label for="external_report_layout_id" string="Template"
+                           colspan="2"/>
+                    <field name="external_report_layout_id" colspan="2"
+                           nolabel="1" class="report_layout_container"
+                           widget="report_layout"
+                           options="{'field_image': 'preview_image','field_binary': 'preview_pdf'}"/>
+                </group>
+                <group>
+                    <field name="image" widget="image"/>
+                    <field name="report_header" widget="char"
+                           placeholder="e.g. Global Business Solutions"/>
+                    <field name="report_footer" string="Footer"
+                           placeholder="e.g. Opening hours, bank accounts (one per line)"/>
+                </group>
+                <footer>
+                    <button special="save" string="Save"
+                            class="btn btn-primary" type="object"/>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="res_brand_form_view">
+        <field name="model">res.brand</field>
+        <field name="inherit_id" ref="brand.res_brand_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('o_address_format')]" position="after">
+                <div colspan="2">
+                    <button name="change_report_template"
+                            string="Change Document Template" type="object"
+                            class="oe_link oe_inline" icon="fa-arrow-right"/>
+                    <field name="external_report_layout_id" class="oe_inline"/>
+                </div>
+
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>
