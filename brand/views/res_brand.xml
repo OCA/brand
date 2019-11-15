@@ -5,19 +5,26 @@
 <odoo>
 
     <record model="ir.ui.view" id="res_brand_form_view">
-        <field name="name">res.brand.form (in partner_brand)</field>
         <field name="model">res.brand</field>
-        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="inherit_id" ref="base.view_partner_short_form"/>
         <field name="mode">primary</field>
         <field name="arch" type="xml">
             <xpath expr="//form" position="attributes">
                 <attribute name="string">Brand</attribute>
             </xpath>
+            <xpath expr="//field[@name='vat']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='company_type']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='parent_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
         </field>
     </record>
 
     <record model="ir.ui.view" id="res_brand_search_view">
-        <field name="name">res.brand.search (in partner_brand)</field>
         <field name="model">res.brand</field>
         <field name="inherit_id" ref="base.view_res_partner_filter"/>
         <field name="mode">primary</field>
@@ -56,6 +63,7 @@
         <field name="name">Brands</field>
         <field name="res_model">res.brand</field>
         <field name="view_mode">kanban,tree,form</field>
+        <field name="context">{'default_customer': 0, 'default_supplier': 0,}</field>
     </record>
 
     <record model="ir.ui.menu" id="res_brand_menu">
