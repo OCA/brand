@@ -237,6 +237,11 @@ msgid "Contacts"
 msgstr ""
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
+msgid "Contracts"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__contracts_count
 msgid "Contracts Count"
 msgstr ""
@@ -580,11 +585,6 @@ msgid "Partner"
 msgstr ""
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
-msgid "Partner Contracts"
-msgstr ""
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__debit_limit
 msgid "Payable Limit"
 msgstr ""
@@ -605,6 +605,11 @@ msgid "Pricelist"
 msgstr ""
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_contract_count
+msgid "Purchase Contracts"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__parent_id
 msgid "Related Company"
 msgstr ""
@@ -617,6 +622,11 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_user_id
 msgid "Responsible User"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__sale_contract_count
+msgid "Sale Contracts"
 msgstr ""
 
 #. module: brand
