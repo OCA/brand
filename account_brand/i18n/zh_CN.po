@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* account_brand
+# 	* account_brand
 #
 msgid ""
 msgstr ""
@@ -17,11 +17,9 @@ msgstr ""
 "X-Generator: Weblate 3.8\n"
 
 #. module: account_brand
-#: model:ir.model.fields,field_description:account_brand.field_account_invoice__brand_id
-msgid "Brand"
-msgstr "品牌"
-
-#. module: account_brand
 #: model:ir.model,name:account_brand.model_account_invoice
 msgid "Invoice"
 msgstr "发票"
+
+#~ msgid "Brand"
+#~ msgstr "品牌"
