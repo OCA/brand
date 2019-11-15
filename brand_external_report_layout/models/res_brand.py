@@ -16,10 +16,10 @@ class ResBrand(models.Model):
                 os.path.join(
                     tools.config['root_path'],
                     'addons',
-                    'brand_external_report_layout',
+                    'base',
                     'static',
                     'img',
-                    'res_brand_logo.png',
+                    'res_company_logo.png',
                 ),
                 'rb',
             ).read()
