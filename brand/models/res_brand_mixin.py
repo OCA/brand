@@ -48,7 +48,7 @@ class ResBrandMixin(models.AbstractModel):
                 and rec.brand_id.company_id != rec.company_id
             ):
                 raise ValidationError(
-                    _("Brand must match document company for %s")
+                    _("Brand company must match document company for %s")
                     % rec.display_name
                 )
 
