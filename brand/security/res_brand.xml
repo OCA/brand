@@ -23,4 +23,12 @@
         <field name="perm_unlink" eval="1"/>
     </record>
 
+    <record id="res_brand_multi_company_rule" model="ir.rule">
+        <field name="name">Res Brand multi company rule</field>
+        <field name="model_id" ref="model_res_brand"/>
+        <field name="domain_force">
+            ['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]
+        </field>
+    </record>
+
 </odoo>
