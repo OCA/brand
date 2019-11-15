@@ -33,14 +33,6 @@ email, website, etc.
 .. contents::
    :local:
 
-Usage
-=====
-
-To use this module, you need to:
-
-#. Go to Settings > Users & Companies > Brands
-#. Add a new brand
-
 Bug Tracker
 ===========
 
@@ -58,7 +50,6 @@ Authors
 ~~~~~~~
 
 * Open Source Integrators
-* ACSONE SA/NV
 
 Contributors
 ~~~~~~~~~~~~
@@ -66,7 +57,6 @@ Contributors
 * Raphael Lee <rlee@opensourceintegrators.com>
 * Steve Campbell <scampbell@opensourceintegrators.com>
 * Maxime Chambreuil <mchambreuil@opensourceintegrators.com>
-* Souheil Bejaoui <souheil.bejaoui@acsone.eu>
 
 Other credits
 ~~~~~~~~~~~~~
