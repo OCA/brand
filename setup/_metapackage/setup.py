@@ -9,6 +9,7 @@ setuptools.setup(
     version=version,
     install_requires=[
         'odoo12-addon-account_brand',
+        'odoo12-addon-brand',
         'odoo12-addon-partner_brand',
         'odoo12-addon-sale_brand',
     ],
