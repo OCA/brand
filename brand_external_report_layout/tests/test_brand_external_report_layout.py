@@ -18,5 +18,5 @@ class TestBrandExternalReportLayout(TransactionCase):
             self.brand.change_report_template()['view_id'],
         )
 
-    def test_get_logo(self):
-        self.assertEqual(self.brand.logo, self.brand._get_logo())
+    def test_get_default_brand_logo(self):
+        self.assertEqual(self.brand.logo, self.brand._get_default_brand_logo())
