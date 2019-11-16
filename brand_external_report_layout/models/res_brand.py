@@ -35,7 +35,7 @@ class ResBrand(models.Model):
         comodel_name='ir.ui.view', string='Document Template'
     )
     report_header = fields.Text(
-        string='Brand Tagline',
+        string='Report Header',
         help='Appears by default on the top right corner of your printed '
         'documents (report header).',
     )
