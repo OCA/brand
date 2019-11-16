@@ -10,7 +10,7 @@ class ResBrand(models.Model):
 
     _inherit = 'res.brand'
 
-    def _get_logo(self):
+    def _get_default_brand_logo(self):
         return base64.b64encode(
             open(
                 os.path.join(
@@ -27,7 +27,7 @@ class ResBrand(models.Model):
 
     logo = fields.Binary(
         related='partner_id.image',
-        default=_get_logo,
+        default=_get_default_brand_logo,
         string="Brand Logo",
         readonly=False,
     )
