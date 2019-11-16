@@ -85,11 +85,6 @@ Contributors
 
 * Souheil Bejaoui <souheil.bejaoui@acsone.eu>
 
-Other credits
-~~~~~~~~~~~~~
-
-* ACSONE SA/NV <https://www.acsone.eu>
-
 Maintainers
 ~~~~~~~~~~~
 
