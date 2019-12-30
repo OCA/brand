@@ -26,3 +26,14 @@ class TestSaleOrder(TransactionCase):
         advance_payment_wizard.with_context(active_ids=self.sale.ids).create_invoices()
         invoice = self.sale.order_line.mapped("invoice_lines").mapped("move_id")
         self.assertEqual(invoice.brand_id, self.sale.brand_id)
+
+    def test_sale_analytic_account_onchange_brand(self):
+        draft_sale = self.sale.copy()
+        draft_sale.brand_id.analytic_account_id = self.env[
+            "account.analytic.account"
+        ].create({"name": "analytic account"})
+        self.assertFalse(draft_sale.analytic_account_id)
+        draft_sale._onchange_brand_id()
+        self.assertEqual(
+            draft_sale.analytic_account_id, draft_sale.brand_id.analytic_account_id,
+        )
