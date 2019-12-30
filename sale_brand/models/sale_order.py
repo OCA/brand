@@ -1,7 +1,7 @@
 # Copyright (C) 2019 Open Source Integrators
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import fields, models
+from odoo import api, fields, models
 
 
 class SaleOrder(models.Model):
@@ -23,3 +23,11 @@ class SaleOrder(models.Model):
             invoice_vals = super(SaleOrder, order)._prepare_invoice()
             invoice_vals.update({"brand_id": order.brand_id.id})
         return invoice_vals
+
+    @api.onchange("brand_id")
+    def _onchange_brand_id(self):
+        res = super()._onchange_brand_id()
+        for order in self:
+            if order.state == "draft" and order.brand_id:
+                order.analytic_account_id = order.brand_id.analytic_account_id
+        return res
