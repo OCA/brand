@@ -9,7 +9,7 @@
     "website": "https://github.com/OCA/sale-workflow",
     "author": "Open Source Integrators, Odoo Community Association (OCA)",
     "license": "AGPL-3",
-    "depends": ["sale", "brand", "account_brand"],
+    "depends": ["sale", "brand", "account_brand", "analytic_brand"],
     "data": ["views/sale_views.xml"],
     "installable": True,
     "development_status": "Beta",
