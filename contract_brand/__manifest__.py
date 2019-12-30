@@ -12,6 +12,6 @@
     "author": "ACSONE SA/NV,"
               "Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/contract",
-    "depends": ["contract", "account_brand"],
+    "depends": ["contract", "account_brand", "analytic_brand"],
     "data": ["views/contract.xml"],
 }
