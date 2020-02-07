@@ -31,3 +31,7 @@ class SaleOrder(models.Model):
             if order.state == "draft" and order.brand_id:
                 order.analytic_account_id = order.brand_id.analytic_account_id
         return res
+
+    @api.onchange("team_id")
+    def _onchange_team_id(self):
+        self.brand_id = self.team_id.brand_id
