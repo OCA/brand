@@ -17,6 +17,7 @@ msgstr ""
 "X-Generator: Weblate 4.3.2\n"
 
 #. module: sale_brand
+#: model:ir.model.fields,field_description:sale_brand.field_crm_team__brand_id
 #: model:ir.model.fields,field_description:sale_brand.field_sale_order__brand_id
 msgid "Brand"
 msgstr "Merk"
@@ -34,4 +35,9 @@ msgstr ""
 #. module: sale_brand
 #: model:ir.model,name:sale_brand.model_sale_order
 msgid "Sales Order"
+msgstr ""
+
+#. module: sale_brand
+#: model:ir.model,name:sale_brand.model_crm_team
+msgid "Sales Team"
 msgstr ""
