@@ -17,5 +17,6 @@
         'views/res_config_settings.xml',
         'security/res_brand.xml',
         'views/res_brand.xml',
+        'views/report_templates.xml',
     ],
 }

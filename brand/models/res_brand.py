@@ -18,3 +18,8 @@ class ResBrand(models.Model):
         delegate=True,
         ondelete="restrict",
     )
+    external_report_layout_id = fields.Many2one(
+        comodel_name='ir.ui.view',
+        string='Template',
+        domain=[('type', '=', 'qweb')]
+    )

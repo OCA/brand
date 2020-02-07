@@ -1,0 +1,25 @@
+<odoo>
+
+    <template id="web.external_layout">
+        <t t-if="not o" t-set="o" t-value="doc"/>
+        <t t-if="not company">
+            <t t-if="company_id">
+                <t t-set="company" t-value="company_id"/>
+            </t>
+            <t t-elif="o and 'company_id' in o">
+                <t t-set="company" t-value="o.company_id.sudo()"/>
+            </t>
+            <t t-else="else">
+                <t t-set="company" t-value="res_company"/>
+            </t>
+        </t>
+
+        <t t-if="'brand_id' in o and o.brand_id.external_report_layout_id"
+           t-call="{{o.brand_id.external_report_layout_id.key}}"><t t-raw="0"/></t>
+        <t t-elif="company.external_report_layout_id"
+           t-call="{{company.external_report_layout_id.key}}"><t t-raw="0"/></t>
+        <t t-else="else"
+           t-call="web.external_layout_standard"><t t-raw="0"/></t>
+
+    </template>
+</odoo>
