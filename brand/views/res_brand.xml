@@ -21,6 +21,11 @@
             <xpath expr="//field[@name='parent_id']" position="attributes">
                 <attribute name="invisible">1</attribute>
             </xpath>
+
+            <xpath expr="//field[@name='function']" position="before">
+                <field name="company_id"/>
+            </xpath>
+
         </field>
     </record>
 
