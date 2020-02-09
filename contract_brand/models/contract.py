@@ -13,5 +13,5 @@ class ContractContract(models.Model):
     def _prepare_invoice(self, date_invoice, journal=None):
         self.ensure_one()
         values = super()._prepare_invoice(date_invoice, journal)
-        values["brand_id"] = self.brand_id
+        values["brand_id"] = self.brand_id.id
         return values
