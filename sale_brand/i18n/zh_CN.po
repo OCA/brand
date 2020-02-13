@@ -17,6 +17,16 @@ msgstr ""
 "X-Generator: Weblate 3.8\n"
 
 #. module: sale_brand
+#: model:ir.model.fields,field_description:sale_brand.field_sale_order__brand_id
+msgid "Brand"
+msgstr "品牌"
+
+#. module: sale_brand
+#: model:ir.model.fields,help:sale_brand.field_sale_order__brand_id
+msgid "Brand to use for this sale"
+msgstr "品牌用于此次销售"
+
+#. module: sale_brand
 #: model:ir.model,name:sale_brand.model_sale_order
 msgid "Sale Order"
 msgstr "销售订单"
@@ -25,9 +35,3 @@ msgstr "销售订单"
 #: model:ir.model,name:sale_brand.model_sale_advance_payment_inv
 msgid "Sales Advance Payment Invoice"
 msgstr ""
-
-#~ msgid "Brand"
-#~ msgstr "品牌"
-
-#~ msgid "Brand to use for this sale"
-#~ msgstr "品牌用于此次销售"
