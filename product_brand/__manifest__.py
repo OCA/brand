@@ -16,7 +16,7 @@
     "author": "NetAndCo, Akretion, Prisnet Telecommunications SA, "
     "MONK Software, SerpentCS Pvt. Ltd., Tecnativa, Kaushal "
     "Prajapati, Odoo Community Association (OCA)",
-    "website": "https://github.com/OCA/product-attribute",
+    "website": "https://github.com/OCA/brand",
     "license": "AGPL-3",
     "depends": ["sale"],
     "data": [
