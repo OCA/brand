@@ -7,7 +7,7 @@
         This module allows you to manage branded contracts.
         It adds a brand field on the contract and propagate the value on the
         invoices.""",
-    "version": "12.0.1.0.1",
+    "version": "12.0.1.0.2",
     "license": "AGPL-3",
     "author": "ACSONE SA/NV,"
               "Odoo Community Association (OCA)",
