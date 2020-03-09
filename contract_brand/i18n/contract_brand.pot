@@ -14,6 +14,11 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: contract_brand
+#: model_terms:ir.ui.view,arch_db:contract_brand.contract_contract_search_view
+msgid "Brand"
+msgstr ""
+
+#. module: contract_brand
 #: model:ir.model,name:contract_brand.model_contract_contract
 msgid "Contract"
 msgstr ""
