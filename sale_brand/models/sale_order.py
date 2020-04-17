@@ -1,7 +1,7 @@
 # Copyright (C) 2019 Open Source Integrators
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import api, fields, models
+from odoo import fields, models
 
 
 class SaleOrder(models.Model):
@@ -17,7 +17,6 @@ class SaleOrder(models.Model):
         }
     )
 
-    @api.multi
     def _prepare_invoice(self):
         invoice_vals = {}
         for order in self:
