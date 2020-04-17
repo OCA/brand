@@ -6,8 +6,8 @@ from odoo import fields, models
 
 class ResBrand(models.Model):
 
-    _name = 'res.brand'
-    _description = 'Brand'
+    _name = "res.brand"
+    _description = "Brand"
 
     partner_id = fields.Many2one(
         comodel_name="res.partner",
