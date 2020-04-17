@@ -13,5 +13,5 @@
     "data": ["views/sale_views.xml"],
     "installable": True,
     "development_status": "Beta",
-    "maintainers": ["osi-scampbell"],
+    "maintainers": ["osi-scampbell", "sbejaoui"],
 }

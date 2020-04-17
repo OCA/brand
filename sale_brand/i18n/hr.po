@@ -28,11 +28,13 @@ msgid "Brand to use for this sale"
 msgstr "Za ovu prodaju koristiti brand"
 
 #. module: sale_brand
-#: model:ir.model,name:sale_brand.model_sale_order
-msgid "Sale Order"
-msgstr "Ponuda"
-
-#. module: sale_brand
 #: model:ir.model,name:sale_brand.model_sale_advance_payment_inv
 msgid "Sales Advance Payment Invoice"
 msgstr ""
+
+#. module: sale_brand
+#: model:ir.model,name:sale_brand.model_sale_order
+#, fuzzy
+#| msgid "Sale Order"
+msgid "Sales Order"
+msgstr "Ponuda"
