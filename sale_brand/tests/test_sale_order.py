@@ -15,15 +15,14 @@ class TestSaleOrder(TransactionCase):
     def test_create_invoice(self):
         """It should create branded invoice"""
         self.assertEqual(self.sale.invoice_status, "to invoice")
-        invoice_ids = self.sale.action_invoice_create()
-        invoice = self.env["account.invoice"].browse(invoice_ids[0])
+        invoice = self.sale._create_invoices()
         self.assertEqual(invoice.brand_id, self.sale.brand_id)
 
     def test_create_down_payment_invoice(self):
         """It should create branded down-payment invoice"""
         advance_payment_wizard = self.env["sale.advance.payment.inv"].create(
-            {"advance_payment_method": "fixed", "amount": 10.0}
+            {"advance_payment_method": "fixed", "fixed_amount": 10.0}
         )
         advance_payment_wizard.with_context(active_ids=self.sale.ids).create_invoices()
-        invoice = self.sale.order_line.mapped("invoice_lines").mapped("invoice_id")
+        invoice = self.sale.order_line.mapped("invoice_lines").mapped("move_id")
         self.assertEqual(invoice.brand_id, self.sale.brand_id)
