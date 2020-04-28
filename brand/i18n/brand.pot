@@ -1,12 +1,12 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* brand
+# 	* brand
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0\n"
+"Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: <>\n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -15,7 +15,8 @@ msgstr ""
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
-msgid "<span class=\"o_form_label\">Brand</span>\n"
+msgid ""
+"<span class=\"o_form_label\">Brand</span>\n"
 "                            <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" aria-label=\"Values set here are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
 msgstr ""
 
@@ -40,8 +41,18 @@ msgid "Active"
 msgstr ""
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__active_lang_count
+msgid "Active Lang Count"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_ids
 msgid "Activities"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__activity_exception_decoration
+msgid "Activity Exception Decoration"
 msgstr ""
 
 #. module: brand
@@ -61,7 +72,9 @@ msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__lang
-msgid "All the emails and documents sent to this contact will be translated in this language."
+msgid ""
+"All the emails and documents sent to this contact will be translated in this"
+" language."
 msgstr ""
 
 #. module: brand
@@ -77,11 +90,6 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__bank_ids
 msgid "Banks"
-msgstr ""
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__barcode
-msgid "Barcode"
 msgstr ""
 
 #. module: brand
@@ -115,13 +123,13 @@ msgid "Brand Use Level"
 msgstr ""
 
 #. module: brand
-#: code:addons/brand/models/res_brand_mixin.py:51
+#: code:addons/brand/models/res_brand_mixin.py:0
 #, python-format
 msgid "Brand company must match document company for %s"
 msgstr ""
 
 #. module: brand
-#: code:addons/brand/models/res_brand_mixin.py:41
+#: code:addons/brand/models/res_brand_mixin.py:0
 #, python-format
 msgid "Brand is required"
 msgstr ""
@@ -148,16 +156,6 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__is_company
 msgid "Check if the contact is a company, otherwise it is a person"
-msgstr ""
-
-#. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__customer
-msgid "Check this box if this contact is a customer. It can be selected in sales orders."
-msgstr ""
-
-#. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__supplier
-msgid "Check this box if this contact is a vendor. It can be selected in purchase orders."
 msgstr ""
 
 #. module: brand
@@ -228,22 +226,14 @@ msgstr ""
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
-msgid "Configure branding of customer facing business documents (SO, invoices, etc)."
+msgid ""
+"Configure branding of customer facing business documents (SO, invoices, "
+"etc)."
 msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__child_ids
-msgid "Contacts"
-msgstr ""
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
-msgid "Contracts"
-msgstr ""
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__contracts_count
-msgid "Contracts Count"
+msgid "Contact"
 msgstr ""
 
 #. module: brand
@@ -287,6 +277,11 @@ msgid "Customer Payment Terms"
 msgstr ""
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__customer_rank
+msgid "Customer Rank"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__date
 msgid "Date"
 msgstr ""
@@ -303,13 +298,16 @@ msgid "Display Name"
 msgstr ""
 
 #. module: brand
-#: selection:res.company,brand_use_level:0
+#: model:ir.model.fields.selection,name:brand.selection__res_company__brand_use_level__no
 msgid "Do not use brands on business document"
 msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__partner_share
-msgid "Either customer (not a user), either shared user. Indicated the current partner is a customer without access or with a limited access created for sharing data."
+msgid ""
+"Either customer (not a user), either shared user. Indicated the current "
+"partner is a customer without access or with a limited access created for "
+"sharing data."
 msgstr ""
 
 #. module: brand
@@ -320,6 +318,13 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__employee
 msgid "Employee"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__phone_sanitized
+msgid ""
+"Field used to store sanitized phone number. Helps speeding up searches and "
+"comparisons."
 msgstr ""
 
 #. module: brand
@@ -353,6 +358,16 @@ msgid "Formatted Email"
 msgstr ""
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__partner_latitude
+msgid "Geo Latitude"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__partner_longitude
+msgid "Geo Longitude"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__has_unreconciled_entries
 msgid "Has Unreconciled Entries"
 msgstr ""
@@ -369,33 +384,65 @@ msgid "IM Status"
 msgstr ""
 
 #. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__message_unread
-msgid "If checked new messages require your attention."
+#: model:ir.model.fields,field_description:brand.field_res_brand__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__activity_exception_icon
+msgid "Icon to indicate an exception activity."
 msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_needaction
+#: model:ir.model.fields,help:brand.field_res_brand__message_unread
 msgid "If checked, new messages require your attention."
 msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_has_error
+#: model:ir.model.fields,help:brand.field_res_brand__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__team_id
-msgid "If set, this Sales Team will be used for sales and assignations related to this partner"
+msgid ""
+"If set, this Sales Team will be used for sales and assignations related to "
+"this partner"
 msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__is_blacklisted
-msgid "If the email address is on the blacklist, the contact won't receive mass mailing anymore, from any list"
+#: model:ir.model.fields,help:brand.field_res_brand__phone_blacklisted
+msgid ""
+"If the email address is on the blacklist, the contact won't receive mass "
+"mailing anymore, from any list"
 msgstr ""
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__image
+#: model:ir.model.fields,field_description:brand.field_res_brand__image_1920
 msgid "Image"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__image_1024
+msgid "Image 1024"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__image_128
+msgid "Image 128"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__image_256
+msgid "Image 256"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__image_512
+msgid "Image 512"
 msgstr ""
 
 #. module: brand
@@ -404,13 +451,15 @@ msgid "Industry"
 msgstr ""
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__ref
-msgid "Internal Reference"
+#: model:ir.model.fields,field_description:brand.field_res_brand__invoice_warn
+msgid "Invoice"
 msgstr ""
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__invoice_warn
-msgid "Invoice"
+#: model:ir.model.fields,help:brand.field_res_brand__type
+msgid ""
+"Invoice & Delivery addresses are used in sales orders. Private addresses are"
+" only visible by authorized users."
 msgstr ""
 
 #. module: brand
@@ -426,16 +475,6 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_company
 msgid "Is a Company"
-msgstr ""
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__customer
-msgid "Is a Customer"
-msgstr ""
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__supplier
-msgid "Is a Vendor"
 msgstr ""
 
 #. module: brand
@@ -471,7 +510,10 @@ msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__last_time_entries_checked
-msgid "Last time the invoices & payments matching was performed for this partner. It is set either if there's not at least an unreconciled debit and an unreconciled credit or if you click the \"Done\" button."
+msgid ""
+"Last time the invoices & payments matching was performed for this partner. "
+"It is set either if there's not at least an unreconciled debit and an "
+"unreconciled credit or if you click the \"Done\" button."
 msgstr ""
 
 #. module: brand
@@ -482,16 +524,6 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_main_attachment_id
 msgid "Main Attachment"
-msgstr ""
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__image_medium
-msgid "Medium-sized image"
-msgstr ""
-
-#. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__image_medium
-msgid "Medium-sized image of this contact. It is automatically resized as a 128x128px image, with aspect ratio preserved. Use this field in form views or some kanban views."
 msgstr ""
 
 #. module: brand
@@ -540,6 +572,11 @@ msgid "Next Activity Type"
 msgstr ""
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__email_normalized
+msgid "Normalized Email"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__comment
 msgid "Notes"
 msgstr ""
@@ -551,7 +588,7 @@ msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_has_error_counter
-msgid "Number of error"
+msgid "Number of errors"
 msgstr ""
 
 #. module: brand
@@ -570,7 +607,7 @@ msgid "Number of unread messages"
 msgstr ""
 
 #. module: brand
-#: selection:res.company,brand_use_level:0
+#: model:ir.model.fields.selection,name:brand.selection__res_company__brand_use_level__optional
 msgid "Optional"
 msgstr ""
 
@@ -582,6 +619,16 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_id
 msgid "Partner"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
+msgid "Partner Contracts"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__same_vat_partner_id
+msgid "Partner with same Tax ID"
 msgstr ""
 
 #. module: brand
@@ -600,13 +647,18 @@ msgid "Phone"
 msgstr ""
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__phone_blacklisted
+msgid "Phone Blacklisted"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_product_pricelist
 msgid "Pricelist"
 msgstr ""
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_contract_count
-msgid "Purchase Contracts"
+#: model:ir.model.fields,field_description:brand.field_res_brand__ref
+msgid "Reference"
 msgstr ""
 
 #. module: brand
@@ -615,7 +667,7 @@ msgid "Related Company"
 msgstr ""
 
 #. module: brand
-#: selection:res.company,brand_use_level:0
+#: model:ir.model.fields.selection,name:brand.selection__res_company__brand_use_level__required
 msgid "Required"
 msgstr ""
 
@@ -625,8 +677,8 @@ msgid "Responsible User"
 msgstr ""
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__sale_contract_count
-msgid "Sale Contracts"
+#: model:ir.model.fields,field_description:brand.field_res_brand__message_has_sms_error
+msgid "SMS Delivery error"
 msgstr ""
 
 #. module: brand
@@ -655,9 +707,17 @@ msgid "Salesperson"
 msgstr ""
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__phone_sanitized
+msgid "Sanitized Number"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__invoice_warn
 #: model:ir.model.fields,help:brand.field_res_brand__sale_warn
-msgid "Selecting the \"Warning\" option will notify user with the message, Selecting \"Blocking Message\" will throw an exception with the message and block the flow. The Message has to be written in the next field."
+msgid ""
+"Selecting the \"Warning\" option will notify user with the message, "
+"Selecting \"Blocking Message\" will throw an exception with the message and "
+"block the flow. The Message has to be written in the next field."
 msgstr ""
 
 #. module: brand
@@ -696,23 +756,14 @@ msgid "Signup URL"
 msgstr ""
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__image_small
-msgid "Small-sized image"
-msgstr ""
-
-#. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__image_small
-msgid "Small-sized image of this contact. It is automatically resized as a 64x64px image, with aspect ratio preserved. Use this field anywhere a small image is required."
-msgstr ""
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__state_id
 msgid "State"
 msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__activity_state
-msgid "Status based on activities\n"
+msgid ""
+"Status based on activities\n"
 "Overdue: Due date is already passed\n"
 "Today: Activity date is today\n"
 "Planned: Future activities."
@@ -729,6 +780,11 @@ msgid "Street2"
 msgstr ""
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__supplier_rank
+msgid "Supplier Rank"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__category_id
 msgid "Tags"
 msgstr ""
@@ -740,12 +796,15 @@ msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__vat
-msgid "The Tax Identification Number. Complete it if the contact is subjected to government taxes. Used in some legal statements."
+msgid ""
+"The Tax Identification Number. Complete it if the contact is subjected to "
+"government taxes. Used in some legal statements."
 msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_account_position_id
-msgid "The fiscal position determines the taxes/accounts used for this contact."
+msgid ""
+"The fiscal position determines the taxes/accounts used for this contact."
 msgstr ""
 
 #. module: brand
@@ -755,42 +814,51 @@ msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__has_unreconciled_entries
-msgid "The partner has at least one unreconciled debit and credit since last time the invoices & payments matching was performed."
-msgstr ""
-
-#. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__tz
-msgid "The partner's timezone, used to output proper date and time values inside printed reports. It is important to set a value for this field. You should use the same timezone that is otherwise used to pick and render date and time values: your computer's timezone."
+msgid ""
+"The partner has at least one unreconciled debit and credit since last time "
+"the invoices & payments matching was performed."
 msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_account_payable_id
-msgid "This account will be used instead of the default one as the payable account for the current partner"
+msgid ""
+"This account will be used instead of the default one as the payable account "
+"for the current partner"
 msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_account_receivable_id
-msgid "This account will be used instead of the default one as the receivable account for the current partner"
+msgid ""
+"This account will be used instead of the default one as the receivable "
+"account for the current partner"
 msgstr ""
 
 #. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__image
-msgid "This field holds the image used as avatar for this contact, limited to 1024x1024px"
+#: model:ir.model.fields,help:brand.field_res_brand__email_normalized
+msgid ""
+"This field is used to search on email address as the primary email field can"
+" contain more than strictly an email address."
 msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_supplier_payment_term_id
-msgid "This payment term will be used instead of the default one for purchase orders and vendor bills"
+msgid ""
+"This payment term will be used instead of the default one for purchase "
+"orders and vendor bills"
 msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_payment_term_id
-msgid "This payment term will be used instead of the default one for sales orders and customer invoices"
+msgid ""
+"This payment term will be used instead of the default one for sales orders "
+"and customer invoices"
 msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_product_pricelist
-msgid "This pricelist will be used, instead of the default one, for sales to the current partner"
+msgid ""
+"This pricelist will be used, instead of the default one, for sales to the "
+"current partner"
 msgstr ""
 
 #. module: brand
@@ -834,6 +902,11 @@ msgid "Total amount you have to pay to this vendor."
 msgstr ""
 
 #. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_unread
 msgid "Unread Messages"
 msgstr ""
@@ -841,16 +914,6 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_unread_counter
 msgid "Unread Messages Counter"
-msgstr ""
-
-#. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__barcode
-msgid "Use a barcode to identify this contact from the Point of Sale."
-msgstr ""
-
-#. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__type
-msgid "Used by Sales and Purchase Apps to select the relevant address depending on the context."
 msgstr ""
 
 #. module: brand
@@ -870,7 +933,7 @@ msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__website
-msgid "Website"
+msgid "Website Link"
 msgstr ""
 
 #. module: brand
@@ -884,7 +947,14 @@ msgid "Website communication history"
 msgstr ""
 
 #. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__tz
+msgid ""
+"When printing documents and exporting/importing data, time values are computed according to this timezone.\n"
+"If the timezone is not set, UTC (Coordinated Universal Time) is used.\n"
+"Anywhere else, time values are computed according to the time offset of your web client."
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__zip
 msgid "Zip"
 msgstr ""
-
