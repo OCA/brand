@@ -5,24 +5,20 @@
 {
     "name": "Account Brand",
     "summary": "Send branded invoices and refunds",
-    "version": "12.0.3.1.0",
+    "version": "13.0.1.0.0",
     "category": "Accounting Management",
     "website": "https://github.com/OCA/account-invoicing",
     "author": "Open Source Integrators,"
-              "ACSONE SA/NV,"
-              "Odoo Community Association (OCA)",
+    "ACSONE SA/NV,"
+    "Odoo Community Association (OCA)",
     "license": "AGPL-3",
-    "depends": [
-        'account',
-        'brand',
-        'analytic_brand',
-    ],
+    "depends": ["account", "brand", "analytic_brand"],
     "data": [
-        "views/account_invoice.xml",
+        "views/account_move_views.xml",
         "views/res_partner_account_brand.xml",
         "security/res_partner_account_brand.xml",
     ],
     "installable": True,
     "development_status": "Beta",
-    "maintainers": ["osi-scampbell"],
+    "maintainers": ["osi-scampbell", "sbejaoui"],
 }
