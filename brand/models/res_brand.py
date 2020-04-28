@@ -5,7 +5,6 @@ from odoo import fields, models
 
 
 class ResBrand(models.Model):
-
     _name = "res.brand"
     _description = "Brand"
 
