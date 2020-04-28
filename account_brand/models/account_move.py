@@ -4,9 +4,9 @@
 from odoo import fields, models
 
 
-class AccountInvoice(models.Model):
-    _name = "account.invoice"
-    _inherit = ["account.invoice", "res.brand.mixin"]
+class AccountMove(models.Model):
+    _name = "account.move"
+    _inherit = ["account.move", "res.brand.mixin"]
 
     brand_id = fields.Many2one(
         states={

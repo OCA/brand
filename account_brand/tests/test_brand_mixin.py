@@ -20,7 +20,7 @@ class TestBrandMixin(TransactionCase):
         self.journal = self.env["account.journal"].create(
             {"type": "sale", "code": "SALE", "name": "Sale journal"}
         )
-        self.invoice = self.env["account.invoice"].create(
+        self.invoice = self.env["account.move"].create(
             {
                 "name": "Sample invoice",
                 "company_id": self.company.id,
@@ -39,7 +39,7 @@ class TestBrandMixin(TransactionCase):
         self.assertTrue(self.invoice._is_brand_required())
 
     def test_check_brand_requirement(self):
-        self.env["account.invoice"].create(
+        self.env["account.move"].create(
             {
                 "name": "Sample invoice",
                 "company_id": self.company.id,
@@ -49,7 +49,7 @@ class TestBrandMixin(TransactionCase):
         )
         self.company.brand_use_level = BRAND_USE_LEVEL_REQUIRED_LEVEL
         with self.assertRaises(ValidationError):
-            self.env["account.invoice"].create(
+            self.env["account.move"].create(
                 {
                     "name": "Sample invoice",
                     "company_id": self.company.id,
@@ -57,7 +57,7 @@ class TestBrandMixin(TransactionCase):
                     "partner_id": self.partner.id,
                 }
             )
-        self.env["account.invoice"].create(
+        self.env["account.move"].create(
             {
                 "name": "Sample invoice",
                 "company_id": self.company.id,
@@ -68,7 +68,7 @@ class TestBrandMixin(TransactionCase):
         )
 
     def test_check_brand_company_id(self):
-        invoice = self.env["account.invoice"].create(
+        invoice = self.env["account.move"].create(
             {
                 "name": "Sample invoice",
                 "company_id": self.company.id,
@@ -81,7 +81,7 @@ class TestBrandMixin(TransactionCase):
             invoice.brand_id = self.other_company_brand
 
     def test_onchange_brand_id(self):
-        new_invoice = self.env["account.invoice"].new(
+        new_invoice = self.env["account.move"].new(
             {
                 "name": "Sample invoice",
                 "company_id": self.company.id,
@@ -96,8 +96,8 @@ class TestBrandMixin(TransactionCase):
         self.assertEqual(new_invoice.company_id, self.other_company)
 
     def test_fields_view_get(self):
-        view = self.env["account.invoice"].fields_view_get(
-            view_id=self.env.ref("account_brand.account_invoice_view_form_brand").id,
+        view = self.env["account.move"].fields_view_get(
+            view_id=self.env.ref("account.view_move_form").id,
             view_type="form",
         )
         doc = etree.XML(view["arch"])
