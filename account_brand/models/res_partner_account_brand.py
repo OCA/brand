@@ -21,9 +21,7 @@ class ResPartnerAccountBrand(models.Model):
         required=True,
         domain="[('user_type_id.type', 'in', ('payable', 'receivable'))]",
     )
-    brand_id = fields.Many2one(
-        comodel_name='res.brand', string='Brand', required=True
-    )
+    brand_id = fields.Many2one(comodel_name="res.brand", string="Brand", required=True)
     account_type = fields.Selection(
         string="Type",
         selection=[("payable", "Payable"), ("receivable", "Receivable")],
@@ -38,7 +36,7 @@ class ResPartnerAccountBrand(models.Model):
         )
     ]
 
-    @api.constrains('account_id', 'account_type')
+    @api.constrains("account_id", "account_type")
     def _check_account_type(self):
         for rec in self:
             if (
@@ -73,16 +71,8 @@ class ResPartnerAccountBrand(models.Model):
             ("brand_id", "=", brand.id),
             ("account_type", "=", account_type),
         ]
-        default_rule = self.search(
-            domain + [("partner_id", "=", False)], limit=1
-        )
+        default_rule = self.search(domain + [("partner_id", "=", False)], limit=1)
         partner_rule = False
         if partner:
-            partner_rule = self.search(
-                domain + [("partner_id", "=", partner.id)]
-            )
-        return (
-            partner_rule.account_id
-            if partner_rule
-            else default_rule.account_id
-        )
+            partner_rule = self.search(domain + [("partner_id", "=", partner.id)])
+        return partner_rule.account_id if partner_rule else default_rule.account_id
