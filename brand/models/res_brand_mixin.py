@@ -19,7 +19,9 @@ class ResBrandMixin(models.AbstractModel):
     _description = "Brand Mixin"
 
     brand_id = fields.Many2one(
-        comodel_name="res.brand", string="Brand", help="Brand to use for this sale",
+        comodel_name="res.brand",
+        string="Brand",
+        help="Brand to use for this sale",
     )
     brand_use_level = fields.Selection(
         string="Brand Use Level",
@@ -27,7 +29,9 @@ class ResBrandMixin(models.AbstractModel):
         default=BRAND_USE_LEVEL_NO_USE_LEVEL,
         related="company_id.brand_use_level",
     )
-    company_id = fields.Many2one(comodel_name="res.company",)
+    company_id = fields.Many2one(
+        comodel_name="res.company",
+    )
 
     def _is_brand_required(self):
         self.ensure_one()
@@ -68,17 +72,21 @@ class ResBrandMixin(models.AbstractModel):
     ):
         """set visibility and requirement rules"""
         result = super(ResBrandMixin, self).fields_view_get(
-            view_id=view_id, view_type=view_type, toolbar=toolbar, submenu=submenu,
+            view_id=view_id,
+            view_type=view_type,
+            toolbar=toolbar,
+            submenu=submenu,
         )
 
         if view_type in ["tree", "form"]:
             doc = etree.XML(result["arch"])
+            result["fields"].update(self.fields_get(["brand_use_level"]))
             for node in doc.xpath("//field[@name='brand_id']"):
                 in_tree_view = node.tag == "tree"
                 elem = etree.Element(
                     "field", {"name": "brand_use_level", "invisible": "True"}
                 )
-                field = self.fields_get(["brand_use_level"])["brand_use_level"]
+                field = result["fields"]["brand_use_level"]
                 self.setup_modifiers(
                     elem, field=field, context=self._context, in_tree_view=in_tree_view
                 )
@@ -89,7 +97,10 @@ class ResBrandMixin(models.AbstractModel):
                     '[("brand_use_level", "=", "%s")], '
                     '"required": '
                     '[("brand_use_level", "=", "%s")]}'
-                    % (BRAND_USE_LEVEL_NO_USE_LEVEL, BRAND_USE_LEVEL_REQUIRED_LEVEL,),
+                    % (
+                        BRAND_USE_LEVEL_NO_USE_LEVEL,
+                        BRAND_USE_LEVEL_REQUIRED_LEVEL,
+                    ),
                 )
                 field = result["fields"]["brand_id"]
                 self.setup_modifiers(
