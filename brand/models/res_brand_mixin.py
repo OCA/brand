@@ -4,7 +4,8 @@ from lxml import etree
 
 from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
-from odoo.osv import orm
+
+from odoo.addons.base.models import ir_ui_view
 
 from .res_company import (
     BRAND_USE_LEVEL_NO_USE_LEVEL,
@@ -14,12 +15,11 @@ from .res_company import (
 
 
 class ResBrandMixin(models.AbstractModel):
-
     _name = "res.brand.mixin"
     _description = "Brand Mixin"
 
     brand_id = fields.Many2one(
-        "res.brand", string="Brand", help="Brand to use for this sale"
+        comodel_name="res.brand", string="Brand", help="Brand to use for this sale",
     )
     brand_use_level = fields.Selection(
         string="Brand Use Level",
@@ -27,9 +27,8 @@ class ResBrandMixin(models.AbstractModel):
         default=BRAND_USE_LEVEL_NO_USE_LEVEL,
         related="company_id.brand_use_level",
     )
-    company_id = fields.Many2one("res.company")
+    company_id = fields.Many2one(comodel_name="res.company",)
 
-    @api.multi
     def _is_brand_required(self):
         self.ensure_one()
         return self.company_id.brand_use_level == BRAND_USE_LEVEL_REQUIRED_LEVEL
@@ -55,6 +54,15 @@ class ResBrandMixin(models.AbstractModel):
             if rec.brand_id and rec.brand_id.company_id:
                 rec.company_id = rec.brand_id.company_id
 
+    def setup_modifiers(self, node, field=None, context=None, in_tree_view=False):
+        modifiers = {}
+        if field is not None:
+            ir_ui_view.transfer_field_to_modifiers(field, modifiers)
+        ir_ui_view.transfer_node_to_modifiers(
+            node, modifiers, context=context, in_tree_view=in_tree_view
+        )
+        ir_ui_view.transfer_modifiers_to_node(modifiers, node)
+
     def fields_view_get(
         self, view_id=None, view_type="form", toolbar=False, submenu=False
     ):
@@ -66,11 +74,13 @@ class ResBrandMixin(models.AbstractModel):
         if view_type in ["tree", "form"]:
             doc = etree.XML(result["arch"])
             for node in doc.xpath("//field[@name='brand_id']"):
+                in_tree_view = node.tag == "tree"
                 elem = etree.Element(
                     "field", {"name": "brand_use_level", "invisible": "True"}
                 )
-                orm.setup_modifiers(
-                    elem, self.fields_get(["brand_use_level"])["brand_use_level"],
+                field = self.fields_get(["brand_use_level"])["brand_use_level"]
+                self.setup_modifiers(
+                    elem, field=field, context=self._context, in_tree_view=in_tree_view
                 )
                 node.addprevious(elem)
                 node.set(
@@ -81,6 +91,9 @@ class ResBrandMixin(models.AbstractModel):
                     '[("brand_use_level", "=", "%s")]}'
                     % (BRAND_USE_LEVEL_NO_USE_LEVEL, BRAND_USE_LEVEL_REQUIRED_LEVEL,),
                 )
-                orm.setup_modifiers(node, result["fields"]["brand_id"])
+                field = result["fields"]["brand_id"]
+                self.setup_modifiers(
+                    node, field=field, context=self._context, in_tree_view=in_tree_view
+                )
             result["arch"] = etree.tostring(doc, encoding="unicode")
         return result
