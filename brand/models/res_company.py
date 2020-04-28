@@ -14,7 +14,6 @@ BRAND_USE_LEVEL_SELECTION = [
 
 
 class ResCompany(models.Model):
-
     _inherit = "res.company"
 
     brand_use_level = fields.Selection(
