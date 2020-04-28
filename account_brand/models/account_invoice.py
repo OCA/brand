@@ -5,14 +5,14 @@ from odoo import fields, models
 
 
 class AccountInvoice(models.Model):
-    _name = 'account.invoice'
-    _inherit = ['account.invoice', 'res.brand.mixin']
+    _name = "account.invoice"
+    _inherit = ["account.invoice", "res.brand.mixin"]
 
     brand_id = fields.Many2one(
         states={
-            'open': [('readonly', True)],
-            'in_payment': [('readonly', True)],
-            'paid': [('readonly', True)],
-            'cancel': [('readonly', True)],
+            "open": [("readonly", True)],
+            "in_payment": [("readonly", True)],
+            "paid": [("readonly", True)],
+            "cancel": [("readonly", True)],
         }
     )
