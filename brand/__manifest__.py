@@ -17,4 +17,5 @@
         "security/res_brand.xml",
         "views/res_brand.xml",
     ],
+    "maintainers": ["sbejaoui"],
 }
