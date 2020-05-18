@@ -38,7 +38,7 @@ class AccountInvoice(models.Model):
                 )
             )
             rec_account = (
-                rec_account.account_id
+                rec_account
                 if rec_account
                 else partner.property_account_receivable_id
             )
@@ -48,7 +48,7 @@ class AccountInvoice(models.Model):
                 )
             )
             pay_account = (
-                pay_account.account_id
+                pay_account
                 if pay_account
                 else partner.property_account_payable_id
             )

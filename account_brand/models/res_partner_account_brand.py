@@ -2,6 +2,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from odoo import _, api, fields, models
+from odoo.exceptions import ValidationError
 
 
 class ResPartnerAccountBrand(models.Model):
@@ -15,12 +16,13 @@ class ResPartnerAccountBrand(models.Model):
         comodel_name="res.partner", string="Partner", required=False
     )
     account_id = fields.Many2one(
-        comodel_name="account.account", string="Account", required=True
+        comodel_name="account.account",
+        string="Account",
+        required=True,
+        domain="[('user_type_id.type', 'in', ('payable', 'receivable'))]",
     )
     brand_id = fields.Many2one(
-        comodel_name='res.brand',
-        string='Brand',
-        required=True,
+        comodel_name='res.brand', string='Brand', required=True
     )
     account_type = fields.Selection(
         string="Type",
@@ -35,6 +37,18 @@ class ResPartnerAccountBrand(models.Model):
             _("Partner has already an account set for this brand!"),
         )
     ]
+
+    @api.constrains('account_id', 'account_type')
+    def _check_account_type(self):
+        for rec in self:
+            if (
+                rec.account_id
+                and rec.account_type
+                and rec.account_id.user_type_id.type != rec.account_type
+            ):
+                raise ValidationError(
+                    _("Please select an account of type %s") % rec.account_type
+                )
 
     @api.onchange("account_type")
     def _onchange_account_type(self):
@@ -59,10 +73,16 @@ class ResPartnerAccountBrand(models.Model):
             ("brand_id", "=", brand.id),
             ("account_type", "=", account_type),
         ]
-        default_account = self.search(
+        default_rule = self.search(
             domain + [("partner_id", "=", False)], limit=1
         )
-        account = False
+        partner_rule = False
         if partner:
-            account = self.search(domain + [("partner_id", "=", partner.id)])
-        return account or default_account
+            partner_rule = self.search(
+                domain + [("partner_id", "=", partner.id)]
+            )
+        return (
+            partner_rule.account_id
+            if partner_rule
+            else default_rule.account_id
+        )
