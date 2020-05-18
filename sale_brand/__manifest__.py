@@ -15,7 +15,8 @@
         'account_brand',
     ],
     "data": [
-        "views/sale_views.xml",
+        'views/sale_views.xml',
+        'views/crm_team_views.xml',
     ],
     "installable": True,
     "development_status": "Beta",

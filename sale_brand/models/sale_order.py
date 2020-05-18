@@ -25,3 +25,7 @@ class SaleOrder(models.Model):
                 'brand_id': order.brand_id.id,
             })
         return invoice_vals
+
+    @api.onchange('team_id')
+    def _onchange_team_id(self):
+        self.brand_id = self.team_id.brand_id
