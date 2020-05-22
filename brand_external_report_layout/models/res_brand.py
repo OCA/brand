@@ -4,7 +4,7 @@
 import base64
 import os
 
-from odoo import _, api, fields, models, tools
+from odoo import _, fields, models, tools
 
 
 class ResBrand(models.Model):
@@ -27,7 +27,7 @@ class ResBrand(models.Model):
         )
 
     logo = fields.Binary(
-        related="partner_id.image",
+        related="partner_id.image_1920",
         default=_get_default_brand_logo,
         string="Brand Logo",
         readonly=False,
@@ -46,7 +46,6 @@ class ResBrand(models.Model):
         help="Footer text displayed at the bottom of all reports.",
     )
 
-    @api.multi
     def change_report_template(self):
         self.ensure_one()
         form_view = self.env.ref(

@@ -6,7 +6,7 @@
     "summary": """
         This module allows you to have a different layout by brand for your
         external reports.""",
-    "version": "12.0.1.0.1",
+    "version": "13.0.1.0.0",
     "license": "AGPL-3",
     "author": "ACSONE SA/NV," "Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/brand",
