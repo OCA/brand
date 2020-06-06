@@ -6,18 +6,25 @@
 
     <template id="brand_external_layout" inherit_id="web.external_layout">
         <xpath expr="//t[@t-if='not company']" position="after">
-            <t t-if="'brand_id' in o.fields_get() and o.brand_id and o.brand_id.external_report_layout_id"
-               t-call="{{o.brand_id.external_report_layout_id.key}}">
-                <t t-set="company" t-value="o.brand_id.sudo()"/>
-                <t t-raw="0"/>
+            <t t-if="o != doc">
+                <t t-if="'brand_id' in o.fields_get() and o.brand_id and o.brand_id.external_report_layout_id"
+                   t-call="{{o.brand_id.external_report_layout_id.key}}">
+                    <t t-set="company" t-value="o.brand_id.sudo()"/>
+                    <t t-raw="0"/>
+                </t>
+                <t t-else="else" name="brand_not_set"></t>
             </t>
-            <t t-else="else" name="brand_not_set"></t>
+            <t t-if="o == doc" name="is_a_doc"></t>
         </xpath>
         <xpath expr="//t[@name='brand_not_set']" position="inside">
             <xpath expr="//t[@t-if='company.external_report_layout_id']"
                    position="move"/>
             <xpath expr="//t[@t-call='web.external_layout_standard']"
                    position="move"/>
+        </xpath>
+        <xpath expr="//t[@name='is_a_doc']" position="inside">
+            <t t-if="company.external_report_layout_id" t-call="{{company.external_report_layout_id.key}}"><t t-raw="0"/></t>
+            <t t-else="else" t-call="web.external_layout_standard"><t t-raw="0"/></t>
         </xpath>
     </template>
 
