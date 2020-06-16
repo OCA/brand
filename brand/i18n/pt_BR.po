@@ -6,89 +6,98 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2020-06-16 13:19+0000\n"
+"Last-Translator: Maurício Liell <mauricio@liell.com.br>\n"
 "Language-Team: none\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.10\n"
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
 msgid "<span class=\"o_form_label\">Brand</span>\n"
 "                            <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" aria-label=\"Values set here are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
 msgstr ""
+"<span class=\"o_form_label\">Marca</span>\n"
+"                            <span class=\"fa fa-lg fa-building-o\" title=\""
+"Os valores definidos aqui são específicos da empresa.\" aria-label=\"Os "
+"valores definidos aqui são específicos da empresa\" groups=\"base."
+"group_multi_company\" role=\"img\"/>"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_account_payable_id
 msgid "Account Payable"
-msgstr ""
+msgstr "Conta a pagar"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_account_receivable_id
 msgid "Account Receivable"
-msgstr ""
+msgstr "Conta a receber"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_needaction
 msgid "Action Needed"
-msgstr ""
+msgstr "Ação necessária"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__active
 msgid "Active"
-msgstr ""
+msgstr "Ativo"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_ids
 msgid "Activities"
-msgstr ""
+msgstr "Atividades"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_state
 msgid "Activity State"
-msgstr ""
+msgstr "Estado da Atividade"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__additional_info
 msgid "Additional info"
-msgstr ""
+msgstr "Informações adicionais"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__type
 msgid "Address Type"
-msgstr ""
+msgstr "Tipo de endereço"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__lang
 msgid "All the emails and documents sent to this contact will be translated in this language."
 msgstr ""
+"Todos os e-mails e documentos enviados para esse contato serão traduzidos "
+"para este idioma."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_attachment_count
 msgid "Attachment Count"
-msgstr ""
+msgstr "Contagem de Anexos"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__bank_account_count
 msgid "Bank"
-msgstr ""
+msgstr "Banco"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__bank_ids
 msgid "Banks"
-msgstr ""
+msgstr "Bancos"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__barcode
 msgid "Barcode"
-msgstr ""
+msgstr "Código de Barras"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_blacklisted
 msgid "Blacklist"
-msgstr ""
+msgstr "Lista negra"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_bounce
@@ -100,7 +109,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:brand.field_res_brand_mixin__brand_id
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "Brand"
-msgstr ""
+msgstr "Marca"
 
 #. module: brand
 #: model:ir.model,name:brand.model_res_brand_mixin
@@ -113,24 +122,24 @@ msgstr ""
 #: model:ir.model.fields,field_description:brand.field_res_config_settings__brand_use_level
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
 msgid "Brand Use Level"
-msgstr ""
+msgstr "Nível de uso da marca"
 
 #. module: brand
 #: code:addons/brand/models/res_brand_mixin.py:51
 #, python-format
 msgid "Brand company must match document company for %s"
-msgstr ""
+msgstr "A empresa da marca deve corresponder à empresa do documento por %s"
 
 #. module: brand
 #: code:addons/brand/models/res_brand_mixin.py:41
 #, python-format
 msgid "Brand is required"
-msgstr ""
+msgstr "É obrigatório o preenchimento da Marca"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand_mixin__brand_id
 msgid "Brand to use for this sale"
-msgstr ""
+msgstr "Marca a ser usada para esta venda"
 
 #. module: brand
 #: model:ir.actions.act_window,name:brand.res_brand_act_window
@@ -139,7 +148,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_search_view
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_tree_view
 msgid "Brands"
-msgstr ""
+msgstr "Marcas"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__channel_ids
