@@ -14,6 +14,10 @@ class ContractContract(models.Model):
         self.ensure_one()
         values = super()._prepare_invoice(date_invoice, journal)
         values["brand_id"] = self.brand_id.id
+        # We remove account_id in order to let account_invoice choose
+        # the right account_id (according to the brand)
+        if 'account_id' in values:
+            values.pop('account_id')
         return values
 
     @api.onchange('brand_id', 'contract_line_ids')

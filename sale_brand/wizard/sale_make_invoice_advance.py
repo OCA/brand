@@ -11,5 +11,4 @@ class SaleAdvancePaymentInv(models.TransientModel):
     def _create_invoice(self, order, so_line, amount):
         invoice = super()._create_invoice(order, so_line, amount)
         invoice.brand_id = order.brand_id
-        invoice._onchange_partner_id()
         return invoice
