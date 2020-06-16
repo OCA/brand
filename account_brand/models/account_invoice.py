@@ -2,6 +2,8 @@
 # Copyright 2019 ACSONE SA/NV
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
+from collections import OrderedDict
+
 from odoo import api, fields, models
 
 
@@ -18,11 +20,11 @@ class AccountInvoice(models.Model):
         }
     )
 
-    @api.onchange("partner_id", "company_id")
-    def _onchange_partner_id(self):
-        res = super()._onchange_partner_id()
-        self._onchange_partner_brand()
-        return res
+    def _get_onchange_create(self):
+        res = super()._get_onchange_create()
+        return OrderedDict(
+            [("_onchange_partner_brand", ["account_id"])] + list(res.items())
+        )
 
     @api.onchange("partner_id", "company_id", "brand_id")
     def _onchange_partner_brand(self):

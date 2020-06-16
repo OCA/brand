@@ -69,7 +69,7 @@ class TestAccountInvoice(SavepointCase):
         )
 
     def test_on_change_partner_id(self):
-        self.invoice._onchange_partner_id()
+        self.invoice._onchange_partner_brand()
         self.assertEqual(self.invoice.account_id, self.account_receivable)
         partner_account_brand = self.env['res.partner.account.brand'].create(
             {
@@ -79,10 +79,10 @@ class TestAccountInvoice(SavepointCase):
                 'account_type': 'receivable',
             }
         )
-        self.invoice._onchange_partner_id()
+        self.invoice._onchange_partner_brand()
         self.assertEqual(self.invoice.account_id, self.account_receivable)
         self.invoice.brand_id = self.brand_id
-        self.invoice._onchange_partner_id()
+        self.invoice._onchange_partner_brand()
         self.assertEqual(
             self.invoice.account_id, self.account_receivable_brand_default
         )
@@ -92,7 +92,7 @@ class TestAccountInvoice(SavepointCase):
                 'account_id': self.account_receivable_partner_brand_default.id,
             }
         )
-        self.invoice._onchange_partner_id()
+        self.invoice._onchange_partner_brand()
         self.assertEqual(
             self.invoice.account_id,
             self.account_receivable_partner_brand_default,
