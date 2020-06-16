@@ -67,6 +67,7 @@ Authors
 ~~~~~~~
 
 * Open Source Integrators
+* ACSONE SA/NV
 
 Contributors
 ~~~~~~~~~~~~
