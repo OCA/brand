@@ -6,19 +6,25 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2020-07-01 22:19+0000\n"
+"Last-Translator: Peter Schubert <psc@saco.info>\n"
 "Language-Team: none\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.10\n"
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
 msgid "<span class=\"o_form_label\">Brand</span>\n"
 "                            <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" aria-label=\"Values set here are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
 msgstr ""
+"<span class=\"o_form_label\">Marke</span>\n"
+"                            <span class=\"fa fa-lg fa-building-o\" title=\""
+"Die Werte hier sind Firmen spezifisch.\" aria-label=\"Die Werte hier sind "
+"Firmen spezifisch.\" groups=\"base.group_multi_company\" role=\"img\"/>"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_account_payable_id
@@ -38,12 +44,12 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__active
 msgid "Active"
-msgstr ""
+msgstr "Aktiv"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_ids
 msgid "Activities"
-msgstr ""
+msgstr "Aktivitäten"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_state
@@ -53,37 +59,39 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__additional_info
 msgid "Additional info"
-msgstr ""
+msgstr "Zusatz Informationen"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__type
 msgid "Address Type"
-msgstr ""
+msgstr "Adressart"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__lang
 msgid "All the emails and documents sent to this contact will be translated in this language."
 msgstr ""
+"Alle Emails und Dokumente die an diesen Kontakt gesendet werden, werden in "
+"diese Sprache übersetzt."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_attachment_count
 msgid "Attachment Count"
-msgstr ""
+msgstr "Anzahl der Anhänge"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__bank_account_count
 msgid "Bank"
-msgstr ""
+msgstr "Bank"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__bank_ids
 msgid "Banks"
-msgstr ""
+msgstr "Banken"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__barcode
 msgid "Barcode"
-msgstr ""
+msgstr "Barcode"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_blacklisted
