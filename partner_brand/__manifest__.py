@@ -6,7 +6,7 @@
     "summary": "Manage your brands and use them on your documents",
     "version": "12.0.2.1.0",
     "category": "Sales Management",
-    "website": "https://github.com/OCA/sale-workflow",
+    "website": "https://github.com/OCA/brand",
     "author": "Open Source Integrators,"
               "Odoo Community Association (OCA)",
     "license": "AGPL-3",
