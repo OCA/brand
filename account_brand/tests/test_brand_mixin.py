@@ -102,3 +102,16 @@ class TestBrandMixin(TransactionCase):
         )
         doc = etree.XML(view['arch'])
         self.assertTrue(doc.xpath("//field[@name='brand_use_level']"))
+
+    def test_refund_invoice(self):
+        invoice = self.env['account.invoice'].create(
+            {
+                'name': "Sample invoice",
+                'company_id': self.company.id,
+                'journal_id': self.journal.id,
+                'partner_id': self.partner.id,
+                'brand_id': self.brand.id,
+            }
+        )
+        credit_note = invoice.refund()
+        self.assertEqual(credit_note.brand_id, self.brand)
