@@ -23,3 +23,13 @@ class AccountInvoice(models.Model):
         if self.type in ('in_invoice', 'in_refund'):
             return False
         return super(AccountInvoice, self)._is_brand_required()
+
+    @api.model
+    def _prepare_refund(self, invoice, date_invoice=None, date=None,
+                        description=None, journal_id=None):
+        values = super(AccountInvoice, self)._prepare_refund(
+            invoice, date_invoice=date_invoice, date=date,
+            description=description, journal_id=journal_id)
+        if invoice.brand_id:
+            values['brand_id'] = invoice.brand_id.id
+        return values
