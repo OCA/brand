@@ -17,7 +17,7 @@ class AccountInvoice(models.Model):
         }
     )
 
-    @api.constrains('brand_id', 'company_id')
+    @api.constrains('brand_id', 'company_id', 'type')
     def _check_brand_requirement(self):
         out_invoices = self.filtered(
             lambda l: l.type in ('out_invoice', 'out_refund')
