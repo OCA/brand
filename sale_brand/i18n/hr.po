@@ -41,6 +41,5 @@ msgstr ""
 #. module: sale_brand
 #: model:ir.model,name:sale_brand.model_crm_team
 #, fuzzy
-#| msgid "Sale Order"
 msgid "Sales Team"
 msgstr "Ponuda"
