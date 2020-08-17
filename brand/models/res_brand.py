@@ -18,3 +18,17 @@ class ResBrand(models.Model):
         delegate=True,
         ondelete="restrict",
     )
+
+    brandname = fields.Char(
+        string="Nom du template"
+    )
+
+    def name_get(self):
+        result = []
+        for record in self:
+            if self.env.context.get('gecko_brandname', False):
+                # Only goes off when the custom_search is in the context values.
+                result.append((record.id, record.brandname))
+            else:
+                result.append((record.id, record.name))
+        return result
