@@ -1,5 +1,5 @@
 # Copyright 2019 ACSONE SA/NV
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 from lxml import etree
 from odoo import api, fields, models, _
 from odoo.osv import orm
