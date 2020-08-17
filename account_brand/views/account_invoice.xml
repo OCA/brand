@@ -1,7 +1,7 @@
 <odoo>
 
     <!-- Copyright (C) 2019 Open Source Integrators
-         License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+         License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).-->
 
     <record id="account_invoice_view_form_brand" model="ir.ui.view">
         <field name="name">account.invoice.form.brand</field>
@@ -9,7 +9,7 @@
         <field name="inherit_id" ref="account.invoice_form"/>
         <field name="arch" type="xml">
             <field name="partner_id" position="after">
-                <field name="brand_id"/>
+                <field name="brand_id" context="{'gecko_brandname': True}"/>
             </field>
         </field>
     </record>
