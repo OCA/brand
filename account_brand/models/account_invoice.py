@@ -17,9 +17,9 @@ class AccountInvoice(models.Model):
         }
     )
 
-    @api.constrains('brand_id', 'company_id', 'type')
-    def _check_brand_requirement(self):
-        out_invoices = self.filtered(
-            lambda l: l.type in ('out_invoice', 'out_refund')
-        )
-        return super(AccountInvoice, out_invoices)._check_brand_requirement()
+    @api.multi
+    def _is_brand_required(self):
+        self.ensure_one()
+        if self.type in ('in_invoice', 'in_refund'):
+            return False
+        return super(AccountInvoice, self)._is_brand_required()
