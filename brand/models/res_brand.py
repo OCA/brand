@@ -23,12 +23,16 @@ class ResBrand(models.Model):
         string="Nom du template"
     )
 
-    def name_get(self):
-        result = []
-        for record in self:
-            if self.env.context.get('gecko_brandname', False):
-                # Only goes off when the custom_search is in the context values.
-                result.append((record.id, record.brandname))
-            else:
-                result.append((record.id, record.name))
-        return result
+class ResBrandName(models.Model):
+
+    _name = 'res.brand.name'
+    _description = 'Brand Name'
+
+    name = fields.Char(
+        string="Template",
+    )
+    brand = fields.Many2one(
+        comodel_name="res.brand",
+        string="brand",
+        required=True,
+    )

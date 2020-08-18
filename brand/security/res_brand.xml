@@ -23,6 +23,25 @@
         <field name="perm_unlink" eval="1"/>
     </record>
 
+    <record model="ir.model.access" id="res_brand_name_access_all">
+        <field name="name">res.brand.name access all</field>
+        <field name="model_id" ref="model_res_brand_name"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <record model="ir.model.access" id="res_brand_name_access_manager">
+        <field name="name">res.brand.name manager access</field>
+        <field name="model_id" ref="model_res_brand_name"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
     <record id="res_brand_multi_company_rule" model="ir.rule">
         <field name="name">Res Brand multi company rule</field>
         <field name="model_id" ref="model_res_brand"/>

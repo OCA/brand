@@ -9,7 +9,8 @@
         <field name="inherit_id" ref="sales_team.crm_team_view_form"/>
         <field name="arch" type="xml">
             <field name="company_id" position="after">
-                <field name="brand_id" context="{'gecko_brandname': True}"/>
+                <field name="brand_name"/>
+                <field name="brand_id" invisible="True"/>
             </field>
         </field>
     </record>

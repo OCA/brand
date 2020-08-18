@@ -12,9 +12,9 @@
             <xpath expr="//form" position="attributes">
                 <attribute name="string">Brand</attribute>
             </xpath>
-            <!--<xpath expr="//field[@name='vat']" position="attributes">
+            <xpath expr="//field[@name='vat']" position="attributes">
                 <attribute name="invisible">1</attribute>
-            </xpath>-->
+            </xpath>
             <xpath expr="//field[@name='company_type']" position="attributes">
                 <attribute name="invisible">1</attribute>
             </xpath>
@@ -65,6 +65,12 @@
         </field>
     </record>
 
+    <record model="ir.actions.act_window" id="res_brand_name_act_window">
+        <field name="name">Template</field>
+        <field name="res_model">res.brand.name</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
     <record model="ir.actions.act_window" id="res_brand_act_window">
         <field name="name">Brands</field>
         <field name="res_model">res.brand</field>
@@ -76,6 +82,12 @@
         <field name="name">Brands</field>
         <field name="parent_id" ref="base.menu_users"/>
         <field name="action" ref="res_brand_act_window"/>
+    </record>
+
+    <record model="ir.ui.menu" id="res_brand_name_menu">
+        <field name="name">Template</field>
+        <field name="parent_id" ref="base.menu_users"/>
+        <field name="action" ref="res_brand_name_act_window"/>
     </record>
 
 </odoo>

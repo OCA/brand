@@ -29,3 +29,13 @@ class SaleOrder(models.Model):
     @api.onchange('team_id')
     def _onchange_team_id(self):
         self.brand_id = self.team_id.brand_id
+
+    brand_name = fields.Many2one(
+        comodel_name="res.brand.name",
+        string="Template",
+        help="Ce template sera utilisé pour ce document",
+    )
+
+    @api.onchange('brand_name')
+    def _onchange_brand_name(self):
+        self.brand_id = self.brand_name.brand
