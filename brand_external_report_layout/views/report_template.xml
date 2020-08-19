@@ -6,6 +6,7 @@
 
     <template id="brand_external_layout" inherit_id="web.external_layout">
         <xpath expr="//t[@t-if='not company']" position="after">
+            <t t-if="docs and not o" t-set="o" t-value="docs[0]"/>
             <t t-if="'brand_id' in o.fields_get() and o.brand_id and o.brand_id.external_report_layout_id"
                t-call="{{o.brand_id.external_report_layout_id.key}}">
                 <t t-set="company" t-value="o.brand_id.sudo()"/>
