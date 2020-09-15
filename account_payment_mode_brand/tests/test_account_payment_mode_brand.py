@@ -59,24 +59,12 @@ class TestAccountPaymentModeBrand(TestBasePaymentModeBrand):
             {"partner_id": self.partner.id, "brand_id": self.brand.id}
         )
 
-    def test_account_invoice_onchange_brand(self):
+    def test_account_invoice_allowed_payment_mode(self):
         self.assertEqual(
-            self.invoice.onchange_brand_allowed_payment_mode()["domain"][
-                "payment_mode_id"
-            ],
-            [("id", "in", self.payment_mode_1.ids)],
-        )
-        self.brand.allowed_payment_mode_ids = False
-        self.assertEqual(
-            self.invoice.onchange_brand_allowed_payment_mode()["domain"][
-                "payment_mode_id"
-            ],
-            [],
+            self.invoice.allowed_payment_mode_ids, self.payment_mode_1
         )
         self.invoice.brand_id = False
         self.assertEqual(
-            self.invoice.onchange_brand_allowed_payment_mode()["domain"][
-                "payment_mode_id"
-            ],
-            [],
+            self.invoice.allowed_payment_mode_ids,
+            self.env['account.payment.mode'].search([]),
         )
