@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2020 ACSONE SA/NV
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record model="ir.ui.view" id="contract_contract_form_view">
+        <field name="model">contract.contract</field>
+        <field name="inherit_id" ref="contract.contract_contract_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='payment_mode_id']" position="before">
+                <field name="allowed_payment_mode_ids" widget="many2many_tags"
+                       invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='payment_mode_id']"
+                   position="attributes">
+                <attribute name="domain">[('id', 'in', allowed_payment_mode_ids)]
+                </attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
