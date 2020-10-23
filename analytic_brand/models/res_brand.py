@@ -6,11 +6,11 @@ from odoo import fields, models
 
 class ResBrand(models.Model):
 
-    _inherit = 'res.brand'
+    _inherit = "res.brand"
 
     analytic_account_id = fields.Many2one(
         comodel_name="account.analytic.account",
         string="Analytic Account",
         required=False,
-        ondelete="set null"
+        ondelete="set null",
     )
