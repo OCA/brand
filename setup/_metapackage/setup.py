@@ -10,6 +10,7 @@ setuptools.setup(
     install_requires=[
         'odoo12-addon-account_brand',
         'odoo12-addon-account_payment_mode_brand',
+        'odoo12-addon-analytic_brand',
         'odoo12-addon-brand',
         'odoo12-addon-brand_external_report_layout',
         'odoo12-addon-contract_brand',
