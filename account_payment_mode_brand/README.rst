@@ -45,7 +45,7 @@ To use this module, you need to:
     #. Select the brand
     #. Select a payment mode
 
-The payment mode list is filtered with the allowed payment modes set in the brand.
+The payment mode list is filtered with the brand allowed payment modes.
 
 Bug Tracker
 ===========
