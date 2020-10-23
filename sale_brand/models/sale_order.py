@@ -19,11 +19,14 @@ class SaleOrder(models.Model):
 
     @api.multi
     def _prepare_invoice(self):
-        for order in self:
-            invoice_vals = super(SaleOrder, order)._prepare_invoice()
-            invoice_vals.update({
-                'brand_id': order.brand_id.id,
-            })
+        invoice_vals = super()._prepare_invoice()
+        invoice_vals.update({
+            'brand_id': self.brand_id.id,
+        })
+        # We remove account_id in order to let account_invoice choose
+        # the right account_id (according to the brand)
+        if 'account_id' in invoice_vals:
+            invoice_vals.pop('account_id')
         return invoice_vals
 
     @api.onchange('brand_id')

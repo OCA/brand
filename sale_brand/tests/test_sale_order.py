@@ -13,6 +13,27 @@ class TestSaleOrder(TransactionCase):
             {'invoice_policy': 'order'}
         )
         self.sale.action_confirm()
+        self.account_receivable_type = self.env.ref(
+            'account.data_account_type_receivable'
+        )
+        self.account_receivable_brand_default = self.env[
+            'account.account'
+        ].create(
+            {
+                'name': 'Receivable Brand Default',
+                'code': 'RCV01',
+                'user_type_id': self.account_receivable_type.id,
+                'reconcile': True,
+            }
+        )
+        self.partner_account_brand = self.env['res.partner.account.brand'].create(
+            {
+                'partner_id': self.sale.partner_id.id,
+                'account_id': self.account_receivable_brand_default.id,
+                'brand_id': self.sale.brand_id.id,
+                'account_type': 'receivable',
+            }
+        )
 
     def test_create_invoice(self):
         """It should create branded invoice"""
@@ -20,6 +41,7 @@ class TestSaleOrder(TransactionCase):
         invoice_ids = self.sale.action_invoice_create()
         invoice = self.env['account.invoice'].browse(invoice_ids[0])
         self.assertEqual(invoice.brand_id, self.sale.brand_id)
+        self.assertEqual(invoice.account_id, self.account_receivable_brand_default)
 
     def test_create_down_payment_invoice(self):
         """It should create branded down-payment invoice"""
