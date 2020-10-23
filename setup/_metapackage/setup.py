@@ -9,13 +9,16 @@ setuptools.setup(
     version=version,
     install_requires=[
         'odoo12-addon-account_brand',
+        'odoo12-addon-account_payment_mode_brand',
         'odoo12-addon-brand',
         'odoo12-addon-brand_external_report_layout',
         'odoo12-addon-contract_brand',
         'odoo12-addon-contract_forecast_brand',
+        'odoo12-addon-contract_payment_mode_brand',
         'odoo12-addon-partner_brand',
         'odoo12-addon-product_contract_brand',
         'odoo12-addon-sale_brand',
+        'odoo12-addon-sale_payment_mode_brand',
     ],
     classifiers=[
         'Programming Language :: Python',
