@@ -13,6 +13,7 @@
         'sale',
         'brand',
         'account_brand',
+        'analytic_brand',
     ],
     "data": [
         'views/sale_views.xml',
