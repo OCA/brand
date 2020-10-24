@@ -101,10 +101,13 @@ promote its widespread use.
 .. |maintainer-osi-scampbell| image:: https://github.com/osi-scampbell.png?size=40px
     :target: https://github.com/osi-scampbell
     :alt: osi-scampbell
+.. |maintainer-sbejaoui| image:: https://github.com/sbejaoui.png?size=40px
+    :target: https://github.com/sbejaoui
+    :alt: sbejaoui
 
-Current `maintainer <https://odoo-community.org/page/maintainer-role>`__:
+Current `maintainers <https://odoo-community.org/page/maintainer-role>`__:
 
-|maintainer-osi-scampbell| 
+|maintainer-osi-scampbell| |maintainer-sbejaoui| 
 
 This module is part of the `OCA/brand <https://github.com/OCA/brand/tree/13.0/account_brand>`_ project on GitHub.
 
