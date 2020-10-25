@@ -23,13 +23,18 @@ msgid "Account"
 msgstr ""
 
 #. module: account_brand
-#: model:ir.model.fields,field_description:account_brand.field_account_invoice__brand_id
+#: model:ir.model,name:account_brand.model_account_move_reversal
+msgid "Account Move Reversal"
+msgstr ""
+
+#. module: account_brand
+#: model:ir.model.fields,field_description:account_brand.field_account_move__brand_id
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__brand_id
 msgid "Brand"
 msgstr "Brand"
 
 #. module: account_brand
-#: model:ir.model.fields,help:account_brand.field_account_invoice__brand_id
+#: model:ir.model.fields,help:account_brand.field_account_move__brand_id
 msgid "Brand to use for this sale"
 msgstr ""
 
@@ -54,9 +59,9 @@ msgid "ID"
 msgstr ""
 
 #. module: account_brand
-#: model:ir.model,name:account_brand.model_account_invoice
-msgid "Invoice"
-msgstr "Račun"
+#: model:ir.model,name:account_brand.model_account_move
+msgid "Journal Entries"
+msgstr ""
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand____last_update
@@ -85,25 +90,25 @@ msgid "Partner Accounts by Brand"
 msgstr ""
 
 #. module: account_brand
-#: code:addons/account_brand/models/res_partner_account_brand.py:37
-#: sql_constraint:res.partner.account.brand:0
+#: code:addons/account_brand/models/res_partner_account_brand.py:0
+#: model:ir.model.constraint,message:account_brand.constraint_res_partner_account_brand_unique_account_by_partner
 #, python-format
 msgid "Partner has already an account set for this brand!"
 msgstr ""
 
 #. module: account_brand
-#: selection:res.partner.account.brand,account_type:0
+#: model:ir.model.fields.selection,name:account_brand.selection__res_partner_account_brand__account_type__payable
 msgid "Payable"
 msgstr ""
 
 #. module: account_brand
-#: code:addons/account_brand/models/res_partner_account_brand.py:50
+#: code:addons/account_brand/models/res_partner_account_brand.py:0
 #, python-format
 msgid "Please select an account of type %s"
 msgstr ""
 
 #. module: account_brand
-#: selection:res.partner.account.brand,account_type:0
+#: model:ir.model.fields.selection,name:account_brand.selection__res_partner_account_brand__account_type__receivable
 msgid "Receivable"
 msgstr ""
 
@@ -116,3 +121,6 @@ msgstr ""
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__account_type
 msgid "Type"
 msgstr ""
+
+#~ msgid "Invoice"
+#~ msgstr "Račun"
