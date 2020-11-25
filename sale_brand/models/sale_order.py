@@ -39,4 +39,5 @@ class SaleOrder(models.Model):
 
     @api.onchange('team_id')
     def _onchange_team_id(self):
-        self.brand_id = self.team_id.brand_id
+        if not self.brand_id and self.team_id.brand_id:
+            self.brand_id = self.team_id.brand_id
