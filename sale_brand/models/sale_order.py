@@ -41,3 +41,10 @@ class SaleOrder(models.Model):
     def _onchange_team_id(self):
         if not self.brand_id and self.team_id.brand_id:
             self.brand_id = self.team_id.brand_id
+
+    @api.multi
+    def _finalize_invoices(self, invoices, references):
+        res = super()._finalize_invoices(invoices, references)
+        for invoice in invoices.values():
+            invoice._onchange_partner_brand()
+        return res
