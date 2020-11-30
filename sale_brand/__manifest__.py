@@ -4,7 +4,7 @@
 {
     "name": "Sale Brand",
     "summary": "Send branded sales orders",
-    "version": "12.0.3.1.0",
+    "version": "12.0.3.1.1",
     "category": "Sales Management",
     "website": "https://github.com/OCA/sale-workflow",
     "author": "Open Source Integrators, Odoo Community Association (OCA)",
