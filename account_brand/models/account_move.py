@@ -34,7 +34,9 @@ class AccountMove(models.Model):
                 if not company_id
                 else self.partner_id.with_context(force_company=company_id)
             )
-            invoice_type = self.move_type or self.env.context.get("move_type", "out_invoice")
+            invoice_type = self.move_type or self.env.context.get(
+                "move_type", "out_invoice"
+            )
             if partner:
                 rec_account = pab_model._get_partner_account_by_brand(
                     "receivable", self.brand_id, partner
