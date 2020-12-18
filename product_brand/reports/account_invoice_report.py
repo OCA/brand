@@ -11,7 +11,7 @@ class AccountInvoiceReport(models.Model):
 
     @api.model
     def _select(self):
-        select_str = super(AccountInvoiceReport, self)._select()
+        select_str = super()._select()
         select_str += """
             , template.product_brand_id as product_brand_id
             """
@@ -19,6 +19,6 @@ class AccountInvoiceReport(models.Model):
 
     @api.model
     def _group_by(self):
-        group_by_str = super(AccountInvoiceReport, self)._group_by()
+        group_by_str = super()._group_by()
         group_by_str += ", template.product_brand_id"
         return group_by_str
