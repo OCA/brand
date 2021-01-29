@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2021 Yves Goldberg
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record model="ir.ui.view" id="crm_lead_form_view">
+        <field name="name">crm.lead.form (in crm_brand)</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <field name="team_id" position="after">
+                <field name="brand_id"/>
+            </field>
+        </field>
+    </record>
+
+
+
+</odoo>
