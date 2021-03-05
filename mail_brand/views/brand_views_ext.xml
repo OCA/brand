@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_brand_form_mail" model="ir.ui.view">
+        <field name="name">brand.form.mail</field>
+        <field name="model">res.brand</field>
+        <field name="inherit_id" ref="brand.res_brand_form_view" />
+        <field name="arch" type="xml">
+            <!-- <xpath expr="//field[@name='email']" position="after"> -->
+            <!-- <xpath expr="//field[@name='function']" position="after"> -->
+            <xpath expr="//group[1]" position="after">
+                <group name="mail_group">
+                    <field name="catchall_alias" />
+                    <field name="catchall_domain" />
+                    <field name="outgoing_mail_server_id" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_brand_tree_mail" model="ir.ui.view">
+        <field name="name">brand.tree.mail</field>
+        <field name="model">res.brand</field>
+        <field name="inherit_id" ref="brand.res_brand_tree_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='company_id']" position="after">
+                <field name="catchall_alias" />
+                <field name="catchall_domain" />
+                <field name="outgoing_mail_server_id" />
+            </xpath>
+        </field>
+    </record>
+</odoo>
