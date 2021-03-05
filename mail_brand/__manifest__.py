@@ -17,7 +17,6 @@
         "views/brand_views_ext.xml",
         "views/mail_alias_views_ext.xml",
         "views/mail_template_views_ext.xml",
-        # "views/res_users_view.xml",
         "wizard/mail_compose_message_view_ext.xml",
     ],
     "installable": True,

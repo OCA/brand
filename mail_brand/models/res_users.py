@@ -17,12 +17,3 @@ class ResUsers(models.Model):
         "Brand For Mails",
         domain="[('id', 'in', brand_ids)]",
     )
-
-    @api.onchange("brand_ids")
-    def _on_change_brand_ids(self):
-        if (
-            self.brand_for_mails_id
-            and self.brand_for_mails_id.id
-            not in self.brand_ids.ids
-        ):
-            self.brand_for_mails_id = False
