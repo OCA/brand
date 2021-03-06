@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-
     <record model="ir.ui.view" id="email_compose_message_wizard_form_mail">
         <field name="name">mail.compose.message.form.mail</field>
         <field name="model">mail.compose.message</field>
-        <field name="inherit_id" ref="mail.email_compose_message_wizard_form"/>
+        <field name="inherit_id" ref="mail.email_compose_message_wizard_form" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='active_domain']" position="after">
-                <field name="brand_id" invisible="1"/>
+                <field name="brand_id" invisible="1" />
             </xpath>
             <field name="template_id" position="attributes">
                 <attribute name="domain">
@@ -19,5 +18,4 @@
             </field>
         </field>
     </record>
-
 </odoo>

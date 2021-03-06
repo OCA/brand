@@ -3,17 +3,15 @@
     License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl.html).
 -->
 <odoo>
-
     <record id="ir_rule_mail_alias_allowed_brands" model="ir.rule">
-        <field name="model_id" ref="mail.model_mail_alias"/>
+        <field name="model_id" ref="mail.model_mail_alias" />
         <field name="domain_force">['|',('brand_id','=',False),
             ('brand_id','in',user.brand_ids.ids)]</field>
         <field name="name">Mail Aliases from allowed brands</field>
-        <field name="global" eval="True"/>
-        <field eval="0" name="perm_unlink"/>
-        <field eval="0" name="perm_write"/>
-        <field eval="1" name="perm_read"/>
-        <field eval="0" name="perm_create"/>
+        <field name="global" eval="True" />
+        <field eval="0" name="perm_unlink" />
+        <field eval="0" name="perm_write" />
+        <field eval="1" name="perm_read" />
+        <field eval="0" name="perm_create" />
     </record>
-
 </odoo>
