@@ -97,7 +97,8 @@ class TestBrandMixin(TransactionCase):
 
     def test_fields_view_get(self):
         view = self.env["account.move"].fields_view_get(
-            view_id=self.env.ref("account.view_move_form").id, view_type="form",
+            view_id=self.env.ref("account.view_move_form").id,
+            view_type="form",
         )
         doc = etree.XML(view["arch"])
         self.assertTrue(doc.xpath("//field[@name='brand_use_level']"))
