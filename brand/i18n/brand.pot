@@ -232,8 +232,8 @@ msgstr ""
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
 msgid ""
-"Configure branding of customer facing business documents (SO, invoices, "
-"etc)."
+"Configure branding of customer facing business\n"
+"                                    documents (SO, invoices, etc)."
 msgstr ""
 
 #. module: brand
