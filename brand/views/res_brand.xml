@@ -4,14 +4,11 @@
 <odoo>
     <record model="ir.ui.view" id="res_brand_form_view">
         <field name="model">res.brand</field>
-        <field name="inherit_id" ref="base.view_partner_short_form" />
+        <field name="inherit_id" ref="base.view_partner_simple_form" />
         <field name="mode">primary</field>
         <field name="arch" type="xml">
             <xpath expr="//form" position="attributes">
                 <attribute name="string">Brand</attribute>
-            </xpath>
-            <xpath expr="//field[@name='vat']" position="attributes">
-                <attribute name="invisible">1</attribute>
             </xpath>
             <xpath expr="//field[@name='company_type']" position="attributes">
                 <attribute name="invisible">1</attribute>
