@@ -14,6 +14,7 @@ setuptools.setup(
         'odoo13-addon-brand_external_report_layout',
         'odoo13-addon-contract_brand',
         'odoo13-addon-product_brand',
+        'odoo13-addon-product_brand_purchase_report',
         'odoo13-addon-sale_brand',
     ],
     classifiers=[
