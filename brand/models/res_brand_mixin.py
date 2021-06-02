@@ -25,7 +25,6 @@ class ResBrandMixin(models.AbstractModel):
     )
     brand_use_level = fields.Selection(
         string="Brand Use Level",
-        selection=BRAND_USE_LEVEL_SELECTION,
         default=BRAND_USE_LEVEL_NO_USE_LEVEL,
         related="company_id.brand_use_level",
     )
