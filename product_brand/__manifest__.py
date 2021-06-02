@@ -9,7 +9,7 @@
 
 {
     "name": "Product Brand Manager",
-    "version": "13.0.2.0.1",
+    "version": "13.0.2.0.2",
     "development_status": "Mature",
     "category": "Product",
     "summary": "Product Brand Manager",
