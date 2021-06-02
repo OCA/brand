@@ -19,7 +19,9 @@ class ResBrandMixin(models.AbstractModel):
     _description = "Brand Mixin"
 
     brand_id = fields.Many2one(
-        comodel_name="res.brand", string="Brand", help="Brand to use for this sale",
+        comodel_name="res.brand",
+        string="Brand",
+        help="Brand to use for this sale",
     )
     brand_use_level = fields.Selection(
         string="Brand Use Level",
@@ -27,7 +29,9 @@ class ResBrandMixin(models.AbstractModel):
         default=BRAND_USE_LEVEL_NO_USE_LEVEL,
         related="company_id.brand_use_level",
     )
-    company_id = fields.Many2one(comodel_name="res.company",)
+    company_id = fields.Many2one(
+        comodel_name="res.company",
+    )
 
     def _is_brand_required(self):
         self.ensure_one()
@@ -68,7 +72,10 @@ class ResBrandMixin(models.AbstractModel):
     ):
         """set visibility and requirement rules"""
         result = super(ResBrandMixin, self).fields_view_get(
-            view_id=view_id, view_type=view_type, toolbar=toolbar, submenu=submenu,
+            view_id=view_id,
+            view_type=view_type,
+            toolbar=toolbar,
+            submenu=submenu,
         )
 
         if view_type in ["tree", "form"]:
@@ -90,7 +97,10 @@ class ResBrandMixin(models.AbstractModel):
                     '[("brand_use_level", "=", "%s")], '
                     '"required": '
                     '[("brand_use_level", "=", "%s")]}'
-                    % (BRAND_USE_LEVEL_NO_USE_LEVEL, BRAND_USE_LEVEL_REQUIRED_LEVEL,),
+                    % (
+                        BRAND_USE_LEVEL_NO_USE_LEVEL,
+                        BRAND_USE_LEVEL_REQUIRED_LEVEL,
+                    ),
                 )
                 field = result["fields"]["brand_id"]
                 self.setup_modifiers(
