@@ -12,7 +12,7 @@
                 <field name="allowed_payment_mode_ids" widget="many2many_tags" invisible="1"/>
             </xpath>
             <xpath expr="//field[@name='payment_mode_id']" position="attributes">
-                <attribute name="domain">[('id', 'in', allowed_payment_mode_ids)]</attribute>
+                <attribute name="domain">[('id', 'in', allowed_payment_mode_ids), ('payment_type', '=', 'inbound')]</attribute>
             </xpath>
         </field>
     </record>
