@@ -20,9 +20,9 @@ class AccountMove(models.Model):
 
     def _is_brand_required(self):
         self.ensure_one()
-        if self.type in ("in_invoice", "in_refund", "entry"):
-            return False
-        return super()._is_brand_required()
+        if self.type in ("out_invoice", "out_refund"):
+            return super()._is_brand_required()
+        return False
 
     def _recompute_payment_terms_lines(self):
         super()._recompute_payment_terms_lines()
