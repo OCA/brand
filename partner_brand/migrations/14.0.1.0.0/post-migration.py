@@ -12,7 +12,7 @@ def migrate(cr, version):
     _logger.info("Move brands to res.brand model")
     with api.Environment.manage():
         env = api.Environment(cr, SUPERUSER_ID, {})
-        brands = env["res.partner"].search([("type", "=", "brand")])
+        brands = env['res.partner'].search([('type', '=', 'brand')])
         for brand in brands:
-            env["res.brand"].create({"partner_id": brand.id})
-            brand.type = "contact"
+            env['res.brand'].create({'partner_id': brand.id})
+            brand.type = 'contact'
