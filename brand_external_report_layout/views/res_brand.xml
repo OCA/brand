@@ -48,11 +48,11 @@
             </form>
         </field>
     </record>
-    <record model="ir.ui.view" id="res_brand_form_view">
+    <record id="res_brand_form_view" model="ir.ui.view">
         <field name="model">res.brand</field>
         <field name="inherit_id" ref="brand.res_brand_form_view" />
         <field name="arch" type="xml">
-            <xpath expr="//div[hasclass('o_address_format')]" position="after">
+            <xpath expr="//form/group" position="after">
                 <div colspan="2">
                     <button
                         name="change_report_template"
