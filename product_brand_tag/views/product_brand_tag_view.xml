@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_product_brand_tag_tree" model="ir.ui.view">
+        <field name="name">product.brand.tag.tree</field>
+        <field name="model">product.brand.tag</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name" />
+                <field name="code" />
+                <field name="product_brand_ids" widget="many2many_tags" />
+                <field name="company_id" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_product_brand_tags">
+        <field name="name">Brand tags</field>
+        <field name="res_model">product.brand.tag</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem
+        name="Product Brands Tags"
+        id="menu_product_brand_tags"
+        action="action_product_brand_tags"
+        parent="sale.prod_config_main"
+    />
+
+</odoo>
