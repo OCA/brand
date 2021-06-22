@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2019 ACSONE SA/NV
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="res_brand_form_view">
+        <field name="model">res.brand</field>
+        <field name="inherit_id" ref="brand.res_brand_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <group name="analytic">
+                    <field
+                        name="analytic_account_id"
+                        groups="analytic.group_analytic_accounting"
+                    />
+                </group>
+            </xpath>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="res_brand_tree_view">
+        <field name="model">res.brand</field>
+        <field name="inherit_id" ref="brand.res_brand_tree_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="inside">
+                <field
+                    name="analytic_account_id"
+                    groups="analytic.group_analytic_accounting"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>
