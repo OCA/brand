@@ -7,11 +7,7 @@ from odoo.exceptions import ValidationError
 
 from odoo.addons.base.models import ir_ui_view
 
-from .res_company import (
-    BRAND_USE_LEVEL_NO_USE_LEVEL,
-    BRAND_USE_LEVEL_REQUIRED_LEVEL,
-    BRAND_USE_LEVEL_SELECTION,
-)
+from .res_company import BRAND_USE_LEVEL_NO_USE_LEVEL, BRAND_USE_LEVEL_REQUIRED_LEVEL
 
 
 class ResBrandMixin(models.AbstractModel):
