@@ -3,8 +3,6 @@
 
 from odoo import fields, models
 
-from .res_company import BRAND_USE_LEVEL_NO_USE_LEVEL, BRAND_USE_LEVEL_SELECTION
-
 
 class ResConfigSetting(models.TransientModel):
     _inherit = "res.config.settings"
