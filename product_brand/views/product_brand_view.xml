@@ -51,12 +51,12 @@
                             <field name="name" />
                         </h1>
                     </div>
-                    <group>
-                        <group>
+                    <group name="main">
+                        <group name="partner">
                             <field name="partner_id" />
                         </group>
                     </group>
-                    <group string="Description">
+                    <group name="desc" string="Description">
                         <field name="description" nolabel="1" />
                     </group>
                 </sheet>
