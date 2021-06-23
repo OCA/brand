@@ -23,6 +23,7 @@ addon | version | summary
 [brand](brand/) | 14.0.1.0.0 | This is a base addon for brand modules. It adds the brand object and its menu and define an abstract model to be inherited from branded objects
 [product_brand](product_brand/) | 14.0.1.0.1 | Product Brand Manager
 [product_brand_multicompany](product_brand_multicompany/) | 14.0.1.0.0 | Define rules product brand's visibility by company
+[product_brand_tag](product_brand_tag/) | 14.0.1.0.0 | Add tags to product brand
 
 [//]: # (end addons)
 
