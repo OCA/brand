@@ -3,7 +3,7 @@
 {
     "name": "Product brand tags",
     "summary": "Add tags to product brand",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.1.0",
     "author": "Camptocamp, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "category": "Product",
