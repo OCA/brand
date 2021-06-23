@@ -13,6 +13,7 @@ setuptools.setup(
         'odoo14-addon-product_brand',
         'odoo14-addon-product_brand_multicompany',
         'odoo14-addon-product_brand_tag',
+        'odoo14-addon-product_brand_tag_secondary',
     ],
     classifiers=[
         'Programming Language :: Python',
