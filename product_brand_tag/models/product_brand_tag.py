@@ -2,6 +2,7 @@
 # @author: Simone Orsi <simone.orsi@camptocamp.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
+from psycopg2.extensions import AsIs
 
 from odoo import api, fields, models
 
@@ -51,21 +52,29 @@ class ProductBrandTag(models.Model):
 
     @api.depends("product_brand_ids")
     def _compute_brands_count(self):
-        count = {}
+        count = self._get_brands_count("product_brand_ids")
+        for rec in self:
+            rec.brands_count = count.get(rec.id, 0)
+
+    def _get_brands_count(self, rel_field_name):
+        res = {}
         if self.ids:
+            table = self._fields[rel_field_name].relation
             self.env.cr.execute(
                 """
                 SELECT
                     tag_id, COUNT(*)
                 FROM
-                    product_brand_tag_rel
+                    %s
                 WHERE
                     tag_id IN %s
                 GROUP BY
                     tag_id
                 """,
-                (tuple(self.ids),),
+                (
+                    AsIs(table),
+                    tuple(self.ids),
+                ),
             )
-            count = dict(self.env.cr.fetchall())
-        for rec in self:
-            rec.brands_count = count.get(rec.id, 0)
+            res = dict(self.env.cr.fetchall())
+        return res
