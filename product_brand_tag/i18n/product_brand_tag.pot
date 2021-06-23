@@ -1,0 +1,112 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_brand_tag
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__brands_count
+msgid "# of brands"
+msgstr ""
+
+#. module: product_brand_tag
+#: model:ir.actions.act_window,name:product_brand_tag.action_product_brand_tags
+msgid "Brand tags"
+msgstr ""
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__product_brand_ids
+msgid "Brands"
+msgstr ""
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__code
+msgid "Code"
+msgstr ""
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__color
+msgid "Color Index"
+msgstr ""
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__company_id
+msgid "Company"
+msgstr ""
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand__display_name
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand__id
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__id
+msgid "ID"
+msgstr ""
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand____last_update
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__name
+msgid "Name"
+msgstr ""
+
+#. module: product_brand_tag
+#: model:ir.model,name:product_brand_tag.model_product_brand
+msgid "Product Brand"
+msgstr ""
+
+#. module: product_brand_tag
+#: model:ir.model,name:product_brand_tag.model_product_brand_tag
+msgid "Product Brand Tag"
+msgstr ""
+
+#. module: product_brand_tag
+#: model:ir.ui.menu,name:product_brand_tag.menu_product_brand_tags
+msgid "Product Brands Tags"
+msgstr ""
+
+#. module: product_brand_tag
+#: model:ir.model.constraint,message:product_brand_tag.constraint_product_brand_tag_tag_code_uniq
+msgid "Tag code must be unique inside a company"
+msgstr ""
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand__tag_ids
+msgid "Tags"
+msgstr ""
