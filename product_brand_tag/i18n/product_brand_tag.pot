@@ -24,11 +24,6 @@ msgid "Brand tags"
 msgstr ""
 
 #. module: product_brand_tag
-#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__product_brand_ids
-msgid "Brands"
-msgstr ""
-
-#. module: product_brand_tag
 #: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__code
 msgid "Code"
 msgstr ""
@@ -87,6 +82,16 @@ msgid "Name"
 msgstr ""
 
 #. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand__tag_ids
+msgid "Primary Tags"
+msgstr ""
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__product_brand_ids
+msgid "Primary for brands"
+msgstr ""
+
+#. module: product_brand_tag
 #: model:ir.model,name:product_brand_tag.model_product_brand
 msgid "Product Brand"
 msgstr ""
@@ -104,9 +109,4 @@ msgstr ""
 #. module: product_brand_tag
 #: model:ir.model.constraint,message:product_brand_tag.constraint_product_brand_tag_tag_code_uniq
 msgid "Tag code must be unique inside a company"
-msgstr ""
-
-#. module: product_brand_tag
-#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand__tag_ids
-msgid "Tags"
 msgstr ""
