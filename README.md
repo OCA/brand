@@ -23,8 +23,8 @@ addon | version | summary
 [brand](brand/) | 14.0.1.0.0 | This is a base addon for brand modules. It adds the brand object and its menu and define an abstract model to be inherited from branded objects
 [product_brand](product_brand/) | 14.0.1.0.1 | Product Brand Manager
 [product_brand_multicompany](product_brand_multicompany/) | 14.0.1.0.0 | Define rules product brand's visibility by company
-[product_brand_social_responsibility](product_brand_social_responsibility/) | 14.0.1.0.0 | Provide CSR info on brands.
-[product_brand_tag](product_brand_tag/) | 14.0.1.0.0 | Add tags to product brand
+[product_brand_social_responsibility](product_brand_social_responsibility/) | 14.0.1.1.0 | Provide CSR info on brands.
+[product_brand_tag](product_brand_tag/) | 14.0.1.1.0 | Add tags to product brand
 [product_brand_tag_secondary](product_brand_tag_secondary/) | 14.0.1.0.0 | Add secondary tags to product brand for a second level of categorization.
 
 [//]: # (end addons)
