@@ -11,6 +11,7 @@ setuptools.setup(
         'odoo14-addon-analytic_brand',
         'odoo14-addon-brand',
         'odoo14-addon-product_brand',
+        'odoo14-addon-product_brand_multicompany',
     ],
     classifiers=[
         'Programming Language :: Python',
