@@ -1,0 +1,16 @@
+<odoo>
+    <record id="product_brand_tag_company" model="ir.rule">
+        <field name="name">
+            product.brand.tag.csr company (product_brand_social_responsibiliy)
+        </field>
+        <field name="model_id" ref="model_product_brand_tag_csr" />
+        <field name="perm_read" eval="1" />
+        <field name="perm_create" eval="1" />
+        <field name="perm_write" eval="1" />
+        <field name="perm_unlink" eval="1" />
+        <field name="domain_force">
+            ['|', ('company_id', '=', False), ('company_id', 'child_of',
+            [user.company_id.id])]
+        </field>
+    </record>
+</odoo>

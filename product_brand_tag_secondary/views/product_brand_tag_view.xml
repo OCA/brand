@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_product_brand_tag_tree" model="ir.ui.view">
+        <field name="name">product.brand.tag.tree</field>
+        <field name="model">product.brand.tag</field>
+        <field name="inherit_id" ref="product_brand_tag.view_product_brand_tag_tree" />
+        <field name="arch" type="xml">
+            <field name="product_brand_ids" position="after">
+                <field name="secondary_product_brand_ids" widget="many2many_tags" />
+            </field>
+        </field>
+    </record>
+
+
+</odoo>
