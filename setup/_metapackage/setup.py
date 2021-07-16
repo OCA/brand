@@ -8,6 +8,7 @@ setuptools.setup(
     description="Meta package for oca-brand Odoo addons",
     version=version,
     install_requires=[
+        'odoo14-addon-account_brand',
         'odoo14-addon-analytic_brand',
         'odoo14-addon-brand',
         'odoo14-addon-product_brand',
