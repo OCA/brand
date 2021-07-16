@@ -17,7 +17,7 @@ class TestAccountAnalyticMove(SavepointCase):
         self.move = self.env["account.move"].create(
             {
                 "partner_id": self.env.ref("base.res_partner_12").id,
-                "type": "out_invoice",
+                "move_type": "out_invoice",
                 "invoice_line_ids": [
                     (
                         0,
