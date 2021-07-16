@@ -19,6 +19,7 @@ Available addons
 ----------------
 addon | version | summary
 --- | --- | ---
+[account_brand](account_brand/) | 14.0.1.0.0 | Send branded invoices and refunds
 [analytic_brand](analytic_brand/) | 14.0.1.0.0 | This addon associate an analytic account to a brand that will be used as a default value where the brand is used if the analytic accounting is activated
 [brand](brand/) | 14.0.1.0.1 | This is a base addon for brand modules. It adds the brand object and its menu and define an abstract model to be inherited from branded objects
 [product_brand](product_brand/) | 14.0.1.0.1 | Product Brand Manager
