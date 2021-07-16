@@ -107,7 +107,7 @@ class TestBrandMixin(TransactionCase):
         move = self.env["account.move"].create(
             {
                 "name": "Sample invoice",
-                "type": "out_invoice",
+                "move_type": "out_invoice",
                 "company_id": self.company.id,
                 "journal_id": self.journal.id,
                 "partner_id": self.partner.id,
