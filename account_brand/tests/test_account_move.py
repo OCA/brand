@@ -97,7 +97,8 @@ class TestAccountMove(SavepointCase):
         self.move._onchange_partner_id()
         account = self._get_receivable_account(self.move)
         self.assertEqual(
-            account, self.account_receivable_partner_brand_default,
+            account,
+            self.account_receivable_partner_brand_default,
         )
         move = self.env["account.move"].create(
             {
@@ -108,5 +109,6 @@ class TestAccountMove(SavepointCase):
         )
         account = self._get_receivable_account(move)
         self.assertEqual(
-            account, self.account_receivable_partner_brand_default,
+            account,
+            self.account_receivable_partner_brand_default,
         )
