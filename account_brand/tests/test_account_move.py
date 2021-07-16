@@ -44,7 +44,7 @@ class TestAccountMove(SavepointCase):
         self.move = self.env["account.move"].create(
             {
                 "partner_id": self.partner_id.id,
-                "type": "out_invoice",
+                "move_type": "out_invoice",
                 "invoice_line_ids": [
                     (
                         0,
@@ -104,7 +104,7 @@ class TestAccountMove(SavepointCase):
             {
                 "partner_id": self.partner_id.id,
                 "brand_id": self.brand_id.id,
-                "type": "out_invoice",
+                "move_type": "out_invoice",
             }
         )
         account = self._get_receivable_account(move)
