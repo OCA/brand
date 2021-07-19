@@ -35,5 +35,6 @@ class TestSaleOrder(TransactionCase):
         self.assertFalse(draft_sale.analytic_account_id)
         draft_sale._onchange_brand_id()
         self.assertEqual(
-            draft_sale.analytic_account_id, draft_sale.brand_id.analytic_account_id,
+            draft_sale.analytic_account_id,
+            draft_sale.brand_id.analytic_account_id,
         )
