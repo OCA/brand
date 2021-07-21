@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
+"Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -47,6 +47,11 @@ msgid "Choose Your Document Layout"
 msgstr ""
 
 #. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__external_report_layout_id
 msgid "Document Template"
 msgstr ""
@@ -59,6 +64,16 @@ msgstr ""
 #. module: brand_external_report_layout
 #: model:ir.model.fields,help:brand_external_report_layout.field_res_brand__report_footer
 msgid "Footer text displayed at the bottom of all reports."
+msgstr ""
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__id
+msgid "ID"
+msgstr ""
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand____last_update
+msgid "Last Modified on"
 msgstr ""
 
 #. module: brand_external_report_layout
