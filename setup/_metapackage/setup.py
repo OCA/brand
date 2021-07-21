@@ -17,6 +17,7 @@ setuptools.setup(
         'odoo14-addon-product_brand_social_responsibility',
         'odoo14-addon-product_brand_tag',
         'odoo14-addon-product_brand_tag_secondary',
+        'odoo14-addon-sale_brand',
     ],
     classifiers=[
         'Programming Language :: Python',
