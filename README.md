@@ -28,6 +28,7 @@ addon | version | summary
 [product_brand_social_responsibility](product_brand_social_responsibility/) | 14.0.1.1.0 | Provide CSR info on brands.
 [product_brand_tag](product_brand_tag/) | 14.0.1.1.0 | Add tags to product brand
 [product_brand_tag_secondary](product_brand_tag_secondary/) | 14.0.1.0.0 | Add secondary tags to product brand for a second level of categorization.
+[sale_brand](sale_brand/) | 14.0.1.0.0 | Send branded sales orders
 
 [//]: # (end addons)
 
