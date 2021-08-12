@@ -2,7 +2,7 @@
 # @author: Simone Orsi <simone.orsi@camptocamp.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from psycopg2.extensions import AsIs
+from psycopg2 import sql
 
 from odoo import api, fields, models
 
@@ -21,7 +21,6 @@ class ProductBrandTag(models.AbstractModel):
     product_brand_ids = fields.Many2many(
         comodel_name="product.brand",
         string="Brands",
-        relation="product_brand_tag_rel",
         column1="tag_id",
         column2="brand_id",
     )
@@ -59,22 +58,18 @@ class ProductBrandTag(models.AbstractModel):
     def _get_brands_count(self, rel_field_name):
         res = {}
         if self.ids:
-            table = self._fields[rel_field_name].relation
-            self.env.cr.execute(
+            field = self._fields[rel_field_name]
+            query = sql.SQL(
                 """
-                SELECT
-                    tag_id, COUNT(*)
-                FROM
-                    %s
-                WHERE
-                    tag_id IN %s
-                GROUP BY
-                    tag_id
-                """,
-                (
-                    AsIs(table),
-                    tuple(self.ids),
-                ),
+                SELECT {column1}, COUNT(*)
+                FROM {relation}
+                WHERE {column1} IN %s
+                GROUP BY {column1}
+                """
+            ).format(
+                relation=sql.Identifier(field.relation),
+                column1=sql.Identifier(field.column1),
             )
+            self.env.cr.execute(query, (tuple(self.ids),))
             res = dict(self.env.cr.fetchall())
         return res
