@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="product_brand.product_brand_search_form_view" />
         <field name="arch" type="xml">
             <field name="partner_id" position="after">
-                <field name="tag_ids" />
+                <field name="tag_ids" options="{'color_field': 'color'}" />
             </field>
         </field>
     </record>
@@ -17,7 +17,11 @@
         <field name="inherit_id" ref="product_brand.view_product_brand_form" />
         <field name="arch" type="xml">
             <field name="partner_id" position="after">
-                <field name="tag_ids" widget="many2many_tags" />
+                <field
+                    name="tag_ids"
+                    widget="many2many_tags"
+                    options="{'color_field': 'color'}"
+                />
             </field>
         </field>
     </record>

@@ -36,6 +36,11 @@ msgid "Code"
 msgstr ""
 
 #. module: product_brand_tag
+#: model_terms:ir.ui.view,arch_db:product_brand_tag.view_product_brand_tag_form
+msgid "Color"
+msgstr ""
+
+#. module: product_brand_tag
 #: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__color
 #: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag_mixin__color
 msgid "Color Index"
