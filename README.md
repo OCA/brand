@@ -26,7 +26,7 @@ addon | version | maintainers | summary
 [product_brand](product_brand/) | 14.0.1.1.0 |  | Product Brand Manager
 [product_brand_multicompany](product_brand_multicompany/) | 14.0.1.0.0 |  | Define rules product brand's visibility by company
 [product_brand_social_responsibility](product_brand_social_responsibility/) | 14.0.1.1.0 |  | Provide CSR info on brands.
-[product_brand_tag](product_brand_tag/) | 14.0.1.1.0 |  | Add tags to product brand
+[product_brand_tag](product_brand_tag/) | 14.0.1.1.1 |  | Add tags to product brand
 [product_brand_tag_secondary](product_brand_tag_secondary/) | 14.0.1.0.0 |  | Add secondary tags to product brand for a second level of categorization.
 [sale_brand](sale_brand/) | 14.0.1.0.0 | [![osi-scampbell](https://github.com/osi-scampbell.png?size=30px)](https://github.com/osi-scampbell) [![sbejaoui](https://github.com/sbejaoui.png?size=30px)](https://github.com/sbejaoui) | Send branded sales orders
 
