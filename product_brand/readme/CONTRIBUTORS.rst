@@ -13,3 +13,6 @@
   * João Marques
 
 * Kaushal Prajapati <kbprajapati@live.com>
+* `Jarsa <https://www.jarsa.com>`_
+
+  * Alan Ramos
