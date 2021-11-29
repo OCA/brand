@@ -69,7 +69,7 @@
         <field name="name">product.brand.tree</field>
         <field name="model">product.brand</field>
         <field name="arch" type="xml">
-            <tree string="product.brand">
+            <tree>
                 <field name="name" />
                 <field name="description" />
                 <field name="partner_id" />
@@ -147,10 +147,7 @@
         <field name="model">product.template</field>
         <field name="inherit_id" ref="product.product_template_kanban_view" />
         <field name="arch" type="xml">
-            <xpath
-                expr="//div[hasclass('oe_kanban_details')]/strong[1]"
-                position="after"
-            >
+            <xpath expr="//strong[hasclass('o_kanban_record_title')]" position="after">
                 <div>
                     <a
                         t-if="record.product_brand_id"
