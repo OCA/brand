@@ -7,7 +7,7 @@
         This is a base addon for brand modules. It adds the brand object and
         its menu and define an abstract model to be inherited from branded
         objects""",
-    'version': '12.0.1.1.2',
+    'version': '12.0.1.1.3',
     'license': 'LGPL-3',
     'author': 'Odoo Community Association (OCA),'
               'ACSONE SA/NV',
