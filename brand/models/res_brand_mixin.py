@@ -71,14 +71,13 @@ class ResBrandMixin(models.AbstractModel):
 
         if view_type in ['tree', 'form']:
             doc = etree.XML(result['arch'])
+            modifiers = self.fields_get(['brand_use_level'])['brand_use_level']
+            result['fields']['brand_use_level'] = modifiers
+            elem = etree.Element(
+                'field', {'name': 'brand_use_level', 'invisible': 'True'}
+            )
+            orm.setup_modifiers(elem, modifiers)
             for node in doc.xpath("//field[@name='brand_id']"):
-                elem = etree.Element(
-                    'field', {'name': 'brand_use_level', 'invisible': 'True'}
-                )
-                orm.setup_modifiers(
-                    elem,
-                    self.fields_get(['brand_use_level'])['brand_use_level'],
-                )
                 node.addprevious(elem)
                 node.set(
                     'attrs',
