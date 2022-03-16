@@ -69,7 +69,8 @@ class AccountMove(models.Model):
         for invoice in self:
             if invoice.state == "draft" and invoice.brand_id:
                 account_analytic = invoice.brand_id.analytic_account_id
-                invoice.invoice_line_ids.update(
-                    {"analytic_account_id": account_analytic.id}
-                )
+                if account_analytic:
+                    invoice.invoice_line_ids.update(
+                        {"analytic_account_id": account_analytic.id}
+                    )
         return res
