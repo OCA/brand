@@ -25,7 +25,7 @@ class AccountMove(models.Model):
         return super()._is_brand_required()
 
     def _recompute_payment_terms_lines(self):
-        super()._recompute_payment_terms_lines()
+        res = super()._recompute_payment_terms_lines()
         if self.brand_id:
             pab_model = self.env["res.partner.account.brand"]
             company_id = self.company_id.id
@@ -61,6 +61,7 @@ class AccountMove(models.Model):
                         lambda l, a=account_id: l.account_id.user_type_id
                         == a.user_type_id
                     ).update({"account_id": account_id.id})
+        return res
 
     @api.onchange("brand_id", "invoice_line_ids")
     def _onchange_brand_id(self):
