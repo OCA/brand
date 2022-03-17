@@ -1,10 +1,10 @@
 # Copyright 2019 ACSONE SA/NV
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo.tests.common import SavepointCase
+from odoo.tests.common import TransactionCase
 
 
-class TestAccountMove(SavepointCase):
+class TestAccountMove(TransactionCase):
     def setUp(self):
         super(TestAccountMove, self).setUp()
         self.product = self.env.ref("product.product_product_4")
