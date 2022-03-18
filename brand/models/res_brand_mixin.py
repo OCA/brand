@@ -21,7 +21,6 @@ class ResBrandMixin(models.AbstractModel):
     )
     brand_use_level = fields.Selection(
         string="Brand Use Level",
-        default=BRAND_USE_LEVEL_NO_USE_LEVEL,
         related="company_id.brand_use_level",
     )
     company_id = fields.Many2one(
@@ -53,13 +52,11 @@ class ResBrandMixin(models.AbstractModel):
             if rec.brand_id and rec.brand_id.company_id:
                 rec.company_id = rec.brand_id.company_id
 
-    def setup_modifiers(self, node, field=None, context=None, current_node_path=None):
+    def setup_modifiers(self, node, field=None, context=None):
         modifiers = {}
         if field is not None:
             ir_ui_view.transfer_field_to_modifiers(field, modifiers)
-        ir_ui_view.transfer_node_to_modifiers(
-            node, modifiers, context=context, current_node_path=current_node_path
-        )
+        ir_ui_view.transfer_node_to_modifiers(node, modifiers, context=context)
         ir_ui_view.transfer_modifiers_to_node(modifiers, node)
 
     def fields_view_get(
@@ -77,17 +74,11 @@ class ResBrandMixin(models.AbstractModel):
             doc = etree.XML(result["arch"])
             result["fields"].update(self.fields_get(["brand_use_level"]))
             for node in doc.xpath("//field[@name='brand_id']"):
-                in_tree_view = node.tag == "tree"
                 elem = etree.Element(
                     "field", {"name": "brand_use_level", "invisible": "True"}
                 )
                 field = result["fields"]["brand_use_level"]
-                self.setup_modifiers(
-                    elem,
-                    field=field,
-                    context=self._context,
-                    current_node_path=in_tree_view,
-                )
+                self.setup_modifiers(elem, field=field, context=self._context)
                 node.addprevious(elem)
                 node.set(
                     "attrs",
@@ -101,11 +92,6 @@ class ResBrandMixin(models.AbstractModel):
                     ),
                 )
                 field = result["fields"]["brand_id"]
-                self.setup_modifiers(
-                    node,
-                    field=field,
-                    context=self._context,
-                    current_node_path=in_tree_view,
-                )
+                self.setup_modifiers(node, field=field, context=self._context)
             result["arch"] = etree.tostring(doc, encoding="unicode")
         return result
