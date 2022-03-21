@@ -4,7 +4,7 @@
 import base64
 import os
 
-from odoo import _, fields, models, tools
+from odoo import _, api, fields, models, tools
 
 
 class ResBrand(models.Model):
@@ -36,12 +36,10 @@ class ResBrand(models.Model):
         comodel_name="ir.ui.view", string="Document Template"
     )
     report_header = fields.Text(
-        string="Report Header",
         help="Appears by default on the top right corner of your printed "
         "documents (report header).",
     )
     report_footer = fields.Text(
-        string="Report Footer",
         translate=True,
         help="Footer text displayed at the bottom of all reports.",
     )
@@ -66,6 +64,16 @@ class ResBrand(models.Model):
     )
     primary_color = fields.Char()
     secondary_color = fields.Char()
+    company_details = fields.Html(
+        string="Brand Details",
+        help="Header text displayed at the top of all reports.",
+    )
+    layout_background = fields.Selection(
+        [("Blank", "Blank"), ("Geometric", "Geometric"), ("Custom", "Custom")],
+        default="Blank",
+        required=True,
+    )
+    layout_background_image = fields.Binary("Background Image")
 
     def change_report_template(self):
         self.ensure_one()
@@ -79,3 +87,47 @@ class ResBrand(models.Model):
             "res_model": "brand.document.layout",
             "context": context,
         }
+
+    def _get_asset_style_b64(self):
+        template_style = self.env.ref(
+            "brand_external_report_layout.styles_brand_report", raise_if_not_found=False
+        )
+        if not template_style:
+            return b""
+        brand_styles = template_style._render(
+            {
+                "brand_ids": self.sudo().search([]),
+            }
+        )
+        return base64.b64encode(brand_styles.encode())
+
+    def _update_asset_style(self):
+        asset_attachment = self.env.ref(
+            "brand_external_report_layout.asset_styles_brand_report",
+            raise_if_not_found=False,
+        )
+        if not asset_attachment:
+            return
+        asset_attachment = asset_attachment.sudo()
+        b64_val = self._get_asset_style_b64()
+        if b64_val != asset_attachment.datas:
+            asset_attachment.write({"datas": b64_val})
+
+    @api.model
+    def _get_style_fields(self):
+        return {"external_report_layout_id", "font", "primary_color", "secondary_color"}
+
+    @api.model_create_multi
+    def create(self, vals_list):
+        companies = super().create(vals_list)
+        style_fields = self._get_style_fields()
+        if any(not style_fields.isdisjoint(values) for values in vals_list):
+            self._update_asset_style()
+        return companies
+
+    def write(self, values):
+        res = super().write(values)
+        style_fields = self._get_style_fields()
+        if not style_fields.isdisjoint(values):
+            self._update_asset_style()
+        return res
