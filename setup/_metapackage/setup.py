@@ -12,6 +12,7 @@ setuptools.setup(
         'odoo14-addon-analytic_brand',
         'odoo14-addon-brand',
         'odoo14-addon-brand_external_report_layout',
+        'odoo14-addon-contract_brand',
         'odoo14-addon-product_brand',
         'odoo14-addon-product_brand_multicompany',
         'odoo14-addon-product_brand_social_responsibility',
