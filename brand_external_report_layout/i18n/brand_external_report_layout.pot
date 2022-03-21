@@ -55,7 +55,6 @@ msgstr ""
 
 #. module: brand_external_report_layout
 #: code:addons/brand_external_report_layout/models/res_brand.py:0
-#: code:addons/brand_external_report_layout/models/res_brand.py:0
 #, python-format
 msgid "Choose Your Document Layout"
 msgstr ""
