@@ -11,6 +11,11 @@
     "author": "ACSONE SA/NV," "Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/brand",
     "depends": ["base", "brand", "web"],
-    "data": ["views/res_brand.xml", "views/report_template.xml"],
+    "data": [
+        "security/brand_document_layout.xml",
+        "views/res_brand.xml",
+        "views/report_template.xml",
+        "wizards/brand_document_layout.xml",
+    ],
     "maintainers": ["sbejaoui"],
 }
