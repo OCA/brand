@@ -45,20 +45,37 @@ class ResBrand(models.Model):
         translate=True,
         help="Footer text displayed at the bottom of all reports.",
     )
+    paperformat_id = fields.Many2one(
+        "report.paperformat",
+        "Paper format",
+        default=lambda self: self.env.ref(
+            "base.paperformat_euro", raise_if_not_found=False
+        ),
+    )
+
+    font = fields.Selection(
+        [
+            ("Lato", "Lato"),
+            ("Roboto", "Roboto"),
+            ("Open_Sans", "Open Sans"),
+            ("Montserrat", "Montserrat"),
+            ("Oswald", "Oswald"),
+            ("Raleway", "Raleway"),
+        ],
+        default="Lato",
+    )
+    primary_color = fields.Char()
+    secondary_color = fields.Char()
 
     def change_report_template(self):
         self.ensure_one()
-        form_view = self.env.ref(
-            "brand_external_report_layout.res_brand_document_template_form"
-        )
+        context = {"default_brand_id": self.id}
+        context.update(self.env.context)
         return {
             "name": _("Choose Your Document Layout"),
             "type": "ir.actions.act_window",
-            "view_type": "form",
             "view_mode": "form",
-            "res_id": self.id,
-            "res_model": "res.brand",
-            "views": [(form_view.id, "form")],
-            "view_id": form_view.id,
             "target": "new",
+            "res_model": "brand.document.layout",
+            "context": context,
         }
