@@ -71,6 +71,11 @@ msgid "Additional info"
 msgstr ""
 
 #. module: brand
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "Address"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__type
 msgid "Address Type"
 msgstr ""
@@ -80,6 +85,11 @@ msgstr ""
 msgid ""
 "All the emails and documents sent to this contact will be translated in this"
 " language."
+msgstr ""
+
+#. module: brand
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "Archived"
 msgstr ""
 
 #. module: brand
@@ -125,7 +135,6 @@ msgstr ""
 #. module: brand
 #: model:ir.model,name:brand.model_res_brand
 #: model:ir.model.fields,field_description:brand.field_res_brand_mixin__brand_id
-#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "Brand"
 msgstr ""
 
@@ -162,7 +171,6 @@ msgstr ""
 #. module: brand
 #: model:ir.actions.act_window,name:brand.res_brand_act_window
 #: model:ir.ui.menu,name:brand.res_brand_menu
-#: model_terms:ir.ui.view,arch_db:brand.res_brand_kanban_view
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_search_view
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_tree_view
 msgid "Brands"
@@ -185,6 +193,7 @@ msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__city
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "City"
 msgstr ""
 
@@ -268,6 +277,7 @@ msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__country_id
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "Country"
 msgstr ""
 
@@ -690,6 +700,11 @@ msgid "Partner with same Tax ID"
 msgstr ""
 
 #. module: brand
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "Partners"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__debit_limit
 msgid "Payable Limit"
 msgstr ""
@@ -828,6 +843,7 @@ msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__state_id
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "State"
 msgstr ""
 
@@ -843,6 +859,16 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__street
 msgid "Street"
+msgstr ""
+
+#. module: brand
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "Street 2..."
+msgstr ""
+
+#. module: brand
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "Street..."
 msgstr ""
 
 #. module: brand
@@ -1008,6 +1034,11 @@ msgid "Vendor Payment Terms"
 msgstr ""
 
 #. module: brand
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "Website"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__website
 msgid "Website Link"
 msgstr ""
@@ -1031,6 +1062,21 @@ msgid ""
 msgstr ""
 
 #. module: brand
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "ZIP"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__zip
 msgid "Zip"
+msgstr ""
+
+#. module: brand
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "e.g. BE0477472701"
+msgstr ""
+
+#. module: brand
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "e.g. https://www.odoo.com"
 msgstr ""
