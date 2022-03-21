@@ -20,7 +20,9 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
 msgid ""
 "<span class=\"o_form_label\">Brand</span>\n"
-"                                <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" aria-label=\"Values set here are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
+"                                <span class=\"fa fa-lg fa-building-o\" title="
+"\"Values set here are company-specific.\" aria-label=\"Values set here are "
+"company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
 msgstr ""
 "<span class=\"o_form_label\">Marque</span>\n"
 "                                <span class=\"fa fa-lg fa-building-o\" title="
@@ -79,6 +81,11 @@ msgid "Additional info"
 msgstr "Info complémentaires"
 
 #. module: brand
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "Address"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__type
 msgid "Address Type"
 msgstr "Type d'adresse"
@@ -86,16 +93,46 @@ msgstr "Type d'adresse"
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__lang
 msgid ""
-"All the emails and documents sent to this contact will be translated in this"
-" language."
+"All the emails and documents sent to this contact will be translated in this "
+"language."
 msgstr ""
 "Tous les emails et documents envoyés à ce contact seront traduits dans cette "
 "langue."
 
 #. module: brand
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "Archived"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_attachment_count
 msgid "Attachment Count"
 msgstr "Nb pièces jointes"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__avatar_1920
+msgid "Avatar"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__avatar_1024
+msgid "Avatar 1024"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__avatar_128
+msgid "Avatar 128"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__avatar_256
+msgid "Avatar 256"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__avatar_512
+msgid "Avatar 512"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__bank_account_count
@@ -135,7 +172,6 @@ msgstr "Rejeter"
 #. module: brand
 #: model:ir.model,name:brand.model_res_brand
 #: model:ir.model.fields,field_description:brand.field_res_brand_mixin__brand_id
-#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "Brand"
 msgstr "Marque"
 
@@ -173,7 +209,6 @@ msgstr "La marque à utiliser pour cette vente"
 #. module: brand
 #: model:ir.actions.act_window,name:brand.res_brand_act_window
 #: model:ir.ui.menu,name:brand.res_brand_menu
-#: model_terms:ir.ui.view,arch_db:brand.res_brand_kanban_view
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_search_view
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_tree_view
 msgid "Brands"
@@ -196,6 +231,7 @@ msgstr "Cocher si le contact est un employé"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__city
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "City"
 msgstr "Ville"
 
@@ -258,21 +294,15 @@ msgstr "Paramètres de config"
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
 msgid ""
-"Configure branding of customer facing business documents (SO, invoices, "
-"etc)."
+"Configure branding of customer facing business documents (SO, invoices, etc)."
 msgstr ""
-"Configurez l'image de marque des documents commerciaux destinés aux clients ("
-"SO, factures, etc.)."
+"Configurez l'image de marque des documents commerciaux destinés aux clients "
+"(SO, factures, etc.)."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__child_ids
 msgid "Contact"
 msgstr "Contact"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__payment_token_count
-msgid "Count Payment Token"
-msgstr "Nb jeton de paiement"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_bounce
@@ -281,8 +311,14 @@ msgstr "Compteur du nombre d'emails rejetés pour ce contact"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__country_id
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "Country"
 msgstr "Pays"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__country_code
+msgid "Country Code"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__create_uid
@@ -326,9 +362,6 @@ msgstr "Degré de confiance que vous avez envers ce débiteur"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__display_name
-#: model:ir.model.fields,field_description:brand.field_res_brand_mixin__display_name
-#: model:ir.model.fields,field_description:brand.field_res_company__display_name
-#: model:ir.model.fields,field_description:brand.field_res_config_settings__display_name
 msgid "Display Name"
 msgstr "Nom affiché"
 
@@ -378,11 +411,6 @@ msgid "Followers"
 msgstr "Suiveurs"
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__message_channel_ids
-msgid "Followers (Channels)"
-msgstr "Suiveurs (canaux)"
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_partner_ids
 msgid "Followers (Partners)"
 msgstr "Suiveurs (Partenaires)"
@@ -413,15 +441,17 @@ msgid "Geo Longitude"
 msgstr "Longitude géographique"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__has_unreconciled_entries
 msgid "Has Unreconciled Entries"
 msgstr "A des écritures non rapprochées"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__id
-#: model:ir.model.fields,field_description:brand.field_res_brand_mixin__id
-#: model:ir.model.fields,field_description:brand.field_res_company__id
-#: model:ir.model.fields,field_description:brand.field_res_config_settings__id
 msgid "ID"
 msgstr "ID"
 
@@ -473,8 +503,8 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__phone_sanitized_blacklisted
 msgid ""
-"If the sanitized phone number is on the blacklist, the contact won't receive"
-" mass mailing sms anymore, from any list"
+"If the sanitized phone number is on the blacklist, the contact won't receive "
+"mass mailing sms anymore, from any list"
 msgstr ""
 "Si le numéro de téléphone nettoyé est sur la liste noire, le contact ne "
 "recevra plus de sms d'envoi en masse, de n'importe quelle liste"
@@ -539,8 +569,8 @@ msgstr "Facture"
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__type
 msgid ""
-"Invoice & Delivery addresses are used in sales orders. Private addresses are"
-" only visible by authorized users."
+"Invoice & Delivery addresses are used in sales orders. Private addresses are "
+"only visible by authorized users."
 msgstr ""
 "Les adresses de facturation et de livraison sont utilisées dans les "
 "commandes de vente. Les adresses privées ne sont visibles que par les "
@@ -578,9 +608,6 @@ msgstr "Langue"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand____last_update
-#: model:ir.model.fields,field_description:brand.field_res_brand_mixin____last_update
-#: model:ir.model.fields,field_description:brand.field_res_company____last_update
-#: model:ir.model.fields,field_description:brand.field_res_config_settings____last_update
 msgid "Last Modified on"
 msgstr "Dernière modif le"
 
@@ -727,6 +754,11 @@ msgid "Partner with same Tax ID"
 msgstr "Partenaire avec la même numéro TVA"
 
 #. module: brand
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "Partners"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__debit_limit
 msgid "Payable Limit"
 msgstr "Limite de paiement"
@@ -735,6 +767,11 @@ msgstr "Limite de paiement"
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_payment_method_id
 msgid "Payment Method"
 msgstr "Méthode de paiement"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__payment_token_count
+msgid "Payment Token Count"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__payment_token_ids
@@ -750,6 +787,11 @@ msgstr "Tél fixe"
 #: model:ir.model.fields,field_description:brand.field_res_brand__phone_sanitized_blacklisted
 msgid "Phone Blacklisted"
 msgstr "Tél fixe sur liste rouge"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__phone_mobile_search
+msgid "Phone/Mobile"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_payment_method_id
@@ -873,6 +915,7 @@ msgstr "URL d'inscription"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__state_id
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "State"
 msgstr "Etat"
 
@@ -895,6 +938,16 @@ msgid "Street"
 msgstr "Rue"
 
 #. module: brand
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "Street 2..."
+msgstr ""
+
+#. module: brand
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "Street..."
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__street2
 msgid "Street2"
 msgstr "Rue 2"
@@ -913,6 +966,13 @@ msgstr "Etiquettes"
 #: model:ir.model.fields,field_description:brand.field_res_brand__vat
 msgid "Tax ID"
 msgstr "Numéro TVA"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__country_code
+msgid ""
+"The ISO country code in two chars. \n"
+"You can use this field for quick search."
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__vat
@@ -965,8 +1025,8 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__email_normalized
 msgid ""
-"This field is used to search on email address as the primary email field can"
-" contain more than strictly an email address."
+"This field is used to search on email address as the primary email field can "
+"contain more than strictly an email address."
 msgstr ""
 "Ce champ est utilisé pour rechercher une adresse e-mail car le champ e-mail "
 "principal peut contenir plus qu'une simple adresse e-mail."
@@ -1074,6 +1134,11 @@ msgid "Vendor Payment Terms"
 msgstr "Condition de paiement fournisseur"
 
 #. module: brand
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "Website"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__website
 msgid "Website Link"
 msgstr "Lien website"
@@ -1091,9 +1156,11 @@ msgstr "Historique des communications du site Web"
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__tz
 msgid ""
-"When printing documents and exporting/importing data, time values are computed according to this timezone.\n"
+"When printing documents and exporting/importing data, time values are "
+"computed according to this timezone.\n"
 "If the timezone is not set, UTC (Coordinated Universal Time) is used.\n"
-"Anywhere else, time values are computed according to the time offset of your web client."
+"Anywhere else, time values are computed according to the time offset of your "
+"web client."
 msgstr ""
 "Lors de l'impression de documents et de l'exportation/importation de "
 "données, les valeurs temporelles sont calculées en fonction de ce fuseau "
@@ -1103,6 +1170,27 @@ msgstr ""
 "décalage temporel de votre client Web."
 
 #. module: brand
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "ZIP"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__zip
 msgid "Zip"
 msgstr "Code postal"
+
+#. module: brand
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "e.g. BE0477472701"
+msgstr ""
+
+#. module: brand
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "e.g. https://www.odoo.com"
+msgstr ""
+
+#~ msgid "Count Payment Token"
+#~ msgstr "Nb jeton de paiement"
+
+#~ msgid "Followers (Channels)"
+#~ msgstr "Suiveurs (canaux)"
