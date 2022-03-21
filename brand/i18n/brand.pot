@@ -266,6 +266,11 @@ msgid "Contact"
 msgstr ""
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
+msgid "Contracts"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__payment_token_count
 msgid "Count Payment Token"
 msgstr ""
@@ -690,11 +695,6 @@ msgid "Partner"
 msgstr ""
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
-msgid "Partner Contracts"
-msgstr ""
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__same_vat_partner_id
 msgid "Partner with same Tax ID"
 msgstr ""
@@ -743,6 +743,11 @@ msgid "Pricelist"
 msgstr ""
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_contract_count
+msgid "Purchase Contracts"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__ref
 msgid "Reference"
 msgstr ""
@@ -765,6 +770,11 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_has_sms_error
 msgid "SMS Delivery error"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__sale_contract_count
+msgid "Sale Contracts"
 msgstr ""
 
 #. module: brand
