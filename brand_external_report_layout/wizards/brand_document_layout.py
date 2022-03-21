@@ -1,6 +1,8 @@
 # Copyright 2022 ACSONE SA/NV
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
+import markupsafe
+
 from odoo import api, fields, models
 
 from odoo.addons.web.models.base_document_layout import (
@@ -28,6 +30,13 @@ class BrandDocumentLayout(models.TransientModel):
     font = fields.Selection(related="brand_id.font", readonly=False)
     primary_color = fields.Char(related="brand_id.primary_color", readonly=False)
     secondary_color = fields.Char(related="brand_id.secondary_color", readonly=False)
+    company_details = fields.Html(related="brand_id.company_details", readonly=False)
+    layout_background = fields.Selection(
+        related="brand_id.layout_background", readonly=False
+    )
+    layout_background_image = fields.Binary(
+        related="brand_id.layout_background_image", readonly=False
+    )
 
     @api.onchange("company_id")
     def _onchange_company_id(self):
@@ -38,7 +47,16 @@ class BrandDocumentLayout(models.TransientModel):
         for wizard in self:
             wizard.logo = wizard.brand_id.logo
             wizard.report_header = wizard.brand_id.report_header
-            wizard.report_footer = wizard.brand_id.report_footer
+            wizard.report_footer = (
+                wizard.brand_id.report_footer
+                if isinstance(wizard.brand_id.report_footer, str)
+                else wizard.report_footer
+            )
+            wizard.company_details = (
+                wizard.brand_id.company_details
+                if isinstance(wizard.brand_id.company_details, str)
+                else wizard.company_details
+            )
             wizard.paperformat_id = wizard.brand_id.paperformat_id
             wizard.external_report_layout_id = wizard.brand_id.external_report_layout_id
             wizard.font = wizard.brand_id.font
@@ -71,3 +89,48 @@ class BrandDocumentLayout(models.TransientModel):
                 wizard.primary_color = wizard.logo_primary_color
             if wizard.logo_secondary_color:
                 wizard.secondary_color = wizard.logo_secondary_color
+
+    def _get_asset_style(self):
+        template_style = self.env.ref(
+            "brand_external_report_layout.styles_brand_report", raise_if_not_found=False
+        )
+        if not template_style:
+            return b""
+
+        brand_styles = template_style._render({"brand_ids": self})
+        return brand_styles
+
+    @api.depends(
+        "report_layout_id",
+        "logo",
+        "font",
+        "primary_color",
+        "secondary_color",
+        "report_header",
+        "report_footer",
+        "layout_background",
+        "layout_background_image",
+        "company_details",
+    )
+    def _compute_preview(self):
+        styles = self._get_asset_style()
+        for wizard in self:
+            if wizard.report_layout_id:
+                if wizard.env.context.get("bin_size"):
+                    wizard_with_logo = wizard.with_context(bin_size=False)
+                else:
+                    wizard_with_logo = wizard
+                preview_css = markupsafe.Markup(
+                    self._get_css_for_preview(styles, wizard_with_logo.id)
+                )
+                ir_ui_view = wizard_with_logo.env["ir.ui.view"]
+                wizard.preview = ir_ui_view._render_template(
+                    "web.report_invoice_wizard_preview",
+                    {
+                        "brand": wizard_with_logo,
+                        "company": wizard_with_logo,
+                        "preview_css": preview_css,
+                    },
+                )
+            else:
+                wizard.preview = False
