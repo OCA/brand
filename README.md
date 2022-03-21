@@ -23,6 +23,7 @@ addon | version | maintainers | summary
 [analytic_brand](analytic_brand/) | 14.0.1.0.0 | [![sbejaoui](https://github.com/sbejaoui.png?size=30px)](https://github.com/sbejaoui) | This addon associate an analytic account to a brand that will be used as a default value where the brand is used if the analytic accounting is activated
 [brand](brand/) | 14.0.1.0.2 | [![sbejaoui](https://github.com/sbejaoui.png?size=30px)](https://github.com/sbejaoui) | This is a base addon for brand modules. It adds the brand object and its menu and define an abstract model to be inherited from branded objects
 [brand_external_report_layout](brand_external_report_layout/) | 14.0.1.0.2 | [![sbejaoui](https://github.com/sbejaoui.png?size=30px)](https://github.com/sbejaoui) | This module allows you to have a different layout by brand for your external reports.
+[contract_brand](contract_brand/) | 14.0.1.0.0 | [![sbejaoui](https://github.com/sbejaoui.png?size=30px)](https://github.com/sbejaoui) | This module allows you to manage branded contracts. It adds a brand field on the contract and propagate the value on the invoices.
 [product_brand](product_brand/) | 14.0.1.1.0 |  | Product Brand Manager
 [product_brand_multicompany](product_brand_multicompany/) | 14.0.1.0.0 |  | Define rules product brand's visibility by company
 [product_brand_social_responsibility](product_brand_social_responsibility/) | 14.0.1.1.0 |  | Provide CSR info on brands.
