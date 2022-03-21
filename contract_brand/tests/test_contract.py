@@ -13,8 +13,7 @@ class TestContract(TestContractBase):
         )
 
     def test_contract_create_branded_move(self):
-        """ It should create a branded move based on the contract brand
-        """
+        """It should create a branded move based on the contract brand"""
         self.contract.brand_id = self.brand_id
         move = self.contract.recurring_create_invoice()
         self.assertEqual(move.brand_id, self.brand_id)
