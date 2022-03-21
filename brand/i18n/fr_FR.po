@@ -305,6 +305,11 @@ msgid "Contact"
 msgstr "Contact"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
+msgid "Contracts"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_bounce
 msgid "Counter of the number of bounced emails for this contact"
 msgstr "Compteur du nombre d'emails rejetés pour ce contact"
@@ -744,11 +749,6 @@ msgid "Partner"
 msgstr "Partenaire"
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
-msgid "Partner Contracts"
-msgstr "Contrats du partenaire"
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__same_vat_partner_id
 msgid "Partner with same Tax ID"
 msgstr "Partenaire avec la même numéro TVA"
@@ -811,6 +811,11 @@ msgid "Pricelist"
 msgstr "Liste de prix"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_contract_count
+msgid "Purchase Contracts"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__ref
 msgid "Reference"
 msgstr "Référence"
@@ -834,6 +839,11 @@ msgstr "Utilisateur responsable"
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_has_sms_error
 msgid "SMS Delivery error"
 msgstr "SMS d'erreur de livraison"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__sale_contract_count
+msgid "Sale Contracts"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_order_count
@@ -1188,6 +1198,9 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "e.g. https://www.odoo.com"
 msgstr ""
+
+#~ msgid "Partner Contracts"
+#~ msgstr "Contrats du partenaire"
 
 #~ msgid "Count Payment Token"
 #~ msgstr "Nb jeton de paiement"
