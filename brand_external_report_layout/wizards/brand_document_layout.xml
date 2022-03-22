@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 ACSONE SA/NV
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="brand_document_layout_form_view" model="ir.ui.view">
+        <field name="model">brand.document.layout</field>
+        <field name="inherit_id" ref="web.view_base_document_layout" />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="attributes">
+                <attribute name="string">Brand document layout</attribute>
+            </xpath>
+            <xpath expr="//field[@name='company_id']" position="after">
+                <field name="brand_id" invisible="1" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

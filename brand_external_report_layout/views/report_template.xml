@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2019 ACSONE SA/NV
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <template id="brand_external_layout" inherit_id="web.external_layout">
+        <xpath expr="//t[@t-if='not company']" position="after">
+            <t t-if="doc and not o" t-set="o" t-value="doc" />
+            <t t-if="brand" t-set="brand_id" t-value="brand.id" />
+            <t
+                t-elif="o and 'brand_id' in o.fields_get() and o.brand_id and o.brand_id.external_report_layout_id"
+                t-set="brand_id"
+                t-value="o.brand_id.id"
+            />
+            <t t-else="" t-set="brand_id" t-value="0" />
+            <t
+                t-if="o and 'brand_id' in o.fields_get() and o.brand_id and o.brand_id.external_report_layout_id"
+                t-call="{{o.brand_id.external_report_layout_id.key}}"
+            >
+                <t t-set="company" t-value="o.brand_id.sudo()" />
+                <t t-raw="0" />
+            </t>
+            <t t-else="else" name="brand_not_set" />
+        </xpath>
+        <xpath expr="//t[@name='brand_not_set']" position="inside">
+            <xpath
+                expr="//t[@t-if='company.external_report_layout_id']"
+                position="move"
+            />
+            <xpath expr="//t[@t-call='web.external_layout_standard']" position="move" />
+        </xpath>
+    </template>
+    <template id="styles_brand_report">
+        <t t-foreach="brand_ids" t-as="brand" t-translation="off">
+            <t t-set="font" t-value="brand.font or 'Lato'" />
+            <t t-set="primary" t-value="brand.primary_color or 'black'" />
+            <t t-set="secondary" t-value="brand.secondary_color or 'black'" />
+            <t
+                t-set="layout"
+                t-value="brand.external_report_layout_id.key or 'web.external_layout_standard'"
+            />
+            .o_brand_<t t-esc='brand.id' />_layout {
+            font-family:<t t-esc="font" />;
+            <t t-if="layout == 'web.external_layout_striped'">
+                &amp;.o_report_layout_striped {
+                strong {
+                color:<t t-esc='secondary' />;
+                }
+                h2 {
+                color:<t t-esc='primary' />;
+                }
+                thead tr th {
+                color:<t t-esc='secondary' />;
+                }
+                }
+                .row > div > table,
+                div#total table {
+                &amp;:first-child,
+                &amp;:last-child,
+                &amp;.o_subtotal,
+                &amp;.o_total {
+                strong {
+                color:<t t-esc='primary' />;
+                }
+                }
+                }
+            </t>
+            <t t-elif="layout == 'web.external_layout_boxed'">
+                &amp;.o_report_layout_boxed {
+                #total strong {
+                color:<t t-esc='primary' />;
+                }
+                #informations strong {
+                color:<t t-esc='secondary' />;
+                }
+                h2 span {
+                color:<t t-esc='primary' />;
+                }
+                table {
+                thead {
+                tr th {
+                color:<t t-esc='secondary' />;
+                }
+                }
+                tbody tr td {
+                &amp;.o_line_section td {
+                background-color: rgba(<t t-esc='primary' />, 0.7);
+                }
+                &amp;.is-subtotal,
+                td.o_price_total {
+                background-color: rgba(<t t-esc='secondary' />, 0.1);
+                }
+                }
+                }
+                }
+                .row > div > table,
+                div#total table {
+                tr {
+                &amp;.o_total td {
+                background-color: rgba(<t t-esc='primary' />, 0.9);
+                }
+                }
+                }
+            </t>
+            <t t-elif="layout == 'web.external_layout_bold'">
+                &amp;.o_clean_footer {
+                border-top: 3px solid<t t-esc='secondary' />;
+                h4 {
+                color:<t t-esc='secondary' />;
+                }
+                .pagenumber {
+                border: 3px solid<t t-esc='primary' />;
+                background-color:<t t-esc='secondary' />;
+                }
+                }
+                &amp;.o_report_layout_bold {
+                h1, h2, h3 {
+                color:<t t-esc='primary' />;
+                }
+                strong {
+                color:<t t-esc='secondary' />;
+                }
+                table {
+                thead {
+                color:<t t-esc='secondary' />;
+                tr th {
+                border-top: 3px solid
+                <t t-esc='secondary' />
+                !important;
+                }
+                }
+                tbody {
+                tr:last-child td {
+                border-bottom: 3px solid<t t-esc='secondary' />;
+                }
+                }
+                }
+                #total {
+                strong {
+                color:<t t-esc='secondary' />;
+                }
+                }
+                }
+            </t>
+            <t t-elif="layout == 'web.external_layout_standard'">
+                &amp;.o_report_layout_standard {
+                h2 {
+                color:<t t-esc='primary' />;
+                }
+                #informations strong {
+                color:<t t-esc='secondary' />;
+                }
+                #total strong{
+                color:<t t-esc='primary' />;
+                }
+                table {
+                thead {
+                color:<t t-esc='secondary' />;
+                }
+                }
+                }
+            </t>
+            }
+        </t>
+    </template>
+    <template id="external_layout_boxed" inherit_id="web.external_layout_boxed">
+        <xpath expr="//div[contains(@t-attf-class, 'header')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >header o_brand_#{brand_id}_layout o_company_#{company.id}_layout</attribute>
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'article')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >article o_report_layout_boxed o_brand_#{brand_id}_layout o_company_#{company.id}_layout {{  'o_layout_background' if company.layout_background in ['Geometric', 'Custom']  else  '' }}']</attribute>
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >footer o_boxed_footer o_brand_#{brand_id}_layout o_company_#{company.id}_layout</attribute>
+        </xpath>
+    </template>
+    <template id="external_layout_striped" inherit_id="web.external_layout_striped">
+        <xpath expr="//div[contains(@t-attf-class, 'header')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >o_brand_#{brand_id}_layout o_company_#{company.id}_layout header</attribute>
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'article')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >o_brand_#{brand_id}_layout o_company_#{company.id}_layout article o_report_layout_striped {{  'o_layout_background' if company.layout_background in ['Geometric', 'Custom']  else  '' }}</attribute>
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >o_brand_#{brand_id}_layout o_company_#{company.id}_layout footer o_background_footer</attribute>
+        </xpath>
+    </template>
+    <template id="external_layout_bold" inherit_id="web.external_layout_bold">
+        <xpath expr="//div[contains(@t-attf-class, 'header')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >header o_brand_#{brand_id}_layout o_company_#{company.id}_layout</attribute>
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'article')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >article o_report_layout_bold o_brand_#{brand_id}_layout o_company_#{company.id}_layout {{  'o_layout_background' if company.layout_background in ['Geometric', 'Custom']  else  '' }}']</attribute>
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >footer o_bold_footer o_brand_#{brand_id}_layout o_company_#{company.id}_layout</attribute>
+        </xpath>
+    </template>
+    <template id="external_layout_standard" inherit_id="web.external_layout_standard">
+        <xpath expr="//div[contains(@t-attf-class, 'header')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >header o_brand_#{brand_id}_layout o_company_#{company.id}_layout</attribute>
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'article')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >article o_report_layout_standard o_brand_#{brand_id}_layout o_company_#{company.id}_layout {{  'o_layout_background' if company.layout_background in ['Geometric', 'Custom']  else  '' }}']</attribute>
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >footer o_standard_footer o_brand_#{brand_id}_layout o_company_#{company.id}_layout</attribute>
+        </xpath>
+    </template>
+
+    <record id="asset_styles_brand_report" model="ir.attachment">
+        <field name="datas" model="res.brand" eval="obj()._get_asset_style_b64()" />
+        <field name="mimetype">text/scss</field>
+        <field name="name">res.brand.scss</field>
+        <field name="type">binary</field>
+        <field
+            name="url"
+        >/brand_external_report_layout/static/src/legacy/scss/asset_styles_brand_report.scss</field>
+    </record>
+
+</odoo>
