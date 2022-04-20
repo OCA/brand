@@ -60,13 +60,15 @@ class AccountMove(models.Model):
                         == a.user_type_id
                     ).update({"account_id": account_id.id})
 
+    def update_invoice_line_account_analytic(self):
+        self.ensure_one()
+        if self.state == "draft" and self.brand_id:
+            account_analytic = self.brand_id.analytic_account_id
+            self.invoice_line_ids.update({"analytic_account_id": account_analytic.id})
+
     @api.onchange("brand_id", "invoice_line_ids")
     def _onchange_brand_id(self):
         res = super()._onchange_brand_id()
         for invoice in self:
-            if invoice.state == "draft" and invoice.brand_id:
-                account_analytic = invoice.brand_id.analytic_account_id
-                invoice.invoice_line_ids.update(
-                    {"analytic_account_id": account_analytic.id}
-                )
+            invoice.update_invoice_line_account_analytic()
         return res
