@@ -6,7 +6,6 @@ from odoo.exceptions import ValidationError
 
 
 class ProductPricelist(models.Model):
-
     _inherit = "product.pricelist"
 
     def _compute_price_rule_get_items(
@@ -47,7 +46,6 @@ class ProductPricelist(models.Model):
 
 
 class ProductPricelistItem(models.Model):
-
     _inherit = "product.pricelist.item"
 
     product_brand_id = fields.Many2one(
@@ -57,7 +55,10 @@ class ProductPricelistItem(models.Model):
         help="Specify a brand if this rule only applies to products"
         "belonging to this brand. Keep empty otherwise.",
     )
-    applied_on = fields.Selection(selection_add=[("25_brand", "Brand")])
+    applied_on = fields.Selection(
+        selection_add=[("25_brand", "Brand")],
+        ondelete={"25_brand": "cascade"},
+    )
 
     @api.constrains("product_id", "product_tmpl_id", "categ_id", "product_brand_id")
     def _check_product_consistency(self):
