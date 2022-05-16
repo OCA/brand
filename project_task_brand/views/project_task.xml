@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 ACSONE SA/NV
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="project_task_form_view">
+        <field name="name">project.task.form (in project_task_brand)</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2" />
+        <field name="arch" type="xml">
+            <field name="project_id" position="after">
+                <field name="brand_id" />
+            </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="project_task_search_view">
+        <field name="name">project.task.search (in project_task_brand)</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_search_form" />
+        <field name="arch" type="xml">
+            <field name="project_id" position="after">
+                <field name="brand_id" />
+            </field>
+            <filter name="project" position="after">
+                <filter
+                    string="Brand"
+                    name="brand"
+                    context="{'group_by': 'brand_id'}"
+                />
+            </filter>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="project_task_tree_view">
+        <field name="name">project.task.tree (in project_task_brand)</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_tree2" />
+        <field name="arch" type="xml">
+            <field name="project_id" position="after">
+                <field name="brand_id" optional="show" />
+            </field>
+        </field>
+    </record>
+</odoo>
