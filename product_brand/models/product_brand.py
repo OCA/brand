@@ -3,7 +3,7 @@
 # Copyright 2014 prisnet.ch Seraphine Lantible <s.lantible@gmail.com>
 # Copyright 2016 Serpent Consulting Services Pvt. Ltd.
 # Copyright 2018 Daniel Campos <danielcampos@avanzosc.es>
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html)
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html)
 
 from odoo import api, fields, models
 

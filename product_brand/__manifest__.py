@@ -5,7 +5,7 @@
 # Copyright 2018 Daniel Campos <danielcampos@avanzosc.es>
 # Copyright 2018 Tecnativa - David Vidal
 # Copyright 2019 Giovanni - GSLabIt
-# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+# License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl).
 
 {
     "name": "Product Brand Manager",
@@ -17,7 +17,7 @@
     "MONK Software, SerpentCS Pvt. Ltd., Tecnativa, Kaushal "
     "Prajapati, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/brand",
-    "license": "AGPL-3",
+    "license": "LGPL-3",
     "depends": ["sale"],
     "data": [
         "security/ir.model.access.csv",

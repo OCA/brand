@@ -1,7 +1,7 @@
 # Copyright 2018 Daniel Campos <danielcampos@avanzosc.es> - Avanzosc S.L.
 # Copyright 2021 Camptocamp SA
 # @author: Simone Orsi <simone.orsi@camptocamp.com>
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 from odoo.tests.common import SavepointCase
 
