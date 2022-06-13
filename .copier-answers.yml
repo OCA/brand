@@ -15,3 +15,4 @@ repo_slug: brand
 repo_website: https://github.com/OCA/brand
 travis_apt_packages: []
 travis_apt_sources: []
+
