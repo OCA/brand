@@ -41,10 +41,10 @@ class TestSaleOrder(TransactionCase):
 
     def test_brand_onchange_team(self):
         sale = self.sale.copy()
-        
+
         brand = sale.brand_id
         brand2 = self.env["res.brand"].create({"name": "brand"})
-        team = self.env.ref('sales_team.team_sales_department')
+        team = self.env.ref("sales_team.team_sales_department")
         team.brand_id = brand2.id
 
         sale.team_id = team.id

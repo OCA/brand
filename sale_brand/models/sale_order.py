@@ -43,5 +43,5 @@ class SaleOrder(models.Model):
         if res.get("team_id", False) and not res.get("brand_id", False):
             team = self.env["crm.team"].browse(res["team_id"])
             res["brand_id"] = team.brand_id.id
-        
+
         return res
