@@ -4,7 +4,7 @@
 {
     "name": "Sale Brand",
     "summary": "Send branded sales orders",
-    "version": "15.0.1.0.0",
+    "version": "15.0.1.0.1",
     "category": "Sales Management",
     "website": "https://github.com/OCA/brand",
     "author": "Open Source Integrators, Odoo Community Association (OCA)",
