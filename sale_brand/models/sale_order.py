@@ -34,4 +34,14 @@ class SaleOrder(models.Model):
 
     @api.onchange("team_id")
     def _onchange_team_id(self):
-        self.brand_id = self.team_id.brand_id
+        if self.team_id.brand_id:
+            self.brand_id = self.team_id.brand_id
+
+    def default_get(self, fields_list):
+        res = super().default_get(fields_list)
+
+        if res.get("team_id", False) and not res.get("brand_id", False):
+            team = self.env["crm.team"].browse(res["team_id"])
+            res["brand_id"] = team.brand_id.id
+
+        return res

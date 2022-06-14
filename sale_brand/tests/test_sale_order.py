@@ -38,3 +38,20 @@ class TestSaleOrder(TransactionCase):
             draft_sale.analytic_account_id,
             draft_sale.brand_id.analytic_account_id,
         )
+
+    def test_brand_onchange_team(self):
+        sale = self.sale.copy()
+
+        brand = sale.brand_id
+        brand2 = self.env["res.brand"].create({"name": "brand"})
+        team = self.env.ref("sales_team.team_sales_department")
+        team.brand_id = brand2.id
+
+        sale.team_id = team.id
+        sale._onchange_team_id()
+        self.assertEqual(sale.brand_id, brand2)
+
+        team.brand_id = False
+        sale.brand_id = brand.id
+        sale._onchange_team_id()
+        self.assertEqual(sale.brand_id, brand)
