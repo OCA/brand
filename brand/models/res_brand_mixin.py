@@ -31,6 +31,22 @@ class ResBrandMixin(models.AbstractModel):
         self.ensure_one()
         return self.company_id.brand_use_level == BRAND_USE_LEVEL_REQUIRED_LEVEL
 
+    def default_get(self, fields_list):
+        res = super().default_get(fields_list)
+
+        if "brand_use_level" not in res:
+            brand_use_level = False
+
+            if res.get("company_id", False):
+                company = self.env["res.company"].browse(res["company_id"])
+                brand_use_level = company.brand_use_level
+            else:
+                brand_use_level = BRAND_USE_LEVEL_NO_USE_LEVEL
+
+            res["brand_use_level"] = brand_use_level
+
+        return res
+
     @api.constrains("brand_id", "company_id")
     def _check_brand_requirement(self):
         for rec in self:
