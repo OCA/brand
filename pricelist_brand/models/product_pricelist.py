@@ -87,10 +87,6 @@ class ProductPricelistItem(models.Model):
             if item.product_brand_id and item.applied_on == "25_brand":
                 item.name = _("Brand: %s") % (item.product_brand_id.display_name)
 
-    @api.onchange("product_id", "product_tmpl_id", "categ_id", "product_brand_id")
-    def _onchane_rule_content(self):
-        super(ProductPricelistItem, self)._onchane_rule_content()
-
     @api.model_create_multi
     def create(self, vals_list):
         for values in vals_list:
