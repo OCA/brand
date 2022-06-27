@@ -23,7 +23,7 @@ Pricelist Brand
     :target: https://runbot.odoo-community.org/runbot/284/13.0
     :alt: Try me on Runbot
 
-|badge1| |badge2| |badge3| |badge4| |badge5| 
+|badge1| |badge2| |badge3| |badge4| |badge5|
 
 This module allows to configure pricelist items so that they are applied on products of specific brands.
 
@@ -80,6 +80,6 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-This module is part of the `OCA/brand <https://github.com/OCA/brand/tree/13.0/pricelist_brand>`_ project on GitHub.
+This module is part of the `OCA/brand <https://github.com/OCA/brand/tree/14.0/pricelist_brand>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.

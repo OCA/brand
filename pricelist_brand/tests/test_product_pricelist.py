@@ -1,6 +1,7 @@
 # Copyright 2020 ACSONE SA/NV
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
+from odoo import _
 from odoo.exceptions import ValidationError
 from odoo.tests.common import TransactionCase
 from odoo.tools import float_compare
@@ -102,6 +103,9 @@ class TestProductPricelist(TransactionCase):
         pricelist_item.write(
             {"applied_on": "25_brand", "product_brand_id": self.product_brand.id}
         )
+        item_name = _("Brand: %s") % (pricelist_item.product_brand_id.display_name)
+        self.assertEqual(item_name, _("Brand: %s") % (self.product_brand.display_name))
+
         self.assertFalse(pricelist_item.categ_id)
         pricelist_item.write({"applied_on": "3_global"})
         self.assertFalse(pricelist_item.product_brand_id)
