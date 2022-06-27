@@ -15,12 +15,8 @@ class TestProductPricelist(TransactionCase):
             {"name": "Test Brand", "description": "Test brand description"}
         )
 
-        self.product = self.env["product.product"].create(
-            {"name": "Test Prod 1"}
-        )
-        self.product_2 = self.env["product.product"].create(
-            {"name": "Test Prod 2"}
-        )
+        self.product = self.env["product.product"].create({"name": "Test Prod 1"})
+        self.product_2 = self.env["product.product"].create({"name": "Test Prod 2"})
         # self.product = self.env.ref("product.product_product_4")
         self.product.write({"product_brand_id": self.product_brand.id})
         # self.product_2 = self.env.ref("product.product_product_5")
@@ -126,7 +122,10 @@ class TestProductPricelist(TransactionCase):
                 "product_brand_id": self.product_brand.id,
             }
         )
-        self.assertEqual(pricelist_item.display_name, _("Brand: %s") % (self.product_brand.display_name))
+        self.assertEqual(
+            pricelist_item.display_name,
+            _("Brand: %s") % (self.product_brand.display_name),
+        )
 
     def test_calculation_price_of_products_pricelist(self):
         """Test calculation of product price based on pricelist"""
