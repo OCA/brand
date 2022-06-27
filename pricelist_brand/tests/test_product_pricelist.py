@@ -15,11 +15,9 @@ class TestProductPricelist(TransactionCase):
             {"name": "Test Brand", "description": "Test brand description"}
         )
 
-        self.product = self.env["product.product"].create({"name": "Test Prod 1"})
-        self.product_2 = self.env["product.product"].create({"name": "Test Prod 2"})
-        # self.product = self.env.ref("product.product_product_4")
+        self.product = self.env.ref("product.product_product_4")
         self.product.write({"product_brand_id": self.product_brand.id})
-        # self.product_2 = self.env.ref("product.product_product_5")
+        self.product_2 = self.env.ref("product.product_product_5")
 
         self.list0 = self.ref("product.list0")
         self.pricelist = self.env["product.pricelist"].create(
@@ -112,7 +110,6 @@ class TestProductPricelist(TransactionCase):
         self.assertFalse(pricelist_item.product_brand_id)
 
     def test_get_pricelist_item_name_price(self):
-
         pricelist_item = self.env["product.pricelist.item"].create(
             {
                 "pricelist_id": self.pricelist.id,
@@ -126,6 +123,19 @@ class TestProductPricelist(TransactionCase):
             pricelist_item.display_name,
             _("Brand: %s") % (self.product_brand.display_name),
         )
+
+    def test_onchane_rule_content(self):
+        pricelist_item = self.env["product.pricelist.item"].create(
+            {
+                "pricelist_id": self.pricelist.id,
+                "base": "list_price",
+                "compute_price": "formula",
+                "applied_on": "25_brand",
+                "product_brand_id": self.product_brand.id,
+            }
+        )
+        pricelist_item._onchane_rule_content()
+        self.assertEqual(pricelist_item.applied_on, "25_brand")
 
     def test_calculation_price_of_products_pricelist(self):
         """Test calculation of product price based on pricelist"""
