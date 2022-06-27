@@ -11,6 +11,7 @@
     "depends": [
         "product_brand",
         "sale",
+        "product",
     ],
-    "data": ["views/product_pricelist.xml"],
+    "data": ["views/product_pricelist.xml"], 
 }
