@@ -124,19 +124,6 @@ class TestProductPricelist(TransactionCase):
             _("Brand: %s") % (self.product_brand.display_name),
         )
 
-    def test_onchane_rule_content(self):
-        pricelist_item = self.env["product.pricelist.item"].create(
-            {
-                "pricelist_id": self.pricelist.id,
-                "base": "list_price",
-                "compute_price": "formula",
-                "applied_on": "25_brand",
-                "product_brand_id": self.product_brand.id,
-            }
-        )
-        pricelist_item._onchane_rule_content()
-        self.assertEqual(pricelist_item.applied_on, "25_brand")
-
     def test_calculation_price_of_products_pricelist(self):
         """Test calculation of product price based on pricelist"""
         context = {}
