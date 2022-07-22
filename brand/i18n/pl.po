@@ -6,7 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2022-07-22 12:06+0000\n"
+"Last-Translator: Jacek Michalski <michalski.jck@gmail.com>\n"
 "Language-Team: none\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -14,6 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.3.2\n"
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
@@ -21,26 +23,31 @@ msgid ""
 "<span class=\"o_form_label\">Brand</span>\n"
 "                                <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" aria-label=\"Values set here are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
 msgstr ""
+"<span class=\"o_form_label\">Marka</span>\n"
+"                                <span class=\"fa fa-lg fa-building-o\" title="
+"\"Ustawione tu wartości są specyficzne dla danej firmy.\" aria-label="
+"\"Ustawione tu wartości są specyficzne dla danej firmy.\" groups=\"base."
+"group_multi_company\" role=\"img\"/>"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_account_payable_id
 msgid "Account Payable"
-msgstr ""
+msgstr "Konto zobowiązań"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_account_receivable_id
 msgid "Account Receivable"
-msgstr ""
+msgstr "Konto należności"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_needaction
 msgid "Action Needed"
-msgstr ""
+msgstr "Wymagane działanie"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__active
 msgid "Active"
-msgstr ""
+msgstr "Aktywny"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__active_lang_count
@@ -88,11 +95,13 @@ msgid ""
 "All the emails and documents sent to this contact will be translated in this"
 " language."
 msgstr ""
+"Wszystkie e-maile i dokumenty wysyłane do tego kontaktu będą tłumaczone na "
+"ten język."
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "Archived"
-msgstr ""
+msgstr "Zarchiwizowane"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_attachment_count
@@ -137,7 +146,7 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__barcode
 msgid "Barcode"
-msgstr ""
+msgstr "Kod kreskowy"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_blacklisted
