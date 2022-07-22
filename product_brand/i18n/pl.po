@@ -6,7 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2022-07-22 12:06+0000\n"
+"Last-Translator: Jacek Michalski <michalski.jck@gmail.com>\n"
 "Language-Team: none\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -14,6 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.3.2\n"
 
 #. module: product_brand
 #: model:ir.actions.act_window,name:product_brand.action_product_brand
@@ -26,121 +28,121 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:product_brand.view_order_product_search
 #: model_terms:ir.ui.view,arch_db:product_brand.view_product_template_search_brand
 msgid "Brand"
-msgstr ""
+msgstr "Marka"
 
 #. module: product_brand
 #: model:ir.model.fields,field_description:product_brand.field_product_brand__name
 #: model_terms:ir.ui.view,arch_db:product_brand.view_product_brand_form
 msgid "Brand Name"
-msgstr ""
+msgstr "Nazwa marki"
 
 #. module: product_brand
 #: model:ir.actions.act_window,name:product_brand.action_open_brand_products
 #: model:ir.model.fields,field_description:product_brand.field_product_brand__product_ids
 msgid "Brand Products"
-msgstr ""
+msgstr "Produkty marki"
 
 #. module: product_brand
 #: model:ir.model.fields,field_description:product_brand.field_product_brand__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Stworzone przez"
 
 #. module: product_brand
 #: model:ir.model.fields,field_description:product_brand.field_product_brand__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Data utworzenia"
 
 #. module: product_brand
 #: model:ir.model.fields,field_description:product_brand.field_product_brand__description
 #: model_terms:ir.ui.view,arch_db:product_brand.view_product_brand_form
 msgid "Description"
-msgstr ""
+msgstr "Opis"
 
 #. module: product_brand
 #: model:ir.model.fields,field_description:product_brand.field_product_brand__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Wyświetlana nazwa"
 
 #. module: product_brand
 #: model:ir.model.fields,field_description:product_brand.field_product_brand__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: product_brand
 #: model:ir.model,name:product_brand.model_account_invoice_report
 msgid "Invoices Statistics"
-msgstr ""
+msgstr "Statystyki faktur"
 
 #. module: product_brand
 #: model:ir.model.fields,field_description:product_brand.field_product_brand____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Ostatnia modyfikacja"
 
 #. module: product_brand
 #: model:ir.model.fields,field_description:product_brand.field_product_brand__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Ostatnia aktualizacja przez"
 
 #. module: product_brand
 #: model:ir.model.fields,field_description:product_brand.field_product_brand__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Ostatnia aktualizacja"
 
 #. module: product_brand
 #: model_terms:ir.ui.view,arch_db:product_brand.view_product_brand_kanban
 msgid "Logo"
-msgstr ""
+msgstr "Logo"
 
 #. module: product_brand
 #: model:ir.model.fields,field_description:product_brand.field_product_brand__logo
 msgid "Logo File"
-msgstr ""
+msgstr "Plik logo"
 
 #. module: product_brand
 #: model:ir.model.fields,field_description:product_brand.field_product_brand__products_count
 msgid "Number of products"
-msgstr ""
+msgstr "Liczba produktów"
 
 #. module: product_brand
 #: model:ir.model.fields,field_description:product_brand.field_product_brand__partner_id
 msgid "Partner"
-msgstr ""
+msgstr "Partner"
 
 #. module: product_brand
 #: model:ir.actions.act_window,name:product_brand.action_open_single_product_brand
 #: model:ir.model,name:product_brand.model_product_brand
 #: model_terms:ir.ui.view,arch_db:product_brand.product_brand_search_form_view
 msgid "Product Brand"
-msgstr ""
+msgstr "Marka produktu"
 
 #. module: product_brand
 #: model:ir.ui.menu,name:product_brand.menu_product_brand
 msgid "Product Brands"
-msgstr ""
+msgstr "Marki produktów"
 
 #. module: product_brand
 #: model:ir.model,name:product_brand.model_product_template
 msgid "Product Template"
-msgstr ""
+msgstr "Szablon produktu"
 
 #. module: product_brand
 #: model_terms:ir.ui.view,arch_db:product_brand.view_product_brand_form
 #: model_terms:ir.ui.view,arch_db:product_brand.view_product_brand_kanban
 msgid "Products"
-msgstr ""
+msgstr "Produkty"
 
 #. module: product_brand
 #: model:ir.model,name:product_brand.model_sale_report
 msgid "Sales Analysis Report"
-msgstr ""
+msgstr "Raport analizy sprzedaży"
 
 #. module: product_brand
 #: model:ir.model.fields,help:product_brand.field_product_product__product_brand_id
 #: model:ir.model.fields,help:product_brand.field_product_template__product_brand_id
 msgid "Select a brand for this product"
-msgstr ""
+msgstr "Wybierz markę dla tego produktu"
 
 #. module: product_brand
 #: model:ir.model.fields,help:product_brand.field_product_brand__partner_id
 msgid "Select a partner for this brand if any."
-msgstr ""
+msgstr "Wybierz partnera dla tej marki, jeśli istnieje."
