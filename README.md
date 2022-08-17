@@ -27,7 +27,7 @@ addon | version | maintainers | summary
 [brand_external_report_layout](brand_external_report_layout/) | 15.0.1.0.0 | [![sbejaoui](https://github.com/sbejaoui.png?size=30px)](https://github.com/sbejaoui) | This module allows you to have a different layout by brand for your external reports.
 [contract_brand](contract_brand/) | 15.0.1.0.0 | [![sbejaoui](https://github.com/sbejaoui.png?size=30px)](https://github.com/sbejaoui) | This module allows you to manage branded contracts. It adds a brand field on the contract and propagate the value on the invoices.
 [product_brand](product_brand/) | 15.0.1.0.0 |  | Product Brand Manager
-[sale_brand](sale_brand/) | 15.0.1.0.0 | [![osi-scampbell](https://github.com/osi-scampbell.png?size=30px)](https://github.com/osi-scampbell) [![sbejaoui](https://github.com/sbejaoui.png?size=30px)](https://github.com/sbejaoui) | Send branded sales orders
+[sale_brand](sale_brand/) | 15.0.1.0.1 | [![osi-scampbell](https://github.com/osi-scampbell.png?size=30px)](https://github.com/osi-scampbell) [![sbejaoui](https://github.com/sbejaoui.png?size=30px)](https://github.com/sbejaoui) | Send branded sales orders
 
 [//]: # (end addons)
 
