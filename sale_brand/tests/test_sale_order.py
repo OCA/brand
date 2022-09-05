@@ -8,6 +8,7 @@ class TestSaleOrder(TransactionCase):
     def setUp(self):
         super(TestSaleOrder, self).setUp()
         self.sale = self.env.ref("sale.sale_order_1")
+        self.sale.company_id.brand_use_level = "required"
         self.sale.brand_id = self.env["res.brand"].create({"name": "brand"})
         self.sale.order_line.mapped("product_id").write({"invoice_policy": "order"})
         self.sale.action_confirm()
