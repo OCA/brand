@@ -6,13 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2022-09-05 07:07+0000\n"
+"Last-Translator: Ignacio Buioli <ibuioli@gmail.com>\n"
 "Language-Team: none\n"
 "Language: es_AR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.3.2\n"
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
@@ -20,36 +22,41 @@ msgid ""
 "<span class=\"o_form_label\">Brand</span>\n"
 "                                <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" aria-label=\"Values set here are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
 msgstr ""
+"<span class=\"o_form_label\">Marca</span>\n"
+"                                <span class=\"fa fa-lg fa-building-o\" title="
+"\"Los valores configurados acá serán específicos de la compañía.\" aria-"
+"label=\"Los valores configurados acá serán específicos de la compañía.\" "
+"groups=\"base.group_multi_company\" role=\"img\"/>"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_account_payable_id
 msgid "Account Payable"
-msgstr ""
+msgstr "Cuenta A Pagar"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_account_receivable_id
 msgid "Account Receivable"
-msgstr ""
+msgstr "Cuenta A Cobrar"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_needaction
 msgid "Action Needed"
-msgstr ""
+msgstr "Acción Requerida"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__active
 msgid "Active"
-msgstr ""
+msgstr "Activo"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__active_lang_count
 msgid "Active Lang Count"
-msgstr ""
+msgstr "Activar Cuenta de Idioma"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_ids
 msgid "Activities"
-msgstr ""
+msgstr "Actividades"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_exception_decoration
@@ -137,7 +144,7 @@ msgstr ""
 #: model:ir.model,name:brand.model_res_brand
 #: model:ir.model.fields,field_description:brand.field_res_brand_mixin__brand_id
 msgid "Brand"
-msgstr ""
+msgstr "Marca"
 
 #. module: brand
 #: model:ir.model,name:brand.model_res_brand_mixin
@@ -290,12 +297,12 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Creado por"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Creado el"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__credit_limit
@@ -333,7 +340,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:brand.field_res_company__display_name
 #: model:ir.model.fields,field_description:brand.field_res_config_settings__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nombre Mostrado"
 
 #. module: brand
 #: model:ir.model.fields.selection,name:brand.selection__res_company__brand_use_level__no
@@ -421,7 +428,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:brand.field_res_company__id
 #: model:ir.model.fields,field_description:brand.field_res_config_settings__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__im_status
@@ -565,17 +572,17 @@ msgstr ""
 #: model:ir.model.fields,field_description:brand.field_res_company____last_update
 #: model:ir.model.fields,field_description:brand.field_res_config_settings____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Última modificación el"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Última actualización por"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Última modificación el"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__last_time_entries_checked
@@ -693,7 +700,7 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_id
 msgid "Partner"
-msgstr ""
+msgstr "Contacto"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__same_vat_partner_id
