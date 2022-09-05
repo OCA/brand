@@ -7,8 +7,7 @@ from odoo import models
 class SaleAdvancePaymentInv(models.TransientModel):
     _inherit = "sale.advance.payment.inv"
 
-    def _create_invoice(self, order, so_line, amount):
-        invoice = super()._create_invoice(order, so_line, amount)
-        invoice.brand_id = order.brand_id
-        invoice._onchange_partner_id()
-        return invoice
+    def _prepare_invoice_values(self, order, name, amount, so_line):
+        res = super()._prepare_invoice_values(order, name, amount, so_line)
+        res["brand_id"] = order.brand_id.id
+        return res
