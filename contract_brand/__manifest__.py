@@ -10,7 +10,7 @@
     "version": "13.0.1.0.0",
     "license": "AGPL-3",
     "author": "ACSONE SA/NV," "Odoo Community Association (OCA)",
-    "website": "https://github.com/OCA/contract",
+    "website": "https://github.com/OCA/brand",
     "depends": ["contract", "account_brand", "analytic_brand"],
     "data": ["views/contract.xml"],
     "maintainers": ["sbejaoui"],
