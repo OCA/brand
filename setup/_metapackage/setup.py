@@ -16,7 +16,9 @@ setuptools.setup(
         'odoo13-addon-pricelist_brand',
         'odoo13-addon-product_brand',
         'odoo13-addon-product_brand_purchase_report',
+        'odoo13-addon-project_task_brand',
         'odoo13-addon-sale_brand',
+        'odoo13-addon-sale_timesheet_brand',
     ],
     classifiers=[
         'Programming Language :: Python',
