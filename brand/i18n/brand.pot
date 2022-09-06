@@ -14,6 +14,11 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__task_count
+msgid "# Tasks"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__supplier_invoice_count
 msgid "# Vendor Bills"
 msgstr ""
@@ -823,6 +828,11 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__category_id
 msgid "Tags"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__task_ids
+msgid "Tasks"
 msgstr ""
 
 #. module: brand
