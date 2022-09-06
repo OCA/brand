@@ -29,7 +29,9 @@ addon | version | maintainers | summary
 [pricelist_brand](pricelist_brand/) | 13.0.1.0.0 |  | This module allows to apply pricelist items on brand
 [product_brand](product_brand/) | 13.0.2.0.2 |  | Product Brand Manager
 [product_brand_purchase_report](product_brand_purchase_report/) | 13.0.1.0.0 |  | This module allows to work with product_brand in purchase reports.
+[project_task_brand](project_task_brand/) | 13.0.1.0.0 |  | Add Brand on tasks
 [sale_brand](sale_brand/) | 13.0.0.0.3 | [![osi-scampbell](https://github.com/osi-scampbell.png?size=30px)](https://github.com/osi-scampbell) [![sbejaoui](https://github.com/sbejaoui.png?size=30px)](https://github.com/sbejaoui) | Send branded sales orders
+[sale_timesheet_brand](sale_timesheet_brand/) | 13.0.1.0.0 |  | Set brand on tasks created from sale order
 
 [//]: # (end addons)
 
