@@ -7,7 +7,7 @@
     "summary": "Send branded invoices and refunds",
     "version": "13.0.1.0.2",
     "category": "Accounting Management",
-    "website": "https://github.com/OCA/account-invoicing",
+    "website": "https://github.com/OCA/brand",
     "author": "Open Source Integrators,"
     "ACSONE SA/NV,"
     "Odoo Community Association (OCA)",
