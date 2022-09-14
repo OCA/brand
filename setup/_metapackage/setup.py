@@ -12,6 +12,7 @@ setuptools.setup(
         'odoo13-addon-analytic_brand',
         'odoo13-addon-brand',
         'odoo13-addon-brand_external_report_layout',
+        'odoo13-addon-brand_stock_account',
         'odoo13-addon-contract_brand',
         'odoo13-addon-pricelist_brand',
         'odoo13-addon-product_brand',
