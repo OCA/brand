@@ -58,18 +58,12 @@ msgid "Description"
 msgstr "Omschrijving"
 
 #. module: product_brand
-#: model:ir.model.fields,field_description:product_brand.field_account_invoice_report__display_name
 #: model:ir.model.fields,field_description:product_brand.field_product_brand__display_name
-#: model:ir.model.fields,field_description:product_brand.field_product_template__display_name
-#: model:ir.model.fields,field_description:product_brand.field_sale_report__display_name
 msgid "Display Name"
 msgstr "Schermnaam"
 
 #. module: product_brand
-#: model:ir.model.fields,field_description:product_brand.field_account_invoice_report__id
 #: model:ir.model.fields,field_description:product_brand.field_product_brand__id
-#: model:ir.model.fields,field_description:product_brand.field_product_template__id
-#: model:ir.model.fields,field_description:product_brand.field_sale_report__id
 msgid "ID"
 msgstr "ID"
 
@@ -79,10 +73,7 @@ msgid "Invoices Statistics"
 msgstr "Factuuranalyse"
 
 #. module: product_brand
-#: model:ir.model.fields,field_description:product_brand.field_account_invoice_report____last_update
 #: model:ir.model.fields,field_description:product_brand.field_product_brand____last_update
-#: model:ir.model.fields,field_description:product_brand.field_product_template____last_update
-#: model:ir.model.fields,field_description:product_brand.field_sale_report____last_update
 msgid "Last Modified on"
 msgstr "Laatst gewijzigd op"
 
@@ -117,6 +108,11 @@ msgid "Partner"
 msgstr "Relatie"
 
 #. module: product_brand
+#: model:ir.model,name:product_brand.model_product_template
+msgid "Product"
+msgstr ""
+
+#. module: product_brand
 #: model:ir.actions.act_window,name:product_brand.action_open_single_product_brand
 #: model:ir.model,name:product_brand.model_product_brand
 #: model_terms:ir.ui.view,arch_db:product_brand.product_brand_search_form_view
@@ -127,11 +123,6 @@ msgstr "Product merk"
 #: model:ir.ui.menu,name:product_brand.menu_product_brand
 msgid "Product Brands"
 msgstr "Product merken"
-
-#. module: product_brand
-#: model:ir.model,name:product_brand.model_product_template
-msgid "Product Template"
-msgstr "Productsjabloon"
 
 #. module: product_brand
 #: model_terms:ir.ui.view,arch_db:product_brand.view_product_brand_form
@@ -155,7 +146,8 @@ msgstr "Selecteer een merk voor dit product"
 msgid "Select a partner for this brand if any."
 msgstr "Selecteer een relatie voor dit merk wanneer beschikbaar."
 
-#. module: product_brand
-#: model_terms:ir.ui.view,arch_db:product_brand.view_product_brand_tree
-msgid "product.brand"
-msgstr "product.brand"
+#~ msgid "Product Template"
+#~ msgstr "Productsjabloon"
+
+#~ msgid "product.brand"
+#~ msgstr "product.brand"

@@ -10,8 +10,16 @@ class SaleReport(models.Model):
 
     product_brand_id = fields.Many2one(comodel_name="product.brand", string="Brand")
 
-    def _query(self, with_clause="", fields=None, groupby="", from_clause=""):
-        fields = fields or {}
-        fields["product_brand_id"] = ", t.product_brand_id as product_brand_id"
-        groupby += ", t.product_brand_id"
-        return super()._query(with_clause, fields, groupby, from_clause)
+    def _select_sale(self):
+        select = super()._select_sale()
+        select = f"""
+            {select},
+            t.product_brand_id as product_brand_id"""
+        return select
+
+    def _group_by_sale(self):
+        group_by = super()._group_by_sale()
+        group_by = f"""
+            {group_by},
+            t.product_brand_id"""
+        return group_by

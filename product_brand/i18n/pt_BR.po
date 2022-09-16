@@ -108,6 +108,11 @@ msgid "Partner"
 msgstr "Parceiro"
 
 #. module: product_brand
+#: model:ir.model,name:product_brand.model_product_template
+msgid "Product"
+msgstr ""
+
+#. module: product_brand
 #: model:ir.actions.act_window,name:product_brand.action_open_single_product_brand
 #: model:ir.model,name:product_brand.model_product_brand
 #: model_terms:ir.ui.view,arch_db:product_brand.product_brand_search_form_view
@@ -118,11 +123,6 @@ msgstr "Marca do produto"
 #: model:ir.ui.menu,name:product_brand.menu_product_brand
 msgid "Product Brands"
 msgstr "Marca dos produtos"
-
-#. module: product_brand
-#: model:ir.model,name:product_brand.model_product_template
-msgid "Product Template"
-msgstr "Template de produto"
 
 #. module: product_brand
 #: model_terms:ir.ui.view,arch_db:product_brand.view_product_brand_form
@@ -146,7 +146,8 @@ msgstr "Selecione uma marca para este produto"
 msgid "Select a partner for this brand if any."
 msgstr "Selecione um parceiro para esta marca se houver."
 
-#. module: product_brand
-#: model_terms:ir.ui.view,arch_db:product_brand.view_product_brand_tree
-msgid "product.brand"
-msgstr "product.brand"
+#~ msgid "Product Template"
+#~ msgstr "Template de produto"
+
+#~ msgid "product.brand"
+#~ msgstr "product.brand"
