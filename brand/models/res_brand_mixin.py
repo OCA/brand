@@ -41,7 +41,7 @@ class ResBrandMixin(models.AbstractModel):
     def _check_brand_requirement(self):
         for rec in self:
             if rec._is_brand_required() and not rec.brand_id:
-                raise ValidationError(_("Brand is required on " % rec._description))
+                raise ValidationError(_("Brand is required on %s" % rec._description))
 
     @api.constrains("brand_id", "company_id")
     def _check_brand_company_id(self):

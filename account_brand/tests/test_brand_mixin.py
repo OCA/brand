@@ -26,6 +26,7 @@ class TestBrandMixin(TransactionCase):
                 "company_id": self.company.id,
                 "journal_id": self.journal.id,
                 "partner_id": self.partner.id,
+                "type": "out_invoice",
             }
         )
         self.brand = self.env["res.brand"].create({"name": "brand"})
@@ -55,6 +56,7 @@ class TestBrandMixin(TransactionCase):
                     "company_id": self.company.id,
                     "journal_id": self.journal.id,
                     "partner_id": self.partner.id,
+                    "type": "out_invoice",
                 }
             )
         self.env["account.move"].create(
@@ -64,6 +66,7 @@ class TestBrandMixin(TransactionCase):
                 "journal_id": self.journal.id,
                 "partner_id": self.partner.id,
                 "brand_id": self.brand.id,
+                "type": "out_invoice",
             }
         )
 
