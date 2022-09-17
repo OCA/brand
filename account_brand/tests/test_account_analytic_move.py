@@ -1,9 +1,11 @@
 # Copyright 2019 ACSONE SA/NV
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
+from odoo.tests import tagged
 from odoo.tests.common import SavepointCase
 
 
+@tagged("post_install", "-at_install")
 class TestAccountAnalyticMove(SavepointCase):
     def setUp(self):
         super().setUp()
