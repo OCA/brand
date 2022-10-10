@@ -8,12 +8,11 @@ class TestAccountMove(TransactionCase):
     def setUp(self):
         super(TestAccountMove, self).setUp()
         self.product = self.env.ref("product.product_product_4")
-        account_receivable_type = self.env.ref("account.data_account_type_receivable")
         self.account_receivable = self.env["account.account"].create(
             {
                 "name": "Partner Receivable",
                 "code": "RCV00",
-                "user_type_id": account_receivable_type.id,
+                "account_type": "asset_receivable",
                 "reconcile": True,
             }
         )
@@ -21,7 +20,7 @@ class TestAccountMove(TransactionCase):
             {
                 "name": "Receivable Brand Default",
                 "code": "RCV01",
-                "user_type_id": account_receivable_type.id,
+                "account_type": "asset_receivable",
                 "reconcile": True,
             }
         )
@@ -31,15 +30,14 @@ class TestAccountMove(TransactionCase):
             {
                 "name": "Receivable Partner Brand Default",
                 "code": "RCV02",
-                "user_type_id": account_receivable_type.id,
+                "account_type": "asset_receivable",
                 "reconcile": True,
             }
         )
         self.partner_id = self.env.ref("base.res_partner_12")
         self.partner_id.property_account_receivable_id = self.account_receivable
-        type_revenue = self.env.ref("account.data_account_type_revenue")
         self.account_revenue = self.env["account.account"].create(
-            {"name": "Test sale", "code": "XX_700", "user_type_id": type_revenue.id}
+            {"name": "Test sale", "code": "XX.700", "account_type": "income"}
         )
         self.move = self.env["account.move"].create(
             {
@@ -64,9 +62,8 @@ class TestAccountMove(TransactionCase):
         self.brand_id = self.env["res.brand"].create({"name": "Brand"})
 
     def _get_receivable_account(self, move):
-        user_type_receivable = self.env.ref("account.data_account_type_receivable")
         return self.move.line_ids.filtered(
-            lambda l, u_type=user_type_receivable: l.account_id.user_type_id == u_type
+            lambda l: l.account_id.account_type == "asset_receivable"
         ).account_id
 
     def test_on_change_partner_id(self):
@@ -78,7 +75,7 @@ class TestAccountMove(TransactionCase):
                 "partner_id": False,
                 "account_id": self.account_receivable_brand_default.id,
                 "brand_id": self.brand_id.id,
-                "account_type": "receivable",
+                "account_type": "asset_receivable",
             }
         )
         self.move._onchange_partner_id()
