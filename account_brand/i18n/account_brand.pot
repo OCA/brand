@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 15.0\n"
+"Project-Id-Version: Odoo Server 16.0beta\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -107,7 +107,7 @@ msgid "Partner has already an account set for this brand!"
 msgstr ""
 
 #. module: account_brand
-#: model:ir.model.fields.selection,name:account_brand.selection__res_partner_account_brand__account_type__payable
+#: model:ir.model.fields.selection,name:account_brand.selection__res_partner_account_brand__account_type__liability_payable
 msgid "Payable"
 msgstr ""
 
@@ -118,7 +118,7 @@ msgid "Please select an account of type %s"
 msgstr ""
 
 #. module: account_brand
-#: model:ir.model.fields.selection,name:account_brand.selection__res_partner_account_brand__account_type__receivable
+#: model:ir.model.fields.selection,name:account_brand.selection__res_partner_account_brand__account_type__asset_receivable
 msgid "Receivable"
 msgstr ""
 
