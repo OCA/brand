@@ -5,8 +5,7 @@ from odoo import api, models
 
 
 class MailThread(models.AbstractModel):
-    _name = "mail.thread"
-    _inherit = ["mail.thread", "res.brand.mixin"]
+    _inherit = "mail.thread"
 
     @api.model
     def _notify_prepare_template_context(
