@@ -91,14 +91,11 @@ class BrandDocumentLayout(models.TransientModel):
                 wizard.secondary_color = wizard.logo_secondary_color
 
     def _get_asset_style(self):
-        template_style = self.env.ref(
-            "brand_external_report_layout.styles_brand_report", raise_if_not_found=False
+        return self.env["ir.qweb"]._render(
+            "brand_external_report_layout.styles_brand_report",
+            {"brand_ids": self},
+            raise_if_not_found=False,
         )
-        if not template_style:
-            return b""
-
-        brand_styles = template_style._render({"brand_ids": self})
-        return brand_styles
 
     @api.depends(
         "report_layout_id",
