@@ -89,15 +89,10 @@ class ResBrand(models.Model):
         }
 
     def _get_asset_style_b64(self):
-        template_style = self.env.ref(
-            "brand_external_report_layout.styles_brand_report", raise_if_not_found=False
-        )
-        if not template_style:
-            return b""
-        brand_styles = template_style._render(
-            {
-                "brand_ids": self.sudo().search([]),
-            }
+        brand_styles = self.env["ir.qweb"]._render(
+            "brand_external_report_layout.styles_brand_report",
+            {"brand_ids": self.sudo().search([])},
+            raise_if_not_found=False,
         )
         return base64.b64encode(brand_styles.encode())
 
