@@ -52,33 +52,31 @@ class ResBrandMixin(models.AbstractModel):
             if rec.brand_id and rec.brand_id.company_id:
                 rec.company_id = rec.brand_id.company_id
 
-    def setup_modifiers(self, node, field=None, context=None):
+    def setup_modifiers(self, node, field=None):
         modifiers = {}
         if field is not None:
             ir_ui_view.transfer_field_to_modifiers(field, modifiers)
-        ir_ui_view.transfer_node_to_modifiers(node, modifiers, context=context)
+        ir_ui_view.transfer_node_to_modifiers(node, modifiers)
         ir_ui_view.transfer_modifiers_to_node(modifiers, node)
 
-    def fields_view_get(
-        self, view_id=None, view_type="form", toolbar=False, submenu=False
-    ):
+    @api.model
+    def get_view(self, view_id=None, view_type="form", **options):
         """set visibility and requirement rules"""
-        result = super(ResBrandMixin, self).fields_view_get(
-            view_id=view_id,
-            view_type=view_type,
-            toolbar=toolbar,
-            submenu=submenu,
+        result = super(ResBrandMixin, self).get_view(
+            view_id=view_id, view_type=view_type, **options
         )
 
         if view_type in ["tree", "form"]:
             doc = etree.XML(result["arch"])
-            result["fields"].update(self.fields_get(["brand_use_level"]))
             for node in doc.xpath("//field[@name='brand_id']"):
                 elem = etree.Element(
                     "field", {"name": "brand_use_level", "invisible": "True"}
                 )
-                field = result["fields"]["brand_use_level"]
-                self.setup_modifiers(elem, field=field, context=self._context)
+                brand_use_level_field = self.fields_get(["brand_use_level"])[
+                    "brand_use_level"
+                ]
+                brand_id_field = self.fields_get(["brand_id"])["brand_id"]
+                self.setup_modifiers(elem, field=brand_use_level_field)
                 node.addprevious(elem)
                 node.set(
                     "attrs",
@@ -91,7 +89,6 @@ class ResBrandMixin(models.AbstractModel):
                         BRAND_USE_LEVEL_REQUIRED_LEVEL,
                     ),
                 )
-                field = result["fields"]["brand_id"]
-                self.setup_modifiers(node, field=field, context=self._context)
+                self.setup_modifiers(node, field=brand_id_field)
             result["arch"] = etree.tostring(doc, encoding="unicode")
         return result
