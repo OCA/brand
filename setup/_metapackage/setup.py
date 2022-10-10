@@ -10,6 +10,7 @@ setuptools.setup(
     install_requires=[
         'odoo-addon-account_brand>=16.0dev,<16.1dev',
         'odoo-addon-brand>=16.0dev,<16.1dev',
+        'odoo-addon-brand_external_report_layout>=16.0dev,<16.1dev',
     ],
     classifiers=[
         'Programming Language :: Python',
