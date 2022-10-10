@@ -95,8 +95,8 @@ class TestBrandMixin(TransactionCase):
         new_invoice._onchange_brand_id()
         self.assertEqual(new_invoice.company_id, self.other_company)
 
-    def test_fields_view_get(self):
-        view = self.env["account.move"].fields_view_get(
+    def test_get_view(self):
+        view = self.env["account.move"].get_view(
             view_id=self.env.ref("account.view_move_form").id,
             view_type="form",
         )
