@@ -38,11 +38,6 @@ msgid "Company"
 msgstr "Compañía"
 
 #. module: sale_brand
-#: model:ir.model,name:sale_brand.model_sale_advance_payment_inv
-msgid "Sales Advance Payment Invoice"
-msgstr "Factura de Pago Anticipado de Ventas"
-
-#. module: sale_brand
 #: model:ir.model,name:sale_brand.model_sale_order
 msgid "Sales Order"
 msgstr "Pedido de Ventas"
@@ -51,3 +46,6 @@ msgstr "Pedido de Ventas"
 #: model:ir.model,name:sale_brand.model_crm_team
 msgid "Sales Team"
 msgstr "Equipo de Ventas"
+
+#~ msgid "Sales Advance Payment Invoice"
+#~ msgstr "Factura de Pago Anticipado de Ventas"
