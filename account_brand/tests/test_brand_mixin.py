@@ -6,7 +6,10 @@ from lxml import etree
 from odoo.exceptions import ValidationError
 from odoo.tests.common import Form, TransactionCase
 
-from odoo.addons.brand.models.res_company import BRAND_USE_LEVEL_REQUIRED_LEVEL
+from odoo.addons.brand.models.res_company import (
+    BRAND_USE_LEVEL_NO_USE_LEVEL,
+    BRAND_USE_LEVEL_REQUIRED_LEVEL,
+)
 
 
 class TestBrandMixin(TransactionCase):
@@ -138,3 +141,14 @@ class TestBrandMixin(TransactionCase):
         action = reverse.reverse_moves()
         credit_note = self.env["account.move"].browse(action.get("res_id"))
         self.assertEqual(credit_note.brand_id, self.brand)
+
+    def test_default_get(self):
+        self.company.brand_use_level = BRAND_USE_LEVEL_REQUIRED_LEVEL
+
+        move = Form(self.env["account.move"])
+        self.assertEqual(move.brand_use_level, BRAND_USE_LEVEL_NO_USE_LEVEL)
+
+        move = Form(
+            self.env["account.move"].with_context(default_company_id=self.company.id)
+        )
+        self.assertEqual(move.brand_use_level, BRAND_USE_LEVEL_REQUIRED_LEVEL)
