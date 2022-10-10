@@ -19,12 +19,15 @@ class ResPartnerAccountBrand(models.Model):
         comodel_name="account.account",
         string="Account",
         required=True,
-        domain="[('user_type_id.type', 'in', ('payable', 'receivable'))]",
+        domain="[('account_type', 'in', ('liability_payable', 'asset_receivable'))]",
     )
     brand_id = fields.Many2one(comodel_name="res.brand", string="Brand", required=True)
     account_type = fields.Selection(
         string="Type",
-        selection=[("payable", "Payable"), ("receivable", "Receivable")],
+        selection=[
+            ("liability_payable", "Payable"),
+            ("asset_receivable", "Receivable"),
+        ],
         required=True,
     )
 
@@ -42,7 +45,7 @@ class ResPartnerAccountBrand(models.Model):
             if (
                 rec.account_id
                 and rec.account_type
-                and rec.account_id.user_type_id.type != rec.account_type
+                and rec.account_id.account_type != rec.account_type
             ):
                 raise ValidationError(
                     _("Please select an account of type %s") % rec.account_type
