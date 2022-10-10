@@ -141,7 +141,7 @@ msgstr ""
 #. module: brand
 #: code:addons/brand/models/res_brand_mixin.py:0
 #, python-format
-msgid "Brand is required"
+msgid "Brand is required on %s"
 msgstr ""
 
 #. module: brand
