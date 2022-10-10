@@ -24,8 +24,9 @@ class AccountMove(models.Model):
             return False
         return super()._is_brand_required()
 
-    def _recompute_payment_terms_lines(self):
-        res = super()._recompute_payment_terms_lines()
+    @api.onchange("partner_id")
+    def _onchange_partner_id(self):
+        res = super()._onchange_partner_id()
         if self.brand_id:
             pab_model = self.env["res.partner.account.brand"]
             company_id = self.company_id.id
@@ -39,7 +40,7 @@ class AccountMove(models.Model):
             )
             if partner:
                 rec_account = pab_model._get_partner_account_by_brand(
-                    "receivable", self.brand_id, partner
+                    "asset_receivable", self.brand_id, partner
                 )
                 rec_account = (
                     rec_account
@@ -47,7 +48,7 @@ class AccountMove(models.Model):
                     else partner.property_account_receivable_id
                 )
                 pay_account = pab_model._get_partner_account_by_brand(
-                    "payable", self.brand_id, partner
+                    "liability_payable", self.brand_id, partner
                 )
                 pay_account = (
                     pay_account if pay_account else partner.property_account_payable_id
@@ -58,19 +59,7 @@ class AccountMove(models.Model):
                     account_id = rec_account
                 if account_id:
                     self.line_ids.filtered(
-                        lambda l, a=account_id: l.account_id.user_type_id
-                        == a.user_type_id
+                        lambda l, a=account_id: l.account_id.account_type
+                        == a.account_type
                     ).update({"account_id": account_id.id})
-        return res
-
-    @api.onchange("brand_id", "invoice_line_ids")
-    def _onchange_brand_id(self):
-        res = super()._onchange_brand_id()
-        for invoice in self:
-            if invoice.state == "draft" and invoice.brand_id:
-                account_analytic = invoice.brand_id.analytic_account_id
-                if account_analytic:
-                    invoice.invoice_line_ids.update(
-                        {"analytic_account_id": account_analytic.id}
-                    )
         return res
