@@ -35,11 +35,6 @@ msgid "Company"
 msgstr ""
 
 #. module: sale_brand
-#: model:ir.model,name:sale_brand.model_sale_advance_payment_inv
-msgid "Sales Advance Payment Invoice"
-msgstr ""
-
-#. module: sale_brand
 #: model:ir.model,name:sale_brand.model_sale_order
 msgid "Sales Order"
 msgstr ""
