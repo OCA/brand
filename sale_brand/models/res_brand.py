@@ -22,6 +22,7 @@ class ResBrand(models.Model):
     )
     terms_url = fields.Char(string="Preview terms", compute="_compute_terms_url")
 
+    # flake8: noqa: B950
     @api.onchange("website", "terms_page")
     def _compute_terms_url(self):
         link_tags = re.compile(
