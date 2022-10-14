@@ -17,6 +17,20 @@ msgstr ""
 "X-Generator: Weblate 4.14.1\n"
 
 #. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__type
+msgid ""
+"- Contact: Use this to organize the contact details of employees of a given "
+"company (e.g. CEO, CFO, ...).\n"
+"- Invoice Address : Preferred address for all invoices. Selected by default "
+"when you invoice an order that belongs to this company.\n"
+"- Delivery Address : Preferred address for all deliveries. Selected by "
+"default when you deliver an order that belongs to this company.\n"
+"- Private: Private addresses are only visible by authorized users and "
+"contain sensitive data (employee home addresses, ...).\n"
+"- Other: Other address for the company (e.g. subsidiary, ...)"
+msgstr ""
+
+#. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
 msgid ""
 "<span class=\"o_form_label\">Brand</span>\n"
@@ -262,6 +276,11 @@ msgid "Company"
 msgstr "Société"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__company_registry
+msgid "Company ID"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__company_name
 msgid "Company Name"
 msgstr "Non société"
@@ -305,11 +324,6 @@ msgid "Contact"
 msgstr "Contact"
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
-msgid "Contracts"
-msgstr "Contrats"
-
-#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_bounce
 msgid "Counter of the number of bounced emails for this contact"
 msgstr "Compteur du nombre d'emails rejetés pour ce contact"
@@ -339,6 +353,11 @@ msgstr "Créé le"
 #: model:ir.model.fields,field_description:brand.field_res_brand__credit_limit
 msgid "Credit Limit"
 msgstr "Limite de crédit"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__credit_limit
+msgid "Credit limit specific to this partner."
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__currency_id
@@ -374,6 +393,11 @@ msgstr "Nom affiché"
 #: model:ir.model.fields.selection,name:brand.selection__res_company__brand_use_level__no
 msgid "Do not use brands on business document"
 msgstr "N'utilisez pas de marques sur un document commercial"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__duplicated_bank_account_partners_count
+msgid "Duplicated Bank Account Partners Count"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__partner_share
@@ -478,7 +502,6 @@ msgstr "Icône pour indiquer une activité d'exception."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_needaction
-#: model:ir.model.fields,help:brand.field_res_brand__message_unread
 msgid "If checked, new messages require your attention."
 msgstr "Si coché, les nouveaux messages nécessitent votre attention."
 
@@ -573,16 +596,6 @@ msgid "Invoice"
 msgstr "Facture"
 
 #. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__type
-msgid ""
-"Invoice & Delivery addresses are used in sales orders. Private addresses are "
-"only visible by authorized users."
-msgstr ""
-"Les adresses de facturation et de livraison sont utilisées dans les "
-"commandes de vente. Les adresses privées ne sont visibles que par les "
-"utilisateurs autorisés."
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_ids
 msgid "Invoices"
 msgstr "Factures"
@@ -591,6 +604,11 @@ msgstr "Factures"
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_is_follower
 msgid "Is Follower"
 msgstr "Est un suiveur"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__is_public
+msgid "Is Public"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_company
@@ -730,11 +748,6 @@ msgid "Number of messages with delivery error"
 msgstr "NB de messages avec erreur de d'acheminement"
 
 #. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__message_unread_counter
-msgid "Number of unread messages"
-msgstr "Nb messages non lus"
-
-#. module: brand
 #: model:ir.model.fields.selection,name:brand.selection__res_company__brand_use_level__optional
 msgid "Optional"
 msgstr "Optionnel"
@@ -750,6 +763,21 @@ msgid "Partner"
 msgstr "Partenaire"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
+msgid "Partner Contracts"
+msgstr "Contrats du partenaire"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__use_partner_credit_limit
+msgid "Partner Limit"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__same_company_registry_partner_id
+msgid "Partner with same Company Registry"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__same_vat_partner_id
 msgid "Partner with same Tax ID"
 msgstr "Partenaire avec la même numéro TVA"
@@ -763,11 +791,6 @@ msgstr "Contacts"
 #: model:ir.model.fields,field_description:brand.field_res_brand__debit_limit
 msgid "Payable Limit"
 msgstr "Limite de paiement"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__property_payment_method_id
-msgid "Payment Method"
-msgstr "Méthode de paiement"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__payment_token_count
@@ -795,26 +818,9 @@ msgid "Phone/Mobile"
 msgstr "Téléphone/Mobile"
 
 #. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__property_payment_method_id
-msgid ""
-"Preferred payment method when paying this vendor. This is used to filter "
-"vendor bills by preferred payment method to register payments in mass. Use "
-"cases: create bank files for batch wires, check runs."
-msgstr ""
-"Mode de paiement préféré lors du paiement de ce fournisseur. Ceci est "
-"utilisé pour filtrer les factures des fournisseurs par mode de paiement "
-"préféré pour enregistrer les paiements en masse. Cas d'utilisation : créer "
-"des fichiers bancaires pour les virements par lots, vérifier les exécutions."
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_product_pricelist
 msgid "Pricelist"
 msgstr "Liste de prix"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_contract_count
-msgid "Purchase Contracts"
-msgstr "Contrats d'Achat"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__ref
@@ -840,11 +846,6 @@ msgstr "Utilisateur responsable"
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_has_sms_error
 msgid "SMS Delivery error"
 msgstr "SMS d'erreur de livraison"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__sale_contract_count
-msgid "Sale Contracts"
-msgstr "Contrats de vente"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_order_count
@@ -898,6 +899,11 @@ msgstr "Self"
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_share
 msgid "Share Partner"
 msgstr "Partager partenaire"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__show_credit_limit
+msgid "Show Credit Limit"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__signup_expiration
@@ -1018,6 +1024,13 @@ msgstr ""
 "dernière mise en correspondance des factures et des paiements."
 
 #. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__company_registry
+msgid ""
+"The registry number of the company. Use it if it is different from the Tax "
+"ID. It must be unique across all partners of a same country"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_account_payable_id
 msgid ""
 "This account will be used instead of the default one as the payable account "
@@ -1117,16 +1130,6 @@ msgid "Type of the exception activity on record."
 msgstr "Type de l'activité d'exception enregistrée."
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__message_unread
-msgid "Unread Messages"
-msgstr "Message non lus"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__message_unread_counter
-msgid "Unread Messages Counter"
-msgstr "Nb messages non lus"
-
-#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__barcode
 msgid "Use a barcode to identify this contact."
 msgstr "Utiliser un code barre pour identifier ce contact."
@@ -1135,11 +1138,6 @@ msgstr "Utiliser un code barre pour identifier ce contact."
 #: model:ir.model.fields,field_description:brand.field_res_brand__user_ids
 msgid "Users"
 msgstr "Utilisateurs"
-
-#. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__currency_id
-msgid "Utility field to express amount currency"
-msgstr "Champ utilitaire pour exprimer la devise du montant"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_supplier_payment_term_id
@@ -1202,8 +1200,48 @@ msgstr "e.g. BFR0477472701"
 msgid "e.g. https://www.odoo.com"
 msgstr "e.g. https://www.odoo.com"
 
-#~ msgid "Partner Contracts"
-#~ msgstr "Contrats du partenaire"
+#~ msgid "Contracts"
+#~ msgstr "Contrats"
+
+#~ msgid ""
+#~ "Invoice & Delivery addresses are used in sales orders. Private addresses "
+#~ "are only visible by authorized users."
+#~ msgstr ""
+#~ "Les adresses de facturation et de livraison sont utilisées dans les "
+#~ "commandes de vente. Les adresses privées ne sont visibles que par les "
+#~ "utilisateurs autorisés."
+
+#~ msgid "Number of unread messages"
+#~ msgstr "Nb messages non lus"
+
+#~ msgid "Payment Method"
+#~ msgstr "Méthode de paiement"
+
+#~ msgid ""
+#~ "Preferred payment method when paying this vendor. This is used to filter "
+#~ "vendor bills by preferred payment method to register payments in mass. "
+#~ "Use cases: create bank files for batch wires, check runs."
+#~ msgstr ""
+#~ "Mode de paiement préféré lors du paiement de ce fournisseur. Ceci est "
+#~ "utilisé pour filtrer les factures des fournisseurs par mode de paiement "
+#~ "préféré pour enregistrer les paiements en masse. Cas d'utilisation : "
+#~ "créer des fichiers bancaires pour les virements par lots, vérifier les "
+#~ "exécutions."
+
+#~ msgid "Purchase Contracts"
+#~ msgstr "Contrats d'Achat"
+
+#~ msgid "Sale Contracts"
+#~ msgstr "Contrats de vente"
+
+#~ msgid "Unread Messages"
+#~ msgstr "Message non lus"
+
+#~ msgid "Unread Messages Counter"
+#~ msgstr "Nb messages non lus"
+
+#~ msgid "Utility field to express amount currency"
+#~ msgstr "Champ utilitaire pour exprimer la devise du montant"
 
 #~ msgid "Count Payment Token"
 #~ msgstr "Nb jeton de paiement"
