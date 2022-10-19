@@ -111,6 +111,11 @@ msgid "Partner"
 msgstr ""
 
 #. module: product_brand
+#: model:ir.model,name:product_brand.model_product_template
+msgid "Product"
+msgstr ""
+
+#. module: product_brand
 #: model:ir.actions.act_window,name:product_brand.action_open_single_product_brand
 #: model:ir.model,name:product_brand.model_product_brand
 #: model_terms:ir.ui.view,arch_db:product_brand.product_brand_search_form_view
@@ -120,11 +125,6 @@ msgstr ""
 #. module: product_brand
 #: model:ir.ui.menu,name:product_brand.menu_product_brand
 msgid "Product Brands"
-msgstr ""
-
-#. module: product_brand
-#: model:ir.model,name:product_brand.model_product_template
-msgid "Product Template"
 msgstr ""
 
 #. module: product_brand
@@ -147,9 +147,4 @@ msgstr ""
 #. module: product_brand
 #: model:ir.model.fields,help:product_brand.field_product_brand__partner_id
 msgid "Select a partner for this brand if any."
-msgstr ""
-
-#. module: product_brand
-#: model_terms:ir.ui.view,arch_db:product_brand.view_product_brand_tree
-msgid "product.brand"
 msgstr ""
