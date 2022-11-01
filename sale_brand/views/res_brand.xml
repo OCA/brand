@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 Snakebyte
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="res_brand_sale_form_view">
+        <field name="model">res.brand</field>
+        <field name="inherit_id" ref="brand.res_brand_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="/form/sheet/group" position="inside">
+                <group>
+                    <field name="terms_type" widget="radio" />
+                    <field
+                        name="invoice_terms"
+                        attrs="{'invisible': [('terms_type', '=', 'html')]}"
+                        class="oe_account_terms mt-5 w-100"
+                        placeholder="Insert your terms &amp; conditions here..."
+                    />
+                    <field
+                        name="terms_page"
+                        string="Terms page"
+                        attrs="{'invisible': [('terms_type', '!=', 'html')]}"
+                    />
+                    <field
+                        name="terms_url"
+                        widget="url"
+                        attrs="{'invisible': [('terms_type', '!=', 'html')]}"
+                    />
+                </group>
+
+            </xpath>
+        </field>
+    </record>
+</odoo>

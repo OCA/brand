@@ -3,6 +3,8 @@
 
 from odoo.tests.common import TransactionCase
 
+from odoo.addons.brand.models.res_company import BRAND_USE_LEVEL_NO_USE_LEVEL
+
 
 class TestSaleOrder(TransactionCase):
     def setUp(self):
@@ -12,6 +14,59 @@ class TestSaleOrder(TransactionCase):
         self.sale.brand_id = self.env["res.brand"].create({"name": "brand"})
         self.sale.order_line.mapped("product_id").write({"invoice_policy": "order"})
         self.sale.action_confirm()
+
+    def test_terms_url(self):
+        self.env["ir.config_parameter"].sudo().set_param(
+            "account.use_invoice_terms", True
+        )
+
+        self.sale.brand_id.write(
+            {
+                "website": "https://odoo-community.org",
+                "terms_type": "html",
+                "invoice_terms": "We are not responsible for or product to work",
+                "terms_page": "/terms",
+            }
+        )
+        self.assertEqual(
+            self.sale.brand_id.terms_url, "https://odoo-community.org/terms"
+        )
+        self.sale._onchange_brand_id()
+        self.assertEqual(
+            self.sale.note,
+            "<p>Terms &amp; Conditions: https://odoo-community.org/terms</p>",
+        )
+
+        self.sale.brand_id.write({"terms_type": "plain"})
+        self.sale._onchange_brand_id()
+        self.assertEqual(
+            self.sale.note,
+            "<p>We are not responsible for or product to work</p>",
+        )
+
+        self.env["ir.config_parameter"].sudo().set_param(
+            "account.use_invoice_terms", False
+        )
+        self.sale.brand_id.write({"terms_type": "plain"})
+        self.sale._onchange_brand_id()
+        self.assertEqual(
+            self.sale.note,
+            "",
+        )
+
+        self.env["ir.config_parameter"].sudo().set_param(
+            "account.use_invoice_terms", True
+        )
+        self.env.company.write(
+            {
+                "terms_type": "plain",
+                "invoice_terms": "Company terms",
+                "brand_use_level": BRAND_USE_LEVEL_NO_USE_LEVEL,
+            }
+        )
+        self.sale.brand_id = False
+        self.sale._onchange_brand_id()
+        self.assertEqual(self.sale.note, "<p>Company terms</p>")
 
     def test_create_invoice(self):
         """It should create branded invoice"""

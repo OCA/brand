@@ -1,7 +1,7 @@
-# Copyright (C) 2019 Open Source Integrators
+# Copyright (C) 2019 Open Source Integrators, 2022 Snakebyte
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import api, fields, models
+from odoo import _, api, fields, models
 
 
 class SaleOrder(models.Model):
@@ -28,6 +28,7 @@ class SaleOrder(models.Model):
     def _onchange_brand_id(self):
         res = super()._onchange_brand_id()
         for order in self:
+            order.note = order._default_note()
             if order.state == "draft" and order.brand_id:
                 order.analytic_account_id = order.brand_id.analytic_account_id
         return res
@@ -45,3 +46,15 @@ class SaleOrder(models.Model):
             res["brand_id"] = team.brand_id.id
 
         return res
+
+    def _default_note(self):
+        use_invoice_terms = (
+            self.env["ir.config_parameter"]
+            .sudo()
+            .get_param("account.use_invoice_terms")
+        )
+        if use_invoice_terms and self.brand_id:
+            if self.brand_id.terms_type == "html":
+                return _("Terms & Conditions: %s", self.brand_id.terms_url)
+            return self.brand_id.invoice_terms or ""
+        return super()._default_note()
