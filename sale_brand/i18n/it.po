@@ -17,6 +17,17 @@ msgstr ""
 "X-Generator: Weblate 4.3.2\n"
 
 #. module: sale_brand
+#: model:ir.model.fields.selection,name:sale_brand.selection__res_brand__terms_type__plain
+msgid "Add a Note"
+msgstr ""
+
+#. module: sale_brand
+#: model:ir.model.fields.selection,name:sale_brand.selection__res_brand__terms_type__html
+msgid "Add a link to a Web Page"
+msgstr ""
+
+#. module: sale_brand
+#: model:ir.model,name:sale_brand.model_res_brand
 #: model:ir.model.fields,field_description:sale_brand.field_crm_team__brand_id
 #: model:ir.model.fields,field_description:sale_brand.field_sale_order__brand_id
 msgid "Brand"
@@ -38,25 +49,19 @@ msgid "Company"
 msgstr "Azienda"
 
 #. module: sale_brand
-#: model:ir.model.fields,field_description:sale_brand.field_crm_team__display_name
-#: model:ir.model.fields,field_description:sale_brand.field_sale_advance_payment_inv__display_name
-#: model:ir.model.fields,field_description:sale_brand.field_sale_order__display_name
-msgid "Display Name"
-msgstr "Nome visualizzato"
+#: model:ir.model.fields,field_description:sale_brand.field_res_brand__invoice_terms
+msgid "Default Terms and Conditions"
+msgstr ""
 
 #. module: sale_brand
-#: model:ir.model.fields,field_description:sale_brand.field_crm_team__id
-#: model:ir.model.fields,field_description:sale_brand.field_sale_advance_payment_inv__id
-#: model:ir.model.fields,field_description:sale_brand.field_sale_order__id
-msgid "ID"
-msgstr "ID"
+#: model_terms:ir.ui.view,arch_db:sale_brand.res_brand_sale_form_view
+msgid "Insert your terms & conditions here..."
+msgstr ""
 
 #. module: sale_brand
-#: model:ir.model.fields,field_description:sale_brand.field_crm_team____last_update
-#: model:ir.model.fields,field_description:sale_brand.field_sale_advance_payment_inv____last_update
-#: model:ir.model.fields,field_description:sale_brand.field_sale_order____last_update
-msgid "Last Modified on"
-msgstr "Ultima Modifica il"
+#: model:ir.model.fields,field_description:sale_brand.field_res_brand__terms_url
+msgid "Preview terms"
+msgstr ""
 
 #. module: sale_brand
 #: model:ir.model,name:sale_brand.model_sale_advance_payment_inv
@@ -72,3 +77,38 @@ msgstr "Ordine di vendita"
 #: model:ir.model,name:sale_brand.model_crm_team
 msgid "Sales Team"
 msgstr "Team di Vendita"
+
+#. module: sale_brand
+#: model:ir.model.fields,field_description:sale_brand.field_res_brand__terms_type
+msgid "Terms & Conditions format"
+msgstr ""
+
+#. module: sale_brand
+#: code:addons/sale_brand/models/sale_order.py:0
+#, python-format
+msgid "Terms & Conditions: %s"
+msgstr ""
+
+#. module: sale_brand
+#: model:ir.model.fields,field_description:sale_brand.field_res_brand__terms_page
+msgid "Terms Page"
+msgstr ""
+
+#. module: sale_brand
+#: model_terms:ir.ui.view,arch_db:sale_brand.res_brand_sale_form_view
+msgid "Terms page"
+msgstr ""
+
+#. module: sale_brand
+#: model:ir.model.fields,help:sale_brand.field_res_brand__terms_page
+msgid "page on the brands site where the terms can be found"
+msgstr ""
+
+#~ msgid "Display Name"
+#~ msgstr "Nome visualizzato"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Ultima Modifica il"
