@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2022-09-05 07:07+0000\n"
+"PO-Revision-Date: 2022-11-02 05:44+0000\n"
 "Last-Translator: Ignacio Buioli <ibuioli@gmail.com>\n"
 "Language-Team: none\n"
 "Language: es_AR\n"
@@ -14,17 +14,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.2\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #. module: sale_brand
 #: model:ir.model.fields.selection,name:sale_brand.selection__res_brand__terms_type__plain
 msgid "Add a Note"
-msgstr ""
+msgstr "Añadir una Nota"
 
 #. module: sale_brand
 #: model:ir.model.fields.selection,name:sale_brand.selection__res_brand__terms_type__html
 msgid "Add a link to a Web Page"
-msgstr ""
+msgstr "Añadir un vínculo a una Página Web"
 
 #. module: sale_brand
 #: model:ir.model,name:sale_brand.model_res_brand
@@ -51,17 +51,17 @@ msgstr "Compañía"
 #. module: sale_brand
 #: model:ir.model.fields,field_description:sale_brand.field_res_brand__invoice_terms
 msgid "Default Terms and Conditions"
-msgstr ""
+msgstr "Términos y Condiciones Predeterminados"
 
 #. module: sale_brand
 #: model_terms:ir.ui.view,arch_db:sale_brand.res_brand_sale_form_view
 msgid "Insert your terms & conditions here..."
-msgstr ""
+msgstr "Inserte sus términos y condiciones acá..."
 
 #. module: sale_brand
 #: model:ir.model.fields,field_description:sale_brand.field_res_brand__terms_url
 msgid "Preview terms"
-msgstr ""
+msgstr "Previsualización de términos"
 
 #. module: sale_brand
 #: model:ir.model,name:sale_brand.model_sale_advance_payment_inv
@@ -81,25 +81,25 @@ msgstr "Equipo de Ventas"
 #. module: sale_brand
 #: model:ir.model.fields,field_description:sale_brand.field_res_brand__terms_type
 msgid "Terms & Conditions format"
-msgstr ""
+msgstr "Formato de Términos y Condiciones"
 
 #. module: sale_brand
 #: code:addons/sale_brand/models/sale_order.py:0
 #, python-format
 msgid "Terms & Conditions: %s"
-msgstr ""
+msgstr "Términos y Condiciones: %s"
 
 #. module: sale_brand
 #: model:ir.model.fields,field_description:sale_brand.field_res_brand__terms_page
 msgid "Terms Page"
-msgstr ""
+msgstr "Página de Términos"
 
 #. module: sale_brand
 #: model_terms:ir.ui.view,arch_db:sale_brand.res_brand_sale_form_view
 msgid "Terms page"
-msgstr ""
+msgstr "Página de términos"
 
 #. module: sale_brand
 #: model:ir.model.fields,help:sale_brand.field_res_brand__terms_page
 msgid "page on the brands site where the terms can be found"
-msgstr ""
+msgstr "página en el sitio de las marcas donde pueden encontrarse los términos"
