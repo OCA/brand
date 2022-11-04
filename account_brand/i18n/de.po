@@ -6,20 +6,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2020-07-01 22:19+0000\n"
-"Last-Translator: Peter Schubert <psc@saco.info>\n"
+"PO-Revision-Date: 2022-11-04 13:45+0000\n"
+"Last-Translator: Maria Sparenberg <maria.sparenberg@gmx.net>\n"
 "Language-Team: none\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.10\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__account_id
 msgid "Account"
-msgstr ""
+msgstr "Konto"
 
 #. module: account_brand
 #: model:ir.model,name:account_brand.model_account_move_reversal
@@ -49,52 +49,52 @@ msgstr "zu verwendende Marke für diesen Verkauf"
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_account_move__company_id
 msgid "Company"
-msgstr ""
+msgstr "Unternehmen"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Erstellt von"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Erstellt am"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Anzeigename"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: account_brand
 #: model:ir.model,name:account_brand.model_account_move
 msgid "Journal Entry"
-msgstr ""
+msgstr "Buchungssatz"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Zuletzt geändert am"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Zuletzt aktualisiert von"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Zuletzt aktualisiert am"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__partner_id
 msgid "Partner"
-msgstr ""
+msgstr "Partner"
 
 #. module: account_brand
 #: model:ir.actions.act_window,name:account_brand.res_partner_account_brand_act_window
@@ -107,33 +107,33 @@ msgstr ""
 #: model:ir.model.constraint,message:account_brand.constraint_res_partner_account_brand_unique_account_by_partner
 #, python-format
 msgid "Partner has already an account set for this brand!"
-msgstr ""
+msgstr "Der Partner hat für diese Marke bereits ein Konto!"
 
 #. module: account_brand
 #: model:ir.model.fields.selection,name:account_brand.selection__res_partner_account_brand__account_type__liability_payable
 msgid "Payable"
-msgstr ""
+msgstr "Kreditor"
 
 #. module: account_brand
 #: code:addons/account_brand/models/res_partner_account_brand.py:0
 #, python-format
 msgid "Please select an account of type %s"
-msgstr ""
+msgstr "Bitte ein Konto vom Typ %s wählen."
 
 #. module: account_brand
 #: model:ir.model.fields.selection,name:account_brand.selection__res_partner_account_brand__account_type__asset_receivable
 msgid "Receivable"
-msgstr ""
+msgstr "Debitor"
 
 #. module: account_brand
 #: model:ir.model,name:account_brand.model_res_partner_account_brand
 msgid "Receivable/Payable Partner Account By Brand"
-msgstr ""
+msgstr "Debitoren-/Kreditorenkonto nach Marke"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__account_type
 msgid "Type"
-msgstr ""
+msgstr "Typ"
 
 #~ msgid "Invoice"
 #~ msgstr "Rechnung"
