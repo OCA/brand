@@ -17,10 +17,14 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__type
 msgid ""
-"- Contact: Use this to organize the contact details of employees of a given company (e.g. CEO, CFO, ...).\n"
-"- Invoice Address : Preferred address for all invoices. Selected by default when you invoice an order that belongs to this company.\n"
-"- Delivery Address : Preferred address for all deliveries. Selected by default when you deliver an order that belongs to this company.\n"
-"- Private: Private addresses are only visible by authorized users and contain sensitive data (employee home addresses, ...).\n"
+"- Contact: Use this to organize the contact details of employees of a given "
+"company (e.g. CEO, CFO, ...).\n"
+"- Invoice Address : Preferred address for all invoices. Selected by default "
+"when you invoice an order that belongs to this company.\n"
+"- Delivery Address : Preferred address for all deliveries. Selected by "
+"default when you deliver an order that belongs to this company.\n"
+"- Private: Private addresses are only visible by authorized users and "
+"contain sensitive data (employee home addresses, ...).\n"
 "- Other: Other address for the company (e.g. subsidiary, ...)"
 msgstr ""
 
@@ -28,7 +32,9 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
 msgid ""
 "<span class=\"o_form_label\">Brand</span>\n"
-"                                <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" aria-label=\"Values set here are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
+"                                <span class=\"fa fa-lg fa-building-o\" title="
+"\"Values set here are company-specific.\" aria-label=\"Values set here are "
+"company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
 msgstr ""
 
 #. module: brand
@@ -94,8 +100,8 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__lang
 msgid ""
-"All the emails and documents sent to this contact will be translated in this"
-" language."
+"All the emails and documents sent to this contact will be translated in this "
+"language."
 msgstr ""
 
 #. module: brand
@@ -188,12 +194,14 @@ msgid "Brand Use Level"
 msgstr ""
 
 #. module: brand
+#. odoo-python
 #: code:addons/brand/models/res_brand_mixin.py:0
 #, python-format
 msgid "Brand company must match document company for %s"
 msgstr ""
 
 #. module: brand
+#. odoo-python
 #: code:addons/brand/models/res_brand_mixin.py:0
 #, python-format
 msgid "Brand is required"
@@ -297,8 +305,7 @@ msgstr ""
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
 msgid ""
-"Configure branding of customer facing business documents (SO, invoices, "
-"etc)."
+"Configure branding of customer facing business documents (SO, invoices, etc)."
 msgstr ""
 
 #. module: brand
@@ -505,8 +512,8 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__phone_sanitized_blacklisted
 msgid ""
-"If the sanitized phone number is on the blacklist, the contact won't receive"
-" mass mailing sms anymore, from any list"
+"If the sanitized phone number is on the blacklist, the contact won't receive "
+"mass mailing sms anymore, from any list"
 msgstr ""
 
 #. module: brand
@@ -993,8 +1000,8 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__email_normalized
 msgid ""
-"This field is used to search on email address as the primary email field can"
-" contain more than strictly an email address."
+"This field is used to search on email address as the primary email field can "
+"contain more than strictly an email address."
 msgstr ""
 
 #. module: brand
@@ -1101,9 +1108,11 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__tz
 msgid ""
-"When printing documents and exporting/importing data, time values are computed according to this timezone.\n"
+"When printing documents and exporting/importing data, time values are "
+"computed according to this timezone.\n"
 "If the timezone is not set, UTC (Coordinated Universal Time) is used.\n"
-"Anywhere else, time values are computed according to the time offset of your web client."
+"Anywhere else, time values are computed according to the time offset of your "
+"web client."
 msgstr ""
 
 #. module: brand

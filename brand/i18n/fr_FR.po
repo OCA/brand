@@ -203,6 +203,7 @@ msgid "Brand Use Level"
 msgstr "Niveau utilisation marque"
 
 #. module: brand
+#. odoo-python
 #: code:addons/brand/models/res_brand_mixin.py:0
 #, python-format
 msgid "Brand company must match document company for %s"
@@ -210,6 +211,7 @@ msgstr ""
 "La société de la marque doit correspondre à la société du document pour %s"
 
 #. module: brand
+#. odoo-python
 #: code:addons/brand/models/res_brand_mixin.py:0
 #, python-format
 msgid "Brand is required"
