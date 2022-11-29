@@ -103,6 +103,7 @@ msgid "Partner Accounts by Brand"
 msgstr ""
 
 #. module: account_brand
+#. odoo-python
 #: code:addons/account_brand/models/res_partner_account_brand.py:0
 #: model:ir.model.constraint,message:account_brand.constraint_res_partner_account_brand_unique_account_by_partner
 #, python-format
@@ -115,6 +116,7 @@ msgid "Payable"
 msgstr "Kreditor"
 
 #. module: account_brand
+#. odoo-python
 #: code:addons/account_brand/models/res_partner_account_brand.py:0
 #, python-format
 msgid "Please select an account of type %s"
