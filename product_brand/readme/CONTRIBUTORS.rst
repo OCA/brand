@@ -16,3 +16,6 @@
 * `Jarsa <https://www.jarsa.com>`_
 
   * Alan Ramos
+* `NuoBiT Solutions <https://www.nuobit.com>`_
+
+  * Eric Antones <eantones@nuobit.com>
