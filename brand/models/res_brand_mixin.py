@@ -54,8 +54,9 @@ class ResBrandMixin(models.AbstractModel):
 
     def setup_modifiers(self, node, field=None):
         modifiers = {}
+        attributes = ["invisible", "readonly", "required"]
         if field is not None:
-            ir_ui_view.transfer_field_to_modifiers(field, modifiers)
+            ir_ui_view.transfer_field_to_modifiers(field, modifiers, attributes)
         ir_ui_view.transfer_node_to_modifiers(node, modifiers)
         ir_ui_view.transfer_modifiers_to_node(modifiers, node)
 
