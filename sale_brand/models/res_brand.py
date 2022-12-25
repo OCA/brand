@@ -31,7 +31,7 @@ class ResBrand(models.Model):
         for brand in self:
             idx = 0
             final = ""
-            text = brand.website + brand.terms_page
+            text = "{}{}".format(brand.website or "", brand.terms_page or "")
             for item in re.finditer(link_tags, text):
                 final += text[idx : item.start()]
                 final += item.group(0)
