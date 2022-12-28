@@ -186,10 +186,13 @@ msgid "Brand Mixin"
 msgstr ""
 
 #. module: brand
+#. odoo-python
+#: code:addons/brand/models/res_brand_mixin.py:0
 #: model:ir.model.fields,field_description:brand.field_res_brand_mixin__brand_use_level
 #: model:ir.model.fields,field_description:brand.field_res_company__brand_use_level
 #: model:ir.model.fields,field_description:brand.field_res_config_settings__brand_use_level
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
+#, python-format
 msgid "Brand Use Level"
 msgstr ""
 
