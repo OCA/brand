@@ -6,7 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2023-01-06 13:45+0000\n"
+"Last-Translator: Bole <bole@dajmi5.com>\n"
 "Language-Team: none\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
@@ -14,6 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__type
@@ -35,62 +37,62 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_account_payable_id
 msgid "Account Payable"
-msgstr ""
+msgstr "Dugovni konto"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_account_receivable_id
 msgid "Account Receivable"
-msgstr ""
+msgstr "Potražni konto"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_needaction
 msgid "Action Needed"
-msgstr ""
+msgstr "Potrebna radnja"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__active
 msgid "Active"
-msgstr ""
+msgstr "Aktivan"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__active_lang_count
 msgid "Active Lang Count"
-msgstr ""
+msgstr "Broj aktivnih jezika"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_ids
 msgid "Activities"
-msgstr ""
+msgstr "Aktivnosti"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_exception_decoration
 msgid "Activity Exception Decoration"
-msgstr ""
+msgstr "Dekoracija izuzetka aktivnosti"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_state
 msgid "Activity State"
-msgstr ""
+msgstr "Status aktivnosti"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_type_icon
 msgid "Activity Type Icon"
-msgstr ""
+msgstr "Ikona Tipa aktivnsoti"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__additional_info
 msgid "Additional info"
-msgstr ""
+msgstr "Dodatne informacije"
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "Address"
-msgstr ""
+msgstr "Adresa"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__type
 msgid "Address Type"
-msgstr ""
+msgstr "Vrsta adrese"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__lang
@@ -98,21 +100,22 @@ msgid ""
 "All the emails and documents sent to this contact will be translated in this"
 " language."
 msgstr ""
+"Sva pošta i dokumentiposlani ovom partneru biti će prevedeni na ovaj jezik."
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "Archived"
-msgstr ""
+msgstr "Arhivirano"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_attachment_count
 msgid "Attachment Count"
-msgstr ""
+msgstr "Broj priloga"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__avatar_1920
 msgid "Avatar"
-msgstr ""
+msgstr "Avatar"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__avatar_1024
@@ -137,48 +140,48 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__bank_account_count
 msgid "Bank"
-msgstr ""
+msgstr "Banka"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__bank_ids
 msgid "Banks"
-msgstr ""
+msgstr "Banke"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__barcode
 msgid "Barcode"
-msgstr ""
+msgstr "Barkod"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_blacklisted
 msgid "Blacklist"
-msgstr ""
+msgstr "Crna lista"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__mobile_blacklisted
 msgid "Blacklisted Phone Is Mobile"
-msgstr ""
+msgstr "Broj na crnoj listi je mobilni"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__phone_blacklisted
 msgid "Blacklisted Phone is Phone"
-msgstr ""
+msgstr "Broj na crnoj listi je fiksni"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_bounce
 msgid "Bounce"
-msgstr ""
+msgstr "Odbij"
 
 #. module: brand
 #: model:ir.model,name:brand.model_res_brand
 #: model:ir.model.fields,field_description:brand.field_res_brand_mixin__brand_id
 msgid "Brand"
-msgstr ""
+msgstr "Brend"
 
 #. module: brand
 #: model:ir.model,name:brand.model_res_brand_mixin
 msgid "Brand Mixin"
-msgstr ""
+msgstr "Brend Mixin"
 
 #. module: brand
 #. odoo-python
@@ -189,7 +192,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
 #, python-format
 msgid "Brand Use Level"
-msgstr ""
+msgstr "Razina upotrebe Brenda"
 
 #. module: brand
 #. odoo-python
@@ -203,12 +206,12 @@ msgstr ""
 #: code:addons/brand/models/res_brand_mixin.py:0
 #, python-format
 msgid "Brand is required"
-msgstr ""
+msgstr "Brand je obavezan"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand_mixin__brand_id
 msgid "Brand to use for this sale"
-msgstr ""
+msgstr "Koristi Brand u ovoj prodaji"
 
 #. module: brand
 #: model:ir.actions.act_window,name:brand.res_brand_act_window
@@ -216,89 +219,89 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_search_view
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_tree_view
 msgid "Brands"
-msgstr ""
+msgstr "Brandovi"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__channel_ids
 msgid "Channels"
-msgstr ""
+msgstr "Kanali"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__is_company
 msgid "Check if the contact is a company, otherwise it is a person"
-msgstr ""
+msgstr "Označite ako je kontakt tvrtka, inače je osoba"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__employee
 msgid "Check this box if this contact is an Employee."
-msgstr ""
+msgstr "Oznaćite ovdje ako je kontakt Djelatnik."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__city
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "City"
-msgstr ""
+msgstr "Grad"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__color
 msgid "Color Index"
-msgstr ""
+msgstr "Index boje"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__commercial_partner_id
 msgid "Commercial Entity"
-msgstr ""
+msgstr "Komercijalni entitet"
 
 #. module: brand
 #: model:ir.model,name:brand.model_res_company
 msgid "Companies"
-msgstr ""
+msgstr "Tvrtke"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__ref_company_ids
 msgid "Companies that refers to partner"
-msgstr ""
+msgstr "Tvrtke koje odgovaraju partneru"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__company_id
 #: model:ir.model.fields,field_description:brand.field_res_brand_mixin__company_id
 msgid "Company"
-msgstr ""
+msgstr "Tvrtka"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__company_registry
 msgid "Company ID"
-msgstr ""
+msgstr "ID Tvrtke"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__company_name
 msgid "Company Name"
-msgstr ""
+msgstr "Naziv tvrtke"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__commercial_company_name
 msgid "Company Name Entity"
-msgstr ""
+msgstr "Naziv entiteta tvrtke"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__company_type
 msgid "Company Type"
-msgstr ""
+msgstr "Vrsta tvrtke"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_gid
 msgid "Company database ID"
-msgstr ""
+msgstr "ID baze Tvrtke"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__contact_address
 msgid "Complete Address"
-msgstr ""
+msgstr "Puna adresa"
 
 #. module: brand
 #: model:ir.model,name:brand.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "Postavke"
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
@@ -310,7 +313,7 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__child_ids
 msgid "Contact"
-msgstr ""
+msgstr "Kontakt"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_bounce
@@ -321,22 +324,22 @@ msgstr ""
 #: model:ir.model.fields,field_description:brand.field_res_brand__country_id
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "Country"
-msgstr ""
+msgstr "Država"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__country_code
 msgid "Country Code"
-msgstr ""
+msgstr "Šifra države"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Kreirao"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Kreirano"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__credit_limit
@@ -351,37 +354,37 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__currency_id
 msgid "Currency"
-msgstr ""
+msgstr "Valuta"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_payment_term_id
 msgid "Customer Payment Terms"
-msgstr ""
+msgstr "Uvjeti plaćanja kupca"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__customer_rank
 msgid "Customer Rank"
-msgstr ""
+msgstr "Rang kupca"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__date
 msgid "Date"
-msgstr ""
+msgstr "Datum"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__trust
 msgid "Degree of trust you have in this debtor"
-msgstr ""
+msgstr "Nivo povjerenja koji imate za ovog partnera"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Naziv za prikaz"
 
 #. module: brand
 #: model:ir.model.fields.selection,name:brand.selection__res_company__brand_use_level__no
 msgid "Do not use brands on business document"
-msgstr ""
+msgstr "Ne koristi Brandove na poslovnim dokumentima"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__duplicated_bank_account_partners_count
@@ -404,7 +407,7 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__employee
 msgid "Employee"
-msgstr ""
+msgstr "Djelatnik"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__phone_sanitized
@@ -416,17 +419,17 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_account_position_id
 msgid "Fiscal Position"
-msgstr ""
+msgstr "Fiskalna pozicija"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_follower_ids
 msgid "Followers"
-msgstr ""
+msgstr "Pratitelji"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_partner_ids
 msgid "Followers (Partners)"
-msgstr ""
+msgstr "Pratitelji (partneri)"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__activity_type_icon
@@ -436,12 +439,12 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__email_formatted
 msgid "Format email address \"Name <email@domain>\""
-msgstr ""
+msgstr "Format email adrese \"Naziv <email@domena>\""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__email_formatted
 msgid "Formatted Email"
-msgstr ""
+msgstr "Formatirani email"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_latitude
@@ -456,12 +459,12 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__has_message
 msgid "Has Message"
-msgstr ""
+msgstr "Ima poruke"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__has_unreconciled_entries
 msgid "Has Unreconciled Entries"
-msgstr ""
+msgstr "Ima otvorenih stavaka"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__id
@@ -476,7 +479,7 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_exception_icon
 msgid "Icon"
-msgstr ""
+msgstr "Ikona"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__activity_exception_icon
@@ -559,57 +562,57 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__industry_id
 msgid "Industry"
-msgstr ""
+msgstr "Industrija"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_warn
 msgid "Invoice"
-msgstr ""
+msgstr "Račun"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_ids
 msgid "Invoices"
-msgstr ""
+msgstr "Računi"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_is_follower
 msgid "Is Follower"
-msgstr ""
+msgstr "Je pratitelj"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_public
 msgid "Is Public"
-msgstr ""
+msgstr "Je javno"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_company
 msgid "Is a Company"
-msgstr ""
+msgstr "Je tvrtka"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__function
 msgid "Job Position"
-msgstr ""
+msgstr "Poslovna pozicija"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__journal_item_count
 msgid "Journal Items"
-msgstr ""
+msgstr "Stavke dnevnika"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__lang
 msgid "Language"
-msgstr ""
+msgstr "Jezik"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Zadnje modificirano"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Zadnje ažurirano"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__write_date
@@ -652,37 +655,37 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_ids
 msgid "Messages"
-msgstr ""
+msgstr "Poruke"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__mobile
 msgid "Mobile"
-msgstr ""
+msgstr "Mobitel"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__my_activity_date_deadline
 msgid "My Activity Deadline"
-msgstr ""
+msgstr "Krajnji rok moje aktivnosti"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__name
 msgid "Name"
-msgstr ""
+msgstr "Naziv"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_date_deadline
 msgid "Next Activity Deadline"
-msgstr ""
+msgstr "Krajnji rok sljedeće aktivnosti"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_summary
 msgid "Next Activity Summary"
-msgstr ""
+msgstr "Sažetak sljedećih aktivnosti"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_type_id
 msgid "Next Activity Type"
-msgstr ""
+msgstr "Tip sljedeće aktivnosti"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__email_normalized
@@ -692,37 +695,37 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__comment
 msgid "Notes"
-msgstr ""
+msgstr "Bilješke"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_needaction_counter
 msgid "Number of Actions"
-msgstr ""
+msgstr "Broj radnji"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_has_error_counter
 msgid "Number of errors"
-msgstr ""
+msgstr "Broj grešaka"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_needaction_counter
 msgid "Number of messages which requires an action"
-msgstr ""
+msgstr "Broj poruka koje zahtijevaju dodatne radnje"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_has_error_counter
 msgid "Number of messages with delivery error"
-msgstr ""
+msgstr "Broj poruka sa greškom isporuke"
 
 #. module: brand
 #: model:ir.model.fields.selection,name:brand.selection__res_company__brand_use_level__optional
 msgid "Optional"
-msgstr ""
+msgstr "Opcionalno"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__parent_name
 msgid "Parent name"
-msgstr ""
+msgstr "Naziv nadređenog"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_id
@@ -732,12 +735,12 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
 msgid "Partner Contracts"
-msgstr ""
+msgstr "Kontakti partnera"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__use_partner_credit_limit
 msgid "Partner Limit"
-msgstr ""
+msgstr "Ograničenje partnera"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__same_company_registry_partner_id
@@ -752,7 +755,7 @@ msgstr ""
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "Partners"
-msgstr ""
+msgstr "Partneri"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__debit_limit
@@ -767,47 +770,47 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__payment_token_ids
 msgid "Payment Tokens"
-msgstr ""
+msgstr "Tokeni plaćanja"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__phone
 msgid "Phone"
-msgstr ""
+msgstr "Telefon"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__phone_sanitized_blacklisted
 msgid "Phone Blacklisted"
-msgstr ""
+msgstr "Telefon je na crnoj listi"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__phone_mobile_search
 msgid "Phone/Mobile"
-msgstr ""
+msgstr "Telefon/Mobitel"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_product_pricelist
 msgid "Pricelist"
-msgstr ""
+msgstr "Cjenik"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__ref
 msgid "Reference"
-msgstr ""
+msgstr "Referenca"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__parent_id
 msgid "Related Company"
-msgstr ""
+msgstr "Povezana tvrtka"
 
 #. module: brand
 #: model:ir.model.fields.selection,name:brand.selection__res_company__brand_use_level__required
 msgid "Required"
-msgstr ""
+msgstr "Obavezno"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_user_id
 msgid "Responsible User"
-msgstr ""
+msgstr "Odgovorni korisnik"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_has_sms_error
@@ -817,17 +820,17 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_order_count
 msgid "Sale Order Count"
-msgstr ""
+msgstr "Broj prodajnih naloga"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_order_ids
 msgid "Sales Order"
-msgstr ""
+msgstr "Prodajni nalog"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__team_id
 msgid "Sales Team"
-msgstr ""
+msgstr "Prodajni tim"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_warn
@@ -861,7 +864,7 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_share
 msgid "Share Partner"
-msgstr ""
+msgstr "Dijeli partnera"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__show_credit_limit
@@ -871,17 +874,17 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__signup_expiration
 msgid "Signup Expiration"
-msgstr ""
+msgstr "Istek prijave"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__signup_token
 msgid "Signup Token"
-msgstr ""
+msgstr "Token prijave"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__signup_type
 msgid "Signup Token Type"
-msgstr ""
+msgstr "Vrsta tokena prijave"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__signup_valid
@@ -911,32 +914,32 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__street
 msgid "Street"
-msgstr ""
+msgstr "Ulica"
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "Street 2..."
-msgstr ""
+msgstr "Ulica 2..."
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "Street..."
-msgstr ""
+msgstr "Ulica..."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__street2
 msgid "Street2"
-msgstr ""
+msgstr "Ulica2"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__supplier_rank
 msgid "Supplier Rank"
-msgstr ""
+msgstr "Rang dobavljača"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__category_id
 msgid "Tags"
-msgstr ""
+msgstr "Oznake"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__vat
@@ -961,7 +964,7 @@ msgstr ""
 #: model:ir.model.fields,help:brand.field_res_brand__property_account_position_id
 msgid ""
 "The fiscal position determines the taxes/accounts used for this contact."
-msgstr ""
+msgstr "Fiskalna pozicija određuje poreze/konta korištene za ovaj kontakt."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__user_id
