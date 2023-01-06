@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2019-11-13 15:34+0000\n"
+"PO-Revision-Date: 2023-01-06 13:44+0000\n"
 "Last-Translator: Bole <bole@dajmi5.com>\n"
 "Language-Team: none\n"
 "Language: hr\n"
@@ -15,12 +15,12 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.8\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__account_id
 msgid "Account"
-msgstr ""
+msgstr "Konto"
 
 #. module: account_brand
 #: model:ir.model,name:account_brand.model_account_move_reversal
@@ -45,47 +45,47 @@ msgstr ""
 #: model:ir.model.fields,help:account_brand.field_account_move__brand_id
 #: model:ir.model.fields,help:account_brand.field_account_payment__brand_id
 msgid "Brand to use for this sale"
-msgstr ""
+msgstr "Brand za ovu prodaju"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_account_move__company_id
 msgid "Company"
-msgstr ""
+msgstr "Tvrtka"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Kreirao"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Kreirano"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Naziv za prikaz"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: account_brand
 #: model:ir.model,name:account_brand.model_account_move
 msgid "Journal Entry"
-msgstr ""
+msgstr "Stavka dnevnika"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Zadnje modificirano"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Zadnje ažurirano"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__write_date
@@ -109,24 +109,24 @@ msgstr ""
 #: model:ir.model.constraint,message:account_brand.constraint_res_partner_account_brand_unique_account_by_partner
 #, python-format
 msgid "Partner has already an account set for this brand!"
-msgstr ""
+msgstr "Partner već ima postavljen konto za ovaj brand!"
 
 #. module: account_brand
 #: model:ir.model.fields.selection,name:account_brand.selection__res_partner_account_brand__account_type__liability_payable
 msgid "Payable"
-msgstr ""
+msgstr "Dugovno"
 
 #. module: account_brand
 #. odoo-python
 #: code:addons/account_brand/models/res_partner_account_brand.py:0
 #, python-format
 msgid "Please select an account of type %s"
-msgstr ""
+msgstr "Molimo odaberite konto tipa %s"
 
 #. module: account_brand
 #: model:ir.model.fields.selection,name:account_brand.selection__res_partner_account_brand__account_type__asset_receivable
 msgid "Receivable"
-msgstr ""
+msgstr "Potražno"
 
 #. module: account_brand
 #: model:ir.model,name:account_brand.model_res_partner_account_brand
@@ -136,7 +136,7 @@ msgstr ""
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__account_type
 msgid "Type"
-msgstr ""
+msgstr "Tip"
 
 #~ msgid "Invoice"
 #~ msgstr "Račun"
