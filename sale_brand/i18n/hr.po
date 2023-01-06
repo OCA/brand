@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2019-11-13 15:34+0000\n"
+"PO-Revision-Date: 2023-01-06 13:45+0000\n"
 "Last-Translator: Bole <bole@dajmi5.com>\n"
 "Language-Team: none\n"
 "Language: hr\n"
@@ -15,18 +15,18 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.8\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #. module: sale_brand
 #: model:ir.model.fields,field_description:sale_brand.field_crm_team__brand_id
 #: model:ir.model.fields,field_description:sale_brand.field_sale_order__brand_id
 msgid "Brand"
-msgstr "Brand"
+msgstr "Brend"
 
 #. module: sale_brand
 #: model:ir.model.fields,field_description:sale_brand.field_sale_order__brand_use_level
 msgid "Brand Use Level"
-msgstr ""
+msgstr "Razina upotrebe Brenda"
 
 #. module: sale_brand
 #: model:ir.model.fields,help:sale_brand.field_sale_order__brand_id
@@ -36,15 +36,14 @@ msgstr "Za ovu prodaju koristiti brand"
 #. module: sale_brand
 #: model:ir.model.fields,field_description:sale_brand.field_sale_order__company_id
 msgid "Company"
-msgstr ""
+msgstr "Tvrtka"
 
 #. module: sale_brand
 #: model:ir.model,name:sale_brand.model_sale_order
-#, fuzzy
 msgid "Sales Order"
 msgstr "Ponuda"
 
 #. module: sale_brand
 #: model:ir.model,name:sale_brand.model_crm_team
 msgid "Sales Team"
-msgstr ""
+msgstr "Prodajni tim"
