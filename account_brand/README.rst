@@ -80,6 +80,7 @@ Contributors
 
   * Vicent Cubells
 * Ammar Officewala <aofficewala@opensourceintegrators.com>
+* Michael Tietz (MT Software) <mtietz@mt-software.de>
 
 Other credits
 ~~~~~~~~~~~~~

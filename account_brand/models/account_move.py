@@ -1,4 +1,5 @@
 # Copyright (C) 2019 Open Source Integrators
+# Copyright 2023 Michael Tietz (MT Software) <mtietz@mt-software.de>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 
@@ -11,9 +12,7 @@ class AccountMove(models.Model):
 
     brand_id = fields.Many2one(
         states={
-            "open": [("readonly", True)],
-            "in_payment": [("readonly", True)],
-            "paid": [("readonly", True)],
+            "posted": [("readonly", True)],
             "cancel": [("readonly", True)],
         }
     )
