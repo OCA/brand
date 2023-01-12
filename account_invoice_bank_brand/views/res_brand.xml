@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2023 ACSONE SA/NV
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record model="ir.ui.view" id="res_brand_form_view">
+        <field name="name">res.brand.form (in account_invoice_bank_brand)</field>
+        <field name="model">res.brand</field>
+        <field name="inherit_id" ref="brand.res_brand_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <group name="invoice" string="Invoices">
+                    <field name="partner_bank_id" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
