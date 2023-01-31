@@ -1003,11 +1003,10 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__vat
 msgid ""
-"The Tax Identification Number. Complete it if the contact is subjected to "
-"government taxes. Used in some legal statements."
+"The Tax Identification Number. Values here will be validated based on the "
+"country format. You can use '/' to indicate that the partner is not subject "
+"to tax."
 msgstr ""
-"El número de identificación fiscal. Complete esto si el contacto está sujeto "
-"a impuestos gubernamentales. Utilizado en algunas declaraciones legales."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_account_position_id
@@ -1207,6 +1206,14 @@ msgstr "ej. BE0477472701"
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "e.g. https://www.odoo.com"
 msgstr "ej. https://www.odoo.com"
+
+#~ msgid ""
+#~ "The Tax Identification Number. Complete it if the contact is subjected to "
+#~ "government taxes. Used in some legal statements."
+#~ msgstr ""
+#~ "El número de identificación fiscal. Complete esto si el contacto está "
+#~ "sujeto a impuestos gubernamentales. Utilizado en algunas declaraciones "
+#~ "legales."
 
 #~ msgid "Contracts"
 #~ msgstr "Contratos"
