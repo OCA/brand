@@ -107,6 +107,7 @@ Contributors
   * João Marques
 
 * Kaushal Prajapati <kbprajapati@live.com>
+* Eric Antones <eantones@nuobit.com>
 
 Maintainers
 ~~~~~~~~~~~
