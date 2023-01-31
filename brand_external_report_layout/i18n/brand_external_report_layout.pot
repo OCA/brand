@@ -275,8 +275,9 @@ msgstr ""
 #. module: brand_external_report_layout
 #: model:ir.model.fields,help:brand_external_report_layout.field_brand_document_layout__vat
 msgid ""
-"The Tax Identification Number. Complete it if the contact is subjected to "
-"government taxes. Used in some legal statements."
+"The Tax Identification Number. Values here will be validated based on the "
+"country format. You can use '/' to indicate that the partner is not subject "
+"to tax."
 msgstr ""
 
 #. module: brand_external_report_layout
