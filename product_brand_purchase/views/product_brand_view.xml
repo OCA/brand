@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <menuitem
+        id="menu_product_in_config_purchase_product_brand"
+        action="product_brand.action_product_brand"
+        parent="purchase.menu_product_in_config_purchase"
+        name="Product Brands"
+        sequence="1"
+    />
+
+</odoo>
