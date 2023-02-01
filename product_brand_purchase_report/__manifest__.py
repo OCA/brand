@@ -5,7 +5,7 @@
     "name": "Product Brand Purchase Report",
     "summary": """
         This module allows to work with product_brand in purchase reports.""",
-    "version": "13.0.1.0.0",
+    "version": "14.0.1.0.0",
     "license": "AGPL-3",
     "author": "ACSONE SA/NV,Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/brand",
