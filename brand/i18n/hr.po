@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-01-06 13:45+0000\n"
+"PO-Revision-Date: 2023-02-16 14:23+0000\n"
 "Last-Translator: Bole <bole@dajmi5.com>\n"
 "Language-Team: none\n"
 "Language: hr\n"
@@ -30,6 +30,15 @@ msgid ""
 "contain sensitive data (employee home addresses, ...).\n"
 "- Other: Other address for the company (e.g. subsidiary, ...)"
 msgstr ""
+"- Kontakt: Koristi se za organiziranje podataka o kontaktima unutar tvtrke ("
+"nrp. CEO, CFO,...). \n"
+"- Adresa računa: Preferirana adresa za slanje svih računa. Odabrana "
+"automatski kad kreirate račun iz naloga koji je naslovljen na ovu tvrtku. \n"
+"- Adresa isporuke: Preferirana adresa za sve isporuke. Odabrana automatski "
+"kad isporučujete nalog koji je adresiran na ovu tvrtku. \n"
+"- Privatno: Privatne adrese vidljivo samo određenim korisnicima i sadrži "
+"osjetljive podatke (kučne adrese djelatnika isl...). \n"
+"- Ostalo: ostale adrese tvrtke (npr. podruznica ...)"
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
@@ -39,6 +48,11 @@ msgid ""
 "\"Values set here are company-specific.\" aria-label=\"Values set here are "
 "company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
 msgstr ""
+"<span class=\"o_form_label\">Brend</span>\n"
+"                                <span class=\"fa fa-lg fa-building-o\" title="
+"\"Ove vrijednosti su specifične za svaku tvrtku.\" aria-label=\"Ove "
+"vrijednosti su specifične za svaku tvrtku.\" groups=\"base."
+"group_multi_company\" role=\"img\"/>"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_account_payable_id
@@ -126,22 +140,22 @@ msgstr "Avatar"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__avatar_1024
 msgid "Avatar 1024"
-msgstr ""
+msgstr "Avatar 1024"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__avatar_128
 msgid "Avatar 128"
-msgstr ""
+msgstr "Avatar 128"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__avatar_256
 msgid "Avatar 256"
-msgstr ""
+msgstr "Avatar 256"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__avatar_512
 msgid "Avatar 512"
-msgstr ""
+msgstr "Avatar 512"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__bank_account_count
@@ -205,7 +219,7 @@ msgstr "Razina upotrebe Brenda"
 #: code:addons/brand/models/res_brand_mixin.py:0
 #, python-format
 msgid "Brand company must match document company for %s"
-msgstr ""
+msgstr "Tvrtka brenda mora odgovarati tvrtci dokumenta za %s"
 
 #. module: brand
 #. odoo-python
@@ -314,6 +328,8 @@ msgstr "Postavke"
 msgid ""
 "Configure branding of customer facing business documents (SO, invoices, etc)."
 msgstr ""
+"Postavite brending dokumenata koji su usmjereni prema kupcu (Ponude, računi "
+"isl.)."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__child_ids
@@ -323,7 +339,7 @@ msgstr "Kontakt"
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_bounce
 msgid "Counter of the number of bounced emails for this contact"
-msgstr ""
+msgstr "Brojač svih odbijenih mailova za ovaj kontakt"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__country_id
