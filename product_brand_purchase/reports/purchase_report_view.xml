@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2020 ACSONE SA/NV
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="purchase_report_search_view">
+        <field name="name">purchase.report.search (in product_brand_purchase)</field>
+        <field name="model">purchase.report</field>
+        <field name="inherit_id" ref="purchase.view_purchase_order_search" />
+        <field name="arch" type="xml">
+            <filter name="group_partner_id" position="after">
+                <filter
+                    name="brand"
+                    string="Brand"
+                    context="{'group_by': 'product_brand_id'}"
+                />
+            </filter>
+        </field>
+    </record>
+</odoo>
