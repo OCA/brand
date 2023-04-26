@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-04-07 14:23+0000\n"
+"PO-Revision-Date: 2023-04-26 11:26+0000\n"
 "Last-Translator: Francesco Foresti <francesco.foresti@ooops404.com>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -61,7 +61,7 @@ msgstr "Ultima Modifica il"
 #. module: sale_brand
 #: model:ir.model,name:sale_brand.model_sale_advance_payment_inv
 msgid "Sales Advance Payment Invoice"
-msgstr ""
+msgstr "Fattura di vendita con pagamento anticipato"
 
 #. module: sale_brand
 #: model:ir.model,name:sale_brand.model_sale_order
