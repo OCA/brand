@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2022-05-18 10:05+0000\n"
+"PO-Revision-Date: 2023-05-24 18:11+0000\n"
 "Last-Translator: Francesco Foresti <francesco.foresti@ooops404.com>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,12 +14,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.2\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__supplier_invoice_count
 msgid "# Vendor Bills"
-msgstr ""
+msgstr "N. fatture fornitore"
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
@@ -29,36 +29,41 @@ msgid ""
 "\"Values set here are company-specific.\" aria-label=\"Values set here are "
 "company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
 msgstr ""
+"<span class=\"o_form_label\">Brand</span>\n"
+"                                <span class=\"fa fa-lg fa-building-o\" title="
+"\"I valori impostati qui sono specifici per azienda.\" aria-label=\"I valori "
+"impostati qui sono specifici per azienda.\" groups=\"base."
+"group_multi_company\" role=\"img\"/>"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_account_payable_id
 msgid "Account Payable"
-msgstr ""
+msgstr "Conto di debito"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_account_receivable_id
 msgid "Account Receivable"
-msgstr ""
+msgstr "Conto di credito"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_needaction
 msgid "Action Needed"
-msgstr ""
+msgstr "Azione richiesta"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__active
 msgid "Active"
-msgstr ""
+msgstr "Attivo"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__active_lang_count
 msgid "Active Lang Count"
-msgstr ""
+msgstr "Numero lingue attive"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_ids
 msgid "Activities"
-msgstr ""
+msgstr "Attività"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_exception_decoration
@@ -68,17 +73,17 @@ msgstr "Decorazione eccezione attività"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_state
 msgid "Activity State"
-msgstr ""
+msgstr "Stato attività"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_type_icon
 msgid "Activity Type Icon"
-msgstr ""
+msgstr "Icona tipo attività"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__additional_info
 msgid "Additional info"
-msgstr ""
+msgstr "Informazioni aggiuntive"
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
@@ -88,7 +93,7 @@ msgstr "Indirizzo"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__type
 msgid "Address Type"
-msgstr ""
+msgstr "Tipo indirizzo"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__lang
@@ -96,16 +101,18 @@ msgid ""
 "All the emails and documents sent to this contact will be translated in this "
 "language."
 msgstr ""
+"Tutte le email e i documenti inviati a questo contatto verranno tradotti in "
+"questa lingua."
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "Archived"
-msgstr ""
+msgstr "In archivio"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_attachment_count
 msgid "Attachment Count"
-msgstr ""
+msgstr "Numero allegati"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__receipt_reminder_email
@@ -113,52 +120,54 @@ msgid ""
 "Automatically send a confirmation email to the vendor X days before the "
 "expected receipt date, asking him to confirm the exact date."
 msgstr ""
+"Invia automaticamente una email al fornitore X giorni prima della data "
+"fattura prevista, chiedendo la conferma della data."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__bank_account_count
 msgid "Bank"
-msgstr ""
+msgstr "Banca"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__bank_ids
 msgid "Banks"
-msgstr ""
+msgstr "Banche"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__barcode
 msgid "Barcode"
-msgstr ""
+msgstr "Codice a barre"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_blacklisted
 msgid "Blacklist"
-msgstr ""
+msgstr "Blacklist"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__mobile_blacklisted
 msgid "Blacklisted Phone Is Mobile"
-msgstr ""
+msgstr "Il numero in blacklist è un cellulare"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__phone_blacklisted
 msgid "Blacklisted Phone is Phone"
-msgstr ""
+msgstr "Il numero in blacklist è un telefono fisso"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_bounce
 msgid "Bounce"
-msgstr ""
+msgstr "Rimbalzo"
 
 #. module: brand
 #: model:ir.model,name:brand.model_res_brand
 #: model:ir.model.fields,field_description:brand.field_res_brand_mixin__brand_id
 msgid "Brand"
-msgstr ""
+msgstr "Marca"
 
 #. module: brand
 #: model:ir.model,name:brand.model_res_brand_mixin
 msgid "Brand Mixin"
-msgstr ""
+msgstr "Mixin marca"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand_mixin__brand_use_level
@@ -166,7 +175,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:brand.field_res_config_settings__brand_use_level
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
 msgid "Brand Use Level"
-msgstr ""
+msgstr "Livello uso marca"
 
 #. module: brand
 #: code:addons/brand/models/res_brand_mixin.py:0
