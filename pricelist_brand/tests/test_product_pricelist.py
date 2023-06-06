@@ -108,11 +108,8 @@ class TestProductPricelist(TransactionCase):
 
     def test_calculation_price_of_products_pricelist(self):
         """Test calculation of product price based on pricelist"""
-        context = {}
-        context.update({"pricelist": self.pricelist.id, "quantity": 1})
-
         # Check sale price of branded product
-        product = self.product.with_context(context)
+        product = self.product.with_context(pricelist=self.pricelist.id, quantity=1)
         price = self.pricelist._get_product_price(product, quantity=1.0)
 
         self.assertEqual(
@@ -125,7 +122,7 @@ class TestProductPricelist(TransactionCase):
         )
 
         # Check sale price of not branded product (should not change)
-        product_2 = self.product_2.with_context(context)
+        product_2 = self.product_2.with_context(pricelist=self.pricelist.id, quantity=1)
         price_2 = self.pricelist._get_product_price(product_2, quantity=1.0)
 
         self.assertEqual(

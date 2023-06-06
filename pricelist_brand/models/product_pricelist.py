@@ -28,6 +28,7 @@ class ProductPricelistItem(models.Model):
                 raise ValidationError(
                     _("Please specify the brand for which this rule should be applied")
                 )
+        return None
 
     @api.depends(
         "applied_on",
@@ -80,6 +81,8 @@ class ProductPricelistItem(models.Model):
     @api.onchange("product_id", "product_tmpl_id", "categ_id", "product_brand_id")
     def _onchange_rule_content(self):
         super(ProductPricelistItem, self)._onchange_rule_content()
+
+        return None
 
     @api.model_create_multi
     def create(self, vals_list):
