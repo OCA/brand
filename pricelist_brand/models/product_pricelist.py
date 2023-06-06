@@ -3,48 +3,7 @@
 
 from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
-
-
-class ProductPricelist(models.Model):
-
-    _inherit = "product.pricelist"
-
-    def _compute_price_rule_get_items(
-        self, products_qty_partner, date, uom_id, prod_tmpl_ids, prod_ids, categ_ids
-    ):
-        self.ensure_one()
-        product_tmpls = self.env["product.template"].browse(prod_tmpl_ids)
-        brand_ids = product_tmpls.mapped("product_brand_id").ids
-        # Load all rules
-        self.env["product.pricelist.item"].flush(["price", "currency_id", "company_id"])
-        self.env.cr.execute(
-            """
-            SELECT
-                item.id
-            FROM
-                product_pricelist_item AS item
-            LEFT JOIN product_category AS categ ON item.categ_id = categ.id
-            LEFT JOIN product_brand AS brand ON item.product_brand_id = brand.id
-            WHERE
-                (item.product_tmpl_id IS NULL OR item.product_tmpl_id = any(%s))
-                AND (item.product_id IS NULL OR item.product_id = any(%s))
-                AND (item.categ_id IS NULL OR item.categ_id = any(%s))
-                AND (item.product_brand_id IS NULL OR item.product_brand_id = any(%s))
-                AND (item.pricelist_id = %s)
-                AND (item.date_start IS NULL OR item.date_start<=%s)
-                AND (item.date_end IS NULL OR item.date_end>=%s)
-            ORDER BY
-                item.applied_on, item.min_quantity desc,
-                categ.complete_name desc, item.id desc
-            """,
-            (prod_tmpl_ids, prod_ids, categ_ids, brand_ids, self.id, date, date),
-        )
-        # NOTE: if you change `order by` on that query, make sure it matches
-        # _order from model to avoid inconstencies and undeterministic issues.
-
-        item_ids = [x[0] for x in self.env.cr.fetchall()]
-        return self.env["product.pricelist.item"].browse(item_ids)
-
+from odoo.tools import format_datetime, formatLang
 
 class ProductPricelistItem(models.Model):
 
@@ -57,7 +16,7 @@ class ProductPricelistItem(models.Model):
         help="Specify a brand if this rule only applies to products"
         "belonging to this brand. Keep empty otherwise.",
     )
-    applied_on = fields.Selection(selection_add=[("25_brand", "Brand")])
+    applied_on = fields.Selection(selection_add=[("25_brand", "Brand")], ondelete={"25_brand": "set default"})
 
     @api.constrains("product_id", "product_tmpl_id", "categ_id", "product_brand_id")
     def _check_product_consistency(self):
@@ -68,28 +27,32 @@ class ProductPricelistItem(models.Model):
                     _("Please specify the brand for which this rule should be applied")
                 )
 
-    @api.depends(
-        "applied_on",
-        "categ_id",
-        "product_tmpl_id",
-        "product_id",
-        "compute_price",
-        "fixed_price",
-        "pricelist_id",
-        "percent_price",
-        "price_discount",
-        "price_surcharge",
-        "product_brand_id",
-    )
-    def _get_pricelist_item_name_price(self):
-        super(ProductPricelistItem, self)._get_pricelist_item_name_price()
+    @api.depends('applied_on', 'categ_id', 'product_tmpl_id', 'product_id', 'compute_price', 'fixed_price', \
+        'pricelist_id', 'percent_price', 'price_discount', 'price_surcharge', 'product_brand_id')
+    def _compute_name_and_price(self):
         for item in self:
-            if item.product_brand_id and item.applied_on == "25_brand":
+            if item.categ_id and item.applied_on == '2_product_category':
+                item.name = _("Category: %s") % (item.categ_id.display_name)
+            elif item.product_tmpl_id and item.applied_on == '1_product':
+                item.name = _("Product: %s") % (item.product_tmpl_id.display_name)
+            elif item.product_id and item.applied_on == '0_product_variant':
+                item.name = _("Variant: %s") % (item.product_id.with_context(display_default_code=False).display_name)
+            elif item.product_brand_id and item.applied_on == "25_brand":
                 item.name = _("Brand: %s") % (item.product_brand_id.display_name)
+            else:
+                item.name = _("All Products")
+
+            if item.compute_price == 'fixed':
+                item.price = formatLang(
+                    item.env, item.fixed_price, monetary=True, dp="Product Price", currency_obj=item.currency_id)
+            elif item.compute_price == 'percentage':
+                item.price = _("%s %% discount", item.percent_price)
+            else:
+                item.price = _("%(percentage)s %% discount and %(price)s surcharge", percentage=item.price_discount, price=item.price_surcharge)
 
     @api.onchange("product_id", "product_tmpl_id", "categ_id", "product_brand_id")
-    def _onchane_rule_content(self):
-        super(ProductPricelistItem, self)._onchane_rule_content()
+    def _onchange_rule_content(self):
+        super(ProductPricelistItem, self)._onchange_rule_content()
 
     @api.model_create_multi
     def create(self, vals_list):
@@ -128,3 +91,52 @@ class ProductPricelistItem(models.Model):
             elif applied_on == "0_product_variant":
                 values.update(dict(product_brand_id=None))
         return super(ProductPricelistItem, self).write(values)
+
+    def _is_applicable_for(self, product, qty_in_product_uom):
+        """Check whether the current rule is valid for the given product & qty.
+        Note: self.ensure_one()
+        :param product: product record (product.product/product.template)
+        :param float qty_in_product_uom: quantity, expressed in product UoM
+        :returns: Whether rules is valid or not
+        :rtype: bool
+        """
+        self.ensure_one()
+        product.ensure_one()
+        res = True
+
+        is_product_template = product._name == 'product.template'
+        if self.min_quantity and qty_in_product_uom < self.min_quantity:
+            res = False
+
+        elif self.categ_id:
+            # Applied on a specific category
+            cat = product.categ_id
+            while cat:
+                if cat.id == self.categ_id.id:
+                    break
+                cat = cat.parent_id
+            if not cat:
+                res = False
+
+        elif self.product_brand_id:
+            # Applied on a specific brand
+            if self.product_brand_id.id != product.product_brand_id.id:
+                res = False
+        else:
+            # Applied on a specific product template/variant
+            if is_product_template:
+                if self.product_tmpl_id and product.id != self.product_tmpl_id.id:
+                    res = False
+                elif self.product_id and not (
+                    product.product_variant_count == 1
+                    and product.product_variant_id.id == self.product_id.id
+                ):
+                    # product self acceptable on template if has only one variant
+                    res = False
+            else:
+                if self.product_tmpl_id and product.product_tmpl_id.id != self.product_tmpl_id.id:
+                    res = False
+                elif self.product_id and product.id != self.product_id.id:
+                    res = False
+
+        return res

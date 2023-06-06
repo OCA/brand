@@ -112,26 +112,21 @@ class TestProductPricelist(TransactionCase):
         context.update({"pricelist": self.pricelist.id, "quantity": 1})
 
         # Check sale price of branded product
-        product_with_context = self.product.with_context(context)
-        self.assertEqual(
-            float_compare(
-                product_with_context.price,
-                (
-                    product_with_context.lst_price
-                    - product_with_context.lst_price * (0.10)
-                ),
-                precision_digits=2,
-            ),
-            0,
+        product = self.product.with_context(context)
+        price = self.pricelist._get_product_price(product, quantity=1.0)
+
+        self.assertEqual(float_compare(
+                price, (
+                product.lst_price - product.lst_price * (0.10) ),
+                precision_digits=2,), 0,
         )
 
         # Check sale price of not branded product (should not change)
-        product_2_with_context = self.product_2.with_context(context)
-        self.assertEqual(
-            float_compare(
-                product_2_with_context.price,
-                product_2_with_context.lst_price,
-                precision_digits=2,
-            ),
-            0,
+        product_2 = self.product_2.with_context(context)
+        price_2 = self.pricelist._get_product_price(product_2, quantity=1.0)
+
+        self.assertEqual(float_compare(
+                price_2,
+                product_2.lst_price,
+                precision_digits=2,), 0,
         )
