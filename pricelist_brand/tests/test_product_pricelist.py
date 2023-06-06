@@ -115,18 +115,24 @@ class TestProductPricelist(TransactionCase):
         product = self.product.with_context(context)
         price = self.pricelist._get_product_price(product, quantity=1.0)
 
-        self.assertEqual(float_compare(
-                price, (
-                product.lst_price - product.lst_price * (0.10) ),
-                precision_digits=2,), 0,
+        self.assertEqual(
+            float_compare(
+                price,
+                (product.lst_price - product.lst_price * (0.10)),
+                precision_digits=2,
+            ),
+            0,
         )
 
         # Check sale price of not branded product (should not change)
         product_2 = self.product_2.with_context(context)
         price_2 = self.pricelist._get_product_price(product_2, quantity=1.0)
 
-        self.assertEqual(float_compare(
+        self.assertEqual(
+            float_compare(
                 price_2,
                 product_2.lst_price,
-                precision_digits=2,), 0,
+                precision_digits=2,
+            ),
+            0,
         )

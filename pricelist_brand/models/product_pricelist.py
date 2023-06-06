@@ -3,10 +3,10 @@
 
 from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
-from odoo.tools import format_datetime, formatLang
+from odoo.tools import formatLang
+
 
 class ProductPricelistItem(models.Model):
-
     _inherit = "product.pricelist.item"
 
     product_brand_id = fields.Many2one(
@@ -16,7 +16,9 @@ class ProductPricelistItem(models.Model):
         help="Specify a brand if this rule only applies to products"
         "belonging to this brand. Keep empty otherwise.",
     )
-    applied_on = fields.Selection(selection_add=[("25_brand", "Brand")], ondelete={"25_brand": "set default"})
+    applied_on = fields.Selection(
+        selection_add=[("25_brand", "Brand")], ondelete={"25_brand": "set default"}
+    )
 
     @api.constrains("product_id", "product_tmpl_id", "categ_id", "product_brand_id")
     def _check_product_consistency(self):
@@ -27,28 +29,53 @@ class ProductPricelistItem(models.Model):
                     _("Please specify the brand for which this rule should be applied")
                 )
 
-    @api.depends('applied_on', 'categ_id', 'product_tmpl_id', 'product_id', 'compute_price', 'fixed_price', \
-        'pricelist_id', 'percent_price', 'price_discount', 'price_surcharge', 'product_brand_id')
+    @api.depends(
+        "applied_on",
+        "categ_id",
+        "product_tmpl_id",
+        "product_id",
+        "compute_price",
+        "fixed_price",
+        "pricelist_id",
+        "percent_price",
+        "price_discount",
+        "price_surcharge",
+        "product_brand_id",
+    )
     def _compute_name_and_price(self):
         for item in self:
-            if item.categ_id and item.applied_on == '2_product_category':
-                item.name = _("Category: %s") % (item.categ_id.display_name)
-            elif item.product_tmpl_id and item.applied_on == '1_product':
-                item.name = _("Product: %s") % (item.product_tmpl_id.display_name)
-            elif item.product_id and item.applied_on == '0_product_variant':
-                item.name = _("Variant: %s") % (item.product_id.with_context(display_default_code=False).display_name)
+            if item.categ_id and item.applied_on == "2_product_category":
+                item.name = _("Category: %s") % item.categ_id.display_name
+            elif item.product_tmpl_id and item.applied_on == "1_product":
+                item.name = _("Product: %s") % item.product_tmpl_id.display_name
+            elif item.product_id and item.applied_on == "0_product_variant":
+                item.name = (
+                    _("Variant: %s")
+                    % item.product_id.with_context(
+                        display_default_code=False
+                    ).display_name
+                )
             elif item.product_brand_id and item.applied_on == "25_brand":
-                item.name = _("Brand: %s") % (item.product_brand_id.display_name)
+                item.name = _("Brand: %s") % item.product_brand_id.display_name
             else:
                 item.name = _("All Products")
 
-            if item.compute_price == 'fixed':
+            if item.compute_price == "fixed":
                 item.price = formatLang(
-                    item.env, item.fixed_price, monetary=True, dp="Product Price", currency_obj=item.currency_id)
-            elif item.compute_price == 'percentage':
+                    item.env,
+                    item.fixed_price,
+                    monetary=True,
+                    dp="Product Price",
+                    currency_obj=item.currency_id,
+                )
+            elif item.compute_price == "percentage":
                 item.price = _("%s %% discount", item.percent_price)
             else:
-                item.price = _("%(percentage)s %% discount and %(price)s surcharge", percentage=item.price_discount, price=item.price_surcharge)
+                item.price = _(
+                    "%(percentage)s %% discount and %(price)s surcharge",
+                    percentage=item.price_discount,
+                    price=item.price_surcharge,
+                )
 
     @api.onchange("product_id", "product_tmpl_id", "categ_id", "product_brand_id")
     def _onchange_rule_content(self):
@@ -104,7 +131,7 @@ class ProductPricelistItem(models.Model):
         product.ensure_one()
         res = True
 
-        is_product_template = product._name == 'product.template'
+        is_product_template = product._name == "product.template"
         if self.min_quantity and qty_in_product_uom < self.min_quantity:
             res = False
 
@@ -134,7 +161,10 @@ class ProductPricelistItem(models.Model):
                     # product self acceptable on template if has only one variant
                     res = False
             else:
-                if self.product_tmpl_id and product.product_tmpl_id.id != self.product_tmpl_id.id:
+                if (
+                    self.product_tmpl_id
+                    and product.product_tmpl_id.id != self.product_tmpl_id.id
+                ):
                     res = False
                 elif self.product_id and product.id != self.product_id.id:
                     res = False
