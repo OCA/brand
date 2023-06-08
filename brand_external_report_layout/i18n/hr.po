@@ -21,8 +21,8 @@ msgstr ""
 #: model:ir.model.fields,help:brand_external_report_layout.field_brand_document_layout__report_header
 #: model:ir.model.fields,help:brand_external_report_layout.field_res_brand__report_header
 msgid ""
-"Appears by default on the top right corner of your printed documents (report"
-" header)."
+"Appears by default on the top right corner of your printed documents (report "
+"header)."
 msgstr ""
 "Pojavljuje se kao zadano u gornjem desnom kutu na vašem ispisu (zaglavlje "
 "dokumenta)."
@@ -156,6 +156,11 @@ msgstr "Tekst zaglavlja prikazan na vrhu svih dokumenata."
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__id
 msgid "ID"
 msgstr "ID"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__is_company_details_empty
+msgid "Is Company Details Empty"
+msgstr ""
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout____last_update
