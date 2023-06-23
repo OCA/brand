@@ -8,7 +8,12 @@ class ResUsers(models.Model):
 
     _inherit = "res.users"
 
-    brand_ids = fields.Many2one("res.brand", "Brands",)
+    brand_ids = fields.Many2one(
+        "res.brand",
+        "Brands",
+    )
     brand_for_mails_id = fields.Many2one(
-        "res.brand", "Brand For Mails", domain="[('id', 'in', brand_ids)]",
+        "res.brand",
+        "Brand For Mails",
+        domain="[('id', 'in', brand_ids)]",
     )

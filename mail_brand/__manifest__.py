@@ -9,7 +9,7 @@
     "website": "https://github.com/OCA/brand",
     "category": "Mail",
     "depends": ["brand", "mail", "base"],
-    "license": "LGPL-3",
+    "license": "AGPL-3",
     "data": [
         "data/mail_data.xml",
         "security/mail_alias_security.xml",
