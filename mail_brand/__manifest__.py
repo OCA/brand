@@ -4,7 +4,7 @@
 {
     "name": "Mail brand",
     "summary": "Adds the concept of brand according mail",
-    "version": "13.0.1.0.0",
+    "version": "14.0.1.0.0",
     "author": "Yves Goldberg (Ygol InternetWork), " "Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/brand",
     "category": "Mail",
