@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2022-09-17 22:07+0000\n"
+"PO-Revision-Date: 2023-06-25 15:26+0000\n"
 "Last-Translator: Ignacio Buioli <ibuioli@gmail.com>\n"
 "Language-Team: none\n"
 "Language: es_AR\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.2\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__type
@@ -29,6 +29,18 @@ msgid ""
 "contain sensitive data (employee home addresses, ...).\n"
 "- Other: Other address for the company (e.g. subsidiary, ...)"
 msgstr ""
+"- Contacto: Use esto para organizar los detalles de contacto de los "
+"empleados de una compañía determinada (por ejemplo, CEO, CFO, ...).\n"
+"- Dirección de facturación: Dirección preferida para todas las facturas. "
+"Seleccionado por defecto cuando se factura un pedido que pertenece a esta "
+"compañía.\n"
+"- Dirección de entrega: Dirección preferida para todas las entregas. "
+"Seleccionado por defecto cuando se entrega un pedido que pertenece a esta "
+"compañía.\n"
+"- Privado: Las direcciones privadas solo son visibles para los usuarios "
+"autorizados y contienen datos confidenciales (domicilios de los empleados, "
+"...).\n"
+"- Otro: Otra dirección de la compañía (por ejemplo una sucursal, ...)"
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
@@ -286,7 +298,7 @@ msgstr "Compañía"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__company_registry
 msgid "Company ID"
-msgstr ""
+msgstr "ID de Compañía"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__company_name
@@ -366,7 +378,7 @@ msgstr "Límite de Crédito"
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__credit_limit
 msgid "Credit limit specific to this partner."
-msgstr ""
+msgstr "Límite de crédito específico de este contacto."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__currency_id
@@ -406,7 +418,7 @@ msgstr "No usar marcas en documentos comerciales"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__duplicated_bank_account_partners_count
 msgid "Duplicated Bank Account Partners Count"
-msgstr ""
+msgstr "Cuenta de Cuentas Bancarias de Contacto Duplicadas"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__partner_share
@@ -616,7 +628,7 @@ msgstr "Es Seguidor"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_public
 msgid "Is Public"
-msgstr ""
+msgstr "Es Público"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_company
@@ -772,17 +784,17 @@ msgstr "Contacto"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
 msgid "Partner Contracts"
-msgstr ""
+msgstr "Contratos de Contactos"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__use_partner_credit_limit
 msgid "Partner Limit"
-msgstr ""
+msgstr "Límite de Contacto"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__same_company_registry_partner_id
 msgid "Partner with same Company Registry"
-msgstr ""
+msgstr "Contacto con el mismo Registro de Compañía"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__same_vat_partner_id
@@ -910,7 +922,7 @@ msgstr "Compartir Socio"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__show_credit_limit
 msgid "Show Credit Limit"
-msgstr ""
+msgstr "Mostrar Límite de Crédito"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__signup_expiration
@@ -1007,6 +1019,9 @@ msgid ""
 "country format. You can use '/' to indicate that the partner is not subject "
 "to tax."
 msgstr ""
+"El Número de Identificación Fiscal. Los valores aquí se validarán según el "
+"formato del país. Puede utilizar '/' para indicar que el contacto no está "
+"sujeto a impuestos."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_account_position_id
@@ -1035,6 +1050,9 @@ msgid ""
 "The registry number of the company. Use it if it is different from the Tax "
 "ID. It must be unique across all partners of a same country"
 msgstr ""
+"El número de registro de la compañía. Úselo si es diferente del número de "
+"identificación fiscal. Debe ser único entre todos los contactos de un mismo "
+"país"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_account_payable_id
