@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_partner_form" model="ir.ui.view">
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <field name="industry_id" position="after">
+                <field
+                    name="brand_id"
+                    attrs="{'invisible': [('is_company', '=', False)]}"
+                />
+            </field>
+            <field name="image_1920" position="before">
+                <field
+                    name="brand_logo"
+                    widget="image"
+                    class="oe_avatar"
+                    attrs="{'invisible': [('brand_logo', '=', False)]}"
+                />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_partner_tree" model="ir.ui.view">
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree" />
+        <field name="arch" type="xml">
+            <field name="active" position="after">
+                <field name="brand_id" optional="hide" />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_res_partner_filter" model="ir.ui.view">
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter" />
+        <field name="arch" type="xml">
+            <xpath expr="//group" position="inside">
+                <filter
+                    name="group_brand"
+                    string="Brand"
+                    context="{'group_by': 'brand_id'}"
+                />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="res_partner_kanban_view" model="ir.ui.view">
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.res_partner_kanban_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//div/div" position="before">
+                <div>
+                    <field name="brand_logo" invisible="1" />
+                    <span
+                        title="This company is linked to a brand"
+                        attrs="{'invisible': [('brand_logo', '=', False)]}"
+                    >® &amp;nbsp;</span>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.menu" id="res_brand_menu">
+        <field name="name">Brands</field>
+        <field name="parent_id" ref="contacts.res_partner_menu_config" />
+        <field name="action" ref="brand.res_brand_act_window" />
+    </record>
+
+</odoo>
