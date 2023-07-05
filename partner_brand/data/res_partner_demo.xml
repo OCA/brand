@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<odoo>
+
+    <record id="carrefour_lyon" model="res.partner">
+        <field name="name">Carrefour Lyon</field>
+        <field name="company_type">company</field>
+        <field name="brand_id" ref="carrefour" />
+        <field
+            name="image_1920"
+            type="base64"
+            file="partner_brand/static/description/lyon.jpg"
+        />
+    </record>
+    <record id="carrefour_bordeaux" model="res.partner">
+        <field name="name">Carrefour Bordeaux</field>
+        <field name="company_type">company</field>
+        <field name="brand_id" ref="carrefour" />
+    </record>
+
+    <record id="walmart_austin" model="res.partner">
+        <field name="name">Walmart Austin</field>
+        <field name="company_type">company</field>
+        <field name="brand_id" ref="walmart" />
+        <field
+            name="image_1920"
+            type="base64"
+            file="partner_brand/static/description/walmart.jpg"
+        />
+    </record>
+    <record id="walmart_miami" model="res.partner">
+        <field name="name">Walmart Miami</field>
+        <field name="company_type">company</field>
+        <field name="brand_id" ref="walmart" />
+    </record>
+
+</odoo>
