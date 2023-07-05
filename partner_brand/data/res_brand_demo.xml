@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<odoo>
+
+    <record id="carrefour" model="res.brand">
+        <field name="name">Carrefour</field>
+        <field
+            name="image_1920"
+            type="base64"
+            file="partner_brand/static/description/carrouf.png"
+        />
+    </record>
+
+    <record id="walmart" model="res.brand">
+        <field name="name">Walmart</field>
+        <field
+            name="image_1920"
+            type="base64"
+            file="partner_brand/static/description/walmart.png"
+        />
+    </record>
+
+
+</odoo>
