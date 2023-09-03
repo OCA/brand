@@ -716,8 +716,8 @@ msgstr "Anzahl der Fehler"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_needaction_counter
-msgid "Number of messages which requires an action"
-msgstr "Anzahl der Nachrichten, die eine Aktion erfordern"
+msgid "Number of messages requiring action"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_has_error_counter
@@ -1144,3 +1144,6 @@ msgstr "z.B. BE0477472701"
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "e.g. https://www.odoo.com"
 msgstr "z.B. https://www.odoo.com"
+
+#~ msgid "Number of messages which requires an action"
+#~ msgstr "Anzahl der Nachrichten, die eine Aktion erfordern"

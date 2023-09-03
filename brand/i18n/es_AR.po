@@ -38,8 +38,8 @@ msgstr ""
 "Seleccionado por defecto cuando se entrega un pedido que pertenece a esta "
 "compañía.\n"
 "- Privado: Las direcciones privadas solo son visibles para los usuarios "
-"autorizados y contienen datos confidenciales (domicilios de los empleados, "
-"...).\n"
+"autorizados y contienen datos confidenciales (domicilios de los "
+"empleados, ...).\n"
 "- Otro: Otra dirección de la compañía (por ejemplo una sucursal, ...)"
 
 #. module: brand
@@ -758,8 +758,8 @@ msgstr "Número de errores"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_needaction_counter
-msgid "Number of messages which requires an action"
-msgstr "Número de mensajes que requieren una acción"
+msgid "Number of messages requiring action"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_has_error_counter
@@ -1224,6 +1224,9 @@ msgstr "ej. BE0477472701"
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "e.g. https://www.odoo.com"
 msgstr "ej. https://www.odoo.com"
+
+#~ msgid "Number of messages which requires an action"
+#~ msgstr "Número de mensajes que requieren una acción"
 
 #~ msgid ""
 #~ "The Tax Identification Number. Complete it if the contact is subjected to "
