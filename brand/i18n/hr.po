@@ -30,8 +30,8 @@ msgid ""
 "contain sensitive data (employee home addresses, ...).\n"
 "- Other: Other address for the company (e.g. subsidiary, ...)"
 msgstr ""
-"- Kontakt: Koristi se za organiziranje podataka o kontaktima unutar tvtrke ("
-"nrp. CEO, CFO,...). \n"
+"- Kontakt: Koristi se za organiziranje podataka o kontaktima unutar tvtrke "
+"(nrp. CEO, CFO,...). \n"
 "- Adresa računa: Preferirana adresa za slanje svih računa. Odabrana "
 "automatski kad kreirate račun iz naloga koji je naslovljen na ovu tvrtku. \n"
 "- Adresa isporuke: Preferirana adresa za sve isporuke. Odabrana automatski "
@@ -730,8 +730,8 @@ msgstr "Broj grešaka"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_needaction_counter
-msgid "Number of messages which requires an action"
-msgstr "Broj poruka koje zahtijevaju dodatne radnje"
+msgid "Number of messages requiring action"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_has_error_counter
@@ -1158,3 +1158,6 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "e.g. https://www.odoo.com"
 msgstr ""
+
+#~ msgid "Number of messages which requires an action"
+#~ msgstr "Broj poruka koje zahtijevaju dodatne radnje"
