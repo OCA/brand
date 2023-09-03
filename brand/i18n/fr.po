@@ -19,10 +19,14 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__type
 msgid ""
-"- Contact: Use this to organize the contact details of employees of a given company (e.g. CEO, CFO, ...).\n"
-"- Invoice Address : Preferred address for all invoices. Selected by default when you invoice an order that belongs to this company.\n"
-"- Delivery Address : Preferred address for all deliveries. Selected by default when you deliver an order that belongs to this company.\n"
-"- Private: Private addresses are only visible by authorized users and contain sensitive data (employee home addresses, ...).\n"
+"- Contact: Use this to organize the contact details of employees of a given "
+"company (e.g. CEO, CFO, ...).\n"
+"- Invoice Address : Preferred address for all invoices. Selected by default "
+"when you invoice an order that belongs to this company.\n"
+"- Delivery Address : Preferred address for all deliveries. Selected by "
+"default when you deliver an order that belongs to this company.\n"
+"- Private: Private addresses are only visible by authorized users and "
+"contain sensitive data (employee home addresses, ...).\n"
 "- Other: Other address for the company (e.g. subsidiary, ...)"
 msgstr ""
 "- Contact : Permet d'organiser les coordonnées des employés d'une entreprise "
@@ -42,7 +46,9 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
 msgid ""
 "<span class=\"o_form_label\">Brand</span>\n"
-"                                <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" aria-label=\"Values set here are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
+"                                <span class=\"fa fa-lg fa-building-o\" title="
+"\"Values set here are company-specific.\" aria-label=\"Values set here are "
+"company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
 msgstr ""
 "<span class=\"o_form_label\">Marque</span>\n"
 "<span class=\"fa fa-lg fa-building-o\" title=\"Les valeurs définies ici sont "
@@ -113,8 +119,8 @@ msgstr "Type d'adresse"
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__lang
 msgid ""
-"All the emails and documents sent to this contact will be translated in this"
-" language."
+"All the emails and documents sent to this contact will be translated in this "
+"language."
 msgstr ""
 "Tous les courriels et documents envoyés à ce contact seront traduits dans "
 "cette langue."
@@ -325,11 +331,10 @@ msgstr "Paramètres de configuration"
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
 msgid ""
-"Configure branding of customer facing business documents (SO, invoices, "
-"etc)."
+"Configure branding of customer facing business documents (SO, invoices, etc)."
 msgstr ""
-"Configurer l'image de marque des documents commerciaux destinés aux clients ("
-"SO, factures, etc.)."
+"Configurer l'image de marque des documents commerciaux destinés aux clients "
+"(SO, factures, etc.)."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__child_ids
@@ -541,8 +546,8 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__phone_sanitized_blacklisted
 msgid ""
-"If the sanitized phone number is on the blacklist, the contact won't receive"
-" mass mailing sms anymore, from any list"
+"If the sanitized phone number is on the blacklist, the contact won't receive "
+"mass mailing sms anymore, from any list"
 msgstr ""
 
 #. module: brand
@@ -736,7 +741,7 @@ msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_needaction_counter
-msgid "Number of messages which requires an action"
+msgid "Number of messages requiring action"
 msgstr ""
 
 #. module: brand
@@ -1030,8 +1035,8 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__email_normalized
 msgid ""
-"This field is used to search on email address as the primary email field can"
-" contain more than strictly an email address."
+"This field is used to search on email address as the primary email field can "
+"contain more than strictly an email address."
 msgstr ""
 
 #. module: brand
@@ -1138,9 +1143,11 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__tz
 msgid ""
-"When printing documents and exporting/importing data, time values are computed according to this timezone.\n"
+"When printing documents and exporting/importing data, time values are "
+"computed according to this timezone.\n"
 "If the timezone is not set, UTC (Coordinated Universal Time) is used.\n"
-"Anywhere else, time values are computed according to the time offset of your web client."
+"Anywhere else, time values are computed according to the time offset of your "
+"web client."
 msgstr ""
 
 #. module: brand
