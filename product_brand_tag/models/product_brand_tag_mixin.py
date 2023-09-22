@@ -13,7 +13,7 @@ class ProductBrandTag(models.AbstractModel):
     _name = "product.brand.tag.mixin"
     _description = "Product Brand Tag Mixin"
 
-    name = fields.Char(string="Name", required=True, translate=True)
+    name = fields.Char(required=True, translate=True)
     code = fields.Char(
         compute="_compute_code", inverse="_inverse_code", readonly=False, store=True
     )
