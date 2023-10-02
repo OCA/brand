@@ -24,6 +24,8 @@
         "views/product_brand_view.xml",
         "reports/sale_report_view.xml",
         "reports/account_invoice_report_view.xml",
+        "reports/report_invoice.xml",
+        "reports/sale_report.xml",
     ],
     "installable": True,
     "auto_install": False,

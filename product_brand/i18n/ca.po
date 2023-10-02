@@ -26,6 +26,8 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:product_brand.view_account_invoice_report_search
 #: model_terms:ir.ui.view,arch_db:product_brand.view_order_product_search
 #: model_terms:ir.ui.view,arch_db:product_brand.view_product_template_search_brand
+#: model_terms:ir.ui.view,arch_db:product_brand.report_invoice_document
+#: model_terms:ir.ui.view,arch_db:product_brand.report_saleorder
 msgid "Brand"
 msgstr "Marca"
 
