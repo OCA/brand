@@ -27,15 +27,29 @@ msgid "Account Move Reversal"
 msgstr ""
 
 #. module: account_brand
+#: model:ir.model.fields,field_description:account_brand.field_account_bank_statement_line__brand_id
 #: model:ir.model.fields,field_description:account_brand.field_account_move__brand_id
+#: model:ir.model.fields,field_description:account_brand.field_account_payment__brand_id
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__brand_id
 msgid "Brand"
 msgstr "Merk"
 
 #. module: account_brand
+#: model:ir.model.fields,field_description:account_brand.field_account_move__brand_use_level
+msgid "Brand Use Level"
+msgstr ""
+
+#. module: account_brand
+#: model:ir.model.fields,help:account_brand.field_account_bank_statement_line__brand_id
 #: model:ir.model.fields,help:account_brand.field_account_move__brand_id
+#: model:ir.model.fields,help:account_brand.field_account_payment__brand_id
 msgid "Brand to use for this sale"
 msgstr "Merk voor deze verkoop"
+
+#. module: account_brand
+#: model:ir.model.fields,field_description:account_brand.field_account_move__company_id
+msgid "Company"
+msgstr ""
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__create_uid
@@ -48,21 +62,27 @@ msgid "Created on"
 msgstr "Aangemaakt op"
 
 #. module: account_brand
+#: model:ir.model.fields,field_description:account_brand.field_account_move__display_name
+#: model:ir.model.fields,field_description:account_brand.field_account_move_reversal__display_name
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__display_name
 msgid "Display Name"
 msgstr "Weergavenaam"
 
 #. module: account_brand
+#: model:ir.model.fields,field_description:account_brand.field_account_move__id
+#: model:ir.model.fields,field_description:account_brand.field_account_move_reversal__id
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__id
 msgid "ID"
 msgstr "ID"
 
 #. module: account_brand
 #: model:ir.model,name:account_brand.model_account_move
-msgid "Journal Entries"
-msgstr "Journaal ingave"
+msgid "Journal Entry"
+msgstr ""
 
 #. module: account_brand
+#: model:ir.model.fields,field_description:account_brand.field_account_move____last_update
+#: model:ir.model.fields,field_description:account_brand.field_account_move_reversal____last_update
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand____last_update
 msgid "Last Modified on"
 msgstr "Laatst gewijzigt op"
@@ -120,3 +140,6 @@ msgstr ""
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__account_type
 msgid "Type"
 msgstr "Type"
+
+#~ msgid "Journal Entries"
+#~ msgstr "Journaal ingave"
