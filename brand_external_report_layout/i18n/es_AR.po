@@ -20,8 +20,8 @@ msgstr ""
 #: model:ir.model.fields,help:brand_external_report_layout.field_brand_document_layout__report_header
 #: model:ir.model.fields,help:brand_external_report_layout.field_res_brand__report_header
 msgid ""
-"Appears by default on the top right corner of your printed documents (report"
-" header)."
+"Appears by default on the top right corner of your printed documents (report "
+"header)."
 msgstr ""
 "Aparece de forma predeterminada en la esquina superior derecha de sus "
 "documentos impresos (encabezado del reporte)."
