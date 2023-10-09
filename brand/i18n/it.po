@@ -32,8 +32,8 @@ msgstr ""
 "<span class=\"o_form_label\">Brand</span>\n"
 "                                <span class=\"fa fa-lg fa-building-o\" title="
 "\"I valori impostati qui sono specifici per azienda.\" aria-label=\"I valori "
-"impostati qui sono specifici per azienda.\" groups=\"base."
-"group_multi_company\" role=\"img\"/>"
+"impostati qui sono specifici per azienda.\" groups=\"base.group_multi_company"
+"\" role=\"img\"/>"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_account_payable_id
