@@ -28,14 +28,28 @@ msgid "Account Move Reversal"
 msgstr ""
 
 #. module: account_brand
+#: model:ir.model.fields,field_description:account_brand.field_account_bank_statement_line__brand_id
 #: model:ir.model.fields,field_description:account_brand.field_account_move__brand_id
+#: model:ir.model.fields,field_description:account_brand.field_account_payment__brand_id
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__brand_id
 msgid "Brand"
 msgstr "Brand"
 
 #. module: account_brand
+#: model:ir.model.fields,field_description:account_brand.field_account_move__brand_use_level
+msgid "Brand Use Level"
+msgstr ""
+
+#. module: account_brand
+#: model:ir.model.fields,help:account_brand.field_account_bank_statement_line__brand_id
 #: model:ir.model.fields,help:account_brand.field_account_move__brand_id
+#: model:ir.model.fields,help:account_brand.field_account_payment__brand_id
 msgid "Brand to use for this sale"
+msgstr ""
+
+#. module: account_brand
+#: model:ir.model.fields,field_description:account_brand.field_account_move__company_id
+msgid "Company"
 msgstr ""
 
 #. module: account_brand
@@ -60,7 +74,7 @@ msgstr ""
 
 #. module: account_brand
 #: model:ir.model,name:account_brand.model_account_move
-msgid "Journal Entries"
+msgid "Journal Entry"
 msgstr ""
 
 #. module: account_brand
