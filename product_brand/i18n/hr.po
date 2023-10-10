@@ -151,7 +151,5 @@ msgstr "Odaberite brand za ovaj proizvod"
 msgid "Select a partner for this brand if any."
 msgstr "Odaberite partnera za ovaj brand ako ga ima."
 
-#. module: product_brand
-#: model_terms:ir.ui.view,arch_db:product_brand.view_product_brand_tree
-msgid "product.brand"
-msgstr "product.brand"
+#~ msgid "product.brand"
+#~ msgstr "product.brand"
