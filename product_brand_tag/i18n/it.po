@@ -1,0 +1,140 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_brand_tag
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-05-25 16:08+0000\n"
+"Last-Translator: Francesco Foresti <francesco.foresti@ooops404.com>\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__brands_count
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag_mixin__brands_count
+msgid "# of brands"
+msgstr "# di marche"
+
+#. module: product_brand_tag
+#: model:ir.actions.act_window,name:product_brand_tag.action_product_brand_tags
+msgid "Brand tags"
+msgstr "Etichette marche"
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag_mixin__product_brand_ids
+msgid "Brands"
+msgstr "Marche"
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__code
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag_mixin__code
+msgid "Code"
+msgstr "Codice"
+
+#. module: product_brand_tag
+#: model_terms:ir.ui.view,arch_db:product_brand_tag.view_product_brand_tag_form
+msgid "Color"
+msgstr "Colore"
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__color
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag_mixin__color
+msgid "Color Index"
+msgstr "Indice colore"
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__company_id
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag_mixin__company_id
+msgid "Company"
+msgstr "Azienda"
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__create_uid
+msgid "Created by"
+msgstr "Creato da"
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__create_date
+msgid "Created on"
+msgstr "Creato il"
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand__display_name
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__display_name
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag_mixin__display_name
+msgid "Display Name"
+msgstr "Nome visualizzato"
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand__id
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__id
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag_mixin__id
+msgid "ID"
+msgstr "ID"
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand____last_update
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag____last_update
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag_mixin____last_update
+msgid "Last Modified on"
+msgstr "Ultima modifica il"
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__write_uid
+msgid "Last Updated by"
+msgstr "Ultimo aggiornamento di"
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__write_date
+msgid "Last Updated on"
+msgstr "Ultimo aggiornamento il"
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__name
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag_mixin__name
+msgid "Name"
+msgstr "Nome"
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand__tag_ids
+msgid "Primary Tags"
+msgstr "Etichette primarie"
+
+#. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__product_brand_ids
+msgid "Primary for brands"
+msgstr "Primaria per marche"
+
+#. module: product_brand_tag
+#: model:ir.model,name:product_brand_tag.model_product_brand
+msgid "Product Brand"
+msgstr "Marca del prodotto"
+
+#. module: product_brand_tag
+#: model:ir.model,name:product_brand_tag.model_product_brand_tag
+msgid "Product Brand Tag"
+msgstr "Etichetta marca del prodotto"
+
+#. module: product_brand_tag
+#: model:ir.model,name:product_brand_tag.model_product_brand_tag_mixin
+msgid "Product Brand Tag Mixin"
+msgstr "Product Brand Tag Mixin"
+
+#. module: product_brand_tag
+#: model:ir.ui.menu,name:product_brand_tag.menu_product_brand_tags
+msgid "Product Brands Tags"
+msgstr "Etichette marche prodotto"
+
+#. module: product_brand_tag
+#: model:ir.model.constraint,message:product_brand_tag.constraint_product_brand_tag_csr_tag_code_uniq
+#: model:ir.model.constraint,message:product_brand_tag.constraint_product_brand_tag_mixin_tag_code_uniq
+#: model:ir.model.constraint,message:product_brand_tag.constraint_product_brand_tag_tag_code_uniq
+msgid "Tag code must be unique inside a company"
+msgstr "Il codice dell'etichetta dev'essere univoca per la stessa azienda"
