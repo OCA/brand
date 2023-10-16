@@ -27,6 +27,7 @@ addon | version | maintainers | summary
 [partner_brand](partner_brand/) | 16.0.1.0.0 | [![bealdav](https://github.com/bealdav.png?size=30px)](https://github.com/bealdav) | Define registered mark in partners according to brand settings
 [product_brand](product_brand/) | 16.0.1.0.1 |  | Product Brand Manager
 [product_brand_mrp](product_brand_mrp/) | 16.0.1.0.0 |  | This module allows to work with product_brand in MRP.
+[product_brand_purchase](product_brand_purchase/) | 16.0.1.0.0 |  | This module allows to work with product_brand in purchase reports.
 [product_brand_tag](product_brand_tag/) | 16.0.1.0.0 |  | Add tags to product brand
 [sale_brand](sale_brand/) | 16.0.1.0.1 | [![osi-scampbell](https://github.com/osi-scampbell.png?size=30px)](https://github.com/osi-scampbell) [![sbejaoui](https://github.com/sbejaoui.png?size=30px)](https://github.com/sbejaoui) | Send branded sales orders
 
