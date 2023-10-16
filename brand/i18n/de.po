@@ -17,6 +17,11 @@ msgstr ""
 "X-Generator: Weblate 4.14.1\n"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__supplier_invoice_count
+msgid "# Vendor Bills"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__type
 msgid ""
 "- Contact: Use this to organize the contact details of employees of a given "
@@ -117,6 +122,13 @@ msgstr "Archiviert"
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_attachment_count
 msgid "Attachment Count"
 msgstr "Anzahl der Anhänge"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__receipt_reminder_email
+msgid ""
+"Automatically send a confirmation email to the vendor X days before the "
+"expected receipt date, asking him to confirm the exact date."
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__avatar_1920
@@ -380,6 +392,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:brand.field_res_brand__date
 msgid "Date"
 msgstr "Datum"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__reminder_date_before_receipt
+msgid "Days Before Receipt"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__trust
@@ -660,6 +677,11 @@ msgid "Message for Invoice"
 msgstr ""
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_warn_msg
+msgid "Message for Purchase Order"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_warn_msg
 msgid "Message for Sales Order"
 msgstr ""
@@ -720,6 +742,11 @@ msgid "Number of Actions"
 msgstr "Anzahl der Aktionen"
 
 #. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__reminder_date_before_receipt
+msgid "Number of days to send reminder email before the promised receipt date"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_has_error_counter
 msgid "Number of errors"
 msgstr "Anzahl der Fehler"
@@ -735,9 +762,22 @@ msgid "Number of messages with delivery error"
 msgstr "Anzahl der Nachrichten mit einem Fehler beim Senden"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__on_time_rate
+msgid "On-Time Delivery Rate"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields.selection,name:brand.selection__res_company__brand_use_level__optional
 msgid "Optional"
 msgstr "Optional"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__on_time_rate
+msgid ""
+"Over the past x days; the number of products received on time divided by the "
+"number of ordered products.x is either the System Parameter purchase_stock."
+"on_time_delivery_days or the default 365"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__parent_name
@@ -810,6 +850,26 @@ msgid "Pricelist"
 msgstr "Preisliste"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_line_ids
+msgid "Purchase Lines"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_warn
+msgid "Purchase Order"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_order_count
+msgid "Purchase Order Count"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__receipt_reminder_email
+msgid "Receipt Reminder"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__ref
 msgid "Reference"
 msgstr "Referenz"
@@ -867,6 +927,7 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__invoice_warn
 #: model:ir.model.fields,help:brand.field_res_brand__picking_warn
+#: model:ir.model.fields,help:brand.field_res_brand__purchase_warn
 #: model:ir.model.fields,help:brand.field_res_brand__sale_warn
 msgid ""
 "Selecting the \"Warning\" option will notify user with the message, "
@@ -955,6 +1016,11 @@ msgid "Street2"
 msgstr "Straße 2"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__property_purchase_currency_id
+msgid "Supplier Currency"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__supplier_rank
 msgid "Supplier Rank"
 msgstr "Lieferanten-Rang"
@@ -1033,6 +1099,13 @@ msgstr ""
 msgid ""
 "This account will be used instead of the default one as the receivable "
 "account for the current partner"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__property_purchase_currency_id
+msgid ""
+"This currency will be used, instead of the default one, for purchases from "
+"the current partner"
 msgstr ""
 
 #. module: brand
