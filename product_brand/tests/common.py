@@ -10,7 +10,16 @@ class CommonCase(TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        cls.env = cls.env(context=dict(cls.env.context, tracking_disable=True))
+        cls.env = cls.env(
+            context=dict(
+                cls.env.context,
+                mail_create_nolog=True,
+                mail_create_nosubscribe=True,
+                mail_notrack=True,
+                no_reset_password=True,
+                tracking_disable=True,
+            )
+        )
         cls.product = cls.env.ref("product.product_product_4")
         cls.supplier = cls.env.ref("base.res_partner_2")
         cls.product_brand_obj = cls.env["product.brand"]
