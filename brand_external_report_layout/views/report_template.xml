@@ -14,7 +14,7 @@
             <t t-else="" t-set="brand_id" t-value="0" />
             <t
                 t-if="o and 'brand_id' in o.fields_get() and o.brand_id and o.brand_id.external_report_layout_id"
-                t-call="{{o.brand_id.external_report_layout_id.key}}"
+                t-call="{{o.brand_id.external_report_layout_id.sudo().key}}"
             >
                 <t t-set="company" t-value="o.brand_id.sudo()" />
                 <t t-raw="0" />
