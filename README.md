@@ -25,7 +25,7 @@ addon | version | maintainers | summary
 [brand](brand/) | 16.0.1.0.2 | [![sbejaoui](https://github.com/sbejaoui.png?size=30px)](https://github.com/sbejaoui) | This is a base addon for brand modules. It adds the brand object and its menu and define an abstract model to be inherited from branded objects
 [brand_external_report_layout](brand_external_report_layout/) | 16.0.1.0.0 | [![sbejaoui](https://github.com/sbejaoui.png?size=30px)](https://github.com/sbejaoui) | This module allows you to have a different layout by brand for your external reports.
 [partner_brand](partner_brand/) | 16.0.1.0.0 | [![bealdav](https://github.com/bealdav.png?size=30px)](https://github.com/bealdav) | Define registered mark in partners according to brand settings
-[product_brand](product_brand/) | 16.0.1.0.1 |  | Product Brand Manager
+[product_brand](product_brand/) | 16.0.1.0.2 |  | Product Brand Manager
 [product_brand_mrp](product_brand_mrp/) | 16.0.1.0.0 |  | This module allows to work with product_brand in MRP.
 [product_brand_purchase](product_brand_purchase/) | 16.0.1.0.0 |  | This module allows to work with product_brand in purchase reports.
 [product_brand_tag](product_brand_tag/) | 16.0.1.0.0 |  | Add tags to product brand
