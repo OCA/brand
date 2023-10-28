@@ -5,7 +5,7 @@
         <field name="name">product.brand.tag.csr.tree</field>
         <field name="model">product.brand.tag.csr</field>
         <field name="arch" type="xml">
-            <tree editable="top" string="CSR tags">
+            <tree editable="top">
                 <field name="name" />
                 <field name="code" />
                 <field name="product_brand_ids" widget="many2many_tags" />
