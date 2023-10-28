@@ -34,11 +34,6 @@ msgid "CSR"
 msgstr ""
 
 #. module: product_brand_social_responsibility
-#: model_terms:ir.ui.view,arch_db:product_brand_social_responsibility.view_product_brand_tag_csr_tree
-msgid "CSR tags"
-msgstr ""
-
-#. module: product_brand_social_responsibility
 #: model:ir.model.fields,field_description:product_brand_social_responsibility.field_product_brand_tag_csr__code
 msgid "Code"
 msgstr ""
