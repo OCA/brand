@@ -95,11 +95,6 @@ msgid "Activity Type Icon"
 msgstr "Type icône d’activité"
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__additional_info
-msgid "Additional info"
-msgstr "Info complémentaires"
-
-#. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "Address"
 msgstr "Adresse"
@@ -179,16 +174,6 @@ msgstr "Code barre"
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_blacklisted
 msgid "Blacklist"
 msgstr "Liste rouge"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__mobile_blacklisted
-msgid "Blacklisted Phone Is Mobile"
-msgstr "Le tél mis en liste rouge est le mobile"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__phone_blacklisted
-msgid "Blacklisted Phone is Phone"
-msgstr "Le tél mis en liste rouge est le fix"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_bounce
@@ -311,11 +296,6 @@ msgstr "Nom de l'entité de la société"
 #: model:ir.model.fields,field_description:brand.field_res_brand__company_type
 msgid "Company Type"
 msgstr "Type société"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__partner_gid
-msgid "Company database ID"
-msgstr "Id de la bases de données de l'entreprise"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__contact_address
@@ -448,15 +428,6 @@ msgid "Employee"
 msgstr "Employé"
 
 #. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__phone_sanitized
-msgid ""
-"Field used to store sanitized phone number. Helps speeding up searches and "
-"comparisons."
-msgstr ""
-"Champ utilisé pour stocker le numéro de téléphone expurgé. Aide à accélérer "
-"les recherches et les comparaisons."
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_account_position_id
 msgid "Fiscal Position"
 msgstr "Position fiscale"
@@ -534,7 +505,6 @@ msgstr "Si coché, les nouveaux messages nécessitent votre attention."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_has_error
-#: model:ir.model.fields,help:brand.field_res_brand__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr "Si coché, certains messages ont une erreur de livraison."
 
@@ -555,15 +525,6 @@ msgid ""
 msgstr ""
 "Si l'adresse e-mail est sur la liste noire, le contact ne recevra plus de "
 "mailing en masse, de n'importe quelle liste"
-
-#. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__phone_sanitized_blacklisted
-msgid ""
-"If the sanitized phone number is on the blacklist, the contact won't receive "
-"mass mailing sms anymore, from any list"
-msgstr ""
-"Si le numéro de téléphone nettoyé est sur la liste noire, le contact ne "
-"recevra plus de sms d'envoi en masse, de n'importe quelle liste"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__image_1920
@@ -589,28 +550,6 @@ msgstr "Image 256"
 #: model:ir.model.fields,field_description:brand.field_res_brand__image_512
 msgid "Image 512"
 msgstr "Image 512"
-
-#. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__mobile_blacklisted
-msgid ""
-"Indicates if a blacklisted sanitized phone number is a mobile number. Helps "
-"distinguish which number is blacklisted             when there is both a "
-"mobile and phone field in a model."
-msgstr ""
-"Indique si un numéro de téléphone expurgé sur liste rouge est un numéro de "
-"mobile. Permet de distinguer quel numéro est sur liste rouge lorsqu'il y a à "
-"la fois un  mobile et un  téléphone fixe dans un modèle."
-
-#. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__phone_blacklisted
-msgid ""
-"Indicates if a blacklisted sanitized phone number is a phone number. Helps "
-"distinguish which number is blacklisted             when there is both a "
-"mobile and phone field in a model."
-msgstr ""
-"Indique si un numéro de téléphone expurgé sur liste rouge est un numéro de "
-"fixe. Permet de distinguer quel numéro est sur liste rouge lorsqu'il y a à "
-"la fois un  mobile et un  téléphone fixe dans un modèle."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__industry_id
@@ -863,16 +802,6 @@ msgid "Phone"
 msgstr "Tél fixe"
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__phone_sanitized_blacklisted
-msgid "Phone Blacklisted"
-msgstr "Tél fixe sur liste rouge"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__phone_mobile_search
-msgid "Phone/Mobile"
-msgstr "Téléphone/Mobile"
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_product_pricelist
 msgid "Pricelist"
 msgstr "Liste de prix"
@@ -918,11 +847,6 @@ msgid "Responsible User"
 msgstr "Utilisateur responsable"
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__message_has_sms_error
-msgid "SMS Delivery error"
-msgstr "SMS d'erreur de livraison"
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_order_count
 msgid "Sale Order Count"
 msgstr "Nb de ventes"
@@ -946,11 +870,6 @@ msgstr "Alerte de vente"
 #: model:ir.model.fields,field_description:brand.field_res_brand__user_id
 msgid "Salesperson"
 msgstr "Vendeur"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__phone_sanitized
-msgid "Sanitized Number"
-msgstr "Numéro expurgé"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__invoice_warn
@@ -1309,6 +1228,62 @@ msgstr "e.g. BFR0477472701"
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "e.g. https://www.odoo.com"
 msgstr "e.g. https://www.odoo.com"
+
+#~ msgid "Additional info"
+#~ msgstr "Info complémentaires"
+
+#~ msgid "Blacklisted Phone Is Mobile"
+#~ msgstr "Le tél mis en liste rouge est le mobile"
+
+#~ msgid "Blacklisted Phone is Phone"
+#~ msgstr "Le tél mis en liste rouge est le fix"
+
+#~ msgid "Company database ID"
+#~ msgstr "Id de la bases de données de l'entreprise"
+
+#~ msgid ""
+#~ "Field used to store sanitized phone number. Helps speeding up searches "
+#~ "and comparisons."
+#~ msgstr ""
+#~ "Champ utilisé pour stocker le numéro de téléphone expurgé. Aide à "
+#~ "accélérer les recherches et les comparaisons."
+
+#~ msgid ""
+#~ "If the sanitized phone number is on the blacklist, the contact won't "
+#~ "receive mass mailing sms anymore, from any list"
+#~ msgstr ""
+#~ "Si le numéro de téléphone nettoyé est sur la liste noire, le contact ne "
+#~ "recevra plus de sms d'envoi en masse, de n'importe quelle liste"
+
+#~ msgid ""
+#~ "Indicates if a blacklisted sanitized phone number is a mobile number. "
+#~ "Helps distinguish which number is blacklisted             when there is "
+#~ "both a mobile and phone field in a model."
+#~ msgstr ""
+#~ "Indique si un numéro de téléphone expurgé sur liste rouge est un numéro "
+#~ "de mobile. Permet de distinguer quel numéro est sur liste rouge lorsqu'il "
+#~ "y a à la fois un  mobile et un  téléphone fixe dans un modèle."
+
+#~ msgid ""
+#~ "Indicates if a blacklisted sanitized phone number is a phone number. "
+#~ "Helps distinguish which number is blacklisted             when there is "
+#~ "both a mobile and phone field in a model."
+#~ msgstr ""
+#~ "Indique si un numéro de téléphone expurgé sur liste rouge est un numéro "
+#~ "de fixe. Permet de distinguer quel numéro est sur liste rouge lorsqu'il y "
+#~ "a à la fois un  mobile et un  téléphone fixe dans un modèle."
+
+#~ msgid "Phone Blacklisted"
+#~ msgstr "Tél fixe sur liste rouge"
+
+#~ msgid "Phone/Mobile"
+#~ msgstr "Téléphone/Mobile"
+
+#~ msgid "SMS Delivery error"
+#~ msgstr "SMS d'erreur de livraison"
+
+#~ msgid "Sanitized Number"
+#~ msgstr "Numéro expurgé"
 
 #~ msgid "Number of messages which requires an action"
 #~ msgstr "Nb de messages nécessitant une action"
