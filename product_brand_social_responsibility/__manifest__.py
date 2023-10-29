@@ -3,7 +3,7 @@
 {
     "name": "Product brand Corporate Social Responsibility",
     "summary": "Provide CSR info on brands.",
-    "version": "14.0.1.1.0",
+    "version": "14.0.1.1.1",
     "author": "Camptocamp, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "category": "Product",
