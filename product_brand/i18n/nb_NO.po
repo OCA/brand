@@ -155,7 +155,5 @@ msgstr "Velg et merke for produktet"
 msgid "Select a partner for this brand if any."
 msgstr "Velg en partner for produktet, om noen."
 
-#. module: product_brand
-#: model_terms:ir.ui.view,arch_db:product_brand.view_product_brand_tree
-msgid "product.brand"
-msgstr "produkt.merke"
+#~ msgid "product.brand"
+#~ msgstr "produkt.merke"
