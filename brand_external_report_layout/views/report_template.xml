@@ -5,19 +5,44 @@
     <template id="brand_external_layout" inherit_id="web.external_layout">
         <xpath expr="//t[@t-if='not company']" position="after">
             <t t-if="doc and not o" t-set="o" t-value="doc" />
-            <t t-if="brand" t-set="brand_id" t-value="brand.id" />
             <t
-                t-elif="o and 'brand_id' in o.fields_get() and o.brand_id and o.brand_id.external_report_layout_id"
+                t-if="brand_document_layout"
                 t-set="brand_id"
-                t-value="o.brand_id.id"
+                t-value="brand_document_layout.id"
             />
-            <t t-else="" t-set="brand_id" t-value="0" />
-            <t
-                t-if="o and 'brand_id' in o.fields_get() and o.brand_id and o.brand_id.external_report_layout_id"
-                t-call="{{o.brand_id.external_report_layout_id.sudo().key}}"
-            >
-                <t t-set="company" t-value="o.brand_id.sudo()" />
-                <t t-raw="0" />
+            <t t-elif="o and 'brand_id' in o.fields_get() and o.brand_id">
+                <t t-set="brand" t-value="o.brand_id.sudo()" />
+                <t t-set="brand_id" t-value="brand.id" />
+            </t>
+            <t t-else="">
+                <t t-set="brand" t-value="0" />
+                <t t-set="brand_id" t-value="0" />
+            </t>
+            <t t-if="brand and brand.external_report_layout_id">
+                <t t-if="not company">
+                    <t t-set="company" t-value="brand.sudo()" />
+                    <t t-set="company_was_set" t-value="0" />
+                </t>
+                <t t-else="else">
+                    <t t-set="company_was_set" t-value="1" />
+                    <t t-set="brand_style_vals" t-value="brand._get_style_vals()" />
+                    <t
+                        t-set="company_style_vals"
+                        t-value="company.sudo()._get_style_vals()"
+                    />
+                    <t
+                        t-set="company"
+                        t-value="company.update_style(brand_style_vals)"
+                    />
+                </t>
+                <t t-call="{{brand.external_report_layout_id.sudo().key}}"><t
+                        t-out="0"
+                    /></t>
+                <t
+                    t-if="company_was_set"
+                    t-set="company"
+                    t-value="company.update_style(company_style_vals)"
+                />
             </t>
             <t t-else="else" name="brand_not_set" />
         </xpath>

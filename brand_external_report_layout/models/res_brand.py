@@ -35,13 +35,10 @@ class ResBrand(models.Model):
     external_report_layout_id = fields.Many2one(
         comodel_name="ir.ui.view", string="Document Template"
     )
-    report_header = fields.Text(
-        help="Appears by default on the top right corner of your printed "
-        "documents (report header).",
-    )
-    report_footer = fields.Text(
-        translate=True,
-        help="Footer text displayed at the bottom of all reports.",
+    report_header = fields.Html(
+        string="Brand Tagline",
+        help="Appears by default on the top right corner of your printed documents "
+        "(report header).",
     )
     paperformat_id = fields.Many2one(
         "report.paperformat",
@@ -64,10 +61,6 @@ class ResBrand(models.Model):
     )
     primary_color = fields.Char()
     secondary_color = fields.Char()
-    company_details = fields.Html(
-        string="Brand Details",
-        help="Header text displayed at the top of all reports.",
-    )
     layout_background = fields.Selection(
         [("Blank", "Blank"), ("Geometric", "Geometric"), ("Custom", "Custom")],
         default="Blank",
@@ -111,6 +104,26 @@ class ResBrand(models.Model):
     @api.model
     def _get_style_fields(self):
         return {"external_report_layout_id", "font", "primary_color", "secondary_color"}
+
+    @api.model
+    def _get_company_overriden_fields(self):
+        return {
+            "name",
+            "logo",
+            "external_report_layout_id",
+            "report_header",
+            "paperformat_id",
+            "font",
+            "primary_color",
+            "secondary_color",
+            "layout_background",
+            "layout_background_image",
+        }
+
+    def _get_style_vals(self):
+        res = self.read(self._get_company_overriden_fields())[0]
+        res.pop("id")
+        return res
 
     @api.model_create_multi
     def create(self, vals_list):

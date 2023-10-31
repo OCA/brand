@@ -20,8 +20,8 @@ class BrandDocumentLayout(models.TransientModel):
     brand_id = fields.Many2one("res.brand", required=True)
 
     logo = fields.Binary(related="brand_id.logo", readonly=False)
-    report_header = fields.Text(related="brand_id.report_header", readonly=False)
-    report_footer = fields.Text(related="brand_id.report_footer", readonly=False)
+    report_header = fields.Html(related="brand_id.report_header", readonly=False)
+    report_footer = fields.Html(readonly=True)
     paperformat_id = fields.Many2one(related="brand_id.paperformat_id", readonly=False)
     external_report_layout_id = fields.Many2one(
         related="brand_id.external_report_layout_id", readonly=False
@@ -30,7 +30,7 @@ class BrandDocumentLayout(models.TransientModel):
     font = fields.Selection(related="brand_id.font", readonly=False)
     primary_color = fields.Char(related="brand_id.primary_color", readonly=False)
     secondary_color = fields.Char(related="brand_id.secondary_color", readonly=False)
-    company_details = fields.Html(related="brand_id.company_details", readonly=False)
+    company_details = fields.Html(readonly=True)
     layout_background = fields.Selection(
         related="brand_id.layout_background", readonly=False
     )
@@ -47,16 +47,6 @@ class BrandDocumentLayout(models.TransientModel):
         for wizard in self:
             wizard.logo = wizard.brand_id.logo
             wizard.report_header = wizard.brand_id.report_header
-            wizard.report_footer = (
-                wizard.brand_id.report_footer
-                if isinstance(wizard.brand_id.report_footer, str)
-                else wizard.report_footer
-            )
-            wizard.company_details = (
-                wizard.brand_id.company_details
-                if isinstance(wizard.brand_id.company_details, str)
-                else wizard.company_details
-            )
             wizard.paperformat_id = wizard.brand_id.paperformat_id
             wizard.external_report_layout_id = wizard.brand_id.external_report_layout_id
             wizard.font = wizard.brand_id.font
@@ -104,10 +94,8 @@ class BrandDocumentLayout(models.TransientModel):
         "primary_color",
         "secondary_color",
         "report_header",
-        "report_footer",
         "layout_background",
         "layout_background_image",
-        "company_details",
     )
     def _compute_preview(self):
         styles = self._get_asset_style()
@@ -124,7 +112,7 @@ class BrandDocumentLayout(models.TransientModel):
                 wizard.preview = ir_ui_view._render_template(
                     "web.report_invoice_wizard_preview",
                     {
-                        "brand": wizard_with_logo,
+                        "brand_document_layout": wizard_with_logo,
                         "company": wizard_with_logo,
                         "preview_css": preview_css,
                     },
