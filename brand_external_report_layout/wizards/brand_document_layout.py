@@ -21,7 +21,7 @@ class BrandDocumentLayout(models.TransientModel):
 
     logo = fields.Binary(related="brand_id.logo", readonly=False)
     report_header = fields.Html(related="brand_id.report_header", readonly=False)
-    report_footer = fields.Html(readonly=True)
+    report_footer = fields.Html(default=None, readonly=True)
     paperformat_id = fields.Many2one(related="brand_id.paperformat_id", readonly=False)
     external_report_layout_id = fields.Many2one(
         related="brand_id.external_report_layout_id", readonly=False
@@ -30,7 +30,7 @@ class BrandDocumentLayout(models.TransientModel):
     font = fields.Selection(related="brand_id.font", readonly=False)
     primary_color = fields.Char(related="brand_id.primary_color", readonly=False)
     secondary_color = fields.Char(related="brand_id.secondary_color", readonly=False)
-    company_details = fields.Html(readonly=True)
+    company_details = fields.Html(default=None, readonly=True)
     layout_background = fields.Selection(
         related="brand_id.layout_background", readonly=False
     )
