@@ -63,9 +63,7 @@ class ResBrandMixin(models.AbstractModel):
     @api.model
     def get_view(self, view_id=None, view_type="form", **options):
         """set visibility and requirement rules"""
-        result = super(ResBrandMixin, self).get_view(
-            view_id=view_id, view_type=view_type, **options
-        )
+        result = super().get_view(view_id=view_id, view_type=view_type, **options)
 
         if view_type in ["tree", "form"]:
             doc = etree.XML(result["arch"])
@@ -90,15 +88,10 @@ class ResBrandMixin(models.AbstractModel):
                 node.addprevious(elem)
                 self.setup_modifiers(elem, field=brand_use_level_field)
                 node.set(
-                    "attrs",
-                    '{"invisible": '
-                    '[("brand_use_level", "=", "%s")], '
-                    '"required": '
-                    '[("brand_use_level", "=", "%s")]}'
-                    % (
-                        BRAND_USE_LEVEL_NO_USE_LEVEL,
-                        BRAND_USE_LEVEL_REQUIRED_LEVEL,
-                    ),
+                    "invisible", f"brand_use_level == {BRAND_USE_LEVEL_NO_USE_LEVEL}"
+                )
+                node.set(
+                    "required", f"brand_use_level == {BRAND_USE_LEVEL_REQUIRED_LEVEL}"
                 )
                 self.setup_modifiers(node, field=brand_id_field)
             result["arch"] = etree.tostring(doc, encoding="unicode")
