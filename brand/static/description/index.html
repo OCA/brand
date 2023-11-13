@@ -369,9 +369,9 @@ ul.auto-toc {
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !! source digest: sha256:7d2e0506d958f6a0e0d83ffd9a4b23c3ae88ddcc45fdf095f87578d5f2cbaaaa
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-<p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/licence-AGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/OCA/brand/tree/16.0/brand"><img alt="OCA/brand" src="https://img.shields.io/badge/github-OCA%2Fbrand-lightgray.png?logo=github" /></a> <a class="reference external image-reference" href="https://translation.odoo-community.org/projects/brand-16-0/brand-16-0-brand"><img alt="Translate me on Weblate" src="https://img.shields.io/badge/weblate-Translate%20me-F47D42.png" /></a> <a class="reference external image-reference" href="https://runboat.odoo-community.org/builds?repo=OCA/brand&amp;target_branch=16.0"><img alt="Try me on Runboat" src="https://img.shields.io/badge/runboat-Try%20me-875A7B.png" /></a></p>
-<p>This is a base addon for brand modules. It adds the brand object and its menu and
-define an abstract model to be inherited from branded objects.</p>
+<p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/licence-AGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/OCA/brand/tree/17.0/brand"><img alt="OCA/brand" src="https://img.shields.io/badge/github-OCA%2Fbrand-lightgray.png?logo=github" /></a> <a class="reference external image-reference" href="https://translation.odoo-community.org/projects/brand-17-0/brand-17-0-brand"><img alt="Translate me on Weblate" src="https://img.shields.io/badge/weblate-Translate%20me-F47D42.png" /></a> <a class="reference external image-reference" href="https://runboat.odoo-community.org/builds?repo=OCA/brand&amp;target_branch=17.0"><img alt="Try me on Runboat" src="https://img.shields.io/badge/runboat-Try%20me-875A7B.png" /></a></p>
+<p>This is a base addon for brand modules. It adds the brand object and its
+menu and define an abstract model to be inherited from branded objects.</p>
 <p><strong>Table of contents</strong></p>
 <div class="contents local topic" id="contents">
 <ul class="simple">
@@ -395,34 +395,34 @@ define an abstract model to be inherited from branded objects.</p>
 <li>Go to Settings &gt; Users &amp; Companies &gt; Brands</li>
 <li>Add a new brand</li>
 <li>Install one of branding module (e.g. account_brand)</li>
-<li>Based on your choice for the brand use level, you will see a new field added to the
-branded object</li>
+<li>Based on your choice for the brand use level, you will see a new
+field added to the branded object</li>
 </ol>
 <p>To make a branded object, you need to:</p>
 <ol class="arabic">
-<li><dl class="first docutils">
-<dt>Inherit from the <cite>res.brand.mixin</cite></dt>
-<dd><pre class="code python first last literal-block">
+<li><p class="first">Inherit from the res.brand.mixin</p>
+<pre class="code python literal-block">
 <span class="k">class</span> <span class="nc">YourModel</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span><span class="w">
 </span>    <span class="n">_name</span> <span class="o">=</span> <span class="s1">'your.model'</span><span class="w">
 </span>    <span class="n">_inherit</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'your.model'</span><span class="p">,</span> <span class="s1">'res.brand.mixin'</span><span class="p">]</span>
 </pre>
-</dd>
-</dl>
 </li>
-<li><p class="first">Add the brand field to the object form or tree view. The mixin will add the brand
-use level field automatically to the view and set the modifiers to the brand field.
-This will define its visibility and if it’s required or not.</p>
+<li><p class="first">Add the brand field to the object form or tree view. The mixin will
+add the brand use level field automatically to the view and set the
+modifiers to the brand field. This will define its visibility and if
+it’s required or not.</p>
 </li>
 </ol>
-<p>You can refer to the <a class="reference external" href="https://github.com/OCA/brand/blob/12.0/account_brand">account_brand</a>. for more details.</p>
+<p>You can refer to the
+<a class="reference external" href="https://github.com/OCA/brand/blob/12.0/account_brand">account_brand</a>.
+for more details.</p>
 </div>
 <div class="section" id="bug-tracker">
 <h1><a class="toc-backref" href="#toc-entry-2">Bug Tracker</a></h1>
 <p>Bugs are tracked on <a class="reference external" href="https://github.com/OCA/brand/issues">GitHub Issues</a>.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-<a class="reference external" href="https://github.com/OCA/brand/issues/new?body=module:%20brand%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>.</p>
+<a class="reference external" href="https://github.com/OCA/brand/issues/new?body=module:%20brand%0Aversion:%2017.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>.</p>
 <p>Do not contact contributors directly about support or help with technical issues.</p>
 </div>
 <div class="section" id="credits">
@@ -459,7 +459,7 @@ mission is to support the collaborative development of Odoo features and
 promote its widespread use.</p>
 <p>Current <a class="reference external" href="https://odoo-community.org/page/maintainer-role">maintainer</a>:</p>
 <p><a class="reference external image-reference" href="https://github.com/sbejaoui"><img alt="sbejaoui" src="https://github.com/sbejaoui.png?size=40px" /></a></p>
-<p>This module is part of the <a class="reference external" href="https://github.com/OCA/brand/tree/16.0/brand">OCA/brand</a> project on GitHub.</p>
+<p>This module is part of the <a class="reference external" href="https://github.com/OCA/brand/tree/17.0/brand">OCA/brand</a> project on GitHub.</p>
 <p>You are welcome to contribute. To learn how please visit <a class="reference external" href="https://odoo-community.org/page/Contribute">https://odoo-community.org/page/Contribute</a>.</p>
 </div>
 </div>
