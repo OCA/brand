@@ -1,11 +1,9 @@
 # Copyright 2019 ACSONE SA/NV
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
-from lxml import etree
+from lxml.builder import E
 
 from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
-
-from odoo.addons.base.models import ir_ui_view
 
 from .res_company import BRAND_USE_LEVEL_NO_USE_LEVEL, BRAND_USE_LEVEL_REQUIRED_LEVEL
 
@@ -52,47 +50,37 @@ class ResBrandMixin(models.AbstractModel):
             if rec.brand_id and rec.brand_id.company_id:
                 rec.company_id = rec.brand_id.company_id
 
-    def setup_modifiers(self, node, field=None):
-        modifiers = {}
-        attributes = ["invisible", "readonly", "required"]
-        if field is not None:
-            ir_ui_view.transfer_field_to_modifiers(field, modifiers, attributes)
-        ir_ui_view.transfer_node_to_modifiers(node, modifiers)
-        ir_ui_view.transfer_modifiers_to_node(modifiers, node)
-
-    @api.model
-    def get_view(self, view_id=None, view_type="form", **options):
+    def _get_view(self, view_id=None, view_type="form", **options):
         """set visibility and requirement rules"""
-        result = super().get_view(view_id=view_id, view_type=view_type, **options)
+        print("_get_view")
+        arch, view = super()._get_view(view_id, view_type, **options)
+        if self.env["res.brand"].check_access_rights("read", raise_exception=False):
+            if view.type in ["form", "tree"]:
+                brand_node = next(
+                    iter(
+                        arch.xpath(
+                            '//field[@name="brand_id"][not(ancestor::*[@widget="one2many" or @widget="many2many"])]'
+                        )
+                    ),
+                    None,
+                )
 
-        if view_type in ["tree", "form"]:
-            doc = etree.XML(result["arch"])
-            for node in doc.xpath(
-                """
-                //field[@name='brand_id']
-                [not(ancestor::*[@widget='one2many' or @widget='many2many'])]
-            """
-            ):
-                elem = etree.Element(
-                    "field",
-                    {
-                        "name": "brand_use_level",
-                        "invisible": "True",
-                        "string": _("Brand Use Level"),
-                    },
-                )
-                brand_use_level_field = self.fields_get(["brand_use_level"])[
-                    "brand_use_level"
-                ]
-                brand_id_field = self.fields_get(["brand_id"])["brand_id"]
-                node.addprevious(elem)
-                self.setup_modifiers(elem, field=brand_use_level_field)
-                node.set(
-                    "invisible", f"brand_use_level == {BRAND_USE_LEVEL_NO_USE_LEVEL}"
-                )
-                node.set(
-                    "required", f"brand_use_level == {BRAND_USE_LEVEL_REQUIRED_LEVEL}"
-                )
-                self.setup_modifiers(node, field=brand_id_field)
-            result["arch"] = etree.tostring(doc, encoding="unicode")
-        return result
+                if brand_node is not None:
+                    brand_node.addprevious(
+                        E.field(
+                            name="brand_use_level",
+                            invisible="True",
+                            column_invisible="True",
+                        )
+                    )
+
+                    brand_node.set(
+                        "invisible",
+                        f"brand_use_level == '{BRAND_USE_LEVEL_NO_USE_LEVEL}'",
+                    )
+                    brand_node.set(
+                        "required",
+                        f"brand_use_level == '{BRAND_USE_LEVEL_REQUIRED_LEVEL}'",
+                    )
+
+        return arch, view
