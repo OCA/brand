@@ -15,3 +15,5 @@
   - Alan Ramos
 - [NuoBiT Solutions](https://www.nuobit.com)
   - Eric Antones \<<eantones@nuobit.com>\>
+- [Trobz](https://trobz.com):  
+  - Thao Le \<<thaolt@trobz.com>\>
