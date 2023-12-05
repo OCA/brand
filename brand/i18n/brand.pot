@@ -24,13 +24,6 @@ msgid ""
 msgstr ""
 
 #. module: brand
-#: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
-msgid ""
-"<span class=\"o_form_label\">Brand</span>\n"
-"                                <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" aria-label=\"Values set here are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
-msgstr ""
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__active
 msgid "Active"
 msgstr ""
@@ -100,6 +93,7 @@ msgstr ""
 #. module: brand
 #: model:ir.model,name:brand.model_res_brand
 #: model:ir.model.fields,field_description:brand.field_res_brand_mixin__brand_id
+#: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
 msgid "Brand"
 msgstr ""
 
@@ -109,13 +103,9 @@ msgid "Brand Mixin"
 msgstr ""
 
 #. module: brand
-#. odoo-python
-#: code:addons/brand/models/res_brand_mixin.py:0
 #: model:ir.model.fields,field_description:brand.field_res_brand_mixin__brand_use_level
 #: model:ir.model.fields,field_description:brand.field_res_company__brand_use_level
 #: model:ir.model.fields,field_description:brand.field_res_config_settings__brand_use_level
-#: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
-#, python-format
 msgid "Brand Use Level"
 msgstr ""
 
