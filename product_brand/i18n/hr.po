@@ -78,11 +78,6 @@ msgid "Invoices Statistics"
 msgstr "Statistika računa"
 
 #. module: product_brand
-#: model:ir.model.fields,field_description:product_brand.field_product_brand____last_update
-msgid "Last Modified on"
-msgstr "Zadnje ažurirano"
-
-#. module: product_brand
 #: model:ir.model.fields,field_description:product_brand.field_product_brand__write_uid
 msgid "Last Updated by"
 msgstr "Zadnji ažurirao"
@@ -150,6 +145,9 @@ msgstr "Odaberite brand za ovaj proizvod"
 #: model:ir.model.fields,help:product_brand.field_product_brand__partner_id
 msgid "Select a partner for this brand if any."
 msgstr "Odaberite partnera za ovaj brand ako ga ima."
+
+#~ msgid "Last Modified on"
+#~ msgstr "Zadnje ažurirano"
 
 #~ msgid "Product Template"
 #~ msgstr "Predložak proizvoda"
