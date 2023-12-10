@@ -21,7 +21,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[account_brand](account_brand/) | 14.0.1.0.1 | [![osi-scampbell](https://github.com/osi-scampbell.png?size=30px)](https://github.com/osi-scampbell) [![sbejaoui](https://github.com/sbejaoui.png?size=30px)](https://github.com/sbejaoui) | Send branded invoices and refunds
+[account_brand](account_brand/) | 14.0.1.0.2 | [![osi-scampbell](https://github.com/osi-scampbell.png?size=30px)](https://github.com/osi-scampbell) [![sbejaoui](https://github.com/sbejaoui.png?size=30px)](https://github.com/sbejaoui) | Send branded invoices and refunds
 [analytic_brand](analytic_brand/) | 14.0.1.0.0 | [![sbejaoui](https://github.com/sbejaoui.png?size=30px)](https://github.com/sbejaoui) | This addon associate an analytic account to a brand that will be used as a default value where the brand is used if the analytic accounting is activated
 [brand](brand/) | 14.0.1.0.3 | [![sbejaoui](https://github.com/sbejaoui.png?size=30px)](https://github.com/sbejaoui) | This is a base addon for brand modules. It adds the brand object and its menu and define an abstract model to be inherited from branded objects
 [brand_external_report_layout](brand_external_report_layout/) | 14.0.1.0.2 | [![sbejaoui](https://github.com/sbejaoui.png?size=30px)](https://github.com/sbejaoui) | This module allows you to have a different layout by brand for your external reports.
@@ -32,7 +32,7 @@ addon | version | maintainers | summary
 [product_brand_social_responsibility](product_brand_social_responsibility/) | 14.0.1.1.1 |  | Provide CSR info on brands.
 [product_brand_tag](product_brand_tag/) | 14.0.1.1.1 |  | Add tags to product brand
 [product_brand_tag_secondary](product_brand_tag_secondary/) | 14.0.1.0.0 |  | Add secondary tags to product brand for a second level of categorization.
-[sale_brand](sale_brand/) | 14.0.1.0.1 | [![osi-scampbell](https://github.com/osi-scampbell.png?size=30px)](https://github.com/osi-scampbell) [![sbejaoui](https://github.com/sbejaoui.png?size=30px)](https://github.com/sbejaoui) | Send branded sales orders
+[sale_brand](sale_brand/) | 14.0.1.0.2 | [![osi-scampbell](https://github.com/osi-scampbell.png?size=30px)](https://github.com/osi-scampbell) [![sbejaoui](https://github.com/sbejaoui.png?size=30px)](https://github.com/sbejaoui) | Send branded sales orders
 
 [//]: # (end addons)
 
