@@ -1,9 +1,11 @@
 # Copyright 2019 ACSONE SA/NV
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
+from odoo.tests import tagged
 from odoo.tests.common import TransactionCase
 
 
+@tagged("post_install", "-at_install")
 class TestSaleOrder(TransactionCase):
     def setUp(self):
         super(TestSaleOrder, self).setUp()

@@ -4,6 +4,7 @@
 from lxml import etree
 
 from odoo.exceptions import ValidationError
+from odoo.tests import tagged
 from odoo.tests.common import Form, TransactionCase
 
 from odoo.addons.brand.models.res_company import (
@@ -12,6 +13,7 @@ from odoo.addons.brand.models.res_company import (
 )
 
 
+@tagged("post_install", "-at_install")
 class TestBrandMixin(TransactionCase):
     def setUp(self):
         super(TestBrandMixin, self).setUp()
