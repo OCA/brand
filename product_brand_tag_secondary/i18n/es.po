@@ -6,71 +6,73 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2023-12-18 21:33+0000\n"
+"Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
 "Language-Team: none\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: product_brand_tag_secondary
 #: model:ir.model.fields,field_description:product_brand_tag_secondary.field_product_brand_tag__secondary_brands_count
 msgid "# of secondary brands"
-msgstr ""
+msgstr "# de marcas secundarias"
 
 #. module: product_brand_tag_secondary
 #: model:ir.model.fields,help:product_brand_tag_secondary.field_product_brand_tag__secondary_product_brand_ids
 msgid "Assign as secondary tag to these brands."
-msgstr ""
+msgstr "Asignar como etiqueta secundaria a estas marcas."
 
 #. module: product_brand_tag_secondary
 #: model:ir.model.fields,field_description:product_brand_tag_secondary.field_product_brand__display_name
 #: model:ir.model.fields,field_description:product_brand_tag_secondary.field_product_brand_tag__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Mostrar Nombre"
 
 #. module: product_brand_tag_secondary
 #: model:ir.model.fields,field_description:product_brand_tag_secondary.field_product_brand__id
 #: model:ir.model.fields,field_description:product_brand_tag_secondary.field_product_brand_tag__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: product_brand_tag_secondary
 #: model:ir.model.fields,field_description:product_brand_tag_secondary.field_product_brand____last_update
 #: model:ir.model.fields,field_description:product_brand_tag_secondary.field_product_brand_tag____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Última Modificación el"
 
 #. module: product_brand_tag_secondary
 #: model:ir.model.fields,field_description:product_brand_tag_secondary.field_product_brand__tag_ids
 msgid "Primary Tags"
-msgstr ""
+msgstr "Etiquetas Primarias"
 
 #. module: product_brand_tag_secondary
 #: model:ir.model.fields,field_description:product_brand_tag_secondary.field_product_brand_tag__product_brand_ids
 msgid "Primary for brands"
-msgstr ""
+msgstr "Primaria para las marcas"
 
 #. module: product_brand_tag_secondary
 #: model:ir.model,name:product_brand_tag_secondary.model_product_brand
 msgid "Product Brand"
-msgstr ""
+msgstr "Marca de Producto"
 
 #. module: product_brand_tag_secondary
 #: model:ir.model,name:product_brand_tag_secondary.model_product_brand_tag
 msgid "Product Brand Tag"
-msgstr ""
+msgstr "Etiqueta de Marca del Producto"
 
 #. module: product_brand_tag_secondary
 #: model:ir.model.fields,field_description:product_brand_tag_secondary.field_product_brand__secondary_tag_ids
 msgid "Secondary Tags"
-msgstr ""
+msgstr "Etiquetas Secundarias"
 
 #. module: product_brand_tag_secondary
 #: model:ir.model.fields,field_description:product_brand_tag_secondary.field_product_brand_tag__secondary_product_brand_ids
 msgid "Secondary for brands"
-msgstr ""
+msgstr "Secundaria para las marcas"
 
 #. module: product_brand_tag_secondary
 #: code:addons/product_brand_tag_secondary/models/product_brand_tag.py:0
@@ -79,3 +81,6 @@ msgid ""
 "You can assign a tag either as primary or secondary. The following tags have been assigned to the same brand as primary and secondary: \n"
 "    %s"
 msgstr ""
+"Puede asignar una etiqueta como primaria o secundaria. Las siguientes "
+"etiquetas se han asignado a la misma marca como primaria y secundaria: \n"
+"    %s"
