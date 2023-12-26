@@ -1100,6 +1100,11 @@ msgid "Total amount you have to pay to this vendor."
 msgstr ""
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__translated_display_name
+msgid "Translated Display Name"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__activity_exception_decoration
 msgid "Type of the exception activity on record."
 msgstr ""
