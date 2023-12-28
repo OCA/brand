@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-10-28 13:24+0000\n"
+"PO-Revision-Date: 2023-12-28 20:34+0000\n"
 "Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
 "Language-Team: none\n"
 "Language: es\n"
@@ -1185,7 +1185,7 @@ msgstr "Importe total que debe pagar a este vendedor."
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__translated_display_name
 msgid "Translated Display Name"
-msgstr ""
+msgstr "Nombre para Visualizar Traducido"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__activity_exception_decoration
