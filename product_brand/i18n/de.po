@@ -76,11 +76,6 @@ msgid "Invoices Statistics"
 msgstr ""
 
 #. module: product_brand
-#: model:ir.model.fields,field_description:product_brand.field_product_brand____last_update
-msgid "Last Modified on"
-msgstr "Zuletzt bearbeitet am"
-
-#. module: product_brand
 #: model:ir.model.fields,field_description:product_brand.field_product_brand__write_uid
 msgid "Last Updated by"
 msgstr "Letzte Aktualisierung von"
@@ -149,6 +144,9 @@ msgstr "Wähle eine Marke für dieses Produkt"
 #: model:ir.model.fields,help:product_brand.field_product_brand__partner_id
 msgid "Select a partner for this brand if any."
 msgstr "Falls vorhanden wähle einen Partner für diese Marke."
+
+#~ msgid "Last Modified on"
+#~ msgstr "Zuletzt bearbeitet am"
 
 #~ msgid "Product Template"
 #~ msgstr "Produktvorlage"
