@@ -1,24 +1,26 @@
 # Copyright 2020 ACSONE SA/NV
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
+from odoo import _
 from odoo.exceptions import ValidationError
 from odoo.tests.common import TransactionCase
 from odoo.tools import float_compare
 
 
 class TestProductPricelist(TransactionCase):
-    def setUp(self):
-        super(TestProductPricelist, self).setUp()
-        self.product_brand_obj = self.env["product.brand"]
-        self.product_brand = self.env["product.brand"].create(
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.product_brand_obj = cls.env["product.brand"]
+        cls.product_brand = cls.env["product.brand"].create(
             {"name": "Test Brand", "description": "Test brand description"}
         )
-        self.product = self.env.ref("product.product_product_4")
-        self.product.write({"product_brand_id": self.product_brand.id})
-        self.product_2 = self.env.ref("product.product_product_5")
+        cls.product = cls.env.ref("product.product_product_4")
+        cls.product.write({"product_brand_id": cls.product_brand.id})
+        cls.product_2 = cls.env.ref("product.product_product_5")
 
-        self.list0 = self.ref("product.list0")
-        self.pricelist = self.env["product.pricelist"].create(
+        cls.list0 = cls.env.ref("product.list0")
+        cls.pricelist = cls.env["product.pricelist"].create(
             {
                 "name": "Test Pricelist",
                 "item_ids": [
@@ -29,7 +31,7 @@ class TestProductPricelist(TransactionCase):
                             "name": "Default pricelist",
                             "compute_price": "formula",
                             "base": "pricelist",
-                            "base_pricelist_id": self.list0,
+                            "base_pricelist_id": cls.list0.id,
                         },
                     ),
                     (
@@ -38,7 +40,7 @@ class TestProductPricelist(TransactionCase):
                         {
                             "name": "10% Discount on Test Brand",
                             "applied_on": "25_brand",
-                            "product_brand_id": self.product_brand.id,
+                            "product_brand_id": cls.product_brand.id,
                             "compute_price": "formula",
                             "base": "list_price",
                             "price_discount": 10,
@@ -47,6 +49,7 @@ class TestProductPricelist(TransactionCase):
                 ],
             }
         )
+        cls.product_categ = cls.env.ref("product.product_category_2")
 
     def test_ensure_pricelist_item_consistency(self):
         with self.assertRaises(ValidationError):
@@ -67,6 +70,44 @@ class TestProductPricelist(TransactionCase):
                 "product_brand_id": self.product_brand.id,
             }
         )
+        pricelist_item.write({"product_brand_id": self.product_brand.id})
+        pricelist_item._compute_name_and_price()
+        self.assertEqual(
+            pricelist_item.name, _("Brand: %s") % (self.product_brand.display_name)
+        )
+        pricelist_item_2 = self.env["product.pricelist.item"].create(
+            {
+                "pricelist_id": self.pricelist.id,
+                "base": "list_price",
+                "compute_price": "formula",
+                "applied_on": "2_product_category",
+                "categ_id": self.product_categ.id,
+                "product_brand_id": self.product_brand.id,
+            }
+        )
+        self.assertFalse(pricelist_item_2.product_brand_id)
+        pricelist_item_3 = self.env["product.pricelist.item"].create(
+            {
+                "pricelist_id": self.pricelist.id,
+                "base": "list_price",
+                "compute_price": "formula",
+                "applied_on": "1_product",
+                "product_tmpl_id": self.product.product_tmpl_id.id,
+                "product_brand_id": self.product_brand.id,
+            }
+        )
+        self.assertFalse(pricelist_item_3.product_brand_id)
+        pricelist_item_4 = self.env["product.pricelist.item"].create(
+            {
+                "pricelist_id": self.pricelist.id,
+                "base": "list_price",
+                "compute_price": "formula",
+                "applied_on": "0_product_variant",
+                "product_id": self.product.id,
+                "product_brand_id": self.product_brand.id,
+            }
+        )
+        self.assertFalse(pricelist_item_4.product_brand_id)
         self.assertFalse(
             any(
                 [
@@ -108,14 +149,13 @@ class TestProductPricelist(TransactionCase):
 
     def test_calculation_price_of_products_pricelist(self):
         """Test calculation of product price based on pricelist"""
-        context = {}
-        context.update({"pricelist": self.pricelist.id, "quantity": 1})
-
         # Check sale price of branded product
-        product_with_context = self.product.with_context(context)
+        product_with_context = self.product.with_context(
+            pricelist=self.pricelist.id, quantity=1
+        )
         self.assertEqual(
             float_compare(
-                product_with_context.price,
+                product_with_context._get_contextual_price(),
                 (
                     product_with_context.lst_price
                     - product_with_context.lst_price * (0.10)
@@ -126,10 +166,12 @@ class TestProductPricelist(TransactionCase):
         )
 
         # Check sale price of not branded product (should not change)
-        product_2_with_context = self.product_2.with_context(context)
+        product_2_with_context = self.product_2.with_context(
+            pricelist=self.pricelist.id, quantity=1
+        )
         self.assertEqual(
             float_compare(
-                product_2_with_context.price,
+                product_2_with_context._get_contextual_price(),
                 product_2_with_context.lst_price,
                 precision_digits=2,
             ),
