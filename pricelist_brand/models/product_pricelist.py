@@ -3,48 +3,34 @@
 
 from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
+from odoo.osv import expression
 
 
 class ProductPricelist(models.Model):
 
     _inherit = "product.pricelist"
 
-    def _compute_price_rule_get_items(
-        self, products_qty_partner, date, uom_id, prod_tmpl_ids, prod_ids, categ_ids
-    ):
-        self.ensure_one()
-        product_tmpls = self.env["product.template"].browse(prod_tmpl_ids)
-        brand_ids = product_tmpls.mapped("product_brand_id").ids
-        # Load all rules
-        self.env["product.pricelist.item"].flush(["price", "currency_id", "company_id"])
-        self.env.cr.execute(
-            """
-            SELECT
-                item.id
-            FROM
-                product_pricelist_item AS item
-            LEFT JOIN product_category AS categ ON item.categ_id = categ.id
-            LEFT JOIN product_brand AS brand ON item.product_brand_id = brand.id
-            WHERE
-                (item.product_tmpl_id IS NULL OR item.product_tmpl_id = any(%s))
-                AND (item.product_id IS NULL OR item.product_id = any(%s))
-                AND (item.categ_id IS NULL OR item.categ_id = any(%s))
-                AND (item.product_brand_id IS NULL OR item.product_brand_id = any(%s))
-                AND (item.pricelist_id = %s)
-                AND (item.date_start IS NULL OR item.date_start<=%s)
-                AND (item.date_end IS NULL OR item.date_end>=%s)
-            ORDER BY
-                item.applied_on, item.min_quantity desc,
-                categ.complete_name desc, item.id desc
-            """,
-            (prod_tmpl_ids, prod_ids, categ_ids, brand_ids, self.id, date, date),
+    def _get_applicable_rules_domain(self, products, date, **kwargs):
+        res = super()._get_applicable_rules_domain(products, date)
+        if products._name == "product.template":
+            brand_domain = ("product_brand_id", "in", products.product_brand_id.ids)
+        else:
+            brand_domain = (
+                "product_brand_id",
+                "in",
+                products.product_tmpl_id.product_brand_id.ids,
+            )
+        res = expression.AND(
+            [
+                res,
+                [
+                    ("|"),
+                    ("product_brand_id", "=", False),
+                    (brand_domain),
+                ],
+            ]
         )
-        # NOTE: if you change `order by` on that query, make sure it matches
-        # _order from model to avoid inconstencies and undeterministic issues.
-
-        item_ids = [x[0] for x in self.env.cr.fetchall()]
-        return self.env["product.pricelist.item"].browse(item_ids)
-
+        return res
 
 class ProductPricelistItem(models.Model):
 
@@ -57,7 +43,9 @@ class ProductPricelistItem(models.Model):
         help="Specify a brand if this rule only applies to products"
         "belonging to this brand. Keep empty otherwise.",
     )
-    applied_on = fields.Selection(selection_add=[("25_brand", "Brand")])
+    applied_on = fields.Selection(
+        selection_add=[("25_brand", "Brand")], ondelete={"25_brand": "set default"}
+    )
 
     @api.constrains("product_id", "product_tmpl_id", "categ_id", "product_brand_id")
     def _check_product_consistency(self):
@@ -88,8 +76,8 @@ class ProductPricelistItem(models.Model):
                 item.name = _("Brand: %s") % (item.product_brand_id.display_name)
 
     @api.onchange("product_id", "product_tmpl_id", "categ_id", "product_brand_id")
-    def _onchane_rule_content(self):
-        super(ProductPricelistItem, self)._onchane_rule_content()
+    def _onchange_rule_content(self):
+        super(ProductPricelistItem, self)._onchange_rule_content()
 
     @api.model_create_multi
     def create(self, vals_list):
