@@ -7,18 +7,19 @@ from odoo.tools import float_compare
 
 
 class TestProductPricelist(TransactionCase):
-    def setUp(self):
-        super(TestProductPricelist, self).setUp()
-        self.product_brand_obj = self.env["product.brand"]
-        self.product_brand = self.env["product.brand"].create(
+    @classmethod
+    def setUpClass(cls):
+        super(TestProductPricelist, cls).setUpClass()
+        cls.product_brand_obj = cls.env["product.brand"]
+        cls.product_brand = cls.env["product.brand"].create(
             {"name": "Test Brand", "description": "Test brand description"}
         )
-        self.product = self.env.ref("product.product_product_4")
-        self.product.write({"product_brand_id": self.product_brand.id})
-        self.product_2 = self.env.ref("product.product_product_5")
+        cls.product = cls.env.ref("product.product_product_4")
+        cls.product.write({"product_brand_id": cls.product_brand.id})
+        cls.product_2 = cls.env.ref("product.product_product_5")
 
-        self.list0 = self.ref("product.list0")
-        self.pricelist = self.env["product.pricelist"].create(
+        cls.list0 = cls.env.ref("product.list0")
+        cls.pricelist = cls.env["product.pricelist"].create(
             {
                 "name": "Test Pricelist",
                 "item_ids": [
@@ -29,7 +30,7 @@ class TestProductPricelist(TransactionCase):
                             "name": "Default pricelist",
                             "compute_price": "formula",
                             "base": "pricelist",
-                            "base_pricelist_id": self.list0,
+                            "base_pricelist_id": cls.list0.id,
                         },
                     ),
                     (
@@ -38,7 +39,7 @@ class TestProductPricelist(TransactionCase):
                         {
                             "name": "10% Discount on Test Brand",
                             "applied_on": "25_brand",
-                            "product_brand_id": self.product_brand.id,
+                            "product_brand_id": cls.product_brand.id,
                             "compute_price": "formula",
                             "base": "list_price",
                             "price_discount": 10,
@@ -115,7 +116,7 @@ class TestProductPricelist(TransactionCase):
         product_with_context = self.product.with_context(context)
         self.assertEqual(
             float_compare(
-                product_with_context.price,
+                product_with_context._get_contextual_price(),
                 (
                     product_with_context.lst_price
                     - product_with_context.lst_price * (0.10)
@@ -129,7 +130,7 @@ class TestProductPricelist(TransactionCase):
         product_2_with_context = self.product_2.with_context(context)
         self.assertEqual(
             float_compare(
-                product_2_with_context.price,
+                product_2_with_context._get_contextual_price(),
                 product_2_with_context.lst_price,
                 precision_digits=2,
             ),
