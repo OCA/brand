@@ -5,7 +5,7 @@
     "name": "Product Brand Stock",
     "summary": """
         This module allows to work with product_brand in Stock.""",
-    "version": "16.0.1.0.0",
+    "version": "15.0.1.0.0",
     "license": "AGPL-3",
     "author": "Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/brand",
