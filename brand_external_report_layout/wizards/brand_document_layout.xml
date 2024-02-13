@@ -13,6 +13,12 @@
             <xpath expr="//field[@name='company_id']" position="after">
                 <field name="brand_id" invisible="1" />
             </xpath>
+            <field name="company_details" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <field name="report_footer" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
         </field>
     </record>
 </odoo>
