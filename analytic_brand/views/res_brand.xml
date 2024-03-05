@@ -6,7 +6,7 @@
         <field name="model">res.brand</field>
         <field name="inherit_id" ref="brand.res_brand_form_view" />
         <field name="arch" type="xml">
-            <xpath expr="//form" position="inside">
+            <xpath expr="//sheet" position="inside">
                 <group name="analytic">
                     <field
                         name="analytic_account_id"
