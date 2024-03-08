@@ -67,7 +67,6 @@ class TestAccountMove(TransactionCase):
         ).account_id
 
     def test_on_change_partner_id(self):
-
         account = self._get_receivable_account(self.move)
         self.assertEqual(account, self.account_receivable)
         partner_account_brand = self.env["res.partner.account.brand"].create(
