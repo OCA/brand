@@ -9,14 +9,7 @@ class AccountMove(models.Model):
     _name = "account.move"
     _inherit = ["account.move", "res.brand.mixin"]
 
-    brand_id = fields.Many2one(
-        states={
-            "open": [("readonly", True)],
-            "in_payment": [("readonly", True)],
-            "paid": [("readonly", True)],
-            "cancel": [("readonly", True)],
-        }
-    )
+    brand_id = fields.Many2one()
 
     def _is_brand_required(self):
         self.ensure_one()
@@ -59,7 +52,7 @@ class AccountMove(models.Model):
                     account_id = rec_account
                 if account_id:
                     self.line_ids.filtered(
-                        lambda l, a=account_id: l.account_id.account_type
+                        lambda line, a=account_id: line.account_id.account_type
                         == a.account_type
                     ).update({"account_id": account_id.id})
         return res

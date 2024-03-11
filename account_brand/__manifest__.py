@@ -5,7 +5,7 @@
 {
     "name": "Account Brand",
     "summary": "Send branded invoices and refunds",
-    "version": "16.0.1.0.0",
+    "version": "17.0.1.0.0",
     "category": "Accounting Management",
     "website": "https://github.com/OCA/brand",
     "author": "Open Source Integrators,"
