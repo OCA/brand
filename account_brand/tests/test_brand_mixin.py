@@ -11,7 +11,7 @@ from odoo.addons.brand.models.res_company import BRAND_USE_LEVEL_REQUIRED_LEVEL
 
 class TestBrandMixin(TransactionCase):
     def setUp(self):
-        super(TestBrandMixin, self).setUp()
+        super().setUp()
         self.partner = self.env.user.partner_id
         self.company = self.env.user.company_id
         self.other_company = self.env["res.company"].create(

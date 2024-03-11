@@ -77,11 +77,6 @@ msgid "Journal Entry"
 msgstr ""
 
 #. module: account_brand
-#: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand____last_update
-msgid "Last Modified on"
-msgstr ""
-
-#. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__write_uid
 msgid "Last Updated by"
 msgstr ""
