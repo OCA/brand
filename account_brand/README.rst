@@ -41,7 +41,10 @@ Configuration
 =============
 
 To configure this module, please refer to the documentation of
-`brand <https://github.com/OCA/brand/blob/12.0/brand/README.rst>`__.
+`brand <https://github.com/OCA/brand/blob/12.0/brand/README.rst>`__. It
+is important to note that if the brand type is not configured in the
+Users & Companies settings, the field will not be visible in the invoice
+view.
 
 Usage
 =====
@@ -52,6 +55,9 @@ To use this module, you need to:
 2. Select or create an invoice
 3. Enter the information and select the brand
 4. Print the PDF report. It includes the information of the brand.
+
+To do point 4, the Brand External Report Layout OCA module must be
+installed.
 
 Bug Tracker
 ===========
