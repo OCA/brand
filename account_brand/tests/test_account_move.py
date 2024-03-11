@@ -6,7 +6,7 @@ from odoo.tests.common import TransactionCase
 
 class TestAccountMove(TransactionCase):
     def setUp(self):
-        super(TestAccountMove, self).setUp()
+        super().setUp()
         self.product = self.env.ref("product.product_product_4")
         self.account_receivable = self.env["account.account"].create(
             {
@@ -63,7 +63,7 @@ class TestAccountMove(TransactionCase):
 
     def _get_receivable_account(self, move):
         return self.move.line_ids.filtered(
-            lambda l: l.account_id.account_type == "asset_receivable"
+            lambda line: line.account_id.account_type == "asset_receivable"
         ).account_id
 
     def test_on_change_partner_id(self):

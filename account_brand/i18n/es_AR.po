@@ -77,11 +77,6 @@ msgid "Journal Entry"
 msgstr "Asiento Contable"
 
 #. module: account_brand
-#: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand____last_update
-msgid "Last Modified on"
-msgstr "Última modificación el"
-
-#. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__write_uid
 msgid "Last Updated by"
 msgstr "Última actualización por"
@@ -136,3 +131,6 @@ msgstr "Cuenta de contacto a Cobrar/Pagar por Marca"
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__account_type
 msgid "Type"
 msgstr "Tipo"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Última modificación el"
