@@ -5,7 +5,6 @@ import base64
 import os
 
 from odoo import _, api, fields, models, tools
-from odoo.tools import html2plaintext
 
 
 class ResBrand(models.Model):
@@ -69,7 +68,7 @@ class ResBrand(models.Model):
         string="Brand Details",
         help="Header text displayed at the top of all reports.",
     )
-    is_company_details_empty = fields.Boolean(compute='_compute_empty_company_details')
+    is_company_details_empty = fields.Boolean(compute="_compute_empty_company_details")
     layout_background = fields.Selection(
         [("Blank", "Blank"), ("Geometric", "Geometric"), ("Custom", "Custom")],
         default="Blank",
@@ -77,10 +76,12 @@ class ResBrand(models.Model):
     )
     layout_background_image = fields.Binary("Background Image")
 
-    @api.depends('company_details')
+    @api.depends("company_details")
     def _compute_empty_company_details(self):
         for record in self:
-            record.is_company_details_empty = not html2plaintext(record.company_details or '')
+            record.is_company_details_empty = not tools.html2plaintext(
+                record.company_details or ""
+            )
 
     def change_report_template(self):
         self.ensure_one()
