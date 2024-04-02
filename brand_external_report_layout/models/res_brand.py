@@ -5,6 +5,7 @@ import base64
 import os
 
 from odoo import _, api, fields, models, tools
+from odoo.tools import html2plaintext
 
 
 class ResBrand(models.Model):
