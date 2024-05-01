@@ -52,14 +52,14 @@ class ResBrandMixin(models.AbstractModel):
 
     def _get_view(self, view_id=None, view_type="form", **options):
         """set visibility and requirement rules"""
-        print("_get_view")
         arch, view = super()._get_view(view_id, view_type, **options)
         if self.env["res.brand"].check_access_rights("read", raise_exception=False):
             if view.type in ["form", "tree"]:
                 brand_node = next(
                     iter(
                         arch.xpath(
-                            '//field[@name="brand_id"][not(ancestor::*[@widget="one2many" or @widget="many2many"])]'
+                            '//field[@name="brand_id"][not(ancestor::*'
+                            '[@widget="one2many" or @widget="many2many"])]'
                         )
                     ),
                     None,
