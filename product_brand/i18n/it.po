@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-29 02:55+0000\n"
-"PO-Revision-Date: 2024-02-12 10:46+0000\n"
+"PO-Revision-Date: 2024-05-03 16:34+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
 "Language: it\n"
@@ -68,12 +68,12 @@ msgstr "Nome visualizzato"
 #. module: product_brand
 #: model:ir.model.fields,field_description:product_brand.field_product_brand__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: product_brand
 #: model:ir.model,name:product_brand.model_account_invoice_report
 msgid "Invoices Statistics"
-msgstr ""
+msgstr "Statistiche fatture"
 
 #. module: product_brand
 #: model:ir.model.fields,field_description:product_brand.field_product_brand____last_update
@@ -92,9 +92,8 @@ msgstr "Ultimo aggiornamento il"
 
 #. module: product_brand
 #: model_terms:ir.ui.view,arch_db:product_brand.view_product_brand_kanban
-#, fuzzy
 msgid "Logo"
-msgstr "File del Logo"
+msgstr "Logo"
 
 #. module: product_brand
 #: model:ir.model.fields,field_description:product_brand.field_product_brand__logo
@@ -114,7 +113,7 @@ msgstr "Partner"
 #. module: product_brand
 #: model:ir.model,name:product_brand.model_product_template
 msgid "Product"
-msgstr ""
+msgstr "Prodotto"
 
 #. module: product_brand
 #: model:ir.actions.act_window,name:product_brand.action_open_single_product_brand
@@ -137,7 +136,7 @@ msgstr "Prodotti"
 #. module: product_brand
 #: model:ir.model,name:product_brand.model_sale_report
 msgid "Sales Analysis Report"
-msgstr ""
+msgstr "Resoconto analisi vendite"
 
 #. module: product_brand
 #: model:ir.model.fields,help:product_brand.field_product_product__product_brand_id
