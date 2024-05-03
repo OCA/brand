@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-29 02:55+0000\n"
-"PO-Revision-Date: 2023-11-03 13:38+0000\n"
+"PO-Revision-Date: 2024-05-03 16:34+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
 "Language: it\n"
@@ -151,7 +151,7 @@ msgstr "Resoconto analisi vendite"
 #: model:ir.model.fields,help:product_brand.field_product_product__product_brand_id
 #: model:ir.model.fields,help:product_brand.field_product_template__product_brand_id
 msgid "Select a brand for this product"
-msgstr "Scegli una marca per questo prodotto"
+msgstr "Scegliere una marca per questo prodotto"
 
 #. module: product_brand
 #: model:ir.model.fields,help:product_brand.field_product_brand__partner_id
