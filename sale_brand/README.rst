@@ -17,21 +17,20 @@ Sale Brand
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fbrand-lightgray.png?logo=github
-    :target: https://github.com/OCA/brand/tree/16.0/sale_brand
+    :target: https://github.com/OCA/brand/tree/17.0/sale_brand
     :alt: OCA/brand
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/brand-16-0/brand-16-0-sale_brand
+    :target: https://translation.odoo-community.org/projects/brand-17-0/brand-17-0-sale_brand
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png
-    :target: https://runboat.odoo-community.org/builds?repo=OCA/brand&target_branch=16.0
+    :target: https://runboat.odoo-community.org/builds?repo=OCA/brand&target_branch=17.0
     :alt: Try me on Runboat
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This module allows you to send branded quotations and sales orders to your
-customers.
-It adds a brand field on the quotation and propagate the value on
-the invoices.
+This module allows you to send branded quotations and sales orders to
+your customers. It adds a brand field on the quotation and propagate the
+value on the invoices.
 
 **Table of contents**
 
@@ -43,12 +42,12 @@ Usage
 
 To use this module, you need to:
 
-#. Go to Sales > Quotations
-#. Select or create a quotation
-#. Enter the information and the brand
-#. Print the PDF report. It includes the information of the brand.
-#. Confirm the quotation and generate an invoice
-#. Print the PDF report. It includes the information of the brand.
+1. Go to Sales > Quotations
+2. Select or create a quotation
+3. Enter the information and the brand
+4. Print the PDF report. It includes the information of the brand.
+5. Confirm the quotation and generate an invoice
+6. Print the PDF report. It includes the information of the brand.
 
 Bug Tracker
 ===========
@@ -56,7 +55,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/brand/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/brand/issues/new?body=module:%20sale_brand%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/brand/issues/new?body=module:%20sale_brand%0Aversion:%2017.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -64,29 +63,28 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Open Source Integrators
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* Raphael Lee <rlee@opensourceintegrators.com>
-* Steve Campbell <scampbell@opensourceintegrators.com>
-* Maxime Chambreuil <mchambreuil@opensourceintegrators.com>
-* Freni Patel <fpatel@opensourceintegrators.com>
+-  Raphael Lee <rlee@opensourceintegrators.com>
+-  Steve Campbell <scampbell@opensourceintegrators.com>
+-  Maxime Chambreuil <mchambreuil@opensourceintegrators.com>
+-  Freni Patel <fpatel@opensourceintegrators.com>
+-  `Obertix <https://www.obertix.net>`__:
 
-* `Obertix <https://www.obertix.net>`_:
-
-  * Vicent Cubells
+   -  Vicent Cubells
 
 Other credits
-~~~~~~~~~~~~~
+-------------
 
-* Open Source Integrators <https://www.opensourceintegrators.com>
+-  Open Source Integrators <https://www.opensourceintegrators.com>
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 
@@ -109,6 +107,6 @@ Current `maintainers <https://odoo-community.org/page/maintainer-role>`__:
 
 |maintainer-osi-scampbell| |maintainer-sbejaoui| 
 
-This module is part of the `OCA/brand <https://github.com/OCA/brand/tree/16.0/sale_brand>`_ project on GitHub.
+This module is part of the `OCA/brand <https://github.com/OCA/brand/tree/17.0/sale_brand>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
