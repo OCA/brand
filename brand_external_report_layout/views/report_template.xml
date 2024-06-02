@@ -16,8 +16,11 @@
                 t-if="o and 'brand_id' in o.fields_get() and o.brand_id and o.brand_id.external_report_layout_id"
                 t-call="{{o.brand_id.external_report_layout_id.sudo().key}}"
             >
-                <t t-set="company" t-value="o.brand_id.sudo()" />
-                <t t-raw="0" />
+                <t
+                    t-set="company"
+                    t-value="company.sudo()._get_company_brand_adapter(o.brand_id)"
+                />
+                <t t-out="0" />
             </t>
             <t t-else="else" name="brand_not_set" />
         </xpath>
