@@ -5,7 +5,6 @@ from odoo import fields, models
 
 
 class ResBrand(models.Model):
-
     _inherit = "res.brand"
 
     analytic_account_id = fields.Many2one(
