@@ -8,7 +8,6 @@ from odoo import _, api, fields, models, tools
 
 
 class ResBrand(models.Model):
-
     _inherit = "res.brand"
 
     def _get_default_brand_logo(self):

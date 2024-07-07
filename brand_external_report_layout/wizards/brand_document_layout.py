@@ -12,7 +12,6 @@ from odoo.addons.web.models.base_document_layout import (
 
 
 class BrandDocumentLayout(models.TransientModel):
-
     _name = "brand.document.layout"
     _description = "Brand Document Layout"
     _inherit = "base.document.layout"
