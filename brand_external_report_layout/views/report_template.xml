@@ -17,7 +17,7 @@
                 t-call="{{o.brand_id.external_report_layout_id.sudo().key}}"
             >
                 <t t-set="company" t-value="o.brand_id.sudo()" />
-                <t t-raw="0" />
+                <t t-out="0" />
             </t>
             <t t-else="else" name="brand_not_set" />
         </xpath>
