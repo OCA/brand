@@ -6,7 +6,7 @@ from odoo.tests.common import TransactionCase
 
 class TestBrandExternalReportLayout(TransactionCase):
     def setUp(self):
-        super(TestBrandExternalReportLayout, self).setUp()
+        super().setUp()
         self.brand = self.env["res.brand"].create({"name": "brand"})
 
     def test_get_default_brand_logo(self):
