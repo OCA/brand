@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-11-12 17:40+0000\n"
+"PO-Revision-Date: 2024-09-19 01:06+0000\n"
 "Last-Translator: Ignacio Buioli <ibuioli@gmail.com>\n"
 "Language-Team: none\n"
 "Language: es_AR\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.17\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__type
@@ -27,6 +27,16 @@ msgid ""
 "default when you deliver an order that belongs to this company.\n"
 "- Other: Other address for the company (e.g. subsidiary, ...)"
 msgstr ""
+"- Contacto: Utilice esta opción para organizar los datos de contacto de los "
+"empleados de una empresa determinada (por ej., director ejecutivo, director "
+"financiero, etc.).\n"
+"- Dirección de facturación: Dirección preferida para todas las facturas. "
+"Seleccionada de forma predeterminada cuando factura un pedido que pertenece "
+"a esta empresa.\n"
+"- Dirección de entrega: Dirección preferida para todas las entregas. "
+"Seleccionada de forma predeterminada cuando entrega un pedido que pertenece "
+"a esta empresa.\n"
+"- Otro: Otra dirección de la empresa (por ej., filial, etc.)"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_account_payable_id
@@ -230,6 +240,10 @@ msgid ""
 "             List available at https://docs.peppol.eu/poacc/billing/3.0/"
 "codelist/eas/"
 msgstr ""
+"Código utilizado para identificar el Endpoint para Facturación BIS 3.0 y sus "
+"derivados.\n"
+"             Lista disponible en https://docs.peppol.eu/poacc/billing/3.0/"
+"codelist/eas/"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__color
@@ -285,7 +299,7 @@ msgstr "Dirección Completa"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__complete_name
 msgid "Complete Name"
-msgstr ""
+msgstr "Nombre Completo"
 
 #. module: brand
 #: model:ir.model,name:brand.model_res_config_settings
@@ -340,7 +354,7 @@ msgstr "Límite de Crédito"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__credit_to_invoice
 msgid "Credit To Invoice"
-msgstr ""
+msgstr "Crédito A Facturar"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__credit_limit
@@ -370,7 +384,7 @@ msgstr "Fecha"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__days_sales_outstanding
 msgid "Days Sales Outstanding (DSO)"
-msgstr ""
+msgstr "Días de Ventas Pendientes de Cobro (DSO)"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__trust
@@ -416,7 +430,7 @@ msgstr "Empleado"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__fiscal_country_codes
 msgid "Fiscal Country Codes"
-msgstr ""
+msgstr "Códigos Fiscales de los Países"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_account_position_id
@@ -441,7 +455,7 @@ msgstr "Icono de Font awesome ej. fa-tasks"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__ubl_cii_format
 msgid "Format"
-msgstr ""
+msgstr "Formato"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__email_formatted
@@ -554,7 +568,7 @@ msgstr "Industria"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__contact_address_inline
 msgid "Inlined Complete Address"
-msgstr ""
+msgstr "Dirección Completa en Línea"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_warn
@@ -765,12 +779,12 @@ msgstr "Tokens de Pago"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__peppol_endpoint
 msgid "Peppol Endpoint"
-msgstr ""
+msgstr "Endpoint de Peppol"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__peppol_eas
 msgid "Peppol e-address (EAS)"
-msgstr ""
+msgstr "Dirección Electrónica Peppol (EAS)"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__phone
@@ -895,7 +909,7 @@ msgstr "URL de Registro"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__starred_message_ids
 msgid "Starred Message"
-msgstr ""
+msgstr "Mensaje Destacado"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__state_id
@@ -1108,6 +1122,8 @@ msgid ""
 "Unique identifier used by the BIS Billing 3.0 and its derivatives, also "
 "known as 'Endpoint ID'."
 msgstr ""
+"Identificador único utilizado por Facturación BIS 3.0 y sus derivados, "
+"también conocido como 'Endpoint ID'."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__barcode
@@ -1176,6 +1192,8 @@ msgid ""
 "[(Total Receivable/Total Revenue) * number of days since the first invoice] "
 "for this customer"
 msgstr ""
+"[(Total de cuentas por cobrar/Ingresos totales) * número de días desde la "
+"primera factura] para este cliente"
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
