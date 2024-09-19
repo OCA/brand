@@ -1,0 +1,141 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_brand
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2020-12-13 23:19+0000\n"
+"Last-Translator: Bosd <c5e2fd43-d292-4c90-9d1f-74ff3436329a@anonaddy.me>\n"
+"Language-Team: none\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.3.2\n"
+
+#. module: account_brand
+#: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__account_id
+msgid "Account"
+msgstr ""
+
+#. module: account_brand
+#: model:ir.model,name:account_brand.model_account_move_reversal
+msgid "Account Move Reversal"
+msgstr ""
+
+#. module: account_brand
+#: model:ir.model.fields,field_description:account_brand.field_account_bank_statement_line__brand_id
+#: model:ir.model.fields,field_description:account_brand.field_account_move__brand_id
+#: model:ir.model.fields,field_description:account_brand.field_account_payment__brand_id
+#: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__brand_id
+msgid "Brand"
+msgstr "Merk"
+
+#. module: account_brand
+#: model:ir.model.fields,field_description:account_brand.field_account_move__brand_use_level
+msgid "Brand Use Level"
+msgstr ""
+
+#. module: account_brand
+#: model:ir.model.fields,help:account_brand.field_account_bank_statement_line__brand_id
+#: model:ir.model.fields,help:account_brand.field_account_move__brand_id
+#: model:ir.model.fields,help:account_brand.field_account_payment__brand_id
+msgid "Brand to use for this sale"
+msgstr "Merk voor deze verkoop"
+
+#. module: account_brand
+#: model:ir.model.fields,field_description:account_brand.field_account_move__company_id
+msgid "Company"
+msgstr ""
+
+#. module: account_brand
+#: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__create_uid
+msgid "Created by"
+msgstr "Aangemaakt door"
+
+#. module: account_brand
+#: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__create_date
+msgid "Created on"
+msgstr "Aangemaakt op"
+
+#. module: account_brand
+#: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__display_name
+msgid "Display Name"
+msgstr "Weergavenaam"
+
+#. module: account_brand
+#: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_brand
+#: model:ir.model,name:account_brand.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: account_brand
+#: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand____last_update
+msgid "Last Modified on"
+msgstr "Laatst gewijzigt op"
+
+#. module: account_brand
+#: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__write_uid
+msgid "Last Updated by"
+msgstr "Laatste wijziging door"
+
+#. module: account_brand
+#: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__write_date
+msgid "Last Updated on"
+msgstr "Laatste wijziging op"
+
+#. module: account_brand
+#: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__partner_id
+msgid "Partner"
+msgstr "Partner"
+
+#. module: account_brand
+#: model:ir.actions.act_window,name:account_brand.res_partner_account_brand_act_window
+#: model:ir.ui.menu,name:account_brand.res_partner_account_brand_menu
+msgid "Partner Accounts by Brand"
+msgstr ""
+
+#. module: account_brand
+#. odoo-python
+#: code:addons/account_brand/models/res_partner_account_brand.py:0
+#: model:ir.model.constraint,message:account_brand.constraint_res_partner_account_brand_unique_account_by_partner
+#, python-format
+msgid "Partner has already an account set for this brand!"
+msgstr ""
+
+#. module: account_brand
+#: model:ir.model.fields.selection,name:account_brand.selection__res_partner_account_brand__account_type__liability_payable
+msgid "Payable"
+msgstr "Te betalen"
+
+#. module: account_brand
+#. odoo-python
+#: code:addons/account_brand/models/res_partner_account_brand.py:0
+#, python-format
+msgid "Please select an account of type %s"
+msgstr ""
+
+#. module: account_brand
+#: model:ir.model.fields.selection,name:account_brand.selection__res_partner_account_brand__account_type__asset_receivable
+msgid "Receivable"
+msgstr ""
+
+#. module: account_brand
+#: model:ir.model,name:account_brand.model_res_partner_account_brand
+msgid "Receivable/Payable Partner Account By Brand"
+msgstr ""
+
+#. module: account_brand
+#: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__account_type
+msgid "Type"
+msgstr "Type"
+
+#~ msgid "Journal Entries"
+#~ msgstr "Journaal ingave"
