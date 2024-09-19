@@ -11,6 +11,21 @@ class ResBrand(models.Model):
 
     _inherit = "res.brand"
 
+    def _get_company_overriden_fields(self):
+        return [
+            "name",
+            "logo",
+            "external_report_layout_id",
+            "report_header",
+            "report_footer",
+            "paperformat_id",
+            "font",
+            "primary_color",
+            "secondary_color",
+            "layout_background",
+            "layout_background_image",
+        ]
+
     def _get_default_brand_logo(self):
         return base64.b64encode(
             open(
