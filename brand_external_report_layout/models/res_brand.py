@@ -68,12 +68,20 @@ class ResBrand(models.Model):
         string="Brand Details",
         help="Header text displayed at the top of all reports.",
     )
+    is_company_details_empty = fields.Boolean(compute="_compute_empty_company_details")
     layout_background = fields.Selection(
         [("Blank", "Blank"), ("Geometric", "Geometric"), ("Custom", "Custom")],
         default="Blank",
         required=True,
     )
     layout_background_image = fields.Binary("Background Image")
+
+    @api.depends("company_details")
+    def _compute_empty_company_details(self):
+        for record in self:
+            record.is_company_details_empty = not tools.html2plaintext(
+                record.company_details or ""
+            )
 
     def change_report_template(self):
         self.ensure_one()
