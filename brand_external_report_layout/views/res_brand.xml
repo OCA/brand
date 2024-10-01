@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2019 ACSONE SA/NV
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record id="res_brand_form_view" model="ir.ui.view">
+        <field name="model">res.brand</field>
+        <field name="inherit_id" ref="brand.res_brand_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <div colspan="2">
+                    <button
+                        name="change_report_template"
+                        string="Change Document Template"
+                        type="object"
+                        class="oe_link oe_inline"
+                        icon="fa-arrow-right"
+                    />
+                    <field name="external_report_layout_id" class="oe_inline" />
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
