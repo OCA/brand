@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-08-07 08:58+0000\n"
+"PO-Revision-Date: 2024-10-24 09:06+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -318,7 +318,7 @@ msgstr "Contatto"
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_bounce
 msgid "Counter of the number of bounced emails for this contact"
-msgstr "Contatore del numero di email respinte per questo contatto"
+msgstr "Contatore del numero di e-mail respinte per questo contatto"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__country_id
@@ -684,7 +684,7 @@ msgstr "Tipo prossima attività"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__email_normalized
 msgid "Normalized Email"
-msgstr "Email normalizzata"
+msgstr "E-mail normalizzata"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__comment
@@ -744,7 +744,7 @@ msgstr "Partner con lo stesso registro azienda"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__same_vat_partner_id
 msgid "Partner with same Tax ID"
-msgstr "Fornitori con lo stesso ID fiscale"
+msgstr "Fornitori con la stessa partita IVA"
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
@@ -1007,7 +1007,7 @@ msgid ""
 "The registry number of the company. Use it if it is different from the Tax "
 "ID. It must be unique across all partners of a same country"
 msgstr ""
-"Il numero registro dell'azienda. Utilizzare se è diverso dall'ID fiscale. "
+"Il numero registro dell'azienda. Utilizzare se è diverso dalla partita IVA. "
 "Deve essere univoco tra tutti i partner della stessa nazione"
 
 #. module: brand
@@ -1034,8 +1034,8 @@ msgid ""
 "This field is used to search on email address as the primary email field can "
 "contain more than strictly an email address."
 msgstr ""
-"Questo campo viene utilizzato per la ricerca degli indirizzi email, come "
-"campo principale dell'email può contenere più indirizzi."
+"Questo campo viene utilizzato per la ricerca degli indirizzi e-mail, come "
+"campo principale dell'e-mail può contenere più indirizzi."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_supplier_payment_term_id
@@ -1121,7 +1121,7 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__barcode
 msgid "Use a barcode to identify this contact."
-msgstr "Utilizza un barcode per identificare questo contatto."
+msgstr "Utilizza un codice a barre per identificare questo contatto."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__user_ids
