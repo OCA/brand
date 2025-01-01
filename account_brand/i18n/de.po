@@ -77,11 +77,6 @@ msgid "Journal Entry"
 msgstr "Buchungssatz"
 
 #. module: account_brand
-#: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand____last_update
-msgid "Last Modified on"
-msgstr "Zuletzt geändert am"
-
-#. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__write_uid
 msgid "Last Updated by"
 msgstr "Zuletzt aktualisiert von"
@@ -136,6 +131,9 @@ msgstr "Debitoren-/Kreditorenkonto nach Marke"
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__account_type
 msgid "Type"
 msgstr "Typ"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Zuletzt geändert am"
 
 #~ msgid "Invoice"
 #~ msgstr "Rechnung"
