@@ -4,7 +4,8 @@
 from lxml import etree
 
 from odoo.exceptions import ValidationError
-from odoo.tests.common import Form, TransactionCase
+from odoo.tests import Form
+from odoo.tests.common import TransactionCase
 
 from odoo.addons.brand.models.res_company import BRAND_USE_LEVEL_REQUIRED_LEVEL
 
@@ -101,7 +102,7 @@ class TestBrandMixin(TransactionCase):
             view_type="form",
         )
         doc = etree.XML(view["arch"])
-        self.assertTrue(doc.xpath("//field[@name='brand_use_level']"))
+        self.assertTrue(doc.xpath("//field[@name='brand_id']"))
 
     def test_reverse_move(self):
         move = self.env["account.move"].create(
