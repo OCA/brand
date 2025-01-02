@@ -23,5 +23,5 @@ To make a branded object, you need to:
     it's required or not.
 
 You can refer to the
-[account_brand](https://github.com/OCA/brand/blob/12.0/account_brand).
+[account_brand](https://github.com/OCA/brand/blob/18.0/account_brand).
 for more details.

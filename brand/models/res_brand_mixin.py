@@ -53,8 +53,8 @@ class ResBrandMixin(models.AbstractModel):
     def _get_view(self, view_id=None, view_type="form", **options):
         """set visibility and requirement rules"""
         arch, view = super()._get_view(view_id, view_type, **options)
-        if self.env["res.brand"].check_access_rights("read", raise_exception=False):
-            if view.type in ["form", "tree"]:
+        if self.env["res.brand"].check_access("read"):
+            if view.type in ["form", "list"]:
                 brand_node = next(
                     iter(
                         arch.xpath(
