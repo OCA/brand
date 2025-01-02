@@ -35,7 +35,7 @@ class ResPartnerAccountBrand(models.Model):
         (
             "unique_account_by_partner",
             "unique(partner_id, account_id, brand_id, account_type)",
-            _("Partner has already an account set for this brand!"),
+            "Partner has already an account set for this brand!",
         )
     ]
 
