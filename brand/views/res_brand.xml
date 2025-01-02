@@ -9,7 +9,7 @@
         <field name="arch" type="xml">
             <form string="Partners">
                 <sheet>
-            <div class="oe_button_box" name="button_box" />
+                    <div class="oe_button_box" name="button_box" />
                     <widget
                         name="web_ribbon"
                         title="Archived"
@@ -29,7 +29,6 @@
                         <h1>
                             <field name="name" />
                         </h1>
-
                     </div>
 
                     <group>
@@ -73,7 +72,6 @@
                             <field name="vat" placeholder="e.g. BE0477472701" />
                         </group>
                         <group>
-
                             <field name="phone" widget="phone" />
                             <field name="mobile" widget="phone" />
                             <field name="email" widget="email" />
@@ -83,7 +81,6 @@
                                 widget="url"
                                 placeholder="e.g. https://www.odoo.com"
                             />
-
                         </group>
                     </group>
                 </sheet>
@@ -174,7 +171,6 @@
                     </t>
                 </templates>
             </kanban>
-
         </field>
     </record>
     <record model="ir.ui.view" id="res_brand_tree_view">
