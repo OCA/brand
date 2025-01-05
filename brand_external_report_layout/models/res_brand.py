@@ -58,6 +58,8 @@ class ResBrand(models.Model):
             ("Montserrat", "Montserrat"),
             ("Oswald", "Oswald"),
             ("Raleway", "Raleway"),
+            ("Tajawal", "Tajawal"),
+            ("Fira_Mono", "Fira Mono"),
         ],
         default="Lato",
     )
