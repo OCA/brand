@@ -1,3 +1,12 @@
-To configure this module, please refer to the documentation of
-[brand](https://github.com/OCA/brand/blob/12.0/brand/README.rst).
-It is important to note that if the brand type is not configured in the Users & Companies settings, the field will not be visible in the invoice view.
+It is important to note that the "brand use level" **should** be set to `Optional` or `Required`.
+The brand use level is configured in the Users & Companies settings.
+By default it is set to 'Do not use brands on business document'.
+Then the field to select a brand on the invoice view will not be available.
+
+To change the "brand use level":
+
+#. Go to Settings > General Settings
+#. Select the brand use level, the following options are available:
+  `Do not use brands on business document` (Default)
+  `Optional`
+  `Required`
