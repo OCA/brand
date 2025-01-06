@@ -390,11 +390,16 @@ report.</p>
 </div>
 <div class="section" id="configuration">
 <h1><a class="toc-backref" href="#toc-entry-1">Configuration</a></h1>
-<p>To configure this module, please refer to the documentation of
-<a class="reference external" href="https://github.com/OCA/brand/blob/12.0/brand/README.rst">brand</a>. It
-is important to note that if the brand type is not configured in the
-Users &amp; Companies settings, the field will not be visible in the invoice
-view.</p>
+<p>It is important to note that the “brand use level” <strong>should</strong> be set to
+<tt class="docutils literal">Optional</tt> or <tt class="docutils literal">Required</tt>. The brand use level is configured in the
+Users &amp; Companies settings. By default it is set to ‘Do not use brands
+on business document’. Then the field to select a brand on the invoice
+view will not be available.</p>
+<p>To change the “brand use level”:</p>
+<p>#. Go to Settings &gt; General Settings #. Select the brand use level, the
+following options are available:
+<tt class="docutils literal">Do not use brands on business document</tt> (Default) <tt class="docutils literal">Optional</tt>
+<tt class="docutils literal">Required</tt></p>
 </div>
 <div class="section" id="usage">
 <h1><a class="toc-backref" href="#toc-entry-2">Usage</a></h1>
@@ -403,10 +408,12 @@ view.</p>
 <li>Go to Accounting &gt; Customers &gt; Invoices</li>
 <li>Select or create an invoice</li>
 <li>Enter the information and select the brand</li>
-<li>Print the PDF report. It includes the information of the brand.</li>
+<li>Print the PDF report. It includes the style and information of the
+brand.</li>
 </ol>
-<p>To do point 4, the Brand External Report Layout OCA module must be
-installed.</p>
+<p>To do point 4, the <a class="reference external" href="https://github.com/OCA/brand/tree/18.0/brand_external_report_layout/README.rst">Brand External Report
+Layout</a>
+OCA module must be installed.</p>
 </div>
 <div class="section" id="bug-tracker">
 <h1><a class="toc-backref" href="#toc-entry-3">Bug Tracker</a></h1>
@@ -436,6 +443,7 @@ If you spotted it first, help us to smash it by providing a detailed and welcome
 </ul>
 </li>
 <li>Ammar Officewala &lt;<a class="reference external" href="mailto:aofficewala&#64;opensourceintegrators.com">aofficewala&#64;opensourceintegrators.com</a>&gt;</li>
+<li>bosd &lt;&lt;<a class="reference external" href="mailto:c5e2fd43-d292-4c90-9d1f-74ff3436329a&#64;anonaddy.me">c5e2fd43-d292-4c90-9d1f-74ff3436329a&#64;anonaddy.me</a>&gt;</li>
 </ul>
 </div>
 <div class="section" id="other-credits">
