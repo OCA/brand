@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 17.0\n"
+"Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -12,6 +12,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: product_brand
+#: model_terms:ir.ui.view,arch_db:product_brand.view_product_brand_kanban
+msgid "Avatar"
+msgstr ""
 
 #. module: product_brand
 #: model:ir.actions.act_window,name:product_brand.action_product_brand
@@ -77,11 +82,6 @@ msgstr ""
 #. module: product_brand
 #: model:ir.model.fields,field_description:product_brand.field_product_brand__write_date
 msgid "Last Updated on"
-msgstr ""
-
-#. module: product_brand
-#: model_terms:ir.ui.view,arch_db:product_brand.view_product_brand_kanban
-msgid "Logo"
 msgstr ""
 
 #. module: product_brand
