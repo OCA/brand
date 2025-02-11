@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-
     <record model="ir.ui.view" id="view_inventory_valuation_search">
         <field name="name">Inventory Valuation</field>
         <field name="model">stock.valuation.layer</field>
@@ -29,5 +28,4 @@
             </field>
         </field>
     </record>
-
 </odoo>

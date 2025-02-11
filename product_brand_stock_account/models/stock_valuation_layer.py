@@ -5,7 +5,6 @@ from odoo import fields, models
 
 
 class StockValuationLayer(models.Model):
-
     _inherit = "stock.valuation.layer"
 
     product_brand_id = fields.Many2one(
