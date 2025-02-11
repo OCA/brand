@@ -6,17 +6,14 @@
         <field name="inherit_id" ref="base.view_partner_form" />
         <field name="arch" type="xml">
             <field name="industry_id" position="after">
-                <field
-                    name="brand_id"
-                    attrs="{'invisible': [('is_company', '=', False)]}"
-                />
+                <field name="brand_id" invisible="not is_company" />
             </field>
             <field name="image_1920" position="before">
                 <field
                     name="brand_logo"
                     widget="image"
                     class="oe_avatar"
-                    attrs="{'invisible': [('brand_logo', '=', False)]}"
+                    invisible="not brand_logo"
                 />
             </field>
         </field>
@@ -55,7 +52,7 @@
                     <field name="brand_logo" invisible="1" />
                     <span
                         title="This company is linked to a brand"
-                        attrs="{'invisible': [('brand_logo', '=', False)]}"
+                        invisible="not brand_logo"
                     >® &amp;nbsp;</span>
                 </div>
             </xpath>
