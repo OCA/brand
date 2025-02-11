@@ -5,7 +5,6 @@ from odoo import fields, models
 
 
 class StockMoveLine(models.Model):
-
     _inherit = "stock.move.line"
 
     product_brand_id = fields.Many2one(
