@@ -5,7 +5,6 @@ from odoo import fields, models
 
 
 class MrpProduction(models.Model):
-
     _inherit = "mrp.production"
 
     product_brand_id = fields.Many2one(
