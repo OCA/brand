@@ -6,7 +6,7 @@ from psycopg2 import sql
 from . import models
 
 
-def pre_init_hook(cr):
+def pre_init_hook(env):
     to_init_tables = (
         "stock_move",
         "stock_move_line",
@@ -22,5 +22,5 @@ def pre_init_hook(cr):
             "INNER JOIN product_template t ON t.id = p.product_tmpl_id "
             "WHERE x.product_id=p.id"
         ).format(sql.Identifier(to_init_table))
-        cr.execute(query_alter)
-        cr.execute(query_update)
+        env.cr.execute(query_alter)
+        env.cr.execute(query_update)
