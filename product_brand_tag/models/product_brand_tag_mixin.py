@@ -6,8 +6,6 @@ from psycopg2 import sql
 
 from odoo import api, fields, models
 
-from odoo.addons.http_routing.models.ir_http import slugify
-
 
 class ProductBrandTag(models.AbstractModel):
     _name = "product.brand.tag.mixin"
@@ -42,12 +40,12 @@ class ProductBrandTag(models.AbstractModel):
     @api.depends("name")
     def _compute_code(self):
         for rec in self:
-            rec.code = slugify(rec.name)
+            rec.code = self.env["ir.http"]._slugify(rec.name or "")
 
     def _inverse_code(self):
         for rec in self:
             # Make sure is always normalized
-            rec.code = slugify(rec.code)
+            rec.code = self.env["ir.http"]._slugify(rec.code)
 
     @api.depends("product_brand_ids")
     def _compute_brands_count(self):
