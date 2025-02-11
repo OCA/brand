@@ -1,6 +1,5 @@
 <?xml version="1.0" ?>
 <odoo>
-
     <record id="carrefour" model="res.brand">
         <field name="name">Carrefour</field>
         <field
@@ -18,6 +17,4 @@
             file="partner_brand/static/description/walmart.png"
         />
     </record>
-
-
 </odoo>
