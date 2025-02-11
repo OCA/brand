@@ -2,6 +2,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from odoo import fields, models
+from odoo.tools import SQL
 
 
 class PurchaseReport(models.Model):
@@ -11,8 +12,8 @@ class PurchaseReport(models.Model):
 
     def _select(self):
         select_str = super()._select()
-        return select_str + ", t.product_brand_id as product_brand_id"
+        return SQL("%s, t.product_brand_id as product_brand_id", select_str)
 
     def _group_by(self):
         group_by_str = super()._group_by()
-        return group_by_str + ", t.product_brand_id"
+        return SQL("%s, t.product_brand_id", group_by_str)
