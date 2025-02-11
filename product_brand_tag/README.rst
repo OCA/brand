@@ -59,6 +59,9 @@ Contributors
 ------------
 
 - Simone Orsi <simone.orsi@camptocamp.com>
+- `Heliconia Solutions Pvt. Ltd. <https://www.heliconia.io>`__
+
+  - Bhavesh Heliconia
 
 Maintainers
 -----------

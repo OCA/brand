@@ -5,6 +5,7 @@
 
 from psycopg2 import IntegrityError
 
+from odoo import Command
 from odoo.tools import mute_logger
 
 from odoo.addons.product_brand.tests.common import CommonCase
@@ -19,7 +20,7 @@ class TestBrandTags(CommonCase):
             {
                 "name": "Test Tag",
                 "product_brand_ids": [
-                    (6, 0, [cls.product_brand.id, cls.product_brand2.id])
+                    Command.set([cls.product_brand.id, cls.product_brand2.id])
                 ],
             }
         )
