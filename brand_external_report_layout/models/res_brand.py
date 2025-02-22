@@ -86,10 +86,10 @@ class ResBrand(models.Model):
 
     def change_report_template(self):
         self.ensure_one()
-        context = {"default_brand_id": self.id}
+        context = {"default_brand_id": self.id, "dialog_size": "extra-large"}
         context.update(self.env.context)
         return {
-            "name": _("Choose Your Document Layout"),
+            "name": _("Configure your document layout"),
             "type": "ir.actions.act_window",
             "view_mode": "form",
             "target": "new",
