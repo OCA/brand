@@ -71,7 +71,7 @@ class ResBrand(models.Model):
     )
     is_company_details_empty = fields.Boolean(compute="_compute_empty_company_details")
     layout_background = fields.Selection(
-        [("Blank", "Blank"), ("Geometric", "Geometric"), ("Custom", "Custom")],
+        [("Blank", "Blank"), ("Custom", "Custom")],
         default="Blank",
         required=True,
     )
