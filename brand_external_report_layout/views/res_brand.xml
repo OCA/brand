@@ -12,9 +12,11 @@
                         name="change_report_template"
                         string="Change Document Template"
                         type="object"
-                        class="oe_link oe_inline"
-                        icon="fa-arrow-right"
-                    />
+                        class="btn btn-link"
+                    >
+                        <i class="o_button_icon oi oi-fw oi-arrow-right me-1" />
+                        <span>Configure Document Layout</span>
+                    </button>
                     <field name="external_report_layout_id" class="oe_inline" />
                 </div>
             </xpath>
