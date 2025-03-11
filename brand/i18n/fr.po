@@ -1,0 +1,1203 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* brand
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-08-14 12:10+0000\n"
+"Last-Translator: sofien-moalla <s.moalla@cadrinsitu.com>\n"
+"Language-Team: none\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.17\n"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__type
+msgid ""
+"- Contact: Use this to organize the contact details of employees of a given "
+"company (e.g. CEO, CFO, ...).\n"
+"- Invoice Address: Preferred address for all invoices. Selected by default "
+"when you invoice an order that belongs to this company.\n"
+"- Delivery Address: Preferred address for all deliveries. Selected by "
+"default when you deliver an order that belongs to this company.\n"
+"- Other: Other address for the company (e.g. subsidiary, ...)"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__property_account_payable_id
+msgid "Account Payable"
+msgstr "Comptes créditeurs"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__property_account_receivable_id
+msgid "Account Receivable"
+msgstr "Comptes débiteurs"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__message_needaction
+msgid "Action Needed"
+msgstr "Mesures à prendre"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__active
+msgid "Active"
+msgstr "Actif"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__active_lang_count
+msgid "Active Lang Count"
+msgstr "Nombre de langues actives"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__activity_ids
+msgid "Activities"
+msgstr "Activités"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Activité Décoration des exceptions"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__activity_state
+msgid "Activity State"
+msgstr "État de l'activité"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Icône type d'activité"
+
+#. module: brand
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "Address"
+msgstr "Adresse"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__type
+msgid "Address Type"
+msgstr "Type d'adresse"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__lang
+msgid ""
+"All the emails and documents sent to this contact will be translated in this "
+"language."
+msgstr ""
+"Tous les courriels et documents envoyés à ce contact seront traduits dans "
+"cette langue."
+
+#. module: brand
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "Archived"
+msgstr "Archivé"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__message_attachment_count
+msgid "Attachment Count"
+msgstr "Nombre de pièces jointes"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__avatar_1920
+msgid "Avatar"
+msgstr "Avatar"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__avatar_1024
+msgid "Avatar 1024"
+msgstr "Avatar 1024"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__avatar_128
+msgid "Avatar 128"
+msgstr "Avatar 128"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__avatar_256
+msgid "Avatar 256"
+msgstr "Avatar 256"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__avatar_512
+msgid "Avatar 512"
+msgstr "Avatar 512"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__bank_account_count
+msgid "Bank"
+msgstr "Bnaque"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__bank_ids
+msgid "Banks"
+msgstr "Banques"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__barcode
+msgid "Barcode"
+msgstr "Code à barres"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__is_blacklisted
+msgid "Blacklist"
+msgstr "Liste noire"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__message_bounce
+msgid "Bounce"
+msgstr "Rebondir"
+
+#. module: brand
+#: model:ir.model,name:brand.model_res_brand
+#: model:ir.model.fields,field_description:brand.field_res_brand_mixin__brand_id
+#: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
+msgid "Brand"
+msgstr "Marque"
+
+#. module: brand
+#: model:ir.model,name:brand.model_res_brand_mixin
+msgid "Brand Mixin"
+msgstr "Mélange de marques"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand_mixin__brand_use_level
+#: model:ir.model.fields,field_description:brand.field_res_company__brand_use_level
+#: model:ir.model.fields,field_description:brand.field_res_config_settings__brand_use_level
+msgid "Brand Use Level"
+msgstr "Niveau d'utilisation de la marque"
+
+#. module: brand
+#. odoo-python
+#: code:addons/brand/models/res_brand_mixin.py:0
+#, python-format
+msgid "Brand company must match document company for %s"
+msgstr ""
+"La société de la marque doit correspondre à la société du document pour %s."
+
+#. module: brand
+#. odoo-python
+#: code:addons/brand/models/res_brand_mixin.py:0
+#, python-format
+msgid "Brand is required"
+msgstr "La marque est obligatoire"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand_mixin__brand_id
+msgid "Brand to use for this sale"
+msgstr "Marque à utiliser pour cette vente"
+
+#. module: brand
+#: model:ir.actions.act_window,name:brand.res_brand_act_window
+#: model:ir.ui.menu,name:brand.res_brand_menu
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_search_view
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_tree_view
+msgid "Brands"
+msgstr "Marques"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__channel_ids
+msgid "Channels"
+msgstr "Canaux"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__is_company
+msgid "Check if the contact is a company, otherwise it is a person"
+msgstr ""
+"Vérifier si le contact est une entreprise, sinon il s'agit d'une personne"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__employee
+msgid "Check this box if this contact is an Employee."
+msgstr "Cochez cette case si ce contact est un employé."
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__city
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "City"
+msgstr "Ville"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__peppol_eas
+msgid ""
+"Code used to identify the Endpoint for BIS Billing 3.0 and its derivatives.\n"
+"             List available at https://docs.peppol.eu/poacc/billing/3.0/"
+"codelist/eas/"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__color
+msgid "Color Index"
+msgstr "Index des couleurs"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__commercial_partner_id
+msgid "Commercial Entity"
+msgstr "Entité commerciale"
+
+#. module: brand
+#: model:ir.model,name:brand.model_res_company
+msgid "Companies"
+msgstr "Sociétés"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__ref_company_ids
+msgid "Companies that refers to partner"
+msgstr "Entreprises qui se réfèrent à des partenaires"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__company_id
+#: model:ir.model.fields,field_description:brand.field_res_brand_mixin__company_id
+msgid "Company"
+msgstr "Société"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__company_registry
+msgid "Company ID"
+msgstr "Société ID"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__company_name
+msgid "Company Name"
+msgstr "Nom Société"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__commercial_company_name
+msgid "Company Name Entity"
+msgstr "Raison sociale Entité"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__company_type
+msgid "Company Type"
+msgstr "Type de société"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__contact_address
+msgid "Complete Address"
+msgstr "Adresse complète"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__complete_name
+msgid "Complete Name"
+msgstr ""
+
+#. module: brand
+#: model:ir.model,name:brand.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de configuration"
+
+#. module: brand
+#: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
+msgid ""
+"Configure branding of customer facing business documents (SO, invoices, etc)."
+msgstr ""
+"Configurer l'image de marque des documents commerciaux destinés aux clients "
+"(SO, factures, etc.)."
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__child_ids
+msgid "Contact"
+msgstr "Contact"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__message_bounce
+msgid "Counter of the number of bounced emails for this contact"
+msgstr "Compteur du nombre d'emails rebondis pour ce contact"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__country_id
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "Country"
+msgstr "Pays"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__country_code
+msgid "Country Code"
+msgstr "Code Pays"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__credit_limit
+msgid "Credit Limit"
+msgstr "Limite de crédit"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__credit_to_invoice
+msgid "Credit To Invoice"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__credit_limit
+msgid "Credit limit specific to this partner."
+msgstr "Limite de crédit spécifique à ce partenaire."
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__currency_id
+msgid "Currency"
+msgstr "Devise"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__property_payment_term_id
+msgid "Customer Payment Terms"
+msgstr "Conditions de paiement du client"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__customer_rank
+msgid "Customer Rank"
+msgstr "Rang du client"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__date
+msgid "Date"
+msgstr "Date"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__days_sales_outstanding
+msgid "Days Sales Outstanding (DSO)"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__trust
+msgid "Degree of trust you have in this debtor"
+msgstr "Degré de confiance que vous accordez à ce débiteur"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: brand
+#: model:ir.model.fields.selection,name:brand.selection__res_company__brand_use_level__no
+msgid "Do not use brands on business document"
+msgstr "Ne pas utiliser de marques sur les documents professionnels"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__duplicated_bank_account_partners_count
+msgid "Duplicated Bank Account Partners Count"
+msgstr "Nombre de partenaires de comptes bancaires dupliqués"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__partner_share
+msgid ""
+"Either customer (not a user), either shared user. Indicated the current "
+"partner is a customer without access or with a limited access created for "
+"sharing data."
+msgstr ""
+"Soit client (non utilisateur), soit utilisateur partagé. Indique que le "
+"partenaire actuel est un client sans accès ou avec un accès limité créé pour "
+"le partage de données."
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__email
+msgid "Email"
+msgstr "Courriel"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__employee
+msgid "Employee"
+msgstr "Employé"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__fiscal_country_codes
+msgid "Fiscal Country Codes"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__property_account_position_id
+msgid "Fiscal Position"
+msgstr "Position fiscale"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__message_follower_ids
+msgid "Followers"
+msgstr "Abonnés"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Abonnés (partenaires)"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Icône de police impressionnante, par exemple fa-tasks"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__ubl_cii_format
+msgid "Format"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__email_formatted
+msgid "Format email address \"Name <email@domain>\""
+msgstr "Format de l'adresse électronique \"Nom <email@domaine>\""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__email_formatted
+msgid "Formatted Email"
+msgstr "Email formaté"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__partner_latitude
+msgid "Geo Latitude"
+msgstr "Latitude géographique"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__partner_longitude
+msgid "Geo Longitude"
+msgstr "Longitude géographique"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__has_message
+msgid "Has Message"
+msgstr "A un message"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__has_unreconciled_entries
+msgid "Has Unreconciled Entries"
+msgstr "A des écritures non rapprochées"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__hide_peppol_fields
+msgid "Hide Peppol Fields"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__id
+msgid "ID"
+msgstr "ID"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__im_status
+msgid "IM Status"
+msgstr "Statut de l'IM"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__activity_exception_icon
+msgid "Icon"
+msgstr "Icone"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icône indiquant une activité d'exception."
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+"Si cette case est cochée, de nouveaux messages requièrent votre attention."
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__team_id
+msgid ""
+"If set, this Sales Team will be used for sales and assignments related to "
+"this partner"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__is_blacklisted
+msgid ""
+"If the email address is on the blacklist, the contact won't receive mass "
+"mailing anymore, from any list"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__image_1920
+msgid "Image"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__image_1024
+msgid "Image 1024"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__image_128
+msgid "Image 128"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__image_256
+msgid "Image 256"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__image_512
+msgid "Image 512"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__industry_id
+msgid "Industry"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__contact_address_inline
+msgid "Inlined Complete Address"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__invoice_warn
+msgid "Invoice"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__invoice_ids
+msgid "Invoices"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__is_coa_installed
+msgid "Is Coa Installed"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__is_public
+msgid "Is Public"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__is_company
+msgid "Is a Company"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__function
+msgid "Job Position"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__journal_item_count
+msgid "Journal Items"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__lang
+msgid "Language"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__last_time_entries_checked
+msgid ""
+"Last time the invoices & payments matching was performed for this partner. "
+"It is set either if there's not at least an unreconciled debit and an "
+"unreconciled credit or if you click the \"Done\" button."
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__last_time_entries_checked
+msgid "Latest Invoices & Payments Matching Date"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__invoice_warn_msg
+msgid "Message for Invoice"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__sale_warn_msg
+msgid "Message for Sales Order"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__mobile
+msgid "Mobile"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__name
+msgid "Name"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__email_normalized
+msgid "Normalized Email"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__comment
+msgid "Notes"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields.selection,name:brand.selection__res_company__brand_use_level__optional
+msgid "Optional"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__parent_name
+msgid "Parent name"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
+msgid "Partner Contracts"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__use_partner_credit_limit
+msgid "Partner Limit"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__same_company_registry_partner_id
+msgid "Partner with same Company Registry"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__same_vat_partner_id
+msgid "Partner with same Tax ID"
+msgstr ""
+
+#. module: brand
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "Partners"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__debit_limit
+msgid "Payable Limit"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__property_payment_method_id
+msgid "Payment Method"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__payment_token_count
+msgid "Payment Token Count"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__payment_token_ids
+msgid "Payment Tokens"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__peppol_endpoint
+msgid "Peppol Endpoint"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__peppol_eas
+msgid "Peppol e-address (EAS)"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__phone
+msgid "Phone"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__property_payment_method_id
+msgid ""
+"Preferred payment method when paying this vendor. This is used to filter "
+"vendor bills by preferred payment method to register payments in mass. Use "
+"cases: create bank files for batch wires, check runs."
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__property_product_pricelist
+msgid "Pricelist"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__ref
+msgid "Reference"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__parent_id
+msgid "Related Company"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields.selection,name:brand.selection__res_company__brand_use_level__required
+msgid "Required"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__sale_order_count
+msgid "Sale Order Count"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__sale_order_ids
+msgid "Sales Order"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__team_id
+msgid "Sales Team"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__sale_warn
+msgid "Sales Warnings"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__user_id
+msgid "Salesperson"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__invoice_warn
+#: model:ir.model.fields,help:brand.field_res_brand__sale_warn
+msgid ""
+"Selecting the \"Warning\" option will notify user with the message, "
+"Selecting \"Blocking Message\" will throw an exception with the message and "
+"block the flow. The Message has to be written in the next field."
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__self
+msgid "Self"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__partner_share
+msgid "Share Partner"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__show_credit_limit
+msgid "Show Credit Limit"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__signup_expiration
+msgid "Signup Expiration"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__signup_token
+msgid "Signup Token"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__signup_type
+msgid "Signup Token Type"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__signup_valid
+msgid "Signup Token is Valid"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__signup_url
+msgid "Signup URL"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__starred_message_ids
+msgid "Starred Message"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__state_id
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "State"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__street
+msgid "Street"
+msgstr ""
+
+#. module: brand
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "Street 2..."
+msgstr ""
+
+#. module: brand
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "Street..."
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__street2
+msgid "Street2"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__supplier_rank
+msgid "Supplier Rank"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__category_id
+msgid "Tags"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__vat
+msgid "Tax ID"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__country_code
+msgid ""
+"The ISO country code in two chars. \n"
+"You can use this field for quick search."
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__vat
+msgid ""
+"The Tax Identification Number. Values here will be validated based on the "
+"country format. You can use '/' to indicate that the partner is not subject "
+"to tax."
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__property_account_position_id
+msgid ""
+"The fiscal position determines the taxes/accounts used for this contact."
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__user_id
+msgid "The internal user in charge of this contact."
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__has_unreconciled_entries
+msgid ""
+"The partner has at least one unreconciled debit and credit since last time "
+"the invoices & payments matching was performed."
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__company_registry
+msgid ""
+"The registry number of the company. Use it if it is different from the Tax "
+"ID. It must be unique across all partners of a same country"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__property_account_payable_id
+msgid ""
+"This account will be used instead of the default one as the payable account "
+"for the current partner"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__property_account_receivable_id
+msgid ""
+"This account will be used instead of the default one as the receivable "
+"account for the current partner"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__email_normalized
+msgid ""
+"This field is used to search on email address as the primary email field can "
+"contain more than strictly an email address."
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__property_supplier_payment_term_id
+msgid ""
+"This payment term will be used instead of the default one for purchase "
+"orders and vendor bills"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__property_payment_term_id
+msgid ""
+"This payment term will be used instead of the default one for sales orders "
+"and customer invoices"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__property_product_pricelist
+msgid ""
+"This pricelist will be used, instead of the default one, for sales to the "
+"current partner"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__tz
+msgid "Timezone"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__tz_offset
+msgid "Timezone offset"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__title
+msgid "Title"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__total_invoiced
+msgid "Total Invoiced"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__debit
+msgid "Total Payable"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__credit
+msgid "Total Receivable"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__credit
+msgid "Total amount this customer owes you."
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__debit
+msgid "Total amount you have to pay to this vendor."
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__peppol_endpoint
+msgid ""
+"Unique identifier used by the BIS Billing 3.0 and its derivatives, also "
+"known as 'Endpoint ID'."
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__barcode
+msgid "Use a barcode to identify this contact."
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__user_ids
+msgid "Users"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__property_supplier_payment_term_id
+msgid "Vendor Payment Terms"
+msgstr ""
+
+#. module: brand
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "Website"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__website
+msgid "Website Link"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__tz
+msgid ""
+"When printing documents and exporting/importing data, time values are "
+"computed according to this timezone.\n"
+"If the timezone is not set, UTC (Coordinated Universal Time) is used.\n"
+"Anywhere else, time values are computed according to the time offset of your "
+"web client."
+msgstr ""
+
+#. module: brand
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "ZIP"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__zip
+msgid "Zip"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__days_sales_outstanding
+msgid ""
+"[(Total Receivable/Total Revenue) * number of days since the first invoice] "
+"for this customer"
+msgstr ""
+
+#. module: brand
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "e.g. BE0477472701"
+msgstr ""
+
+#. module: brand
+#: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
+msgid "e.g. https://www.odoo.com"
+msgstr ""
+
+#~ msgid "Additional info"
+#~ msgstr "Informations complémentaires"
+
+#~ msgid "Blacklisted Phone Is Mobile"
+#~ msgstr "Le téléphone sur liste noire est mobile"
+
+#~ msgid "Blacklisted Phone is Phone"
+#~ msgstr "Le téléphone sur liste noire est téléphone"
+
+#~ msgid "Company database ID"
+#~ msgstr "ID de la base de données de l'entreprise"
+
+#~ msgid ""
+#~ "Field used to store sanitized phone number. Helps speeding up searches "
+#~ "and comparisons."
+#~ msgstr ""
+#~ "Champ utilisé pour stocker le numéro de téléphone normalisé. Il permet "
+#~ "d'accélérer les recherches et les comparaisons."
+
+#~ msgid ""
+#~ "- Contact: Use this to organize the contact details of employees of a "
+#~ "given company (e.g. CEO, CFO, ...).\n"
+#~ "- Invoice Address : Preferred address for all invoices. Selected by "
+#~ "default when you invoice an order that belongs to this company.\n"
+#~ "- Delivery Address : Preferred address for all deliveries. Selected by "
+#~ "default when you deliver an order that belongs to this company.\n"
+#~ "- Private: Private addresses are only visible by authorized users and "
+#~ "contain sensitive data (employee home addresses, ...).\n"
+#~ "- Other: Other address for the company (e.g. subsidiary, ...)"
+#~ msgstr ""
+#~ "- Contact : Permet d'organiser les coordonnées des employés d'une "
+#~ "entreprise donnée (par exemple, le PDG, le directeur financier, ...).\n"
+#~ "- Adresse de facturation : Adresse préférée pour toutes les factures. "
+#~ "Elle est sélectionnée par défaut lorsque vous facturez une commande "
+#~ "appartenant à cette entreprise.\n"
+#~ "- Adresse de livraison : adresse préférée pour toutes les livraisons. "
+#~ "Sélectionnée par défaut lorsque vous livrez une commande appartenant à "
+#~ "cette entreprise.\n"
+#~ "- Privé : Les adresses privées ne sont visibles que par les utilisateurs "
+#~ "autorisés et contiennent des données sensibles (adresses personnelles des "
+#~ "employés, ...).\n"
+#~ "- Autre : Autre adresse de l'entreprise (par exemple, filiale, ...)"
+
+#~ msgid ""
+#~ "<span class=\"o_form_label\">Brand</span>\n"
+#~ "                                <span class=\"fa fa-lg fa-building-o\" "
+#~ "title=\"Values set here are company-specific.\" aria-label=\"Values set "
+#~ "here are company-specific.\" groups=\"base.group_multi_company\" "
+#~ "role=\"img\"/>"
+#~ msgstr ""
+#~ "<span class=\"o_form_label\">Marque</span>\n"
+#~ "<span class=\"fa fa-lg fa-building-o\" title=\"Les valeurs définies ici "
+#~ "sont spécifiques à l'entreprise.\" aria-label=\"Les valeurs définies ici "
+#~ "sont spécifiques à l'entreprise.\" groups=\"base.group_multi_company\" "
+#~ "role=\"img\"/>"
