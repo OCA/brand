@@ -20,8 +20,8 @@ class BrandDocumentLayout(models.TransientModel):
     brand_id = fields.Many2one("res.brand", required=True)
 
     logo = fields.Binary(related="brand_id.logo", readonly=False)
-    report_header = fields.Text(related="brand_id.report_header", readonly=False)
-    report_footer = fields.Text(related="brand_id.report_footer", readonly=False)
+    report_header = fields.Html(related="brand_id.report_header", readonly=False)
+    report_footer = fields.Html(related="brand_id.report_footer", readonly=False)
     paperformat_id = fields.Many2one(related="brand_id.paperformat_id", readonly=False)
     external_report_layout_id = fields.Many2one(
         related="brand_id.external_report_layout_id", readonly=False
