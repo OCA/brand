@@ -35,11 +35,11 @@ class ResBrand(models.Model):
     external_report_layout_id = fields.Many2one(
         comodel_name="ir.ui.view", string="Document Template"
     )
-    report_header = fields.Text(
+    report_header = fields.Html(
         help="Appears by default on the top right corner of your printed "
         "documents (report header).",
     )
-    report_footer = fields.Text(
+    report_footer = fields.Html(
         translate=True,
         help="Footer text displayed at the bottom of all reports.",
     )
