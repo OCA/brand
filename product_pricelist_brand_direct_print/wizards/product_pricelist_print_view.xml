@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="product_pricelist_print_brand_form" model="ir.ui.view">
+        <field name="name">product.pricelist.print.brand.form</field>
+        <field name="model">product.pricelist.print</field>
+        <field
+            name="inherit_id"
+            ref="product_pricelist_direct_print.view_product_pricelist_print"
+        />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='pricelist_id']" position="after">
+                <field name="brand_id" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,15 @@
+<odoo>
+    <record id="product_pricelist_print_brand_report" model="ir.ui.view">
+        <field name="name">product.pricelist.print.brand.report</field>
+        <field name="model">product.pricelist.print</field>
+        <field
+            name="inherit_id"
+            ref="product_pricelist_direct_print.report_product_pricelist_document"
+        />
+        <field name="arch" type="xml">
+            <xpath expr="//span[@t-field='pricelist.currency_id']" position="after">
+                <field name="brand_id" />
+            </xpath>
+        </field>
+    </record>
+</odoo>
