@@ -7,7 +7,6 @@ from odoo import api, models
 
 
 class AccountInvoice(models.Model):
-
     _inherit = "account.invoice"
 
     def _get_onchange_create(self):

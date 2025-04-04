@@ -6,7 +6,6 @@ from odoo.exceptions import ValidationError
 
 
 class ResBrand(models.Model):
-
     _inherit = "res.brand"
 
     partner_bank_id = fields.Many2one(
@@ -22,8 +21,8 @@ class ResBrand(models.Model):
         for record in self:
             if (
                 record.partner_bank_id
-                and not record.company_id
-                in record.partner_bank_id.partner_id.ref_company_ids
+                and record.company_id
+                not in record.partner_bank_id.partner_id.ref_company_ids
             ):
                 raise ValidationError(
                     _(
