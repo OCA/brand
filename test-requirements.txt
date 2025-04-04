@@ -1,0 +1,2 @@
+odoo-addon-brand-external-report-layout @ git+https://github.com/OCA/brand.git@refs/pull/224/head#subdirectory=brand_external_report_layout
+odoo-addon-brand @ git+https://github.com/OCA/brand.git@refs/pull/255/head#subdirectory=brand
