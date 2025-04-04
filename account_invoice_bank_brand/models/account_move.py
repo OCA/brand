@@ -6,8 +6,8 @@ from collections import OrderedDict
 from odoo import api, models
 
 
-class AccountInvoice(models.Model):
-    _inherit = "account.invoice"
+class AccountMove(models.Model):
+    _inherit = "account.move"
 
     def _get_onchange_create(self):
         res = super()._get_onchange_create()
@@ -17,9 +17,9 @@ class AccountInvoice(models.Model):
 
     @api.onchange("brand_id")
     def _onchange_brand(self):
-        invoice_type = self.type or self.env.context.get("type", "out_invoice")
+        move_type = self.move_type or self.env.context.get("move_type", "out_invoice")
         if (
-            invoice_type in ("out_invoice", "in_refund")
+            move_type in ("out_invoice", "in_refund")
             and self.brand_id
             and self.brand_id.partner_bank_id
         ):

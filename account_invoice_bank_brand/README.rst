@@ -28,8 +28,11 @@ Account Invoice Bank Brand
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This addon allows to set partner_bank_id on invoices depending on the
-brand.
+This module addresses the need to specify different receiving bank
+accounts based on brand. When generating invoices, the module
+automatically populates the invoice's bank account field with the
+configured default, streamlining the payment process and ensuring
+invoices specify the correct remittance details based on the brand.
 
 **Table of contents**
 
@@ -45,14 +48,13 @@ To use this module, you need to:
 
 2. Select a brand
 
-3. Define bank account
+3. Define its bank account
 
 4. Create a new invoice
 
    1. Select the brand
-   2. Save
-
-The bank account is filled with the brand bank account.
+   2. The bank account is automatically filled with the brand's
+      specified bank account.
 
 Bug Tracker
 ===========
