@@ -3,9 +3,9 @@
 
 {
     "name": "Account Invoice Bank Brand",
-    "summary": """
-        This addon allows to set partner_bank_id on invoices depending on the brand.""",
-    "version": "12.0.1.0.0",
+    "summary": "Enables the automatic selection of the partner's"
+    "bank account on invoices based on the brand.",
+    "version": "18.0.1.0.0",
     "license": "AGPL-3",
     "author": "ACSONE SA/NV,Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/brand",

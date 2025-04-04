@@ -10,23 +10,22 @@ class ResBrand(models.Model):
 
     partner_bank_id = fields.Many2one(
         comodel_name="res.partner.bank",
-        domain="[('partner_id.ref_company_ids', 'in', [company_id])]",
+        domain="[('partner_id', '=', partner_id)]",
         string="Bank Account",
-        description="Company Bank Account Number to which the invoices of this "
+        help="Bank Account Number to which the invoices of this "
         "brand will be paid (for Customer Invoice and Vendor Credit Note)",
     )
 
-    @api.constrains("company_id", "partner_bank_id")
+    @api.constrains("partner_id", "partner_bank_id")
     def validate_partner_bank_id(self):
         for record in self:
             if (
                 record.partner_bank_id
-                and record.company_id
-                not in record.partner_bank_id.partner_id.ref_company_ids
+                and record.partner_id != record.partner_bank_id.partner_id
             ):
                 raise ValidationError(
                     _(
                         "The account selected for invoices payment does not "
-                        "belong to the same company as this brand."
+                        "belong to the same partner as this brand."
                     )
                 )
