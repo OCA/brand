@@ -6,7 +6,7 @@ from odoo.tests.common import SavepointCase
 
 class TestAccountInvoice(SavepointCase):
     def setUp(self):
-        super(TestAccountInvoice, self).setUp()
+        super().setUp()
         self.partner_id = self.env.ref("base.res_partner_12")
         self.invoice = self.env["account.invoice"].create(
             {"partner_id": self.partner_id.id, "type": "out_invoice"}
