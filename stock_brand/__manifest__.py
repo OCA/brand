@@ -3,17 +3,18 @@
 
 {
     "name": "Stock Brand",
-    "summary": "Manage branded delivery orders",
-    "version": "12.0.1.0.0",
-    "category": "Stock Management",
+    "summary": "Manage brands on stock picking documents",
+    "version": "18.0.1.0.0",
+    "category": "Warehouse",
     "website": "https://github.com/OCA/brand",
     "author": "Sunflower IT, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "depends": [
+        "sale_brand",
         "sale_stock",
     ],
     "data": [
-        "views/sale_views.xml",
+        "views/stock_picking_views.xml",
     ],
     "installable": True,
     "development_status": "Beta",
