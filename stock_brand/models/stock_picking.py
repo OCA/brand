@@ -5,8 +5,8 @@ from odoo import fields, models
 
 
 class StockPicking(models.Model):
-    _inherit = 'stock.picking'
+    _inherit = "stock.picking"
 
     brand_id = fields.Many2one(
-        'res.brand', string='Brand',
-        help="Brand to use for this picking")
+        "res.brand", string="Brand", help="Brand to use for this picking"
+    )
