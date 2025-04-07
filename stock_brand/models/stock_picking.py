@@ -5,8 +5,15 @@ from odoo import fields, models
 
 
 class StockPicking(models.Model):
-    _inherit = "stock.picking"
+    _name = "stock.picking"
+    _inherit = ["stock.picking", "res.brand.mixin"]
 
     brand_id = fields.Many2one(
-        "res.brand", string="Brand", help="Brand to use for this picking"
+        help="Brand to use for this picking.",
     )
+
+    def _is_brand_required(self):
+        self.ensure_one()
+        if self.picking_type_id.code in ("internal", "mrp_operation"):
+            return False
+        return super()._is_brand_required()
