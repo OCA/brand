@@ -1,3 +1,1 @@
-This module allows you to send or print branded delivery slips and
-operation documents. It adds a brand field on the procurement group to
-propagate the value on the stock picking documents.
+This module streamlines the branding of shipping documents. It ensures that the brand selected on a sale order is automatically applied to the corresponding stock picking documents, providing consistent branding on delivery slips and other related paperwork.
