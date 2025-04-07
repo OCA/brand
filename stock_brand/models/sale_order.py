@@ -5,11 +5,11 @@ from odoo import api, models
 
 
 class SaleOrder(models.Model):
-    _inherit = 'sale.order'
+    _inherit = "sale.order"
 
     @api.multi
     def action_confirm(self):
-        ret = super(SaleOrder, self).action_confirm()
+        ret = super().action_confirm()
         for order in self:
-            order.picking_ids.write({'brand_id': order.brand_id.id})
+            order.picking_ids.write({"brand_id": order.brand_id.id})
         return ret
