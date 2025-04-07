@@ -6,15 +6,15 @@
     "summary": "Manage branded delivery orders",
     "version": "12.0.1.0.0",
     "category": "Stock Management",
-    "website": "https://github.com/OCA/stock-logistics-workflow",
+    "website": "https://github.com/OCA/brand",
     "author": "Sunflower IT, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "depends": [
-        'sale_stock',
+        "sale_stock",
     ],
     "data": [
         "views/sale_views.xml",
     ],
     "installable": True,
-    "development_status": "Beta"
+    "development_status": "Beta",
 }
