@@ -2,13 +2,18 @@ from odoo.tests import common
 
 
 class TestSaleOrderStockPickingBrandID(common.TransactionCase):
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.partner = cls.env["res.partner"].create({"name": "Test Partner"})
+
     def test_stock_picking_brand_id(self):
         """
         Test stock.picking brand_id is same as sale.order's brand_id
         """
         product = self.env.ref("product.product_order_01")
         brand_id = self.env["res.brand"].create({"name": "Brand1"})
-        product.type = "product"
+        product.type = "consu"
         vals = {
             "partner_id": self.partner.id,
             "partner_invoice_id": self.partner.id,
@@ -27,7 +32,6 @@ class TestSaleOrderStockPickingBrandID(common.TransactionCase):
                     },
                 )
             ],
-            "pricelist_id": self.env.ref("product.list0").id,
             "picking_policy": "direct",
         }
         self.so = self.env["sale.order"].create(vals)
