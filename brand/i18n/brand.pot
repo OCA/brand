@@ -768,6 +768,11 @@ msgid "Partner"
 msgstr ""
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__partner_company_registry_placeholder
+msgid "Partner Company Registry Placeholder"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
 msgid "Partner Contracts"
 msgstr ""
