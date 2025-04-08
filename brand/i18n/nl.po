@@ -82,8 +82,8 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__lang
 msgid ""
-"All the emails and documents sent to this contact will be translated in this"
-" language."
+"All the emails and documents sent to this contact will be translated in this "
+"language."
 msgstr ""
 
 #. module: brand
@@ -235,7 +235,8 @@ msgstr ""
 #: model:ir.model.fields,help:brand.field_res_brand__peppol_eas
 msgid ""
 "Code used to identify the Endpoint for BIS Billing 3.0 and its derivatives.\n"
-"             List available at https://docs.peppol.eu/poacc/billing/3.0/codelist/eas/"
+"             List available at https://docs.peppol.eu/poacc/billing/3.0/"
+"codelist/eas/"
 msgstr ""
 
 #. module: brand
@@ -312,8 +313,7 @@ msgstr ""
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
 msgid ""
-"Configure branding of customer facing business documents (SO, invoices, "
-"etc)."
+"Configure branding of customer facing business documents (SO, invoices, etc)."
 msgstr ""
 
 #. module: brand
@@ -528,8 +528,8 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__phone_sanitized_blacklisted
 msgid ""
-"If the sanitized phone number is on the blacklist, the contact won't receive"
-" mass mailing sms anymore, from any list"
+"If the sanitized phone number is on the blacklist, the contact won't receive "
+"mass mailing sms anymore, from any list"
 msgstr ""
 
 #. module: brand
@@ -766,6 +766,11 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_id
 msgid "Partner"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__partner_company_registry_placeholder
+msgid "Partner Company Registry Placeholder"
 msgstr ""
 
 #. module: brand
@@ -1066,8 +1071,8 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__email_normalized
 msgid ""
-"This field is used to search on email address as the primary email field can"
-" contain more than strictly an email address."
+"This field is used to search on email address as the primary email field can "
+"contain more than strictly an email address."
 msgstr ""
 
 #. module: brand
@@ -1181,9 +1186,11 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__tz
 msgid ""
-"When printing documents and exporting/importing data, time values are computed according to this timezone.\n"
+"When printing documents and exporting/importing data, time values are "
+"computed according to this timezone.\n"
 "If the timezone is not set, UTC (Coordinated Universal Time) is used.\n"
-"Anywhere else, time values are computed according to the time offset of your web client."
+"Anywhere else, time values are computed according to the time offset of your "
+"web client."
 msgstr ""
 
 #. module: brand
