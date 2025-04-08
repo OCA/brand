@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-04-08 16:44+0000\n"
+"PO-Revision-Date: 2025-04-08 16:49+0000\n"
 "Last-Translator: Bosd <c5e2fd43-d292-4c90-9d1f-74ff3436329a@anonaddy.me>\n"
 "Language-Team: none\n"
 "Language: nl\n"
@@ -604,6 +604,10 @@ msgid ""
 "distinguish which number is blacklisted             when there is both a "
 "mobile and phone field in a model."
 msgstr ""
+"Geeft aan of een geblokkeerd, geschoond telefoonnummer een telefoonnummer "
+"is. \n"
+"Helpt onderscheiden welk nummer geblokkeerd is wanneer er zowel een mobiel- "
+"als een telefoonveld in een model aanwezig is."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__industry_id
@@ -623,17 +627,17 @@ msgstr "Factuur"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_edi_format_store
 msgid "Invoice Edi Format Store"
-msgstr ""
+msgstr "Opslagplaats Factuur Edi Formaat"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_sending_method
 msgid "Invoice sending"
-msgstr ""
+msgstr "Factuurverzending"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_template_pdf_report_id
 msgid "Invoice template"
-msgstr ""
+msgstr "Factuursjabloon"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_ids
@@ -653,7 +657,7 @@ msgstr "Is volger"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_peppol_edi_format
 msgid "Is Peppol Edi Format"
-msgstr ""
+msgstr "Is Peppol Edi Formaat"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_public
@@ -663,7 +667,7 @@ msgstr "Is openbaar"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_ubl_format
 msgid "Is Ubl Format"
-msgstr ""
+msgstr "Is Ubl Formaat"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_company
@@ -793,7 +797,7 @@ msgstr "Partner"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_company_registry_placeholder
 msgid "Partner Company Registry Placeholder"
-msgstr ""
+msgstr "Plaatshouder Handelsregister Partner"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
@@ -808,7 +812,7 @@ msgstr "Partnerlimiet"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_vat_placeholder
 msgid "Partner Vat Placeholder"
-msgstr ""
+msgstr "Plaatshouder Btw-nummer Partner"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__same_company_registry_partner_id
@@ -858,12 +862,12 @@ msgstr "Telefoon"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__phone_sanitized_blacklisted
 msgid "Phone Blacklisted"
-msgstr ""
+msgstr "Telefoonnummer Geblokkeerd"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__phone_mobile_search
 msgid "Phone/Mobile"
-msgstr ""
+msgstr "Telefoon/Mobiel"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_outbound_payment_method_line_id
@@ -871,6 +875,9 @@ msgid ""
 "Preferred payment method when buying from this vendor. This will be set by "
 "default on all outgoing payments created for this vendor"
 msgstr ""
+"Voorkeursbetaalmethode bij aankoop van deze leverancier. Dit wordt standaard "
+"ingesteld op alle uitgaande betalingen die voor deze leverancier worden "
+"aangemaakt."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_inbound_payment_method_line_id
@@ -878,6 +885,8 @@ msgid ""
 "Preferred payment method when selling to this customer. This will be set by "
 "default on all incoming payments created for this customer"
 msgstr ""
+"Voorkeursbetaalmethode bij verkoop aan deze klant. Dit wordt standaard "
+"ingesteld op alle inkomende betalingen die voor deze klant worden aangemaakt."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_product_pricelist
@@ -887,12 +896,12 @@ msgstr "Prijslijst"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_inbound_payment_method_line_id
 msgid "Property Inbound Payment Method Line"
-msgstr ""
+msgstr "Lijn Inkomende Betaalmethode (Eigenschap)"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_outbound_payment_method_line_id
 msgid "Property Outbound Payment Method Line"
-msgstr ""
+msgstr "Lijn Uitgaande Betaalmethode (Eigenschap)"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__ref
@@ -917,7 +926,7 @@ msgstr "Verantwoordelijke gebruiker"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_has_sms_error
 msgid "SMS Delivery error"
-msgstr ""
+msgstr "Fout bij SMS-bezorging"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_order_count
@@ -942,7 +951,7 @@ msgstr "Verkoper"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__phone_sanitized
 msgid "Sanitized Number"
-msgstr ""
+msgstr "Geschoond Nummer"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__invoice_warn
@@ -966,6 +975,7 @@ msgstr "Zelf"
 #: model:ir.model.fields,help:brand.field_res_brand__use_partner_credit_limit
 msgid "Set a value greater than 0.0 to activate a credit limit check"
 msgstr ""
+"Stel een waarde hoger dan 0.0 in om een kredietlimietcontrole te activeren"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_share
@@ -985,7 +995,7 @@ msgstr "Type aanmeldingstoken"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__specific_property_product_pricelist
 msgid "Specific Property Product Pricelist"
-msgstr ""
+msgstr "Specifieke Eigenschap Productprijslijst"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__starred_message_ids
@@ -1049,7 +1059,7 @@ msgstr "BTW nummer"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__vat_label
 msgid "Tax ID Label"
-msgstr ""
+msgstr "Label Btw-nummer"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__country_code
@@ -1283,4 +1293,4 @@ msgstr "bijv. https://www.odoo.com"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_edi_format
 msgid "eInvoice format"
-msgstr ""
+msgstr "eFactuur formaat"
