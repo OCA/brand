@@ -58,6 +58,7 @@ Contributors
 ------------
 
 - Souheil Bejaoui <souheil.bejaoui@acsone.eu>
+- Marie Lejeune <marie.lejeune@acsone.eu>
 
 Maintainers
 -----------
