@@ -9,8 +9,9 @@
             <xpath expr="/form/sheet/group" position="inside">
                 <group name="analytic">
                     <field
-                        name="analytic_account_id"
+                        name="analytic_distribution"
                         groups="analytic.group_analytic_accounting"
+                        widget="analytic_distribution"
                     />
                 </group>
             </xpath>
@@ -22,8 +23,9 @@
         <field name="arch" type="xml">
             <xpath expr="//list" position="inside">
                 <field
-                    name="analytic_account_id"
+                    name="analytic_distribution"
                     groups="analytic.group_analytic_accounting"
+                    widget="analytic_distribution"
                 />
             </xpath>
         </field>
