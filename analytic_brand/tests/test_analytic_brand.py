@@ -22,18 +22,18 @@ class TestResBrand(BaseCommon):
             }
         )
 
-        # Create a brand with the analytic account
+        # Create a brand with the analytic distribution: 100% on the analytic account
         self.res_brand = self.env["res.brand"].create(
             {
                 "name": "Test Brand",
-                "analytic_account_id": self.analytic_account.id,
+                "analytic_distribution": {self.analytic_account.id: 100.0},
             }
         )
 
     def test_analytic_account_assignment(self):
         """Test if the analytic_account_id is assigned correctly"""
         self.assertEqual(
-            self.res_brand.analytic_account_id,
-            self.analytic_account,
-            "The analytic_account_id field should be assigned correctly.",
+            self.res_brand.analytic_distribution,
+            {str(self.analytic_account.id): 100.0},
+            "The analytic_distribution field should be assigned correctly.",
         )
