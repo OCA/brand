@@ -1,0 +1,11 @@
+<odoo>
+    <record id="ir_rule_mail_template_allowed_brands" model="ir.rule">
+        <field name="model_id" ref="mail.model_mail_template" />
+        <field name="name">Brand Specific Mail Templates</field>
+        <field name="global" eval="True" />
+        <field eval="0" name="perm_unlink" />
+        <field eval="0" name="perm_write" />
+        <field eval="1" name="perm_read" />
+        <field eval="0" name="perm_create" />
+    </record>
+</odoo>
