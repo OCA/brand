@@ -5,16 +5,16 @@
     "name": "Email Brand",
     "summary": """
         If a model has a brand defined to it, emails send from this model will be
-        branded accordingly. If the brand module gets implemented more broadly this
-        module could need extension to work properly.
+        branded accordingly.
     """,
     "license": "AGPL-3",
-    "author": "Odoo Community Association (OCA), Gert Pellin / Snakebyte Development",
+    "author": "Odoo Community Association (OCA), Gert Pellin / Snakebyte Development, bosd",
     "website": "https://github.com/OCA/brand",
     "version": "15.0.1.0.1",
     "depends": ["mail", "brand"],
     "data": [
         "data/mail_template.xml",
+        "wizard/mail_compose_message_view.xml",
     ],
-    "maintainers": ["switch87"],
+    "maintainers": ["switch87", "bosd"],
 }

@@ -32,9 +32,7 @@ class BrandBinary(Binary):
             response = http.send_file(placeholder(imgname + imgext))
         else:
             try:
-                has_brand = (
-                    int(kw["has_brand"]) if kw and kw.get("has_brand") else False
-                )
+                has_brand = int(kw["bstyle"]) if kw and kw.get("bstyle") else False
                 if has_brand:
                     registry = odoo.modules.registry.Registry(dbname)
                     with registry.cursor() as cr:
