@@ -16,22 +16,30 @@ class TestMailComposeMessage(MailBrandCommon):
 
     def test_action_send_mail_context(self):
         recipient = self.env["res.partner"].create({"name": "Test Recipient"})
+        existing_model_id = 1
+        record = self.env["ir.model"].browse(existing_model_id)
+
         # Create the wizard with a brand and a recipient
-        wizard = self.env["mail.compose.message"].create(
-            {
-                "brand_id": self.test_brand.id,
-                "partner_ids": [(6, 0, [recipient.id])],
-                "subject": "Test Subject",
-                "body": "<p>Test body</p>",
-            }
-        )
-        # Modify the environment's context directly
-        self.env = self.env(
-            context=dict(self.env.context, email_brand=self.test_brand.id)
+        wizard = (
+            self.env["mail.compose.message"]
+            .with_context(
+                active_model="ir.model",
+                active_ids=[record.id],
+                active_id=record.id,
+                email_brand=self.test_brand.id,
+            )
+            .create(
+                {
+                    "brand_id": self.test_brand.id,
+                    "partner_ids": [(6, 0, [recipient.id])],
+                    "subject": "Test Subject",
+                    "body": "<p>Test body</p>",
+                }
+            )
         )
         wizard.action_send_mail()
         self.assertEqual(
-            self.env.context.get("email_brand"),
+            wizard.env.context.get("email_brand"),
             self.test_brand.id,
             "Email brand should be in context",
         )

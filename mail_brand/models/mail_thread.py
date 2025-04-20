@@ -40,7 +40,7 @@ class MailThread(models.AbstractModel):
     def _format_website_url(self, website):
         if website:
             return (
-                "https://%s" % website
+                f"https://{website}"
                 if not website.lower().startswith(("http:", "https:"))
                 else website
             )
