@@ -8,7 +8,7 @@ from odoo.tests.common import TransactionCase, tagged
 class MailBrandCommon(TransactionCase):
     @classmethod
     def setUpClass(cls):
-        super(MailBrandCommon, cls).setUpClass()
+        super().setUpClass()
         cls.module_name = "mail_brand"
         cls.icon_path = get_resource_path(
             cls.module_name, "static", "description", "icon.png"

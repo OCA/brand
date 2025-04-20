@@ -6,7 +6,6 @@ from odoo.tools import image_process
 
 
 class ResBrand(models.Model):
-
     _inherit = "res.brand"
 
     logo_web = fields.Binary(compute="_compute_logo_web", store=True, attachment=False)
