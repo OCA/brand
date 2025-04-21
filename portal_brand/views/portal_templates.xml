@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template
+        id="frontend_layout_brand"
+        name="Main Frontend Layout - Brand Logo"
+        inherit_id="portal.frontend_layout"
+        priority="20"
+    >
+        <xpath
+            expr="//div[@id='wrapwrap']/header/nav/div/a[@class='navbar-brand logo']/img"
+            position="attributes"
+        >
+            <attribute
+                name="t-att-src"
+            >'/logo.png?company=%s&amp;bstyle=1' % res_company.id</attribute>
+        </xpath>
+    </template>
+</odoo>

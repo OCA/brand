@@ -1,0 +1,1 @@
+This module, `portal_brand`, customizes the Odoo portal layout to display brand-specific logos.  It modifies the default logo URL in the portal header to use a custom controller, allowing the display of a logo associated with the brand, if available, instead of the default company logo.  This enhancement provides a more branded experience for users accessing the portal.
