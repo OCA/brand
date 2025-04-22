@@ -5,7 +5,6 @@ from odoo import api, models
 
 
 class ContractContract(models.Model):
-
     _inherit = "contract.contract"
 
     @api.model

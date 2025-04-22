@@ -8,7 +8,7 @@ _logger = logging.getLogger(__name__)
 
 def post_init_hook(cr, registry):
     """Set Brand for existing forecasts."""
-    _logger.info('Set Brand for existing forecasts')
+    _logger.info("Set Brand for existing forecasts")
     cr.execute(
         """
             UPDATE contract_line_forecast_period AS forecast

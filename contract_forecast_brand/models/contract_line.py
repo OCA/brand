@@ -5,7 +5,6 @@ from odoo import api, models
 
 
 class ContractLine(models.Model):
-
     _inherit = "contract.line"
 
     @api.multi
