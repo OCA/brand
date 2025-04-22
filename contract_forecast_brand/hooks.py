@@ -6,10 +6,10 @@ import logging
 _logger = logging.getLogger(__name__)
 
 
-def post_init_hook(cr, registry):
+def post_init_hook(env):
     """Set Brand for existing forecasts."""
     _logger.info("Set Brand for existing forecasts")
-    cr.execute(
+    env.cr.execute(
         """
             UPDATE contract_line_forecast_period AS forecast
             SET brand_id=contract.brand_id
