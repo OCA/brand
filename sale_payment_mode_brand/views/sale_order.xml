@@ -6,16 +6,11 @@
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="account_payment_sale.view_order_form" />
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='payment_mode_id']" position="before">
-                <field
-                    name="allowed_payment_mode_ids"
-                    widget="many2many_tags"
-                    invisible="1"
-                />
-            </xpath>
             <xpath expr="//field[@name='payment_mode_id']" position="attributes">
                 <attribute
                     name="domain"
+                    operation="domain_add"
+                    join_operator="AND"
                 >[('id', 'in', allowed_payment_mode_ids), ('payment_type', '=', 'inbound')]</attribute>
             </xpath>
         </field>
