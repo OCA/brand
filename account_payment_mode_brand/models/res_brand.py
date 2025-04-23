@@ -5,7 +5,6 @@ from odoo import fields, models
 
 
 class ResBrand(models.Model):
-
     _inherit = "res.brand"
 
     allowed_payment_mode_ids = fields.Many2many(
