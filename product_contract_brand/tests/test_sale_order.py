@@ -7,9 +7,10 @@ from odoo.addons.product_contract.tests.test_sale_order import (
 
 
 class TestSaleOrder(TestContractSaleOrder):
-    def setUp(self):
-        super().setUp()
-        self.brand_id = self.env["res.brand"].create({"name": "brand"})
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.brand_id = cls.env["res.brand"].create({"name": "brand"})
 
     def test_action_confirm_branded_sale(self):
         """It should create a branded contract based on the sale order brand"""
