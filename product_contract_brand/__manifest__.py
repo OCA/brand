@@ -7,8 +7,7 @@
         This addon propagate the brand from sale order to contract""",
     "version": "12.0.1.0.0",
     "license": "AGPL-3",
-    "author": "ACSONE SA/NV,"
-              "Odoo Community Association (OCA)",
-    "website": "https://github.com/OCA/contract",
+    "author": "ACSONE SA/NV," "Odoo Community Association (OCA)",
+    "website": "https://github.com/OCA/brand",
     "depends": ["product_contract", "sale_brand", "contract_brand"],
 }
