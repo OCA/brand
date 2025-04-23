@@ -5,56 +5,58 @@ from odoo.tests.common import TransactionCase
 
 
 class TestBasePaymentModeBrand(TransactionCase):
-    def setUp(self):
-        super().setUp()
-        self.manual_out = self.env.ref("account.account_payment_method_manual_out")
-        self.company = self.env.user.company_id
-        self.journal_1 = self.env["account.journal"].create(
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.manual_out = cls.env.ref("account.account_payment_method_manual_out")
+        cls.company = cls.env.user.company_id
+        cls.journal_1 = cls.env["account.journal"].create(
             {
                 "name": "J1",
                 "code": "J1",
                 "type": "bank",
-                "company_id": self.company.id,
+                "company_id": cls.company.id,
                 "bank_acc_number": "123456",
             }
         )
-        self.payment_mode_1 = self.env["account.payment.mode"].create(
+        cls.payment_mode_1 = cls.env["account.payment.mode"].create(
             {
                 "name": "Customer To Bank 1",
                 "bank_account_link": "variable",
-                "payment_method_id": self.manual_out.id,
+                "payment_method_id": cls.manual_out.id,
                 "show_bank_account_from_journal": True,
-                "company_id": self.company.id,
-                "fixed_journal_id": self.journal_1.id,
-                "variable_journal_ids": [(6, 0, [self.journal_1.id])],
+                "company_id": cls.company.id,
+                "fixed_journal_id": cls.journal_1.id,
+                "variable_journal_ids": [(6, 0, [cls.journal_1.id])],
             }
         )
-        self.payment_mode_2 = self.env["account.payment.mode"].create(
+        cls.payment_mode_2 = cls.env["account.payment.mode"].create(
             {
                 "name": "Customer To Bank 2",
                 "bank_account_link": "variable",
-                "payment_method_id": self.manual_out.id,
+                "payment_method_id": cls.manual_out.id,
                 "show_bank_account_from_journal": True,
-                "company_id": self.company.id,
-                "fixed_journal_id": self.journal_1.id,
-                "variable_journal_ids": [(6, 0, [self.journal_1.id])],
+                "company_id": cls.company.id,
+                "fixed_journal_id": cls.journal_1.id,
+                "variable_journal_ids": [(6, 0, [cls.journal_1.id])],
             }
         )
-        self.partner = self.env["res.partner"].create(
+        cls.partner = cls.env["res.partner"].create(
             {
                 "name": "Customer",
-                "customer_payment_mode_id": self.payment_mode_1.id,
+                "customer_payment_mode_id": cls.payment_mode_1.id,
             }
         )
-        self.brand = self.env["res.brand"].create({"name": "brand"})
-        self.brand.allowed_payment_mode_ids = self.payment_mode_1
+        cls.brand = cls.env["res.brand"].create({"name": "brand"})
+        cls.brand.allowed_payment_mode_ids = cls.payment_mode_1
 
 
 class TestAccountPaymentModeBrand(TestBasePaymentModeBrand):
-    def setUp(self):
-        super().setUp()
-        self.invoice = self.env["account.invoice"].create(
-            {"partner_id": self.partner.id, "brand_id": self.brand.id}
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.invoice = cls.env["account.move"].create(
+            {"partner_id": cls.partner.id, "brand_id": cls.brand.id}
         )
 
     def test_account_invoice_allowed_payment_mode(self):
