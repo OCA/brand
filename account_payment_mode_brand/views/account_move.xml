@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2020 ACSONE SA/NV
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="account_move_form_view">
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account_payment_partner.view_move_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='payment_mode_id']" position="attributes">
+                <attribute name="domain" operation="domain_add" join_operator="AND">
+            [('id', 'in', allowed_payment_mode_ids)]
+        </attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
