@@ -6,10 +6,8 @@ from odoo.tests.common import TransactionCase
 
 class TestBasePaymentModeBrand(TransactionCase):
     def setUp(self):
-        super(TestBasePaymentModeBrand, self).setUp()
-        self.manual_out = self.env.ref(
-            "account.account_payment_method_manual_out"
-        )
+        super().setUp()
+        self.manual_out = self.env.ref("account.account_payment_method_manual_out")
         self.company = self.env.user.company_id
         self.journal_1 = self.env["account.journal"].create(
             {
@@ -54,17 +52,15 @@ class TestBasePaymentModeBrand(TransactionCase):
 
 class TestAccountPaymentModeBrand(TestBasePaymentModeBrand):
     def setUp(self):
-        super(TestAccountPaymentModeBrand, self).setUp()
+        super().setUp()
         self.invoice = self.env["account.invoice"].create(
             {"partner_id": self.partner.id, "brand_id": self.brand.id}
         )
 
     def test_account_invoice_allowed_payment_mode(self):
-        self.assertEqual(
-            self.invoice.allowed_payment_mode_ids, self.payment_mode_1
-        )
+        self.assertEqual(self.invoice.allowed_payment_mode_ids, self.payment_mode_1)
         self.invoice.brand_id = False
         self.assertEqual(
             self.invoice.allowed_payment_mode_ids,
-            self.env['account.payment.mode'].search([]),
+            self.env["account.payment.mode"].search([]),
         )
