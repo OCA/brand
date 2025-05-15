@@ -15,6 +15,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__supplier_invoice_count
+msgid "# Vendor Bills"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__type
 msgid ""
 "- Contact: Use this to organize the contact details of employees of a given "
@@ -836,6 +841,11 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__self
 msgid "Self"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__use_partner_credit_limit
+msgid "Set a value greater than 0.0 to activate a credit limit check"
 msgstr ""
 
 #. module: brand

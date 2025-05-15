@@ -17,11 +17,19 @@ msgstr ""
 "X-Generator: Weblate 5.6.2\n"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__supplier_invoice_count
+msgid "# Vendor Bills"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__type
 msgid ""
-"- Contact: Use this to organize the contact details of employees of a given company (e.g. CEO, CFO, ...).\n"
-"- Invoice Address: Preferred address for all invoices. Selected by default when you invoice an order that belongs to this company.\n"
-"- Delivery Address: Preferred address for all deliveries. Selected by default when you deliver an order that belongs to this company.\n"
+"- Contact: Use this to organize the contact details of employees of a given "
+"company (e.g. CEO, CFO, ...).\n"
+"- Invoice Address: Preferred address for all invoices. Selected by default "
+"when you invoice an order that belongs to this company.\n"
+"- Delivery Address: Preferred address for all deliveries. Selected by "
+"default when you deliver an order that belongs to this company.\n"
 "- Other: Other address for the company (e.g. subsidiary, ...)"
 msgstr ""
 "- Contact: Gebruik dit om de contactgegevens van werknemers van een bepaald "
@@ -90,8 +98,8 @@ msgstr "Adres type"
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__lang
 msgid ""
-"All the emails and documents sent to this contact will be translated in this"
-" language."
+"All the emails and documents sent to this contact will be translated in this "
+"language."
 msgstr ""
 "Alle e-mails en documenten die naar deze contactpersoon worden verzonden, "
 "worden in deze taal vertaald."
@@ -228,7 +236,8 @@ msgstr "Stad"
 #: model:ir.model.fields,help:brand.field_res_brand__peppol_eas
 msgid ""
 "Code used to identify the Endpoint for BIS Billing 3.0 and its derivatives.\n"
-"             List available at https://docs.peppol.eu/poacc/billing/3.0/codelist/eas/"
+"             List available at https://docs.peppol.eu/poacc/billing/3.0/"
+"codelist/eas/"
 msgstr ""
 "Code die wordt gebruikt om het eindpunt voor BIS Billing 3.0 en zijn "
 "derivaten te identificeren.\n"
@@ -298,8 +307,7 @@ msgstr "Configuratie-instellingen"
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
 msgid ""
-"Configure branding of customer facing business documents (SO, invoices, "
-"etc)."
+"Configure branding of customer facing business documents (SO, invoices, etc)."
 msgstr ""
 "Configureer de branding van klantgerichte bedrijfsdocumenten (offertes, "
 "facturen, enz.)."
@@ -871,6 +879,11 @@ msgid "Self"
 msgstr "Zelf"
 
 #. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__use_partner_credit_limit
+msgid "Set a value greater than 0.0 to activate a credit limit check"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_share
 msgid "Share Partner"
 msgstr "Partner delen"
@@ -1036,8 +1049,8 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__email_normalized
 msgid ""
-"This field is used to search on email address as the primary email field can"
-" contain more than strictly an email address."
+"This field is used to search on email address as the primary email field can "
+"contain more than strictly an email address."
 msgstr ""
 "Dit veld wordt gebruikt om te zoeken op e-mailadres, aangezien het primaire "
 "e-mailveld meer kan bevatten dan alleen een e-mailadres."
@@ -1161,9 +1174,11 @@ msgstr "Communicatiegeschiedenis website"
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__tz
 msgid ""
-"When printing documents and exporting/importing data, time values are computed according to this timezone.\n"
+"When printing documents and exporting/importing data, time values are "
+"computed according to this timezone.\n"
 "If the timezone is not set, UTC (Coordinated Universal Time) is used.\n"
-"Anywhere else, time values are computed according to the time offset of your web client."
+"Anywhere else, time values are computed according to the time offset of your "
+"web client."
 msgstr ""
 "Bij het afdrukken van documenten en het exporteren/importeren van gegevens "
 "worden tijdwaarden berekend volgens deze tijdzone.\n"
