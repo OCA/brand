@@ -1,7 +1,6 @@
-from odoo import fields, models
+from odoo import models
 
 
-class ProductPricelistPrintBrand(models.TransientModel):
-    _inherit = "product.pricelist.print"
-
-    brand_id = fields.Many2one("res.brand")
+class ProductPricelistPrint(models.TransientModel):
+    _name = "product.pricelist.print"
+    _inherit = ["product.pricelist.print", "res.brand.mixin"]
