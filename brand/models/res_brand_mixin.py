@@ -28,6 +28,17 @@ class ResBrandMixin(models.AbstractModel):
         compute="_compute_is_brand_required",
     )
 
+    @api.model
+    def default_get(self, fields_list):
+        defaults = super().default_get(fields_list)
+        if "company_id" in fields_list and not defaults.get("company_id"):
+            company_field = self._fields.get("company_id")
+            if company_field is not None and not (
+                company_field.related and company_field.readonly
+            ):
+                defaults["company_id"] = self.env.company.id
+        return defaults
+
     @api.depends("company_id")
     def _compute_is_brand_required(self):
         for record in self:
