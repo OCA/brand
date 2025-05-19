@@ -14,6 +14,6 @@ class StockPicking(models.Model):
 
     def _is_brand_required(self):
         self.ensure_one()
-        if self.picking_type_id.code in ("internal", "mrp_operation"):
+        if self.picking_type_id.code == "internal":
             return False
         return super()._is_brand_required()
