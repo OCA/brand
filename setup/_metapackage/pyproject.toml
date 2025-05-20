@@ -1,12 +1,13 @@
 [project]
 name = "odoo-addons-oca-brand"
-version = "18.0.20250424.0"
+version = "18.0.20250520.0"
 dependencies = [
     "odoo-addon-account_brand==18.0.*",
     "odoo-addon-analytic_brand==18.0.*",
     "odoo-addon-brand==18.0.*",
     "odoo-addon-product_brand==18.0.*",
     "odoo-addon-sale_brand==18.0.*",
+    "odoo-addon-stock_brand==18.0.*",
 ]
 classifiers=[
     "Programming Language :: Python",
