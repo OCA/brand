@@ -19,6 +19,7 @@ setuptools.setup(
         'odoo-addon-product_brand_stock_account>=16.0dev,<16.1dev',
         'odoo-addon-product_brand_tag>=16.0dev,<16.1dev',
         'odoo-addon-sale_brand>=16.0dev,<16.1dev',
+        'odoo-addon-stock_brand>=16.0dev,<16.1dev',
     ],
     classifiers=[
         'Programming Language :: Python',
