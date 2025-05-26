@@ -6,7 +6,7 @@
     "summary": """
         This addon limit payment mode selection is contract to the brand
         allowed payment mode.""",
-    "version": "12.0.1.0.0",
+    "version": "18.0.1.0.0",
     "license": "AGPL-3",
     "author": "ACSONE SA/NV," "Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/brand",
