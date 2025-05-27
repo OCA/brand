@@ -28,8 +28,8 @@ Contract Payment Mode Brand
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This addon limit payment mode selection is contract to the brand allowed
-payment mode.
+This addon limits payment mode selection in contract to the brand's
+allowed.
 
 **Table of contents**
 

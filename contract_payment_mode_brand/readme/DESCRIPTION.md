@@ -1,2 +1,1 @@
-This addon limit payment mode selection is contract to the brand allowed
-payment mode.
+This addon limits payment mode selection in contract to the brand's allowed.
