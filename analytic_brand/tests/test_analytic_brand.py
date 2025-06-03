@@ -1,8 +1,15 @@
 # Copyright 2019 ACSONE SA/NV
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+from odoo.tests.common import tagged
+
 from odoo.addons.base.tests.common import BaseCommon
 
 
+# Run tests in post-install because creating a res.brand creates a res.partner
+# And there is an issue creating a new partner with required field autopost_bills
+# in addon account (default value not set up because this addon doesn't depend
+# on account)
+@tagged("post_install", "-at_install")
 class TestResBrand(BaseCommon):
     @classmethod
     def setUpClass(self):
