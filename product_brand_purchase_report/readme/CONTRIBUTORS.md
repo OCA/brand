@@ -1,1 +1,3 @@
 - Quentin Groulard \<quentin.groulard@acsone.eu\>
+- `Ahkio Consulting Oy <https://ahkio.com>`__:
+  - Johan Tötterman <johan@ahkio.com>
