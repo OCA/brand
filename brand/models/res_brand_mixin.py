@@ -53,34 +53,33 @@ class ResBrandMixin(models.AbstractModel):
     def _get_view(self, view_id=None, view_type="form", **options):
         """set visibility and requirement rules"""
         arch, view = super()._get_view(view_id, view_type, **options)
-        if self.env["res.brand"].check_access("read"):
-            if view.type in ["form", "list"]:
-                brand_node = next(
-                    iter(
-                        arch.xpath(
-                            '//field[@name="brand_id"][not(ancestor::*'
-                            '[@widget="one2many" or @widget="many2many"])]'
-                        )
-                    ),
-                    None,
+        if view.type in ["form", "list"]:
+            brand_node = next(
+                iter(
+                    arch.xpath(
+                        '//field[@name="brand_id"][not(ancestor::*'
+                        '[@widget="one2many" or @widget="many2many"])]'
+                    )
+                ),
+                None,
+            )
+
+            if brand_node is not None:
+                brand_node.addprevious(
+                    E.field(
+                        name="brand_use_level",
+                        invisible="True",
+                        column_invisible="True",
+                    )
                 )
 
-                if brand_node is not None:
-                    brand_node.addprevious(
-                        E.field(
-                            name="brand_use_level",
-                            invisible="True",
-                            column_invisible="True",
-                        )
-                    )
-
-                    brand_node.set(
-                        "invisible",
-                        f"brand_use_level == '{BRAND_USE_LEVEL_NO_USE_LEVEL}'",
-                    )
-                    brand_node.set(
-                        "required",
-                        f"brand_use_level == '{BRAND_USE_LEVEL_REQUIRED_LEVEL}'",
-                    )
+                brand_node.set(
+                    "invisible",
+                    f"brand_use_level == '{BRAND_USE_LEVEL_NO_USE_LEVEL}'",
+                )
+                brand_node.set(
+                    "required",
+                    f"brand_use_level == '{BRAND_USE_LEVEL_REQUIRED_LEVEL}'",
+                )
 
         return arch, view
