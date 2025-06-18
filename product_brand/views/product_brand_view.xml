@@ -125,10 +125,9 @@
         <field name="model">product.template</field>
         <field name="inherit_id" ref="product.product_template_form_view" />
         <field name="arch" type="xml">
-            <field name="sale_ok" position="before">
+            <xpath expr="//field[@name='sale_ok']/.." position="before">
                 <field name="product_brand_id" placeholder="Brand" />
-                <span />
-            </field>
+            </xpath>
         </field>
     </record>
     <record id="view_product_template_kanban_brand" model="ir.ui.view">
