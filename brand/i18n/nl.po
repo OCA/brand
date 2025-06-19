@@ -67,11 +67,6 @@ msgid "Activity Type Icon"
 msgstr "Pictogram voor activiteitstype"
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__additional_info
-msgid "Additional info"
-msgstr "Extra info"
-
-#. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "Address"
 msgstr "Adres"
@@ -154,16 +149,6 @@ msgstr "Barcode"
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_blacklisted
 msgid "Blacklist"
 msgstr "Zwarte lijst"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__mobile_blacklisted
-msgid "Blacklisted Phone Is Mobile"
-msgstr "Zwarte lijst Telefoon is mobiel"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__phone_blacklisted
-msgid "Blacklisted Phone is Phone"
-msgstr "Zwarte lijst Telefoon is Telefoon"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_bounce
@@ -297,11 +282,6 @@ msgstr "Bedrijfsnaam Entiteit"
 #: model:ir.model.fields,field_description:brand.field_res_brand__company_type
 msgid "Company Type"
 msgstr "Bedrijfstype"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__partner_gid
-msgid "Company database ID"
-msgstr "Bedrijfs database id"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__contact_address
@@ -449,15 +429,6 @@ msgid "Employee"
 msgstr "Werknemer"
 
 #. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__phone_sanitized
-msgid ""
-"Field used to store sanitized phone number. Helps speeding up searches and "
-"comparisons."
-msgstr ""
-"Veld gebruikt om opgeschoond telefoonnummer op te slaan. Helpt bij het "
-"versnellen van zoekopdrachten en vergelijkingen."
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__fiscal_country_codes
 msgid "Fiscal Country Codes"
 msgstr "Fiscale landcodes"
@@ -534,7 +505,6 @@ msgstr "Indien aangevinkt, vereisen nieuwe berichten uw aandacht."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_has_error
-#: model:ir.model.fields,help:brand.field_res_brand__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr "Indien aangevinkt, hebben sommige berichten een leveringsfout."
 
@@ -546,15 +516,6 @@ msgid ""
 msgstr ""
 "Als het e-mailadres op de zwarte lijst staat, ontvangt de contactpersoon "
 "geen massamailings meer, van welke lijst dan ook."
-
-#. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__phone_sanitized_blacklisted
-msgid ""
-"If the sanitized phone number is on the blacklist, the contact won't receive "
-"mass mailing sms anymore, from any list"
-msgstr ""
-"Als het opgeschoonde telefoonnummer op de zwarte lijst staat, ontvangt het "
-"contact geen massale sms-berichten meer van welke lijst dan ook"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__ignore_abnormal_invoice_amount
@@ -590,29 +551,6 @@ msgstr "Afbeelding 256"
 #: model:ir.model.fields,field_description:brand.field_res_brand__image_512
 msgid "Image 512"
 msgstr "Afbeelding 512"
-
-#. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__mobile_blacklisted
-msgid ""
-"Indicates if a blacklisted sanitized phone number is a mobile number. Helps "
-"distinguish which number is blacklisted             when there is both a "
-"mobile and phone field in a model."
-msgstr ""
-"Geeft aan of een op de zwarte lijst geplaatst, gezuiverd telefoonnummer een "
-"mobiel nummer is. Helpt te onderscheiden welk nummer op de zwarte lijst "
-"staat wanneer er zowel een mobiel als een telefoonveld in een model is."
-
-#. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__phone_blacklisted
-msgid ""
-"Indicates if a blacklisted sanitized phone number is a phone number. Helps "
-"distinguish which number is blacklisted             when there is both a "
-"mobile and phone field in a model."
-msgstr ""
-"Geeft aan of een geblokkeerd, geschoond telefoonnummer een telefoonnummer "
-"is. \n"
-"Helpt onderscheiden welk nummer geblokkeerd is wanneer er zowel een mobiel- "
-"als een telefoonveld in een model aanwezig is."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__industry_id
@@ -870,16 +808,6 @@ msgid "Phone"
 msgstr "Telefoon"
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__phone_sanitized_blacklisted
-msgid "Phone Blacklisted"
-msgstr "Telefoonnummer Geblokkeerd"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__phone_mobile_search
-msgid "Phone/Mobile"
-msgstr "Telefoon/Mobiel"
-
-#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_outbound_payment_method_line_id
 msgid ""
 "Preferred payment method when buying from this vendor. This will be set by "
@@ -934,11 +862,6 @@ msgid "Responsible User"
 msgstr "Verantwoordelijke gebruiker"
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__message_has_sms_error
-msgid "SMS Delivery error"
-msgstr "Fout bij SMS-bezorging"
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_order_count
 msgid "Sale Order Count"
 msgstr "Aantal verkooporders"
@@ -957,11 +880,6 @@ msgstr "Verkoopwaarschuwingen"
 #: model:ir.model.fields,field_description:brand.field_res_brand__user_id
 msgid "Salesperson"
 msgstr "Verkoper"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__phone_sanitized
-msgid "Sanitized Number"
-msgstr "Geschoond Nummer"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__invoice_warn
@@ -1327,3 +1245,61 @@ msgstr "bijv. https://www.odoo.com"
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_edi_format
 msgid "eInvoice format"
 msgstr "eFactuur formaat"
+
+#~ msgid "Additional info"
+#~ msgstr "Extra info"
+
+#~ msgid "Blacklisted Phone Is Mobile"
+#~ msgstr "Zwarte lijst Telefoon is mobiel"
+
+#~ msgid "Blacklisted Phone is Phone"
+#~ msgstr "Zwarte lijst Telefoon is Telefoon"
+
+#~ msgid "Company database ID"
+#~ msgstr "Bedrijfs database id"
+
+#~ msgid ""
+#~ "Field used to store sanitized phone number. Helps speeding up searches "
+#~ "and comparisons."
+#~ msgstr ""
+#~ "Veld gebruikt om opgeschoond telefoonnummer op te slaan. Helpt bij het "
+#~ "versnellen van zoekopdrachten en vergelijkingen."
+
+#~ msgid ""
+#~ "If the sanitized phone number is on the blacklist, the contact won't "
+#~ "receive mass mailing sms anymore, from any list"
+#~ msgstr ""
+#~ "Als het opgeschoonde telefoonnummer op de zwarte lijst staat, ontvangt "
+#~ "het contact geen massale sms-berichten meer van welke lijst dan ook"
+
+#~ msgid ""
+#~ "Indicates if a blacklisted sanitized phone number is a mobile number. "
+#~ "Helps distinguish which number is blacklisted             when there is "
+#~ "both a mobile and phone field in a model."
+#~ msgstr ""
+#~ "Geeft aan of een op de zwarte lijst geplaatst, gezuiverd telefoonnummer "
+#~ "een mobiel nummer is. Helpt te onderscheiden welk nummer op de zwarte "
+#~ "lijst staat wanneer er zowel een mobiel als een telefoonveld in een model "
+#~ "is."
+
+#~ msgid ""
+#~ "Indicates if a blacklisted sanitized phone number is a phone number. "
+#~ "Helps distinguish which number is blacklisted             when there is "
+#~ "both a mobile and phone field in a model."
+#~ msgstr ""
+#~ "Geeft aan of een geblokkeerd, geschoond telefoonnummer een telefoonnummer "
+#~ "is. \n"
+#~ "Helpt onderscheiden welk nummer geblokkeerd is wanneer er zowel een "
+#~ "mobiel- als een telefoonveld in een model aanwezig is."
+
+#~ msgid "Phone Blacklisted"
+#~ msgstr "Telefoonnummer Geblokkeerd"
+
+#~ msgid "Phone/Mobile"
+#~ msgstr "Telefoon/Mobiel"
+
+#~ msgid "SMS Delivery error"
+#~ msgstr "Fout bij SMS-bezorging"
+
+#~ msgid "Sanitized Number"
+#~ msgstr "Geschoond Nummer"
