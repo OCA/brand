@@ -1,0 +1,25 @@
+<odoo>
+  <template id="product_brand_block" inherit_id="website_sale.product">
+    <xpath expr="//h1[@itemprop='name']" position="after">
+      <t t-if="product.product_brand_id">
+        <div class="d-flex align-items-center gap-2 my-2">
+          <a t-att-href="'/shop/brands?brand=' + str(product.product_brand_id.id)"
+             class="d-flex align-items-center text-decoration-none brand-hover-block">
+            <t t-set="brand_name" t-value="product.product_brand_id.name"/>
+            <t t-set="tooltip_text" t-value="'Open all products of brand %s' % brand_name"/>
+            <t t-att-title="tooltip_text" t-translation="on"/>
+            <t t-if="product.product_brand_id.logo">
+              <img t-att-src="'/web/image/product.brand/' + str(product.product_brand_id.id) + '/logo'"
+                   alt="Brand Logo"
+                   t-att-alt="'Brand Logo'"
+                   t-translation="on"
+                   class="img-fluid me-2"
+                   style="max-height: 40px; max-width: 80px; object-fit: contain;"/>
+            </t>
+            <h5 class="mb-0" t-esc="brand_name" t-translation="on"/>
+          </a>
+        </div>
+      </t>
+    </xpath>
+  </template>
+</odoo>

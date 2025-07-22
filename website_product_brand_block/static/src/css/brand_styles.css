@@ -1,0 +1,17 @@
+.brand-hover-block {
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  padding: 6px 8px;
+  border-radius: 4px;
+  color: #505050;
+  mix-blend-mode: multiply;
+}
+.brand-hover-block:hover {
+  transform: scale(1.04);
+  background-color: rgba(255, 253, 80, 0.2);
+}
+
+.brand-hover-block img {
+  filter: grayscale(100%);
+  mix-blend-mode: multiply;
+
+}
