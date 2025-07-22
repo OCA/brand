@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-05-29 16:26+0000\n"
+"PO-Revision-Date: 2025-07-22 16:00+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -19,12 +19,12 @@ msgstr ""
 #. module: analytic_brand
 #: model:ir.model.fields,field_description:analytic_brand.field_res_brand__analytic_account_id
 msgid "Analytic Account"
-msgstr ""
+msgstr "Conto analitico"
 
 #. module: analytic_brand
 #: model:ir.model,name:analytic_brand.model_res_brand
 msgid "Brand"
-msgstr ""
+msgstr "Marca"
 
 #. module: analytic_brand
 #: model:ir.model.fields,field_description:analytic_brand.field_res_brand__display_name
