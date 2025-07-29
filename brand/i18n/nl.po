@@ -368,6 +368,11 @@ msgid "Customer Location"
 msgstr ""
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__customer_payment_mode_id
+msgid "Customer Payment Mode"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_payment_term_id
 msgid "Customer Payment Terms"
 msgstr "Betalingsvoorwaarden klant"
@@ -892,6 +897,16 @@ msgid "Salesperson"
 msgstr "Verkoper"
 
 #. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__customer_payment_mode_id
+msgid "Select the default payment mode for this customer."
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__supplier_payment_mode_id
+msgid "Select the default payment mode for this supplier."
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__invoice_warn
 #: model:ir.model.fields,help:brand.field_res_brand__picking_warn
 #: model:ir.model.fields,help:brand.field_res_brand__sale_warn
@@ -984,6 +999,11 @@ msgstr "Straat..."
 #: model:ir.model.fields,field_description:brand.field_res_brand__street2
 msgid "Street2"
 msgstr "Straat2"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__supplier_payment_mode_id
+msgid "Supplier Payment Mode"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__supplier_rank
