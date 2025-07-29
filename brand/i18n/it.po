@@ -330,6 +330,11 @@ msgid "Contact"
 msgstr "Contatto"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
+msgid "Contracts"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_bounce
 msgid "Counter of the number of bounced emails for this contact"
 msgstr "Contatore del numero di e-mail respinte per questo contatto"
@@ -804,11 +809,6 @@ msgid "Partner Company Registry Placeholder"
 msgstr "Segnaposto registro azienda partner"
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
-msgid "Partner Contracts"
-msgstr "Contratti fornitori"
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__use_partner_credit_limit
 msgid "Partner Limit"
 msgstr "Limite partner"
@@ -899,6 +899,11 @@ msgid "Property Outbound Payment Method Line"
 msgstr "Riga del metodo di pagamento in uscita della proprietà"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_contract_count
+msgid "Purchase Contracts"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__purchase_line_ids
 msgid "Purchase Lines"
 msgstr ""
@@ -937,6 +942,11 @@ msgstr "Richiesto"
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_user_id
 msgid "Responsible User"
 msgstr "Utente responsabile"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__sale_contract_count
+msgid "Sale Contracts"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_order_count
@@ -1352,6 +1362,9 @@ msgstr "es. https://www.odoo.com"
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_edi_format
 msgid "eInvoice format"
 msgstr "Formato fattura elettronica"
+
+#~ msgid "Partner Contracts"
+#~ msgstr "Contratti fornitori"
 
 #~ msgid "Additional info"
 #~ msgstr "Informazioni aggiuntive"
