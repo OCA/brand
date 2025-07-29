@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0\n"
+"Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #. module: product_brand_mrp
 #: model:ir.model,name:product_brand_mrp.model_mrp_production
-msgid "Production Order"
+msgid "Manufacturing Order"
 msgstr ""
 
 #. module: product_brand_mrp
