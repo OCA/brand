@@ -28,9 +28,9 @@ Analytic Brand
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This addon associate an analytic account to a brand that will be used as
-a default value where the brand is used if the analytic accounting is
-activated.
+This addon associate an analytic distribution to a brand that will be
+used as a default value where the brand is used if the analytic
+accounting is activated.
 
 **Table of contents**
 
@@ -63,6 +63,8 @@ Contributors
 - `Heliconia Solutions Pvt. Ltd. <https://www.heliconia.io>`__
 
   - Bhavesh Heliconia
+
+- Marie Lejeune <marie.lejeune@acsone.eu/>
 
 Maintainers
 -----------

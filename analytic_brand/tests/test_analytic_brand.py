@@ -1,8 +1,15 @@
 # Copyright 2019 ACSONE SA/NV
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+from odoo.tests.common import tagged
+
 from odoo.addons.base.tests.common import BaseCommon
 
 
+# Run tests in post-install because creating a res.brand creates a res.partner
+# And there is an issue creating a new partner with required field autopost_bills
+# in addon account (default value not set up because this addon doesn't depend
+# on account)
+@tagged("post_install", "-at_install")
 class TestResBrand(BaseCommon):
     @classmethod
     def setUpClass(self):
@@ -22,18 +29,18 @@ class TestResBrand(BaseCommon):
             }
         )
 
-        # Create a brand with the analytic account
+        # Create a brand with the analytic distribution: 100% on the analytic account
         self.res_brand = self.env["res.brand"].create(
             {
                 "name": "Test Brand",
-                "analytic_account_id": self.analytic_account.id,
+                "analytic_distribution": {self.analytic_account.id: 100.0},
             }
         )
 
     def test_analytic_account_assignment(self):
         """Test if the analytic_account_id is assigned correctly"""
         self.assertEqual(
-            self.res_brand.analytic_account_id,
-            self.analytic_account,
-            "The analytic_account_id field should be assigned correctly.",
+            self.res_brand.analytic_distribution,
+            {str(self.analytic_account.id): 100.0},
+            "The analytic_distribution field should be assigned correctly.",
         )
