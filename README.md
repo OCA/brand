@@ -25,7 +25,7 @@ addon | version | maintainers | summary
 [account_invoice_bank_brand](account_invoice_bank_brand/) | 18.0.1.0.0 |  | Enables the automatic selection of the partner'sbank account on invoices based on the brand.
 [account_payment_mode_brand](account_payment_mode_brand/) | 18.0.1.0.0 |  | This addon define allowed payment mode per brand
 [analytic_brand](analytic_brand/) | 18.0.1.1.0 | <a href='https://github.com/sbejaoui'><img src='https://github.com/sbejaoui.png' width='32' height='32' style='border-radius:50%;' alt='sbejaoui'/></a> | This addon associate an analytic account to a brand that will be used as a default value where the brand is used if the analytic accounting is activated
-[brand](brand/) | 18.0.1.0.0 | <a href='https://github.com/sbejaoui'><img src='https://github.com/sbejaoui.png' width='32' height='32' style='border-radius:50%;' alt='sbejaoui'/></a> | This is a base addon for brand modules. It adds the brand object and its menu and define an abstract model to be inherited from branded objects
+[brand](brand/) | 18.0.1.0.1 | <a href='https://github.com/sbejaoui'><img src='https://github.com/sbejaoui.png' width='32' height='32' style='border-radius:50%;' alt='sbejaoui'/></a> | This is a base addon for brand modules. It adds the brand object and its menu and define an abstract model to be inherited from branded objects
 [product_brand](product_brand/) | 18.0.1.0.0 |  | Product Brand Manager
 [product_brand_mrp](product_brand_mrp/) | 18.0.1.0.0 |  | This module allows to work with product_brand in MRP.
 [product_brand_purchase](product_brand_purchase/) | 18.0.1.0.0 |  | This module allows to work with product_brand in purchase reports.
