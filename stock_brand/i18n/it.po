@@ -17,6 +17,11 @@ msgstr ""
 "X-Generator: Weblate 5.10.4\n"
 
 #. module: stock_brand
+#: model:ir.model.fields,field_description:stock_brand.field_stock_picking__allowed_payment_mode_ids
+msgid "Allowed Payment Mode"
+msgstr ""
+
+#. module: stock_brand
 #: model:ir.model.fields,field_description:stock_brand.field_stock_picking__brand_id
 msgid "Brand"
 msgstr "Marca"
