@@ -26,6 +26,7 @@ addon | version | maintainers | summary
 [analytic_brand](analytic_brand/) | 18.0.1.1.0 | <a href='https://github.com/sbejaoui'><img src='https://github.com/sbejaoui.png' width='32' height='32' style='border-radius:50%;' alt='sbejaoui'/></a> | This addon associate an analytic account to a brand that will be used as a default value where the brand is used if the analytic accounting is activated
 [brand](brand/) | 18.0.1.0.0 | <a href='https://github.com/sbejaoui'><img src='https://github.com/sbejaoui.png' width='32' height='32' style='border-radius:50%;' alt='sbejaoui'/></a> | This is a base addon for brand modules. It adds the brand object and its menu and define an abstract model to be inherited from branded objects
 [product_brand](product_brand/) | 18.0.1.0.0 |  | Product Brand Manager
+[product_brand_tag](product_brand_tag/) | 18.0.1.0.0 |  | Add tags to product brand
 [sale_brand](sale_brand/) | 18.0.1.0.0 | <a href='https://github.com/osi-scampbell'><img src='https://github.com/osi-scampbell.png' width='32' height='32' style='border-radius:50%;' alt='osi-scampbell'/></a> <a href='https://github.com/sbejaoui'><img src='https://github.com/sbejaoui.png' width='32' height='32' style='border-radius:50%;' alt='sbejaoui'/></a> | Send branded sales orders
 [stock_brand](stock_brand/) | 18.0.1.0.0 |  | Manage brands on stock picking documents
 
