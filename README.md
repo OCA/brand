@@ -33,6 +33,7 @@ addon | version | maintainers | summary
 [product_brand_mrp](product_brand_mrp/) | 18.0.1.0.0 |  | This module allows to work with product_brand in MRP.
 [product_brand_purchase](product_brand_purchase/) | 18.0.1.0.0 |  | This module allows to work with product_brand in purchase reports.
 [product_brand_tag](product_brand_tag/) | 18.0.1.0.0 |  | Add tags to product brand
+[product_contract_brand](product_contract_brand/) | 18.0.1.0.0 |  | This addon propagate the brand from sale order to contract
 [sale_brand](sale_brand/) | 18.0.1.0.0 | <a href='https://github.com/osi-scampbell'><img src='https://github.com/osi-scampbell.png' width='32' height='32' style='border-radius:50%;' alt='osi-scampbell'/></a> <a href='https://github.com/sbejaoui'><img src='https://github.com/sbejaoui.png' width='32' height='32' style='border-radius:50%;' alt='sbejaoui'/></a> | Send branded sales orders
 [stock_brand](stock_brand/) | 18.0.1.0.0 |  | Manage brands on stock picking documents
 
