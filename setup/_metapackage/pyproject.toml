@@ -1,12 +1,13 @@
 [project]
 name = "odoo-addons-oca-brand"
-version = "18.0.20250729.4"
+version = "18.0.20250729.5"
 dependencies = [
     "odoo-addon-account_brand==18.0.*",
     "odoo-addon-account_invoice_bank_brand==18.0.*",
     "odoo-addon-account_payment_mode_brand==18.0.*",
     "odoo-addon-analytic_brand==18.0.*",
     "odoo-addon-brand==18.0.*",
+    "odoo-addon-partner_brand==18.0.*",
     "odoo-addon-product_brand==18.0.*",
     "odoo-addon-product_brand_mrp==18.0.*",
     "odoo-addon-product_brand_purchase==18.0.*",
