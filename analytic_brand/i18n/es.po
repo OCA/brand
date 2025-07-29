@@ -17,11 +17,24 @@ msgstr ""
 "X-Generator: Weblate 4.17\n"
 
 #. module: analytic_brand
-#: model:ir.model.fields,field_description:analytic_brand.field_res_brand__analytic_account_id
-msgid "Analytic Account"
-msgstr "Cuenta Analítica"
+#: model:ir.model.fields,field_description:analytic_brand.field_res_brand__analytic_distribution
+msgid "Analytic Distribution"
+msgstr ""
+
+#. module: analytic_brand
+#: model:ir.model.fields,field_description:analytic_brand.field_res_brand__analytic_precision
+msgid "Analytic Precision"
+msgstr ""
 
 #. module: analytic_brand
 #: model:ir.model,name:analytic_brand.model_res_brand
 msgid "Brand"
 msgstr "Marca"
+
+#. module: analytic_brand
+#: model:ir.model.fields,field_description:analytic_brand.field_res_brand__distribution_analytic_account_ids
+msgid "Distribution Analytic Account"
+msgstr ""
+
+#~ msgid "Analytic Account"
+#~ msgstr "Cuenta Analítica"
