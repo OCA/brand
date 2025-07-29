@@ -336,6 +336,11 @@ msgid "Contact"
 msgstr "Contacto"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
+msgid "Contracts"
+msgstr "Contratos"
+
+#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_bounce
 msgid "Counter of the number of bounced emails for this contact"
 msgstr ""
@@ -816,11 +821,6 @@ msgid "Partner Company Registry Placeholder"
 msgstr ""
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
-msgid "Partner Contracts"
-msgstr "Contratos de Contactos"
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__use_partner_credit_limit
 msgid "Partner Limit"
 msgstr "Límite de Contacto"
@@ -905,6 +905,11 @@ msgid "Property Outbound Payment Method Line"
 msgstr ""
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_contract_count
+msgid "Purchase Contracts"
+msgstr "Contratos de Compra"
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__purchase_line_ids
 msgid "Purchase Lines"
 msgstr "Líneas de Compra"
@@ -943,6 +948,11 @@ msgstr "Requerido"
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_user_id
 msgid "Responsible User"
 msgstr "Usuario Responsable"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__sale_contract_count
+msgid "Sale Contracts"
+msgstr "Contratos de Venta"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_order_count
@@ -1363,6 +1373,9 @@ msgstr "ej. https://www.odoo.com"
 msgid "eInvoice format"
 msgstr ""
 
+#~ msgid "Partner Contracts"
+#~ msgstr "Contratos de Contactos"
+
 #~ msgid "Additional info"
 #~ msgstr "Información adicional"
 
@@ -1561,9 +1574,6 @@ msgstr ""
 #~ "sujeto a impuestos gubernamentales. Utilizado en algunas declaraciones "
 #~ "legales."
 
-#~ msgid "Contracts"
-#~ msgstr "Contratos"
-
 #~ msgid ""
 #~ "Invoice & Delivery addresses are used in sales orders. Private addresses "
 #~ "are only visible by authorized users."
@@ -1574,12 +1584,6 @@ msgstr ""
 
 #~ msgid "Number of unread messages"
 #~ msgstr "Número de mensajes sin leer"
-
-#~ msgid "Purchase Contracts"
-#~ msgstr "Contratos de Compra"
-
-#~ msgid "Sale Contracts"
-#~ msgstr "Contratos de Venta"
 
 #~ msgid "Unread Messages"
 #~ msgstr "Mensajes sin Leer"
