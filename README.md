@@ -35,6 +35,7 @@ addon | version | maintainers | summary
 [product_brand_tag](product_brand_tag/) | 18.0.1.0.0 |  | Add tags to product brand
 [product_contract_brand](product_contract_brand/) | 18.0.1.0.0 |  | This addon propagate the brand from sale order to contract
 [sale_brand](sale_brand/) | 18.0.1.0.0 | <a href='https://github.com/osi-scampbell'><img src='https://github.com/osi-scampbell.png' width='32' height='32' style='border-radius:50%;' alt='osi-scampbell'/></a> <a href='https://github.com/sbejaoui'><img src='https://github.com/sbejaoui.png' width='32' height='32' style='border-radius:50%;' alt='sbejaoui'/></a> | Send branded sales orders
+[sale_payment_mode_brand](sale_payment_mode_brand/) | 18.0.1.0.0 |  | This addon limit payment mode selection on sale order to the brand allowed payment modes.
 [stock_brand](stock_brand/) | 18.0.1.0.0 |  | Manage brands on stock picking documents
 
 [//]: # (end addons)
