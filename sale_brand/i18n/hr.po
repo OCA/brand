@@ -44,6 +44,11 @@ msgid "Company"
 msgstr "Tvrtka"
 
 #. module: sale_brand
+#: model:ir.model.fields,field_description:sale_brand.field_sale_order__is_brand_required
+msgid "Is Brand Required"
+msgstr ""
+
+#. module: sale_brand
 #: model:ir.model,name:sale_brand.model_sale_order
 msgid "Sales Order"
 msgstr "Ponuda"
