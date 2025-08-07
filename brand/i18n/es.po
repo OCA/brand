@@ -116,11 +116,6 @@ msgstr ""
 "fecha exacta."
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__available_peppol_eas
-msgid "Available Peppol Eas"
-msgstr ""
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__avatar_1920
 msgid "Avatar"
 msgstr "Avatar"
@@ -242,18 +237,6 @@ msgstr "Marque esta casilla si este contacto es un Empleado."
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "City"
 msgstr "Ciudad"
-
-#. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__peppol_eas
-msgid ""
-"Code used to identify the Endpoint for BIS Billing 3.0 and its derivatives.\n"
-"             List available at https://docs.peppol.eu/poacc/billing/3.0/"
-"codelist/eas/"
-msgstr ""
-"Código utilizado para identificar el Endpoint para BIS Billing 3.0 y sus "
-"derivados.\n"
-"             Lista disponible en https://docs.peppol.eu/poacc/billing/3.0/"
-"codelist/eas/"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__color
@@ -642,19 +625,9 @@ msgid "Is Follower"
 msgstr "Es seguidor/a"
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__is_peppol_edi_format
-msgid "Is Peppol Edi Format"
-msgstr ""
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_public
 msgid "Is Public"
 msgstr "Es público"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__is_ubl_format
-msgid "Is Ubl Format"
-msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_company
@@ -858,16 +831,6 @@ msgstr "Recuento de vales de pago"
 #: model:ir.model.fields,field_description:brand.field_res_brand__payment_token_ids
 msgid "Payment Tokens"
 msgstr "Fichas de pago"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__peppol_endpoint
-msgid "Peppol Endpoint"
-msgstr "Punto final de Peppol"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__peppol_eas
-msgid "Peppol e-address (EAS)"
-msgstr "Dirección electrónica de Peppol (EAS)"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__phone
@@ -1275,15 +1238,6 @@ msgid "Type of the exception activity on record."
 msgstr "Tipo (o clase) de actividad excepcional registrada."
 
 #. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__peppol_endpoint
-msgid ""
-"Unique identifier used by the BIS Billing 3.0 and its derivatives, also "
-"known as 'Endpoint ID'."
-msgstr ""
-"Identificador único utilizado por el BIS Billing 3.0 y sus derivados, "
-"también conocido como \"Endpoint ID\"."
-
-#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__barcode
 msgid "Use a barcode to identify this contact."
 msgstr "Utilice un código de barras para identificar este contacto."
@@ -1372,6 +1326,30 @@ msgstr "Por ej. https://www.odoo.com"
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_edi_format
 msgid "eInvoice format"
 msgstr ""
+
+#~ msgid ""
+#~ "Code used to identify the Endpoint for BIS Billing 3.0 and its "
+#~ "derivatives.\n"
+#~ "             List available at https://docs.peppol.eu/poacc/billing/3.0/"
+#~ "codelist/eas/"
+#~ msgstr ""
+#~ "Código utilizado para identificar el Endpoint para BIS Billing 3.0 y sus "
+#~ "derivados.\n"
+#~ "             Lista disponible en https://docs.peppol.eu/poacc/billing/3.0/"
+#~ "codelist/eas/"
+
+#~ msgid "Peppol Endpoint"
+#~ msgstr "Punto final de Peppol"
+
+#~ msgid "Peppol e-address (EAS)"
+#~ msgstr "Dirección electrónica de Peppol (EAS)"
+
+#~ msgid ""
+#~ "Unique identifier used by the BIS Billing 3.0 and its derivatives, also "
+#~ "known as 'Endpoint ID'."
+#~ msgstr ""
+#~ "Identificador único utilizado por el BIS Billing 3.0 y sus derivados, "
+#~ "también conocido como \"Endpoint ID\"."
 
 #~ msgid "Partner Contracts"
 #~ msgstr "Contratos del socio"
