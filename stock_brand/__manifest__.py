@@ -4,7 +4,7 @@
 {
     "name": "Stock Brand",
     "summary": "Manage brands on stock picking documents",
-    "version": "16.0.1.0.0",
+    "version": "17.0.1.0.0",
     "category": "Warehouse",
     "website": "https://github.com/OCA/brand",
     "author": "Sunflower IT, Odoo Community Association (OCA)",
