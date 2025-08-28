@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-01-02 19:06+0000\n"
+"PO-Revision-Date: 2025-09-16 11:42+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.10.4\n"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__account_id
@@ -29,7 +29,6 @@ msgstr "Storno movimento conto"
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_account_bank_statement_line__brand_id
 #: model:ir.model.fields,field_description:account_brand.field_account_move__brand_id
-#: model:ir.model.fields,field_description:account_brand.field_account_payment__brand_id
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__brand_id
 msgid "Brand"
 msgstr "Marca"
@@ -42,7 +41,6 @@ msgstr "Livello uso marca"
 #. module: account_brand
 #: model:ir.model.fields,help:account_brand.field_account_bank_statement_line__brand_id
 #: model:ir.model.fields,help:account_brand.field_account_move__brand_id
-#: model:ir.model.fields,help:account_brand.field_account_payment__brand_id
 msgid "Brand to use for this sale"
 msgstr "Marca da usare per questa vendita"
 
@@ -72,6 +70,11 @@ msgid "ID"
 msgstr "ID"
 
 #. module: account_brand
+#: model:ir.model.fields,field_description:account_brand.field_account_move__is_brand_required
+msgid "Is Brand Required"
+msgstr "La marca è richiesta"
+
+#. module: account_brand
 #: model:ir.model,name:account_brand.model_account_move
 msgid "Journal Entry"
 msgstr "Registrazione contabile"
@@ -98,10 +101,7 @@ msgid "Partner Accounts by Brand"
 msgstr "Conti partner per marca"
 
 #. module: account_brand
-#. odoo-python
-#: code:addons/account_brand/models/res_partner_account_brand.py:0
 #: model:ir.model.constraint,message:account_brand.constraint_res_partner_account_brand_unique_account_by_partner
-#, python-format
 msgid "Partner has already an account set for this brand!"
 msgstr "Il partner ha già un conto impostato per questa marca!"
 
@@ -113,7 +113,6 @@ msgstr "Debito"
 #. module: account_brand
 #. odoo-python
 #: code:addons/account_brand/models/res_partner_account_brand.py:0
-#, python-format
 msgid "Please select an account of type %s"
 msgstr "Selezionare un conto di tipo %s"
 
