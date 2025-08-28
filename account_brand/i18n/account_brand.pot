@@ -67,6 +67,11 @@ msgid "ID"
 msgstr ""
 
 #. module: account_brand
+#: model:ir.model.fields,field_description:account_brand.field_account_move__is_brand_required
+msgid "Is Brand Required"
+msgstr ""
+
+#. module: account_brand
 #: model:ir.model,name:account_brand.model_account_move
 msgid "Journal Entry"
 msgstr ""
