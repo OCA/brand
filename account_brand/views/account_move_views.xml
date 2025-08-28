@@ -11,6 +11,7 @@
                     name="brand_id"
                     invisible="move_type not in ['out_invoice', 'out_refund', 'in_invoice', 'in_refund', 'out_receipt', 'in_receipt']"
                     readonly="state != 'draft'"
+                    required="is_brand_required"
                 />
             </field>
         </field>
