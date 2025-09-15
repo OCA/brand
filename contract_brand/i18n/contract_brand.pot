@@ -43,3 +43,8 @@ msgstr ""
 #: model:ir.model,name:contract_brand.model_contract_line
 msgid "Contract Line"
 msgstr ""
+
+#. module: contract_brand
+#: model:ir.model.fields,field_description:contract_brand.field_contract_contract__is_brand_required
+msgid "Is Brand Required"
+msgstr ""
