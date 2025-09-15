@@ -55,3 +55,8 @@ msgstr "Riga contratto"
 #: model:ir.model,name:contract_forecast_brand.model_contract_line_forecast_period
 msgid "Contract Line Forecast Period"
 msgstr "Periodo previsione riga contratto"
+
+#. module: contract_forecast_brand
+#: model:ir.model.fields,field_description:contract_forecast_brand.field_contract_line_forecast_period__is_brand_required
+msgid "Is Brand Required"
+msgstr ""
