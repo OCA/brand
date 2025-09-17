@@ -6,8 +6,6 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-20 21:24+0000\n"
-"PO-Revision-Date: 2025-04-20 21:24+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -22,6 +20,7 @@ msgstr ""
 
 #. module: mail_brand
 #: model:ir.model,name:mail_brand.model_res_brand
+#: model:ir.model.fields,field_description:mail_brand.field_account_invoice_send__brand_id
 #: model:ir.model.fields,field_description:mail_brand.field_mail_compose_message__brand_id
 msgid "Brand"
 msgstr ""
