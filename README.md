@@ -28,6 +28,7 @@ addon | version | maintainers | summary
 [brand](brand/) | 18.0.1.0.2 | <a href='https://github.com/sbejaoui'><img src='https://github.com/sbejaoui.png' width='32' height='32' style='border-radius:50%;' alt='sbejaoui'/></a> | This is a base addon for brand modules. It adds the brand object and its menu and define an abstract model to be inherited from branded objects
 [contract_brand](contract_brand/) | 18.0.1.0.0 | <a href='https://github.com/sbejaoui'><img src='https://github.com/sbejaoui.png' width='32' height='32' style='border-radius:50%;' alt='sbejaoui'/></a> | This module allows you to manage branded contracts. It adds a brand field on the contract and propagate the value on the invoices.
 [contract_forecast_brand](contract_forecast_brand/) | 18.0.1.0.0 |  | This addon add brand field for contract forecast
+[contract_payment_mode_brand](contract_payment_mode_brand/) | 18.0.1.0.0 |  | This addon limits payment mode selection in contract to the brand's allowed.
 [partner_brand](partner_brand/) | 18.0.1.0.0 | <a href='https://github.com/bealdav'><img src='https://github.com/bealdav.png' width='32' height='32' style='border-radius:50%;' alt='bealdav'/></a> | Define registered mark in partners according to brand settings
 [product_brand](product_brand/) | 18.0.1.0.1 |  | Product Brand Manager
 [product_brand_mrp](product_brand_mrp/) | 18.0.1.0.0 |  | This module allows to work with product_brand in MRP.
