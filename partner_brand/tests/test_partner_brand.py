@@ -4,9 +4,12 @@
 import base64
 import os
 
+from odoo.tests.common import tagged
+
 from odoo.addons.base.tests.common import BaseCommon
 
 
+@tagged("post_install", "-at_install")
 class TestResPartner(BaseCommon):
     @classmethod
     def setUpClass(self):
