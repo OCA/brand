@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template
+        id="message_notification_email_brand"
+        inherit_id="mail.message_notification_email"
+        priority="100"
+    >
+        <xpath expr="//tbody//img" position="replace">
+            <img
+                t-att-src="'/logo.png?company=%s&amp;bstyle=%i' % (brand.id if has_brand else company.id or 0, has_brand or 0)"
+                style="padding: 0px; margin: 0px; height: auto; max-width: 200px; max-height: 36px;"
+                t-att-alt="'%s' % company.name"
+            />
+        </xpath>
+    </template>
+
+    <template
+        id="mail_notification_borders_brand"
+        inherit_id="mail.mail_notification_borders"
+        priority="100"
+    >
+        <xpath expr="//tbody//img" position="replace">
+            <img
+                t-att-src="'/logo.png?company=%s&amp;bstyle=%i' % (brand.id if has_brand else company.id or 0, has_brand or 0)"
+                style="padding: 0px; margin: 0px; height: auto; width: 80px;"
+                t-att-alt="'%s' % company.name"
+            />
+        </xpath>
+    </template>
+
+    <template
+        id="mail_notification_light_brand"
+        inherit_id="mail.mail_notification_light"
+        priority="100"
+    >
+        <xpath expr="//tbody//img" position="replace">
+            <img
+                t-att-src="'/logo.png?company=%s&amp;bstyle=%i' % (brand.id if has_brand else company.id or 0, has_brand or 0)"
+                style="padding: 0px; margin: 0px; height: 48px;"
+                t-att-alt="'%s' % company.name"
+            />
+        </xpath>
+    </template>
+
+    <template
+        id="mail_notification_paynow_brand"
+        inherit_id="mail.mail_notification_paynow"
+        priority="100"
+    >
+        <xpath expr="//tbody//img" position="replace">
+            <img
+                t-att-src="'/logo.png?company=%s&amp;bstyle=%i' % (brand.id if has_brand else company.id or 0, has_brand or 0)"
+                style="padding: 0px; margin: 0px; height: auto; max-width: 200px; max-height: 36px;"
+                t-att-alt="'%s' % company.name"
+            />
+        </xpath>
+    </template>
+</odoo>
