@@ -14,6 +14,11 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: stock_brand
+#: model:ir.model.fields,field_description:stock_brand.field_stock_picking__allowed_payment_mode_ids
+msgid "Allowed Payment Mode"
+msgstr ""
+
+#. module: stock_brand
 #: model:ir.model.fields,field_description:stock_brand.field_stock_picking__brand_id
 msgid "Brand"
 msgstr ""
@@ -31,6 +36,11 @@ msgstr ""
 #. module: stock_brand
 #: model:ir.model.fields,field_description:stock_brand.field_stock_picking__company_id
 msgid "Company"
+msgstr ""
+
+#. module: stock_brand
+#: model:ir.model.fields,field_description:stock_brand.field_stock_picking__is_brand_required
+msgid "Is Brand Required"
 msgstr ""
 
 #. module: stock_brand

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-06-19 14:26+0000\n"
+"PO-Revision-Date: 2025-09-16 11:42+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -106,6 +106,15 @@ msgid "Automatically post bills for this trusted partner"
 msgstr "Invia automaticamente le fatture per questo partner affidabile"
 
 #. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__receipt_reminder_email
+msgid ""
+"Automatically send a confirmation email to the vendor X days before the "
+"expected receipt date, asking him to confirm the exact date."
+msgstr ""
+"Invia automaticamente una email al fornitore X giorni prima della data "
+"fattura prevista, chiedendo la conferma della data."
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__avatar_1920
 msgid "Avatar"
 msgstr "Avatar"
@@ -201,6 +210,11 @@ msgid "Brands"
 msgstr "Marche"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__buyer_id
+msgid "Buyer"
+msgstr "Acquirente"
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__channel_ids
 msgid "Channels"
 msgstr "Canali"
@@ -220,18 +234,6 @@ msgstr "Seleziona questa casella se questo contatto è un dipendente."
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "City"
 msgstr "Città"
-
-#. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__peppol_eas
-msgid ""
-"Code used to identify the Endpoint for BIS Billing 3.0 and its derivatives.\n"
-"             List available at https://docs.peppol.eu/poacc/billing/3.0/"
-"codelist/eas/"
-msgstr ""
-"Codice utilizzato per identificare l'endpoint per BIS Billing 3.0 e suoi "
-"derivati.\n"
-"             Elenco disponibile a https://docs.peppol.eu/poacc/billing/3.0/"
-"codelist/eas/"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__color
@@ -313,6 +315,11 @@ msgid "Contact"
 msgstr "Contatto"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
+msgid "Contracts"
+msgstr "Contratti"
+
+#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_bounce
 msgid "Counter of the number of bounced emails for this contact"
 msgstr "Contatore del numero di e-mail respinte per questo contatto"
@@ -364,6 +371,11 @@ msgid "Customer Location"
 msgstr "Ubicazione cliente"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__customer_payment_mode_id
+msgid "Customer Payment Mode"
+msgstr "Modo di pagamento cliente"
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_payment_term_id
 msgid "Customer Payment Terms"
 msgstr "Termini pagamento cliente"
@@ -372,6 +384,11 @@ msgstr "Termini pagamento cliente"
 #: model:ir.model.fields,field_description:brand.field_res_brand__customer_rank
 msgid "Customer Rank"
 msgstr "Classe cliente"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__reminder_date_before_receipt
+msgid "Days Before Receipt"
+msgstr "Giorni antecedenti la fattura"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__days_sales_outstanding
@@ -402,6 +419,11 @@ msgstr "Nome visualizzato"
 #: model:ir.model.fields.selection,name:brand.selection__res_company__brand_use_level__no
 msgid "Do not use brands on business document"
 msgstr "Non utilizzare marche nel documento commerciale"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__duplicate_bank_partner_ids
+msgid "Duplicate Bank Partner"
+msgstr "Duplica banca partner"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__duplicated_bank_account_partners_count
@@ -589,6 +611,11 @@ msgid "Invoices"
 msgstr "Fatture"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand_mixin__is_brand_required
+msgid "Is Brand Required"
+msgstr "La marca è richiesta"
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_coa_installed
 msgid "Is Coa Installed"
 msgstr "Coa è installato"
@@ -599,19 +626,9 @@ msgid "Is Follower"
 msgstr "Segue"
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__is_peppol_edi_format
-msgid "Is Peppol Edi Format"
-msgstr "È un formato EDI Peppol"
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_public
 msgid "Is Public"
 msgstr "È pubblico"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__is_ubl_format
-msgid "Is Ubl Format"
-msgstr "È formato UBI"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_company
@@ -652,6 +669,11 @@ msgstr "Errore di consegna messaggio"
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_warn_msg
 msgid "Message for Invoice"
 msgstr "Messaggio per fattura"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_warn_msg
+msgid "Message for Purchase Order"
+msgstr "Messaggio per ordine di acquisto"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_warn_msg
@@ -714,6 +736,12 @@ msgid "Number of Actions"
 msgstr "Numero di azioni"
 
 #. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__reminder_date_before_receipt
+msgid "Number of days to send reminder email before the promised receipt date"
+msgstr ""
+"Numero di giorni per invio email promemoria prima della data fattura attesa"
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_has_error_counter
 msgid "Number of errors"
 msgstr "Numero di errori"
@@ -729,9 +757,25 @@ msgid "Number of messages with delivery error"
 msgstr "Numero di messaggi con errore di consegna"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__on_time_rate
+msgid "On-Time Delivery Rate"
+msgstr "Tasso puntualità consegna"
+
+#. module: brand
 #: model:ir.model.fields.selection,name:brand.selection__res_company__brand_use_level__optional
 msgid "Optional"
 msgstr "Opzionale"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__on_time_rate
+msgid ""
+"Over the past x days; the number of products received on time divided by the "
+"number of ordered products.x is either the System Parameter purchase_stock."
+"on_time_delivery_days or the default 365"
+msgstr ""
+"Negli ultimi X giorni; il numero di prodotti ricevuti puntualmente diviso "
+"per il numero di prodotti ordinati. X è il parametro di sistema "
+"purchase_stock.on_time_delivery_days o il predefinito 365"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__parent_name
@@ -747,11 +791,6 @@ msgstr "Partner"
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_company_registry_placeholder
 msgid "Partner Company Registry Placeholder"
 msgstr "Segnaposto registro azienda partner"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
-msgid "Partner Contracts"
-msgstr "Contratti fornitori"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__use_partner_credit_limit
@@ -794,16 +833,6 @@ msgid "Payment Tokens"
 msgstr "Token pagamenti"
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__peppol_endpoint
-msgid "Peppol Endpoint"
-msgstr "Endpoint Peppol"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__peppol_eas
-msgid "Peppol e-address (EAS)"
-msgstr "E-address (EAS) Peppol"
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__phone
 msgid "Phone"
 msgstr "Telefono"
@@ -844,6 +873,31 @@ msgid "Property Outbound Payment Method Line"
 msgstr "Riga del metodo di pagamento in uscita della proprietà"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_contract_count
+msgid "Purchase Contracts"
+msgstr "Contratti di acquisto"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_line_ids
+msgid "Purchase Lines"
+msgstr "Righe acquisti"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_order_count
+msgid "Purchase Order Count"
+msgstr "Conteggio ordine di acquisto"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_warn
+msgid "Purchase Order Warning"
+msgstr "Avviso ordine acquisto"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__receipt_reminder_email
+msgid "Receipt Reminder"
+msgstr "Promemoria ricevuta"
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__ref
 msgid "Reference"
 msgstr "Riferimento"
@@ -862,6 +916,11 @@ msgstr "Richiesto"
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_user_id
 msgid "Responsible User"
 msgstr "Utente responsabile"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__sale_contract_count
+msgid "Sale Contracts"
+msgstr "Contratti di vendita"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_order_count
@@ -884,8 +943,19 @@ msgid "Salesperson"
 msgstr "Addetto vendite"
 
 #. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__customer_payment_mode_id
+msgid "Select the default payment mode for this customer."
+msgstr "Selezionare la modalità di pagamento di default per questo cliente."
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__supplier_payment_mode_id
+msgid "Select the default payment mode for this supplier."
+msgstr "Selezionare la modalità di pagamento per questo fornitore."
+
+#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__invoice_warn
 #: model:ir.model.fields,help:brand.field_res_brand__picking_warn
+#: model:ir.model.fields,help:brand.field_res_brand__purchase_warn
 #: model:ir.model.fields,help:brand.field_res_brand__sale_warn
 msgid ""
 "Selecting the \"Warning\" option will notify user with the message, "
@@ -975,6 +1045,16 @@ msgstr "Indirizzo..."
 #: model:ir.model.fields,field_description:brand.field_res_brand__street2
 msgid "Street2"
 msgstr "Indirizzo2"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__property_purchase_currency_id
+msgid "Supplier Currency"
+msgstr "Valuta fornitore"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__supplier_payment_mode_id
+msgid "Supplier Payment Mode"
+msgstr "Modo di pagamento fornitore"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__supplier_rank
@@ -1072,6 +1152,15 @@ msgstr ""
 "per il cliente corrente"
 
 #. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__property_purchase_currency_id
+msgid ""
+"This currency will be used, instead of the default one, for purchases from "
+"the current partner"
+msgstr ""
+"Questa valuta verrà utilizzata, al posto della predefinita, per gli acquisti "
+"dal fornitore corrente"
+
+#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__email_normalized
 msgid ""
 "This field is used to search on email address as the primary email field can "
@@ -1151,15 +1240,6 @@ msgstr "Ammontare totale dovuto a questo fornitore."
 #: model:ir.model.fields,help:brand.field_res_brand__activity_exception_decoration
 msgid "Type of the exception activity on record."
 msgstr "Tipo di attività eccezione sul record."
-
-#. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__peppol_endpoint
-msgid ""
-"Unique identifier used by the BIS Billing 3.0 and its derivatives, also "
-"known as 'Endpoint ID'."
-msgstr ""
-"Identificatore univoco utilizzato da BIS Billing 3.0 e suoi derivati, "
-"conosciuto anche come 'ID endpoint'."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__barcode
@@ -1249,6 +1329,42 @@ msgstr "es. https://www.odoo.com"
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_edi_format
 msgid "eInvoice format"
 msgstr "Formato fattura elettronica"
+
+#~ msgid "Available Peppol Eas"
+#~ msgstr "EAS Peppol disponibile"
+
+#~ msgid ""
+#~ "Code used to identify the Endpoint for BIS Billing 3.0 and its "
+#~ "derivatives.\n"
+#~ "             List available at https://docs.peppol.eu/poacc/billing/3.0/"
+#~ "codelist/eas/"
+#~ msgstr ""
+#~ "Codice utilizzato per identificare l'endpoint per BIS Billing 3.0 e suoi "
+#~ "derivati.\n"
+#~ "             Elenco disponibile a https://docs.peppol.eu/poacc/"
+#~ "billing/3.0/codelist/eas/"
+
+#~ msgid "Is Peppol Edi Format"
+#~ msgstr "È un formato EDI Peppol"
+
+#~ msgid "Is Ubl Format"
+#~ msgstr "È formato UBI"
+
+#~ msgid "Peppol Endpoint"
+#~ msgstr "Endpoint Peppol"
+
+#~ msgid "Peppol e-address (EAS)"
+#~ msgstr "E-address (EAS) Peppol"
+
+#~ msgid ""
+#~ "Unique identifier used by the BIS Billing 3.0 and its derivatives, also "
+#~ "known as 'Endpoint ID'."
+#~ msgstr ""
+#~ "Identificatore univoco utilizzato da BIS Billing 3.0 e suoi derivati, "
+#~ "conosciuto anche come 'ID endpoint'."
+
+#~ msgid "Partner Contracts"
+#~ msgstr "Contratti fornitori"
 
 #~ msgid "Additional info"
 #~ msgstr "Informazioni aggiuntive"

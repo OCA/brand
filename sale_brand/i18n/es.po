@@ -17,6 +17,11 @@ msgstr ""
 "X-Generator: Weblate 4.17\n"
 
 #. module: sale_brand
+#: model:ir.model.fields,field_description:sale_brand.field_sale_order__allowed_payment_mode_ids
+msgid "Allowed Payment Mode"
+msgstr ""
+
+#. module: sale_brand
 #: model:ir.model.fields,field_description:sale_brand.field_crm_team__brand_id
 #: model:ir.model.fields,field_description:sale_brand.field_sale_order__brand_id
 msgid "Brand"
@@ -36,6 +41,11 @@ msgstr "Marca a utilizar para esta venta"
 #: model:ir.model.fields,field_description:sale_brand.field_sale_order__company_id
 msgid "Company"
 msgstr "Companía"
+
+#. module: sale_brand
+#: model:ir.model.fields,field_description:sale_brand.field_sale_order__is_brand_required
+msgid "Is Brand Required"
+msgstr ""
 
 #. module: sale_brand
 #: model:ir.model,name:sale_brand.model_sale_order

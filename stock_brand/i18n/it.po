@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-05-22 09:26+0000\n"
+"PO-Revision-Date: 2025-09-16 11:42+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -15,6 +15,11 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.10.4\n"
+
+#. module: stock_brand
+#: model:ir.model.fields,field_description:stock_brand.field_stock_picking__allowed_payment_mode_ids
+msgid "Allowed Payment Mode"
+msgstr "Metodo di pagamento consentito"
 
 #. module: stock_brand
 #: model:ir.model.fields,field_description:stock_brand.field_stock_picking__brand_id
@@ -35,6 +40,11 @@ msgstr "Marca da usare per questo prelievo."
 #: model:ir.model.fields,field_description:stock_brand.field_stock_picking__company_id
 msgid "Company"
 msgstr "Azienda"
+
+#. module: stock_brand
+#: model:ir.model.fields,field_description:stock_brand.field_stock_picking__is_brand_required
+msgid "Is Brand Required"
+msgstr "La marca è richiesta"
 
 #. module: stock_brand
 #: model:ir.model,name:stock_brand.model_sale_order

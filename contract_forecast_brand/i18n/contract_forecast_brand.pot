@@ -1,0 +1,59 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* contract_forecast_brand
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: contract_forecast_brand
+#: model:ir.model.fields,field_description:contract_forecast_brand.field_contract_line_forecast_period__allowed_payment_mode_ids
+msgid "Allowed Payment Mode"
+msgstr ""
+
+#. module: contract_forecast_brand
+#: model:ir.model.fields,field_description:contract_forecast_brand.field_contract_line_forecast_period__brand_id
+msgid "Brand"
+msgstr ""
+
+#. module: contract_forecast_brand
+#: model:ir.model.fields,field_description:contract_forecast_brand.field_contract_line_forecast_period__brand_use_level
+msgid "Brand Use Level"
+msgstr ""
+
+#. module: contract_forecast_brand
+#: model:ir.model.fields,help:contract_forecast_brand.field_contract_line_forecast_period__brand_id
+msgid "Brand to use for this sale"
+msgstr ""
+
+#. module: contract_forecast_brand
+#: model:ir.model.fields,field_description:contract_forecast_brand.field_contract_line_forecast_period__company_id
+msgid "Company"
+msgstr ""
+
+#. module: contract_forecast_brand
+#: model:ir.model,name:contract_forecast_brand.model_contract_contract
+msgid "Contract"
+msgstr ""
+
+#. module: contract_forecast_brand
+#: model:ir.model,name:contract_forecast_brand.model_contract_line
+msgid "Contract Line"
+msgstr ""
+
+#. module: contract_forecast_brand
+#: model:ir.model,name:contract_forecast_brand.model_contract_line_forecast_period
+msgid "Contract Line Forecast Period"
+msgstr ""
+
+#. module: contract_forecast_brand
+#: model:ir.model.fields,field_description:contract_forecast_brand.field_contract_line_forecast_period__is_brand_required
+msgid "Is Brand Required"
+msgstr ""

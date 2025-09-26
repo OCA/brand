@@ -24,6 +24,14 @@ class ResBrandMixin(models.AbstractModel):
     company_id = fields.Many2one(
         comodel_name="res.company",
     )
+    is_brand_required = fields.Boolean(
+        compute="_compute_is_brand_required",
+    )
+
+    @api.depends("company_id")
+    def _compute_is_brand_required(self):
+        for record in self:
+            record.is_brand_required = record._is_brand_required()
 
     def _is_brand_required(self):
         self.ensure_one()
@@ -32,7 +40,7 @@ class ResBrandMixin(models.AbstractModel):
     @api.constrains("brand_id", "company_id")
     def _check_brand_requirement(self):
         for rec in self:
-            if rec._is_brand_required() and not rec.brand_id:
+            if rec.is_brand_required and not rec.brand_id:
                 raise ValidationError(_("Brand is required"))
 
     @api.constrains("brand_id", "company_id")
@@ -53,34 +61,33 @@ class ResBrandMixin(models.AbstractModel):
     def _get_view(self, view_id=None, view_type="form", **options):
         """set visibility and requirement rules"""
         arch, view = super()._get_view(view_id, view_type, **options)
-        if self.env["res.brand"].check_access("read"):
-            if view.type in ["form", "list"]:
-                brand_node = next(
-                    iter(
-                        arch.xpath(
-                            '//field[@name="brand_id"][not(ancestor::*'
-                            '[@widget="one2many" or @widget="many2many"])]'
-                        )
-                    ),
-                    None,
+        if view.type in ["form", "list"]:
+            brand_node = next(
+                iter(
+                    arch.xpath(
+                        '//field[@name="brand_id"][not(ancestor::*'
+                        '[@widget="one2many" or @widget="many2many"])]'
+                    )
+                ),
+                None,
+            )
+
+            if brand_node is not None:
+                brand_node.addprevious(
+                    E.field(
+                        name="brand_use_level",
+                        invisible="True",
+                        column_invisible="True",
+                    )
                 )
 
-                if brand_node is not None:
-                    brand_node.addprevious(
-                        E.field(
-                            name="brand_use_level",
-                            invisible="True",
-                            column_invisible="True",
-                        )
-                    )
-
-                    brand_node.set(
-                        "invisible",
-                        f"brand_use_level == '{BRAND_USE_LEVEL_NO_USE_LEVEL}'",
-                    )
+                brand_node.set(
+                    "invisible",
+                    f"brand_use_level == '{BRAND_USE_LEVEL_NO_USE_LEVEL}'",
+                )
+                if not brand_node.get("required"):
                     brand_node.set(
                         "required",
                         f"brand_use_level == '{BRAND_USE_LEVEL_REQUIRED_LEVEL}'",
                     )
-
         return arch, view
