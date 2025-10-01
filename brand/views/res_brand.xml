@@ -16,7 +16,6 @@
                         bg_color="bg-danger"
                         invisible="active == True"
                     />
-                    <field name="avatar_128" invisible="1" />
                     <field
                         name="image_1920"
                         widget="image"
@@ -24,7 +23,6 @@
                         options="{&quot;preview_image&quot;: &quot;avatar_128&quot;}"
                     />
                     <div class="oe_title mb24">
-                        <field name="active" invisible="1" />
                         <label for="name" class="oe_edit_only" />
                         <h1>
                             <field name="name" />
@@ -78,7 +76,6 @@
                         </group>
                         <group>
                             <field name="phone" widget="phone" />
-                            <field name="mobile" widget="phone" />
                             <field name="email" widget="email" />
                             <field
                                 name="website"
@@ -111,7 +108,6 @@
                 <field name="id" />
                 <field name="color" />
                 <field name="display_name" />
-                <field name="title" />
                 <field name="email" />
                 <field name="phone" />
                 <field name="street" />
@@ -119,7 +115,6 @@
                 <field name="zip" />
                 <field name="city" />
                 <field name="country_id" />
-                <field name="mobile" />
                 <field name="state_id" />
                 <field name="category_id" />
                 <field name="image_128" />
