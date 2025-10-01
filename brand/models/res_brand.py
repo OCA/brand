@@ -8,12 +8,14 @@ class ResBrand(models.Model):
     _name = "res.brand"
     _description = "Brand"
 
+    _inherits = {"res.partner": "partner_id"}
+
     partner_id = fields.Many2one(
         comodel_name="res.partner",
         string="Partner",
         required=True,
         index=True,
-        auto_join=True,
         delegate=True,
+        bypass_search_access=True,
         ondelete="restrict",
     )
