@@ -1,8 +1,7 @@
 # Copyright 2019 ACSONE SA/NV
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0).
-from lxml.builder import E
 
-from odoo import _, api, fields, models
+from odoo import api, fields, models
 from odoo.exceptions import ValidationError
 
 from .res_company import BRAND_USE_LEVEL_NO_USE_LEVEL, BRAND_USE_LEVEL_REQUIRED_LEVEL
@@ -41,15 +40,17 @@ class ResBrandMixin(models.AbstractModel):
     def _check_brand_requirement(self):
         for rec in self:
             if rec.is_brand_required and not rec.brand_id:
-                raise ValidationError(_("Brand is required"))
+                raise ValidationError(self.env._("Brand is required"))
 
     @api.constrains("brand_id", "company_id")
     def _check_brand_company_id(self):
         for rec in self:
             if rec.brand_id.company_id and rec.brand_id.company_id != rec.company_id:
                 raise ValidationError(
-                    _("Brand company must match document company for %s")
-                    % rec.display_name
+                    self.env._(
+                        "Brand company must match document company for %(doc_name)s",
+                        doc_name=rec.display_name,
+                    )
                 )
 
     @api.onchange("brand_id")
@@ -73,14 +74,6 @@ class ResBrandMixin(models.AbstractModel):
             )
 
             if brand_node is not None:
-                brand_node.addprevious(
-                    E.field(
-                        name="brand_use_level",
-                        invisible="True",
-                        column_invisible="True",
-                    )
-                )
-
                 brand_node.set(
                     "invisible",
                     f"brand_use_level == '{BRAND_USE_LEVEL_NO_USE_LEVEL}'",
