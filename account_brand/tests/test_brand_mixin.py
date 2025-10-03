@@ -107,6 +107,14 @@ class TestBrandMixin(TransactionCase):
         self.assertTrue(doc.xpath("//field[@name='brand_id']"))
 
     def test_reverse_move(self):
+        product = self.env["product.product"].create(
+            {
+                "name": "Test Product",
+                "type": "consu",
+                "lst_price": 100.0,
+            }
+        )
+
         move = self.env["account.move"].create(
             {
                 "name": "Sample invoice",
@@ -120,7 +128,7 @@ class TestBrandMixin(TransactionCase):
                         0,
                         0,
                         {
-                            "product_id": self.env.ref("product.product_product_1").id,
+                            "product_id": product.id,
                             "quantity": 40.0,
                             "name": "product test 1",
                             "discount": 10.00,

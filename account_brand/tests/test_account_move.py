@@ -7,7 +7,13 @@ from odoo.tests.common import TransactionCase
 class TestAccountMove(TransactionCase):
     def setUp(self):
         super().setUp()
-        self.product = self.env.ref("product.product_product_4")
+        self.product = self.env["product.product"].create(
+            {
+                "name": "Test Product",
+                "type": "consu",
+                "lst_price": 100.0,
+            }
+        )
         self.account_receivable = self.env["account.account"].create(
             {
                 "name": "Partner Receivable",
@@ -34,7 +40,12 @@ class TestAccountMove(TransactionCase):
                 "reconcile": True,
             }
         )
-        self.partner_id = self.env.ref("base.res_partner_12")
+        self.partner_id = self.env["res.partner"].create(
+            {
+                "name": "Test Partner",
+            }
+        )
+
         self.partner_id.property_account_receivable_id = self.account_receivable
         self.account_revenue = self.env["account.account"].create(
             {"name": "Test sale", "code": "XX.700", "account_type": "income"}
