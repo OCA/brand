@@ -5,13 +5,39 @@ from odoo.tests.common import TransactionCase
 
 
 class TestSaleOrder(TransactionCase):
-    def setUp(self):
-        super().setUp()
-        self.sale = self.env.ref("sale.sale_order_1")
-        self.sale.company_id.brand_use_level = "required"
-        self.sale.brand_id = self.env["res.brand"].create({"name": "brand"})
-        self.sale.order_line.mapped("product_id").write({"invoice_policy": "order"})
-        self.sale.action_confirm()
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.partner_a = cls.env["res.partner"].create(
+            {
+                "name": "Test Partner A",
+            }
+        )
+        cls.product_a = cls.env["product.product"].create(
+            {
+                "name": "Test Product A",
+                "list_price": 50.0,
+            }
+        )
+        cls.sale = cls.env["sale.order"].create(
+            {
+                "partner_id": cls.partner_a.id,
+                "order_line": [
+                    (
+                        0,
+                        0,
+                        {
+                            "product_id": cls.product_a.id,
+                            "product_uom_qty": 10,
+                        },
+                    )
+                ],
+            }
+        )
+        cls.sale.company_id.brand_use_level = "required"
+        cls.sale.brand_id = cls.env["res.brand"].create({"name": "brand"})
+        cls.sale.order_line.mapped("product_id").write({"invoice_policy": "order"})
+        cls.sale.action_confirm()
 
     def test_create_invoice(self):
         """It should create branded invoice"""
