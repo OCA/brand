@@ -1,0 +1,7 @@
+- Raphael Lee \<<rlee@opensourceintegrators.com>\>
+- Steve Campbell \<<scampbell@opensourceintegrators.com>\>
+- Maxime Chambreuil \<<mchambreuil@opensourceintegrators.com>\>
+- [Obertix](https://www.obertix.net):
+  - Vicent Cubells
+- Ammar Officewala \<<aofficewala@opensourceintegrators.com>\>
+- bosd \<<c5e2fd43-d292-4c90-9d1f-74ff3436329a@anonaddy.me\>
