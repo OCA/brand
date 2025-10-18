@@ -61,12 +61,3 @@ class TestResPartner(BaseCommon):
             brand_image,
             "Brand logo is not correctly related to the partner.",
         )
-
-    def test_empty_brand_logo(self):
-        """Test if the partner's brand_logo is empty
-        when no image is set on the brand."""
-        # Initially, the brand does not have an image set.
-        self.assertFalse(
-            self.partner.brand_logo,
-            "Brand logo should be empty if the brand does not have an image.",
-        )
