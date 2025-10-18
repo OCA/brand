@@ -18,4 +18,10 @@
         "wizards/brand_document_layout.xml",
     ],
     "maintainers": ["sbejaoui"],
+    "assets": {
+        "web.report_assets_common": [
+            "/brand_external_report_layout/"
+            "static/src/legacy/scss/asset_styles_brand_report.scss"
+        ]
+    },
 }
