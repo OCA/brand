@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template
+        id="mail_notification_light_brand"
+        inherit_id="mail.mail_notification_light"
+        priority="100"
+    >
+        <xpath expr="//tbody//img" position="replace">
+            <img
+                t-att-src="'/logo.png?company=%s&amp;bstyle=%i' % (brand.id if has_brand else company.id or 0, has_brand or 0)"
+                style="padding: 0px; margin: 0px; height: 48px;"
+                t-att-alt="'%s' % company.name"
+            />
+        </xpath>
+    </template>
+</odoo>
