@@ -1,0 +1,41 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mail_brand
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. module: mail_brand
+#: model:ir.model,name:mail_brand.model_base
+msgid "Base"
+msgstr ""
+
+#. module: mail_brand
+#: model:ir.model,name:mail_brand.model_res_brand
+#: model:ir.model.fields,field_description:mail_brand.field_mail_compose_message__brand_id
+msgid "Brand"
+msgstr ""
+
+#. module: mail_brand
+#: model:ir.model,name:mail_brand.model_mail_thread
+msgid "Email Thread"
+msgstr ""
+
+#. module: mail_brand
+#: model:ir.model,name:mail_brand.model_mail_compose_message
+msgid "Email composition wizard"
+msgstr ""
+
+#. module: mail_brand
+#: model:ir.model.fields,field_description:mail_brand.field_res_brand__logo_web
+msgid "Logo Web"
+msgstr ""
