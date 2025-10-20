@@ -3,7 +3,7 @@
 
 import markupsafe
 
-from odoo import api, fields, models
+from odoo import api, fields, models, tools
 
 from odoo.addons.web.models.base_document_layout import (
     DEFAULT_PRIMARY,
@@ -126,6 +126,7 @@ class BrandDocumentLayout(models.TransientModel):
                         "brand": wizard_with_logo,
                         "company": wizard_with_logo,
                         "preview_css": preview_css,
+                        "is_html_empty": tools.is_html_empty,
                     },
                 )
             else:
