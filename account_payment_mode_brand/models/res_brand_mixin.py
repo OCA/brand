@@ -14,7 +14,9 @@ class ResBrandMixin(models.AbstractModel):
 
     @api.depends("brand_id")
     def _compute_allowed_payment_mode_ids(self):
-        all_payment_mode = self.env["account.payment.mode"].search([])
+        all_payment_mode = self.env["account.payment.mode"].search(
+            [("active", "=", True)]
+        )
         for rec in self:
             if rec.brand_id and rec.brand_id.allowed_payment_mode_ids:
                 rec.allowed_payment_mode_ids = rec.brand_id.allowed_payment_mode_ids

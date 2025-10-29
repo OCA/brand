@@ -4,7 +4,7 @@
 <odoo>
     <record model="ir.ui.view" id="account_move_form_view">
         <field name="model">account.move</field>
-        <field name="inherit_id" ref="account_payment_partner.view_move_form" />
+        <field name="inherit_id" ref="account_payment_mode.view_move_form" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='payment_mode_id']" position="attributes">
                 <attribute name="domain" operation="domain_add" join_operator="AND">

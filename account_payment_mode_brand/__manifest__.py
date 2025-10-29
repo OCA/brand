@@ -5,14 +5,14 @@
     "name": "Account Payment Mode Brand",
     "summary": """
         This addon define allowed payment mode per brand""",
-    "version": "18.0.1.0.0",
+    "version": "19.0.1.0.0",
     "license": "AGPL-3",
     "author": "ACSONE SA/NV,Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/brand",
     "depends": [
         "brand",
         "account_brand",
-        "account_payment_partner",
+        "account_payment_mode",
         "base_view_inheritance_extension",
     ],
     "data": [
