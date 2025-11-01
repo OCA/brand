@@ -19,3 +19,4 @@
 - [Trobz](https://trobz.com):
   - Thao Le \<<thaolt@trobz.com>\>
   - Do Anh Duy \<<duyda@trobz.com>\>
+- Antonio David Ruban \<<antoniodavid8@gmail.com>\>

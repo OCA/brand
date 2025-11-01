@@ -32,12 +32,11 @@ class ProductBrand(models.Model):
     @api.depends("product_ids")
     def _compute_products_count(self):
         product_model = self.env["product.template"]
-        groups = product_model.read_group(
+        groups = product_model._read_group(
             [("product_brand_id", "in", self.ids)],
-            ["product_brand_id"],
-            ["product_brand_id"],
-            lazy=False,
+            groupby=["product_brand_id"],
+            aggregates=["__count"],
         )
-        data = {group["product_brand_id"][0]: group["__count"] for group in groups}
+        data = {brand.id: count for brand, count in groups}
         for brand in self:
             brand.products_count = data.get(brand.id, 0)
