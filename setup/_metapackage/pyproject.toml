@@ -1,0 +1,11 @@
+[project]
+name = "odoo-addons-oca-brand"
+version = "19.0.20251113.0"
+dependencies = [
+    "odoo-addon-product_brand==19.0.*",
+]
+classifiers=[
+    "Programming Language :: Python",
+    "Framework :: Odoo",
+    "Framework :: Odoo :: 19.0",
+]
