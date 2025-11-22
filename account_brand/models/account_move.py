@@ -17,23 +17,22 @@ class AccountMove(models.Model):
             return False
         return super()._is_brand_required()
 
-    @api.onchange("partner_id")
-    def _onchange_partner_id(self):
-        res = super()._onchange_partner_id()
-        if self.brand_id:
-            pab_model = self.env["res.partner.account.brand"]
-            company_id = self.company_id.id
+    @api.onchange("partner_id", "brand_id", "company_id")
+    def _onchange_lines_account_id_from_brand(self):
+        pab_model = self.env["res.partner.account.brand"]
+        for move in self.filtered("brand_id"):
+            company_id = move.company_id.id
             partner = (
-                self.partner_id
+                move.partner_id
                 if not company_id
-                else self.partner_id.with_company(company_id)
+                else move.partner_id.with_company(company_id)
             )
-            invoice_type = self.move_type or self.env.context.get(
+            invoice_type = move.move_type or self.env.context.get(
                 "move_type", "out_invoice"
             )
             if partner:
                 rec_account = pab_model._get_partner_account_by_brand(
-                    "asset_receivable", self.brand_id, partner
+                    "asset_receivable", move.brand_id, partner
                 )
                 rec_account = (
                     rec_account
@@ -41,7 +40,7 @@ class AccountMove(models.Model):
                     else partner.property_account_receivable_id
                 )
                 pay_account = pab_model._get_partner_account_by_brand(
-                    "liability_payable", self.brand_id, partner
+                    "liability_payable", move.brand_id, partner
                 )
                 pay_account = (
                     pay_account if pay_account else partner.property_account_payable_id
@@ -51,8 +50,7 @@ class AccountMove(models.Model):
                 else:
                     account_id = rec_account
                 if account_id:
-                    self.line_ids.filtered(
+                    move.line_ids.filtered(
                         lambda line, a=account_id: line.account_id.account_type
                         == a.account_type
                     ).update({"account_id": account_id.id})
-        return res
