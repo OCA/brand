@@ -1,7 +1,3 @@
-.. image:: https://odoo-community.org/readme-banner-image
-   :target: https://odoo-community.org/get-involved?utm_source=readme
-   :alt: Odoo Community Association
-
 ==============
 Analytic Brand
 ==============
@@ -17,7 +13,7 @@ Analytic Brand
 .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
     :target: https://odoo-community.org/page/development-status
     :alt: Beta
-.. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fbrand-lightgray.png?logo=github
@@ -32,9 +28,8 @@ Analytic Brand
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This addon associate an analytic distribution to a brand that will be
-used as a default value where the brand is used if the analytic
-accounting is activated.
+This addon allows to define analytic distribution models using brands in
+their domains.
 
 **Table of contents**
 
