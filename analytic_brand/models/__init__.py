@@ -1,1 +1,1 @@
-from . import res_brand
+from . import account_analytic_distribution_model
