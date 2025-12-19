@@ -26,12 +26,16 @@ class TestContract(TestContractBase):
         self.assertEqual(move.brand_id, self.brand_id)
 
     def test_contract_analytic_account_onchange_brand(self):
-        self.brand_id.analytic_distribution = {self.analytic_account.id: 100.0}
+        analytic_distribution = {str(self.analytic_account.id): 100.0}
+        self.env["account.analytic.distribution.model"].create(
+            {
+                "brand_id": self.brand_id.id,
+                "analytic_distribution": analytic_distribution,
+            }
+        )
         self.assertFalse(
             any(self.contract.contract_line_ids.mapped("analytic_distribution"))
         )
         self.contract.brand_id = self.brand_id
         for line in self.contract.contract_line_ids:
-            self.assertEqual(
-                line.analytic_distribution, self.brand_id.analytic_distribution
-            )
+            self.assertEqual(line.analytic_distribution, analytic_distribution)
