@@ -30,7 +30,7 @@ addon | version | maintainers | summary
 [contract_forecast_brand](contract_forecast_brand/) | 18.0.1.0.0 |  | This addon add brand field for contract forecast
 [contract_payment_mode_brand](contract_payment_mode_brand/) | 18.0.1.0.0 |  | This addon limits payment mode selection in contract to the brand's allowed.
 [mail_brand](mail_brand/) | 18.0.1.0.0 | <a href='https://github.com/switch87'><img src='https://github.com/switch87.png' width='32' height='32' style='border-radius:50%;' alt='switch87'/></a> <a href='https://github.com/bosd'><img src='https://github.com/bosd.png' width='32' height='32' style='border-radius:50%;' alt='bosd'/></a> | If a model has a brand defined to it, emails send from this model will be branded accordingly.
-[partner_brand](partner_brand/) | 18.0.1.0.1 | <a href='https://github.com/bealdav'><img src='https://github.com/bealdav.png' width='32' height='32' style='border-radius:50%;' alt='bealdav'/></a> | Define registered mark in partners according to brand settings
+[partner_brand](partner_brand/) | 18.0.1.0.2 | <a href='https://github.com/bealdav'><img src='https://github.com/bealdav.png' width='32' height='32' style='border-radius:50%;' alt='bealdav'/></a> | Define registered mark in partners according to brand settings
 [product_brand](product_brand/) | 18.0.1.0.1 |  | Product Brand Manager
 [product_brand_mrp](product_brand_mrp/) | 18.0.1.0.0 |  | This module allows to work with product_brand in MRP.
 [product_brand_purchase](product_brand_purchase/) | 18.0.1.0.0 |  | This module allows to work with product_brand in purchase reports.
