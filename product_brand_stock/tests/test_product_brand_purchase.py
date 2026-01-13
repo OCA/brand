@@ -25,7 +25,6 @@ class TestStockMove(BaseCommon):
         # Create a stock.move record
         self.stock_move = self.env["stock.move"].create(
             {
-                "name": "Test Move",
                 "product_id": self.product.id,
                 "product_uom_qty": 10,
                 "product_uom": self.product.uom_id.id,
