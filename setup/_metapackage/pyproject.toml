@@ -1,7 +1,8 @@
 [project]
 name = "odoo-addons-oca-brand"
-version = "19.0.20251113.0"
+version = "19.0.20260120.0"
 dependencies = [
+    "odoo-addon-brand==19.0.*",
     "odoo-addon-product_brand==19.0.*",
 ]
 classifiers=[
