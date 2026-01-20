@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2019 ACSONE SA/NV
+     License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0). -->
+<odoo>
+    <record model="ir.ui.view" id="res_config_settings_view_form">
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//block[@name='companies_setting_container']"
+                position="inside"
+            >
+                <setting
+                    string="Brand"
+                    help="Configure branding of customer facing business documents (SO, invoices, etc)."
+                    company_dependent="1"
+                >
+                    <field name="brand_use_level" required="1" />
+                </setting>
+            </xpath>
+        </field>
+    </record>
+</odoo>
