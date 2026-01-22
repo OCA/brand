@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0\n"
+"Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -12,6 +12,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: brand_external_report_layout
+#: model_terms:ir.ui.view,arch_db:brand_external_report_layout.res_brand_form_view
+msgid ""
+"<i class=\"o_button_icon oi oi-fw oi-arrow-right me-1\"/>\n"
+"                        <span>Configure Document Layout</span>"
+msgstr ""
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__account_number
+msgid "Account Number"
+msgstr ""
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,help:brand_external_report_layout.field_brand_document_layout__report_header
@@ -66,13 +78,6 @@ msgid "Change Document Template"
 msgstr ""
 
 #. module: brand_external_report_layout
-#. odoo-python
-#: code:addons/brand_external_report_layout/models/res_brand.py:0
-#, python-format
-msgid "Choose Your Document Layout"
-msgstr ""
-
-#. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__company_id
 msgid "Company"
 msgstr ""
@@ -80,6 +85,12 @@ msgstr ""
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__name
 msgid "Company Name"
+msgstr ""
+
+#. module: brand_external_report_layout
+#. odoo-python
+#: code:addons/brand_external_report_layout/models/res_brand.py:0
+msgid "Configure your document layout"
 msgstr ""
 
 #. module: brand_external_report_layout
@@ -113,6 +124,11 @@ msgid "Display Name"
 msgstr ""
 
 #. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__qr_code
+msgid "Display QR-code on invoices"
+msgstr ""
+
+#. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__external_report_layout_id
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__external_report_layout_id
 msgid "Document Template"
@@ -121,6 +137,11 @@ msgstr ""
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__email
 msgid "Email"
+msgstr ""
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields.selection,name:brand_external_report_layout.selection__res_brand__font__fira_mono
+msgid "Fira Mono"
 msgstr ""
 
 #. module: brand_external_report_layout
@@ -136,8 +157,8 @@ msgid "Footer text displayed at the bottom of all reports."
 msgstr ""
 
 #. module: brand_external_report_layout
-#: model:ir.model.fields.selection,name:brand_external_report_layout.selection__res_brand__layout_background__geometric
-msgid "Geometric"
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__from_invoice
+msgid "From Invoice"
 msgstr ""
 
 #. module: brand_external_report_layout
@@ -153,12 +174,8 @@ msgstr ""
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__is_company_details_empty
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__is_company_details_empty
 msgid "Is Company Details Empty"
-msgstr ""
-
-#. module: brand_external_report_layout
-#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout____last_update
-msgid "Last Modified on"
 msgstr ""
 
 #. module: brand_external_report_layout
@@ -270,6 +287,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__secondary_color
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__secondary_color
 msgid "Secondary Color"
+msgstr ""
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields.selection,name:brand_external_report_layout.selection__res_brand__font__tajawal
+msgid "Tajawal"
 msgstr ""
 
 #. module: brand_external_report_layout
