@@ -9,11 +9,7 @@
                 <field name="product_brand_id" />
             </field>
             <filter name="group_by_product_id" position="after">
-                <filter
-                    name="brand"
-                    string="Brand"
-                    context="{'group_by': 'product_brand_id'}"
-                />
+                <filter name="brand" string="Brand" context="{'group_by': 'product_brand_id'}" />
             </filter>
         </field>
     </record>
