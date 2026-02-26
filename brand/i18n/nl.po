@@ -233,17 +233,6 @@ msgid "City"
 msgstr "Stad"
 
 #. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__peppol_eas
-msgid ""
-"Code used to identify the Endpoint for BIS Billing 3.0 and its derivatives.\n"
-"             List available at https://docs.peppol.eu/poacc/billing/3.0/"
-"codelist/eas/"
-msgstr ""
-"Code die wordt gebruikt om het eindpunt voor BIS Billing 3.0 en zijn "
-"derivaten te identificeren.\n"
-"Lijst beschikbaar op https://docs.peppol.eu/poacc/billing/3.0/codelist/eas/"
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__color
 msgid "Color Index"
 msgstr "Kleurindex"
@@ -450,11 +439,6 @@ msgid "Font awesome icon e.g. fa-tasks"
 msgstr "Font awesome pictogram, bijvoorbeeld fa-tasks"
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__ubl_cii_format
-msgid "Format"
-msgstr "Formaat"
-
-#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__email_formatted
 msgid "Format email address \"Name <email@domain>\""
 msgstr "E-mailadres opmaken \"Naam <email@domain>\""
@@ -463,6 +447,11 @@ msgstr "E-mailadres opmaken \"Naam <email@domain>\""
 #: model:ir.model.fields,field_description:brand.field_res_brand__email_formatted
 msgid "Formatted Email"
 msgstr "Opgemaakte e-mail"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__global_location_number
+msgid "GLN"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_latitude
@@ -475,6 +464,11 @@ msgid "Geo Longitude"
 msgstr "Geografische lengtegraad"
 
 #. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__global_location_number
+msgid "Global Location Number"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__has_message
 msgid "Has Message"
 msgstr "Heeft bericht"
@@ -483,11 +477,6 @@ msgstr "Heeft bericht"
 #: model:ir.model.fields,field_description:brand.field_res_brand__has_unreconciled_entries
 msgid "Has Unreconciled Entries"
 msgstr "Heeft niet-afgestemde items"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__hide_peppol_fields
-msgid "Hide Peppol Fields"
-msgstr "Verberg Peppol-velden"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__id
@@ -782,16 +771,6 @@ msgstr "Aantal betalingstokens"
 #: model:ir.model.fields,field_description:brand.field_res_brand__payment_token_ids
 msgid "Payment Tokens"
 msgstr "Betalingstokens"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__peppol_endpoint
-msgid "Peppol Endpoint"
-msgstr "Peppol eindpunt"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__peppol_eas
-msgid "Peppol e-address (EAS)"
-msgstr "Peppol e-adres (EAS)"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__phone
@@ -1128,15 +1107,6 @@ msgid "Type of the exception activity on record."
 msgstr "Type uitzonderingsactiviteit op record."
 
 #. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__peppol_endpoint
-msgid ""
-"Unique identifier used by the BIS Billing 3.0 and its derivatives, also "
-"known as 'Endpoint ID'."
-msgstr ""
-"Unieke identificatie die wordt gebruikt door BIS Billing 3.0 en zijn "
-"afgeleiden, ook wel 'Endpoint ID' genoemd."
-
-#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__barcode
 msgid "Use a barcode to identify this contact."
 msgstr "Gebruik een barcode om deze contactpersoon te identificeren."
@@ -1214,3 +1184,33 @@ msgstr "bijv. BE0477472701"
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "e.g. https://www.odoo.com"
 msgstr "bijv. https://www.odoo.com"
+
+#~ msgid ""
+#~ "Code used to identify the Endpoint for BIS Billing 3.0 and its "
+#~ "derivatives.\n"
+#~ "             List available at https://docs.peppol.eu/poacc/billing/3.0/"
+#~ "codelist/eas/"
+#~ msgstr ""
+#~ "Code die wordt gebruikt om het eindpunt voor BIS Billing 3.0 en zijn "
+#~ "derivaten te identificeren.\n"
+#~ "Lijst beschikbaar op https://docs.peppol.eu/poacc/billing/3.0/codelist/"
+#~ "eas/"
+
+#~ msgid "Format"
+#~ msgstr "Formaat"
+
+#~ msgid "Hide Peppol Fields"
+#~ msgstr "Verberg Peppol-velden"
+
+#~ msgid "Peppol Endpoint"
+#~ msgstr "Peppol eindpunt"
+
+#~ msgid "Peppol e-address (EAS)"
+#~ msgstr "Peppol e-adres (EAS)"
+
+#~ msgid ""
+#~ "Unique identifier used by the BIS Billing 3.0 and its derivatives, also "
+#~ "known as 'Endpoint ID'."
+#~ msgstr ""
+#~ "Unieke identificatie die wordt gebruikt door BIS Billing 3.0 en zijn "
+#~ "afgeleiden, ook wel 'Endpoint ID' genoemd."

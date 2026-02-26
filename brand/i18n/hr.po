@@ -225,14 +225,6 @@ msgid "City"
 msgstr "Grad"
 
 #. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__peppol_eas
-msgid ""
-"Code used to identify the Endpoint for BIS Billing 3.0 and its derivatives.\n"
-"             List available at https://docs.peppol.eu/poacc/billing/3.0/"
-"codelist/eas/"
-msgstr ""
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__color
 msgid "Color Index"
 msgstr "Index boje"
@@ -436,11 +428,6 @@ msgid "Font awesome icon e.g. fa-tasks"
 msgstr ""
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__ubl_cii_format
-msgid "Format"
-msgstr ""
-
-#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__email_formatted
 msgid "Format email address \"Name <email@domain>\""
 msgstr "Format email adrese \"Naziv <email@domena>\""
@@ -449,6 +436,11 @@ msgstr "Format email adrese \"Naziv <email@domena>\""
 #: model:ir.model.fields,field_description:brand.field_res_brand__email_formatted
 msgid "Formatted Email"
 msgstr "Formatirani email"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__global_location_number
+msgid "GLN"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_latitude
@@ -461,6 +453,11 @@ msgid "Geo Longitude"
 msgstr ""
 
 #. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__global_location_number
+msgid "Global Location Number"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__has_message
 msgid "Has Message"
 msgstr "Ima poruke"
@@ -469,11 +466,6 @@ msgstr "Ima poruke"
 #: model:ir.model.fields,field_description:brand.field_res_brand__has_unreconciled_entries
 msgid "Has Unreconciled Entries"
 msgstr "Ima otvorenih stavaka"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__hide_peppol_fields
-msgid "Hide Peppol Fields"
-msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__id
@@ -761,16 +753,6 @@ msgstr ""
 #: model:ir.model.fields,field_description:brand.field_res_brand__payment_token_ids
 msgid "Payment Tokens"
 msgstr "Tokeni plaćanja"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__peppol_endpoint
-msgid "Peppol Endpoint"
-msgstr ""
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__peppol_eas
-msgid "Peppol e-address (EAS)"
-msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__phone
@@ -1072,13 +1054,6 @@ msgid "Type of the exception activity on record."
 msgstr ""
 
 #. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__peppol_endpoint
-msgid ""
-"Unique identifier used by the BIS Billing 3.0 and its derivatives, also "
-"known as 'Endpoint ID'."
-msgstr ""
-
-#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__barcode
 msgid "Use a barcode to identify this contact."
 msgstr ""
@@ -1200,8 +1175,8 @@ msgstr ""
 #~ "<span class=\"o_form_label\">Brend</span>\n"
 #~ "                                <span class=\"fa fa-lg fa-building-o\" "
 #~ "title=\"Ove vrijednosti su specifične za svaku tvrtku.\" aria-label=\"Ove "
-#~ "vrijednosti su specifične za svaku tvrtku.\" groups=\"base."
-#~ "group_multi_company\" role=\"img\"/>"
+#~ "vrijednosti su specifične za svaku tvrtku.\" "
+#~ "groups=\"base.group_multi_company\" role=\"img\"/>"
 
 #~ msgid "Last Modified on"
 #~ msgstr "Zadnje modificirano"
