@@ -121,11 +121,6 @@ msgid "Available Invoice Template Pdf Report"
 msgstr ""
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__available_peppol_eas
-msgid "Available Peppol Eas"
-msgstr ""
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__avatar_1920
 msgid "Avatar"
 msgstr "Avatar"
@@ -169,11 +164,6 @@ msgstr "Barcode"
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_blacklisted
 msgid "Blacklist"
 msgstr "Zwarte lijst"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__phone_blacklisted
-msgid "Blacklisted Phone is Phone"
-msgstr "Zwarte lijst Telefoon is Telefoon"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_bounce
@@ -250,17 +240,6 @@ msgstr "Vink dit vakje aan als deze contactpersoon een werknemer is."
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "City"
 msgstr "Stad"
-
-#. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__peppol_eas
-msgid ""
-"Code used to identify the Endpoint for BIS Billing 3.0 and its derivatives.\n"
-"             List available at https://docs.peppol.eu/poacc/billing/3.0/"
-"codelist/eas/"
-msgstr ""
-"Code die wordt gebruikt om het eindpunt voor BIS Billing 3.0 en zijn "
-"derivaten te identificeren.\n"
-"Lijst beschikbaar op https://docs.peppol.eu/poacc/billing/3.0/codelist/eas/"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__color
@@ -467,15 +446,6 @@ msgid "Employee"
 msgstr "Werknemer"
 
 #. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__phone_sanitized
-msgid ""
-"Field used to store sanitized phone number. Helps speeding up searches and "
-"comparisons."
-msgstr ""
-"Veld gebruikt om opgeschoond telefoonnummer op te slaan. Helpt bij het "
-"versnellen van zoekopdrachten en vergelijkingen."
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__fiscal_country_codes
 msgid "Fiscal Country Codes"
 msgstr "Fiscale landcodes"
@@ -516,11 +486,6 @@ msgid "Formatted Email"
 msgstr "Opgemaakte e-mail"
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__global_location_number
-msgid "GLN"
-msgstr ""
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_latitude
 msgid "Geo Latitude"
 msgstr "Geografische breedtegraad"
@@ -529,11 +494,6 @@ msgstr "Geografische breedtegraad"
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_longitude
 msgid "Geo Longitude"
 msgstr "Geografische lengtegraad"
-
-#. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__global_location_number
-msgid "Global Location Number"
-msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__has_message
@@ -570,7 +530,6 @@ msgstr "Indien aangevinkt, vereisen nieuwe berichten uw aandacht."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_has_error
-#: model:ir.model.fields,help:brand.field_res_brand__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr "Indien aangevinkt, hebben sommige berichten een leveringsfout."
 
@@ -582,15 +541,6 @@ msgid ""
 msgstr ""
 "Als het e-mailadres op de zwarte lijst staat, ontvangt de contactpersoon "
 "geen massamailings meer, van welke lijst dan ook."
-
-#. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__phone_sanitized_blacklisted
-msgid ""
-"If the sanitized phone number is on the blacklist, the contact won't receive "
-"mass mailing sms anymore, from any list"
-msgstr ""
-"Als het opgeschoonde telefoonnummer op de zwarte lijst staat, ontvangt het "
-"contact geen massale sms-berichten meer van welke lijst dan ook"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__ignore_abnormal_invoice_amount
@@ -626,18 +576,6 @@ msgstr "Afbeelding 256"
 #: model:ir.model.fields,field_description:brand.field_res_brand__image_512
 msgid "Image 512"
 msgstr "Afbeelding 512"
-
-#. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__phone_blacklisted
-msgid ""
-"Indicates if a blacklisted sanitized phone number is a phone number. Helps "
-"distinguish which number is blacklisted             when there is both a "
-"mobile and phone field in a model."
-msgstr ""
-"Geeft aan of een geblokkeerd, geschoond telefoonnummer een telefoonnummer "
-"is. \n"
-"Helpt onderscheiden welk nummer geblokkeerd is wanneer er zowel een mobiel- "
-"als een telefoonveld in een model aanwezig is."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__industry_id
@@ -685,19 +623,9 @@ msgid "Is In Call"
 msgstr ""
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__is_peppol_edi_format
-msgid "Is Peppol Edi Format"
-msgstr "Is Peppol Edi Formaat"
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_public
 msgid "Is Public"
 msgstr "Is openbaar"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__is_ubl_format
-msgid "Is Ubl Format"
-msgstr "Is Ubl Formaat"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_company
@@ -870,29 +798,9 @@ msgid "Payment Tokens"
 msgstr "Betalingstokens"
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__peppol_endpoint
-msgid "Peppol Endpoint"
-msgstr "Peppol eindpunt"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__peppol_eas
-msgid "Peppol e-address (EAS)"
-msgstr "Peppol e-adres (EAS)"
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__phone
 msgid "Phone"
 msgstr "Telefoon"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__phone_sanitized_blacklisted
-msgid "Phone Blacklisted"
-msgstr "Telefoonnummer Geblokkeerd"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__phone_mobile_search
-msgid "Phone Number"
-msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_product_pricelist
@@ -945,11 +853,6 @@ msgid "Rtc Session"
 msgstr ""
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__message_has_sms_error
-msgid "SMS Delivery error"
-msgstr "Fout bij SMS-bezorging"
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_order_count
 msgid "Sale Order Count"
 msgstr "Aantal verkooporders"
@@ -963,11 +866,6 @@ msgstr "Verkooporder"
 #: model:ir.model.fields,field_description:brand.field_res_brand__user_id
 msgid "Salesperson"
 msgstr "Verkoper"
-
-#. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__phone_sanitized
-msgid "Sanitized Number"
-msgstr "Geschoond Nummer"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__self
@@ -1175,15 +1073,6 @@ msgid "Type of the exception activity on record."
 msgstr "Type uitzonderingsactiviteit op record."
 
 #. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__peppol_endpoint
-msgid ""
-"Unique identifier used by the BIS Billing 3.0 and its derivatives, also "
-"known as 'Endpoint ID'."
-msgstr ""
-"Unieke identificatie die wordt gebruikt door BIS Billing 3.0 en zijn "
-"afgeleiden, ook wel 'Endpoint ID' genoemd."
-
-#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__barcode
 msgid "Use a barcode to identify this contact."
 msgstr "Gebruik een barcode om deze contactpersoon te identificeren."
@@ -1276,6 +1165,72 @@ msgstr "bijv. https://www.odoo.com"
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_edi_format
 msgid "eInvoice format"
 msgstr "eFactuur formaat"
+
+#~ msgid "Blacklisted Phone is Phone"
+#~ msgstr "Zwarte lijst Telefoon is Telefoon"
+
+#~ msgid ""
+#~ "Code used to identify the Endpoint for BIS Billing 3.0 and its "
+#~ "derivatives.\n"
+#~ "             List available at https://docs.peppol.eu/poacc/billing/3.0/"
+#~ "codelist/eas/"
+#~ msgstr ""
+#~ "Code die wordt gebruikt om het eindpunt voor BIS Billing 3.0 en zijn "
+#~ "derivaten te identificeren.\n"
+#~ "Lijst beschikbaar op https://docs.peppol.eu/poacc/billing/3.0/codelist/"
+#~ "eas/"
+
+#~ msgid ""
+#~ "Field used to store sanitized phone number. Helps speeding up searches "
+#~ "and comparisons."
+#~ msgstr ""
+#~ "Veld gebruikt om opgeschoond telefoonnummer op te slaan. Helpt bij het "
+#~ "versnellen van zoekopdrachten en vergelijkingen."
+
+#~ msgid ""
+#~ "If the sanitized phone number is on the blacklist, the contact won't "
+#~ "receive mass mailing sms anymore, from any list"
+#~ msgstr ""
+#~ "Als het opgeschoonde telefoonnummer op de zwarte lijst staat, ontvangt "
+#~ "het contact geen massale sms-berichten meer van welke lijst dan ook"
+
+#~ msgid ""
+#~ "Indicates if a blacklisted sanitized phone number is a phone number. "
+#~ "Helps distinguish which number is blacklisted             when there is "
+#~ "both a mobile and phone field in a model."
+#~ msgstr ""
+#~ "Geeft aan of een geblokkeerd, geschoond telefoonnummer een telefoonnummer "
+#~ "is. \n"
+#~ "Helpt onderscheiden welk nummer geblokkeerd is wanneer er zowel een "
+#~ "mobiel- als een telefoonveld in een model aanwezig is."
+
+#~ msgid "Is Peppol Edi Format"
+#~ msgstr "Is Peppol Edi Formaat"
+
+#~ msgid "Is Ubl Format"
+#~ msgstr "Is Ubl Formaat"
+
+#~ msgid "Peppol Endpoint"
+#~ msgstr "Peppol eindpunt"
+
+#~ msgid "Peppol e-address (EAS)"
+#~ msgstr "Peppol e-adres (EAS)"
+
+#~ msgid "Phone Blacklisted"
+#~ msgstr "Telefoonnummer Geblokkeerd"
+
+#~ msgid "SMS Delivery error"
+#~ msgstr "Fout bij SMS-bezorging"
+
+#~ msgid "Sanitized Number"
+#~ msgstr "Geschoond Nummer"
+
+#~ msgid ""
+#~ "Unique identifier used by the BIS Billing 3.0 and its derivatives, also "
+#~ "known as 'Endpoint ID'."
+#~ msgstr ""
+#~ "Unieke identificatie die wordt gebruikt door BIS Billing 3.0 en zijn "
+#~ "afgeleiden, ook wel 'Endpoint ID' genoemd."
 
 #~ msgid "Brand company must match document company for %s"
 #~ msgstr "Merkbedrijf moet overeenkomen met documentbedrijf voor %s"
