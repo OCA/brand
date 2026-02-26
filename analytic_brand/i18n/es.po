@@ -17,24 +17,31 @@ msgstr ""
 "X-Generator: Weblate 5.10.4\n"
 
 #. module: analytic_brand
-#: model:ir.model.fields,field_description:analytic_brand.field_res_brand__analytic_distribution
-msgid "Analytic Distribution"
-msgstr "Distribución analítica"
+#: model:ir.model,name:analytic_brand.model_account_analytic_distribution_model
+msgid "Analytic Distribution Model"
+msgstr ""
 
 #. module: analytic_brand
-#: model:ir.model.fields,field_description:analytic_brand.field_res_brand__analytic_precision
-msgid "Analytic Precision"
-msgstr "Precisión analítica"
-
-#. module: analytic_brand
-#: model:ir.model,name:analytic_brand.model_res_brand
+#: model:ir.model.fields,field_description:analytic_brand.field_account_analytic_distribution_model__brand_id
 msgid "Brand"
 msgstr "Marca"
 
 #. module: analytic_brand
-#: model:ir.model.fields,field_description:analytic_brand.field_res_brand__distribution_analytic_account_ids
-msgid "Distribution Analytic Account"
-msgstr "Cuenta analítica de distribución"
+#: model:ir.model.fields,help:analytic_brand.field_account_analytic_distribution_model__brand_id
+msgid ""
+"Select a brand for which the analytic distribution will be used (e.g. create "
+"new customer invoice or Sales order linked to this brand, it will "
+"automatically take this as an analytic account)"
+msgstr ""
+
+#~ msgid "Analytic Distribution"
+#~ msgstr "Distribución analítica"
+
+#~ msgid "Analytic Precision"
+#~ msgstr "Precisión analítica"
+
+#~ msgid "Distribution Analytic Account"
+#~ msgstr "Cuenta analítica de distribución"
 
 #~ msgid "Analytic Account"
 #~ msgstr "Cuenta Analítica"
