@@ -6,7 +6,7 @@
     "summary": """
         This module allows to propagate analytic distribution from branded analytic
         distribution models on account moves""",
-    "version": "18.0.1.0.0",
+    "version": "18.0.2.0.0",
     "license": "AGPL-3",
     "author": "ACSONE SA/NV," "Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/brand",
