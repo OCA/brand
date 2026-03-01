@@ -6,7 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-03-01 18:09+0000\n"
+"Last-Translator: metwaly774 <ametwaly724@gmail.com>\n"
 "Language-Team: none\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
@@ -14,11 +15,12 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__supplier_invoice_count
 msgid "# Vendor Bills"
-msgstr ""
+msgstr "# فواتير الموردين"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__type
@@ -46,57 +48,57 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_account_payable_id
 msgid "Account Payable"
-msgstr ""
+msgstr "حساب الدائنين"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_account_receivable_id
 msgid "Account Receivable"
-msgstr ""
+msgstr "حساب المدينين"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_needaction
 msgid "Action Needed"
-msgstr ""
+msgstr "يتطلب إجراء"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__active
 msgid "Active"
-msgstr ""
+msgstr "نشط"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__active_lang_count
 msgid "Active Lang Count"
-msgstr ""
+msgstr "عدد اللغات النشطة"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_ids
 msgid "Activities"
-msgstr ""
+msgstr "الأنشطة"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_exception_decoration
 msgid "Activity Exception Decoration"
-msgstr ""
+msgstr "تمييز استثناء النشاط"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_state
 msgid "Activity State"
-msgstr ""
+msgstr "حالة النشاط"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_type_icon
 msgid "Activity Type Icon"
-msgstr ""
+msgstr "أيقونة نوع النشاط"
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "Address"
-msgstr ""
+msgstr "العنوان"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__type
 msgid "Address Type"
-msgstr ""
+msgstr "نوع العنوان"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__lang
@@ -104,16 +106,18 @@ msgid ""
 "All the emails and documents sent to this contact will be translated in this "
 "language."
 msgstr ""
+"سيتم ترجمة جميع رسائل البريد الإلكتروني والمستندات المرسلة إلى جهة الاتصال هذه "
+"إلى هذه اللغة."
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "Archived"
-msgstr ""
+msgstr "مؤرشف"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_attachment_count
 msgid "Attachment Count"
-msgstr ""
+msgstr "عدد المرفقات"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__receipt_reminder_email
@@ -125,52 +129,52 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__avatar_1920
 msgid "Avatar"
-msgstr ""
+msgstr "الصورة الرمزية"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__avatar_1024
 msgid "Avatar 1024"
-msgstr ""
+msgstr "الصورة الرمزية 1024"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__avatar_128
 msgid "Avatar 128"
-msgstr ""
+msgstr "الصورة الرمزية 128"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__avatar_256
 msgid "Avatar 256"
-msgstr ""
+msgstr "الصورة الرمزية 256"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__avatar_512
 msgid "Avatar 512"
-msgstr ""
+msgstr "الصورة الرمزية 512"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__bank_account_count
 msgid "Bank"
-msgstr ""
+msgstr "بنك"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__bank_ids
 msgid "Banks"
-msgstr ""
+msgstr "البنوك"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__barcode
 msgid "Barcode"
-msgstr ""
+msgstr "الباركود"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_blacklisted
 msgid "Blacklist"
-msgstr ""
+msgstr "القائمة السوداء"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_bounce
 msgid "Bounce"
-msgstr ""
+msgstr "مرتجع"
 
 #. module: brand
 #: model:ir.model,name:brand.model_res_brand
@@ -181,7 +185,7 @@ msgstr ""
 #. module: brand
 #: model:ir.model,name:brand.model_res_brand_mixin
 msgid "Brand Mixin"
-msgstr ""
+msgstr "مزيج العلامة التجارية"
 
 #. module: brand
 #. odoo-python
@@ -192,26 +196,26 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
 #, python-format
 msgid "Brand Use Level"
-msgstr ""
+msgstr "مستوى استخدام العلامة التجارية"
 
 #. module: brand
 #. odoo-python
 #: code:addons/brand/models/res_brand_mixin.py:0
 #, python-format
 msgid "Brand company must match document company for %s"
-msgstr ""
+msgstr "يجب أن تتطابق شركة العلامة التجارية مع شركة المستند لـ %s"
 
 #. module: brand
 #. odoo-python
 #: code:addons/brand/models/res_brand_mixin.py:0
 #, python-format
 msgid "Brand is required"
-msgstr ""
+msgstr "العلامة التجارية مطلوبة"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand_mixin__brand_id
 msgid "Brand to use for this sale"
-msgstr ""
+msgstr "العلامة التجارية المستخدمة في عملية البيع هذه"
 
 #. module: brand
 #: model:ir.actions.act_window,name:brand.res_brand_act_window
@@ -219,136 +223,138 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_search_view
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_tree_view
 msgid "Brands"
-msgstr ""
+msgstr "العلامات التجارية"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__channel_ids
 msgid "Channels"
-msgstr ""
+msgstr "القنوات"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__is_company
 msgid "Check if the contact is a company, otherwise it is a person"
-msgstr ""
+msgstr "حدد هذا الخيار إذا كانت جهة الاتصال شركة، وإلا فهي فرد"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__employee
 msgid "Check this box if this contact is an Employee."
-msgstr ""
+msgstr "حدد هذا المربع إذا كانت جهة الاتصال موظفًا."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__city
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "City"
-msgstr ""
+msgstr "المدينة"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__color
 msgid "Color Index"
-msgstr ""
+msgstr "مؤشر اللون"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__commercial_partner_id
 msgid "Commercial Entity"
-msgstr ""
+msgstr "الكيان التجاري"
 
 #. module: brand
 #: model:ir.model,name:brand.model_res_company
 msgid "Companies"
-msgstr ""
+msgstr "الشركات"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__ref_company_ids
 msgid "Companies that refers to partner"
-msgstr ""
+msgstr "الشركات المرتبطة بهذه الجهة"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__company_id
 #: model:ir.model.fields,field_description:brand.field_res_brand_mixin__company_id
 msgid "Company"
-msgstr ""
+msgstr "الشركة"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__company_registry
 msgid "Company ID"
-msgstr ""
+msgstr "رقم تسجيل الشركة"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__company_name
 msgid "Company Name"
-msgstr ""
+msgstr "اسم الشركة"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__commercial_company_name
 msgid "Company Name Entity"
-msgstr ""
+msgstr "اسم الكيان التجاري"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__company_type
 msgid "Company Type"
-msgstr ""
+msgstr "نوع الشركة"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__contact_address
 msgid "Complete Address"
-msgstr ""
+msgstr "العنوان الكامل"
 
 #. module: brand
 #: model:ir.model,name:brand.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "إعدادات التهيئة"
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
 msgid ""
 "Configure branding of customer facing business documents (SO, invoices, etc)."
 msgstr ""
+"تهيئة العلامة التجارية للمستندات التجارية الموجهة للعملاء (أوامر البيع، "
+"الفواتير، وغيرها)."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__child_ids
 msgid "Contact"
-msgstr ""
+msgstr "جهة اتصال"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_bounce
 msgid "Counter of the number of bounced emails for this contact"
-msgstr ""
+msgstr "عدد رسائل البريد الإلكتروني المرتجعة لهذه الجهة"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__country_id
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "Country"
-msgstr ""
+msgstr "الدولة"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__country_code
 msgid "Country Code"
-msgstr ""
+msgstr "رمز الدولة"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "أنشئ بواسطة"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__create_date
 msgid "Created on"
-msgstr ""
+msgstr "تاريخ الإنشاء"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__credit_limit
 msgid "Credit Limit"
-msgstr ""
+msgstr "حد الائتمان"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__credit_limit
 msgid "Credit limit specific to this partner."
-msgstr ""
+msgstr "حد الائتمان المخصص لهذه الجهة المرتبطة."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__currency_id
 msgid "Currency"
-msgstr ""
+msgstr "العملة"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_stock_customer
@@ -358,17 +364,17 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_payment_term_id
 msgid "Customer Payment Terms"
-msgstr ""
+msgstr "شروط دفع العميل"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__customer_rank
 msgid "Customer Rank"
-msgstr ""
+msgstr "تصنيف العميل"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__date
 msgid "Date"
-msgstr ""
+msgstr "التاريخ"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__reminder_date_before_receipt
@@ -378,22 +384,22 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__trust
 msgid "Degree of trust you have in this debtor"
-msgstr ""
+msgstr "درجة الثقة في هذا المدين"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "الاسم المعروض"
 
 #. module: brand
 #: model:ir.model.fields.selection,name:brand.selection__res_company__brand_use_level__no
 msgid "Do not use brands on business document"
-msgstr ""
+msgstr "عدم استخدام العلامات التجارية في المستندات التجارية"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__duplicated_bank_account_partners_count
 msgid "Duplicated Bank Account Partners Count"
-msgstr ""
+msgstr "عدد الجهات ذات الحسابات البنكية المكررة"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__partner_share
@@ -402,46 +408,49 @@ msgid ""
 "partner is a customer without access or with a limited access created for "
 "sharing data."
 msgstr ""
+"إما عميل (ليس مستخدمًا)، أو مستخدم مشترك. يشير ذلك إلى أن الجهة المرتبطة "
+"الحالية هي عميل بدون صلاحية وصول أو بصلاحية وصول محدودة تم إنشاؤها لمشاركة "
+"البيانات."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__email
 msgid "Email"
-msgstr ""
+msgstr "البريد الإلكتروني"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__employee
 msgid "Employee"
-msgstr ""
+msgstr "موظف"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_account_position_id
 msgid "Fiscal Position"
-msgstr ""
+msgstr "المركز الضريبي"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_follower_ids
 msgid "Followers"
-msgstr ""
+msgstr "المتابعون"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_partner_ids
 msgid "Followers (Partners)"
-msgstr ""
+msgstr "المتابعون (الجهات المرتبطة)"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__activity_type_icon
 msgid "Font awesome icon e.g. fa-tasks"
-msgstr ""
+msgstr "أيقونة Font Awesome مثل fa-tasks"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__email_formatted
 msgid "Format email address \"Name <email@domain>\""
-msgstr ""
+msgstr "تنسيق عنوان البريد الإلكتروني \"الاسم <email@domain>\""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__email_formatted
 msgid "Formatted Email"
-msgstr ""
+msgstr "بريد إلكتروني منسق"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__global_location_number
@@ -451,12 +460,12 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_latitude
 msgid "Geo Latitude"
-msgstr ""
+msgstr "خط العرض الجغرافي"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_longitude
 msgid "Geo Longitude"
-msgstr ""
+msgstr "خط الطول الجغرافي"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__global_location_number
@@ -466,42 +475,42 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__has_message
 msgid "Has Message"
-msgstr ""
+msgstr "يحتوي على رسالة"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__has_unreconciled_entries
 msgid "Has Unreconciled Entries"
-msgstr ""
+msgstr "يحتوي على قيود غير مسواة"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__id
 msgid "ID"
-msgstr ""
+msgstr "المعرف"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__im_status
 msgid "IM Status"
-msgstr ""
+msgstr "حالة المراسلة الفورية"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_exception_icon
 msgid "Icon"
-msgstr ""
+msgstr "أيقونة"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__activity_exception_icon
 msgid "Icon to indicate an exception activity."
-msgstr ""
+msgstr "أيقونة للإشارة إلى نشاط استثنائي."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_needaction
 msgid "If checked, new messages require your attention."
-msgstr ""
+msgstr "إذا تم التحديد، فإن الرسائل الجديدة تتطلب انتباهك."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_has_error
 msgid "If checked, some messages have a delivery error."
-msgstr ""
+msgstr "إذا تم التحديد، فإن بعض الرسائل تحتوي على خطأ في التسليم."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__team_id
@@ -509,6 +518,8 @@ msgid ""
 "If set, this Sales Team will be used for sales and assignments related to "
 "this partner"
 msgstr ""
+"إذا تم تعيينه، سيتم استخدام فريق المبيعات هذا للعمليات والمهام المرتبطة بهذه "
+"الجهة المرتبطة"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__is_blacklisted
@@ -516,81 +527,83 @@ msgid ""
 "If the email address is on the blacklist, the contact won't receive mass "
 "mailing anymore, from any list"
 msgstr ""
+"إذا كان عنوان البريد الإلكتروني ضمن القائمة السوداء، فلن تتلقى جهة الاتصال "
+"رسائل بريد جماعية بعد الآن من أي قائمة"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__image_1920
 msgid "Image"
-msgstr ""
+msgstr "صورة"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__image_1024
 msgid "Image 1024"
-msgstr ""
+msgstr "صورة 1024"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__image_128
 msgid "Image 128"
-msgstr ""
+msgstr "صورة 128"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__image_256
 msgid "Image 256"
-msgstr ""
+msgstr "صورة 256"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__image_512
 msgid "Image 512"
-msgstr ""
+msgstr "صورة 512"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__industry_id
 msgid "Industry"
-msgstr ""
+msgstr "النشاط"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_warn
 msgid "Invoice"
-msgstr ""
+msgstr "الفاتورة"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_ids
 msgid "Invoices"
-msgstr ""
+msgstr "الفواتير"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_coa_installed
 msgid "Is Coa Installed"
-msgstr ""
+msgstr "هل مخطط الحسابات مُثبّت"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_is_follower
 msgid "Is Follower"
-msgstr ""
+msgstr "متابع"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_public
 msgid "Is Public"
-msgstr ""
+msgstr "عام"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_company
 msgid "Is a Company"
-msgstr ""
+msgstr "شركة"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__function
 msgid "Job Position"
-msgstr ""
+msgstr "المسمى الوظيفي"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__journal_item_count
 msgid "Journal Items"
-msgstr ""
+msgstr "قيود اليومية"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__lang
 msgid "Language"
-msgstr ""
+msgstr "اللغة"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand____last_update
@@ -600,12 +613,12 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "آخر تحديث بواسطة"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "آخر تحديث في"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__last_time_entries_checked
@@ -614,11 +627,14 @@ msgid ""
 "It is set either if there's not at least an unreconciled debit and an "
 "unreconciled credit or if you click the \"Done\" button."
 msgstr ""
+"آخر مرة تم فيها إجراء مطابقة الفواتير والمدفوعات لهذه الجهة المرتبطة. يتم "
+"تعيينه إذا لم يكن هناك على الأقل قيد مدين غير مسوّى وقيد دائن غير مسوّى أو عند "
+"الضغط على زر \"تم\"."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__last_time_entries_checked
 msgid "Latest Invoices & Payments Matching Date"
-msgstr ""
+msgstr "آخر تاريخ لمطابقة الفواتير والمدفوعات"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_main_attachment_id
@@ -628,12 +644,12 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_has_error
 msgid "Message Delivery error"
-msgstr ""
+msgstr "خطأ في تسليم الرسالة"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_warn_msg
 msgid "Message for Invoice"
-msgstr ""
+msgstr "رسالة الفاتورة"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__purchase_warn_msg
@@ -643,7 +659,7 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_warn_msg
 msgid "Message for Sales Order"
-msgstr ""
+msgstr "رسالة أمر البيع"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__picking_warn_msg
@@ -653,52 +669,52 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_ids
 msgid "Messages"
-msgstr ""
+msgstr "الرسائل"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__mobile
 msgid "Mobile"
-msgstr ""
+msgstr "الهاتف المحمول"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__my_activity_date_deadline
 msgid "My Activity Deadline"
-msgstr ""
+msgstr "موعد استحقاق نشاطي"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__name
 msgid "Name"
-msgstr ""
+msgstr "الاسم"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_date_deadline
 msgid "Next Activity Deadline"
-msgstr ""
+msgstr "موعد استحقاق النشاط التالي"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_summary
 msgid "Next Activity Summary"
-msgstr ""
+msgstr "ملخص النشاط التالي"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_type_id
 msgid "Next Activity Type"
-msgstr ""
+msgstr "نوع النشاط التالي"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__email_normalized
 msgid "Normalized Email"
-msgstr ""
+msgstr "البريد الإلكتروني المُطبع"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__comment
 msgid "Notes"
-msgstr ""
+msgstr "ملاحظات"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_needaction_counter
 msgid "Number of Actions"
-msgstr ""
+msgstr "عدد الإجراءات"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__reminder_date_before_receipt
@@ -708,17 +724,17 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_has_error_counter
 msgid "Number of errors"
-msgstr ""
+msgstr "عدد الأخطاء"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_needaction_counter
 msgid "Number of messages requiring action"
-msgstr ""
+msgstr "عدد الرسائل التي تتطلب إجراء"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_has_error_counter
 msgid "Number of messages with delivery error"
-msgstr ""
+msgstr "عدد الرسائل التي تحتوي على خطأ في التسليم"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__on_time_rate
@@ -728,7 +744,7 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields.selection,name:brand.selection__res_company__brand_use_level__optional
 msgid "Optional"
-msgstr ""
+msgstr "اختياري"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__on_time_rate
@@ -741,62 +757,62 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__parent_name
 msgid "Parent name"
-msgstr ""
+msgstr "اسم الجهة الرئيسية"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_id
 msgid "Partner"
-msgstr ""
+msgstr "الجهة المرتبطة"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
 msgid "Partner Contracts"
-msgstr ""
+msgstr "عقود الجهة المرتبطة"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__use_partner_credit_limit
 msgid "Partner Limit"
-msgstr ""
+msgstr "حد الجهة المرتبطة"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__same_company_registry_partner_id
 msgid "Partner with same Company Registry"
-msgstr ""
+msgstr "جهة مرتبطة بنفس سجل الشركة"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__same_vat_partner_id
 msgid "Partner with same Tax ID"
-msgstr ""
+msgstr "جهة مرتبطة بنفس الرقم الضريبي"
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "Partners"
-msgstr ""
+msgstr "الجهات المرتبطة"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__debit_limit
 msgid "Payable Limit"
-msgstr ""
+msgstr "حد الدائن"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__payment_token_count
 msgid "Payment Token Count"
-msgstr ""
+msgstr "عدد رموز الدفع"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__payment_token_ids
 msgid "Payment Tokens"
-msgstr ""
+msgstr "رموز الدفع"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__phone
 msgid "Phone"
-msgstr ""
+msgstr "الهاتف"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_product_pricelist
 msgid "Pricelist"
-msgstr ""
+msgstr "قائمة الأسعار"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__purchase_line_ids
@@ -821,47 +837,47 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__ref
 msgid "Reference"
-msgstr ""
+msgstr "المرجع"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__parent_id
 msgid "Related Company"
-msgstr ""
+msgstr "الشركة المرتبطة"
 
 #. module: brand
 #: model:ir.model.fields.selection,name:brand.selection__res_company__brand_use_level__required
 msgid "Required"
-msgstr ""
+msgstr "إلزامي"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_user_id
 msgid "Responsible User"
-msgstr ""
+msgstr "المستخدم المسؤول"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_order_count
 msgid "Sale Order Count"
-msgstr ""
+msgstr "عدد أوامر البيع"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_order_ids
 msgid "Sales Order"
-msgstr ""
+msgstr "أمر البيع"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__team_id
 msgid "Sales Team"
-msgstr ""
+msgstr "فريق المبيعات"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_warn
 msgid "Sales Warnings"
-msgstr ""
+msgstr "تحذيرات المبيعات"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__user_id
 msgid "Salesperson"
-msgstr ""
+msgstr "مندوب المبيعات"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__invoice_warn
@@ -873,57 +889,60 @@ msgid ""
 "Selecting \"Blocking Message\" will throw an exception with the message and "
 "block the flow. The Message has to be written in the next field."
 msgstr ""
+"عند اختيار خيار \"تحذير\" سيتم إخطار المستخدم بالرسالة، وعند اختيار \"رسالة "
+"حظر\" سيتم رفع استثناء بالرسالة وإيقاف العملية. يجب كتابة الرسالة في الحقل "
+"التالي."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__self
 msgid "Self"
-msgstr ""
+msgstr "ذاتي"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__use_partner_credit_limit
 msgid "Set a value greater than 0.0 to activate a credit limit check"
-msgstr ""
+msgstr "قم بتعيين قيمة أكبر من 0.0 لتفعيل التحقق من حد الائتمان"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_share
 msgid "Share Partner"
-msgstr ""
+msgstr "مشاركة جهة الاتصال"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__show_credit_limit
 msgid "Show Credit Limit"
-msgstr ""
+msgstr "إظهار حد الائتمان"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__signup_expiration
 msgid "Signup Expiration"
-msgstr ""
+msgstr "انتهاء صلاحية التسجيل"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__signup_token
 msgid "Signup Token"
-msgstr ""
+msgstr "رمز التسجيل"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__signup_type
 msgid "Signup Token Type"
-msgstr ""
+msgstr "نوع رمز التسجيل"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__signup_valid
 msgid "Signup Token is Valid"
-msgstr ""
+msgstr "رمز التسجيل صالح"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__signup_url
 msgid "Signup URL"
-msgstr ""
+msgstr "رابط التسجيل"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__state_id
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "State"
-msgstr ""
+msgstr "الولاية / المحافظة"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__activity_state
@@ -933,6 +952,10 @@ msgid ""
 "Today: Activity date is today\n"
 "Planned: Future activities."
 msgstr ""
+"الحالة بناءً على الأنشطة\n"
+"متأخر: تاريخ الاستحقاق قد مضى\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"مخطط: أنشطة مستقبلية."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__picking_warn
@@ -942,22 +965,22 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__street
 msgid "Street"
-msgstr ""
+msgstr "الشارع"
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "Street 2..."
-msgstr ""
+msgstr "الشارع 2..."
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "Street..."
-msgstr ""
+msgstr "الشارع..."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__street2
 msgid "Street2"
-msgstr ""
+msgstr "الشارع 2"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_purchase_currency_id
@@ -967,17 +990,17 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__supplier_rank
 msgid "Supplier Rank"
-msgstr ""
+msgstr "تصنيف المورد"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__category_id
 msgid "Tags"
-msgstr ""
+msgstr "الوسوم"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__vat
 msgid "Tax ID"
-msgstr ""
+msgstr "الرقم الضريبي"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__country_code
@@ -985,6 +1008,8 @@ msgid ""
 "The ISO country code in two chars. \n"
 "You can use this field for quick search."
 msgstr ""
+"رمز الدولة وفق معيار ISO مكون من حرفين.\n"
+"يمكنك استخدام هذا الحقل للبحث السريع."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__vat
@@ -993,17 +1018,19 @@ msgid ""
 "country format. You can use '/' to indicate that the partner is not subject "
 "to tax."
 msgstr ""
+"رقم التعريف الضريبي. سيتم التحقق من القيم هنا وفقًا لتنسيق الدولة.\n"
+"يمكنك استخدام '/' للإشارة إلى أن جهة الاتصال غير خاضعة للضريبة."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_account_position_id
 msgid ""
 "The fiscal position determines the taxes/accounts used for this contact."
-msgstr ""
+msgstr "تحدد الوضعية الضريبية الضرائب والحسابات المستخدمة لهذه الجهة."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__user_id
 msgid "The internal user in charge of this contact."
-msgstr ""
+msgstr "المستخدم الداخلي المسؤول عن جهة الاتصال هذه."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__has_unreconciled_entries
@@ -1011,6 +1038,8 @@ msgid ""
 "The partner has at least one unreconciled debit and credit since last time "
 "the invoices & payments matching was performed."
 msgstr ""
+"تحتوي جهة الاتصال على قيد مدين وقيد دائن واحد على الأقل غير مُسوى منذ آخر مرة "
+"تمت فيها مطابقة الفواتير والمدفوعات."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__company_registry
@@ -1018,6 +1047,8 @@ msgid ""
 "The registry number of the company. Use it if it is different from the Tax "
 "ID. It must be unique across all partners of a same country"
 msgstr ""
+"رقم السجل التجاري للشركة. استخدمه إذا كان مختلفًا عن الرقم الضريبي. يجب أن "
+"يكون فريدًا بين جميع جهات الاتصال داخل نفس الدولة."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_stock_customer
@@ -1037,6 +1068,8 @@ msgid ""
 "This account will be used instead of the default one as the payable account "
 "for the current partner"
 msgstr ""
+"سيتم استخدام هذا الحساب بدلًا من الحساب الافتراضي كحساب دائن لجهة الاتصال "
+"الحالية."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_account_receivable_id
@@ -1044,6 +1077,8 @@ msgid ""
 "This account will be used instead of the default one as the receivable "
 "account for the current partner"
 msgstr ""
+"سيتم استخدام هذا الحساب بدلًا من الحساب الافتراضي كحساب مدين لجهة الاتصال "
+"الحالية."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_purchase_currency_id
@@ -1058,6 +1093,8 @@ msgid ""
 "This field is used to search on email address as the primary email field can "
 "contain more than strictly an email address."
 msgstr ""
+"يُستخدم هذا الحقل للبحث باستخدام عنوان البريد الإلكتروني، حيث قد يحتوي حقل "
+"البريد الإلكتروني الأساسي على أكثر من مجرد عنوان بريد إلكتروني."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_supplier_payment_term_id
@@ -1065,6 +1102,7 @@ msgid ""
 "This payment term will be used instead of the default one for purchase "
 "orders and vendor bills"
 msgstr ""
+"سيتم استخدام شرط الدفع هذا بدلًا من الافتراضي في أوامر الشراء وفواتير الموردين."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_payment_term_id
@@ -1072,6 +1110,7 @@ msgid ""
 "This payment term will be used instead of the default one for sales orders "
 "and customer invoices"
 msgstr ""
+"سيتم استخدام شرط الدفع هذا بدلًا من الافتراضي في أوامر البيع وفواتير العملاء."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_product_pricelist
@@ -1079,46 +1118,48 @@ msgid ""
 "This pricelist will be used, instead of the default one, for sales to the "
 "current partner"
 msgstr ""
+"سيتم استخدام قائمة الأسعار هذه بدلًا من الافتراضية في عمليات البيع لجهة الاتصال "
+"الحالية."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__tz
 msgid "Timezone"
-msgstr ""
+msgstr "المنطقة الزمنية"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__tz_offset
 msgid "Timezone offset"
-msgstr ""
+msgstr "فرق التوقيت"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__title
 msgid "Title"
-msgstr ""
+msgstr "اللقب"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__total_invoiced
 msgid "Total Invoiced"
-msgstr ""
+msgstr "إجمالي المفوتر"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__debit
 msgid "Total Payable"
-msgstr ""
+msgstr "إجمالي الدائن"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__credit
 msgid "Total Receivable"
-msgstr ""
+msgstr "إجمالي المدين"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__credit
 msgid "Total amount this customer owes you."
-msgstr ""
+msgstr "إجمالي المبلغ المستحق عليكم من هذا العميل."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__debit
 msgid "Total amount you have to pay to this vendor."
-msgstr ""
+msgstr "إجمالي المبلغ المستحق عليكم لهذا المورد."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__translated_display_name
@@ -1128,17 +1169,17 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__activity_exception_decoration
 msgid "Type of the exception activity on record."
-msgstr ""
+msgstr "نوع نشاط الاستثناء المسجل في السجل."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__barcode
 msgid "Use a barcode to identify this contact."
-msgstr ""
+msgstr "استخدم رمزًا شريطيًا لتعريف جهة الاتصال هذه."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__user_ids
 msgid "Users"
-msgstr ""
+msgstr "المستخدمون"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_stock_supplier
@@ -1148,27 +1189,27 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_supplier_payment_term_id
 msgid "Vendor Payment Terms"
-msgstr ""
+msgstr "شروط دفع المورد"
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "Website"
-msgstr ""
+msgstr "الموقع الإلكتروني"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__website
 msgid "Website Link"
-msgstr ""
+msgstr "رابط الموقع الإلكتروني"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__website_message_ids
 msgid "Website Messages"
-msgstr ""
+msgstr "رسائل الموقع الإلكتروني"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__website_message_ids
 msgid "Website communication history"
-msgstr ""
+msgstr "سجل تواصل الموقع الإلكتروني"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__tz
@@ -1179,23 +1220,29 @@ msgid ""
 "Anywhere else, time values are computed according to the time offset of your "
 "web client."
 msgstr ""
+"عند طباعة المستندات وتصدير/استيراد البيانات، يتم احتساب قيم الوقت وفقًا لهذه "
+"المنطقة الزمنية.\n"
+"إذا لم يتم تعيين المنطقة الزمنية، فسيتم استخدام UTC (التوقيت العالمي المنسق)"
+".\n"
+"في أي موضع آخر، يتم احتساب قيم الوقت وفقًا لفارق التوقيت الخاص بعميل الويب "
+"الخاص بك."
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "ZIP"
-msgstr ""
+msgstr "الرمز البريدي"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__zip
 msgid "Zip"
-msgstr ""
+msgstr "الرمز البريدي"
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "e.g. BE0477472701"
-msgstr ""
+msgstr "مثال: BE0477472701"
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "e.g. https://www.odoo.com"
-msgstr ""
+msgstr "مثال: https://www.odoo.com"
