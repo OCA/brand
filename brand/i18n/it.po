@@ -57,8 +57,8 @@ msgstr ""
 "<span class=\"o_form_label\">Brand</span>\n"
 "                                <span class=\"fa fa-lg fa-building-o\" "
 "title=\"I valori impostati qui sono specifici per azienda.\" aria-label=\"I "
-"valori impostati qui sono specifici per azienda.\" groups=\"base."
-"group_multi_company\" role=\"img\"/>"
+"valori impostati qui sono specifici per azienda.\" "
+"groups=\"base.group_multi_company\" role=\"img\"/>"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_account_payable_id
@@ -471,6 +471,11 @@ msgid "Formatted Email"
 msgstr "Email formattata"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__global_location_number
+msgid "GLN"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_latitude
 msgid "Geo Latitude"
 msgstr "Latitudine geografica"
@@ -479,6 +484,11 @@ msgstr "Latitudine geografica"
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_longitude
 msgid "Geo Longitude"
 msgstr "Longitudine geografica"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__global_location_number
+msgid "Global Location Number"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__has_message
@@ -759,8 +769,8 @@ msgstr "Opzionale"
 #: model:ir.model.fields,help:brand.field_res_brand__on_time_rate
 msgid ""
 "Over the past x days; the number of products received on time divided by the "
-"number of ordered products.x is either the System Parameter purchase_stock."
-"on_time_delivery_days or the default 365"
+"number of ordered products.x is either the System Parameter "
+"purchase_stock.on_time_delivery_days or the default 365"
 msgstr ""
 "Negli ultimi X giorni; il numero di prodotti ricevuti puntualmente diviso "
 "per il numero di prodotti ordinati. X è il parametro di sistema "

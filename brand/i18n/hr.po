@@ -56,8 +56,8 @@ msgstr ""
 "<span class=\"o_form_label\">Brend</span>\n"
 "                                <span class=\"fa fa-lg fa-building-o\" "
 "title=\"Ove vrijednosti su specifične za svaku tvrtku.\" aria-label=\"Ove "
-"vrijednosti su specifične za svaku tvrtku.\" groups=\"base."
-"group_multi_company\" role=\"img\"/>"
+"vrijednosti su specifične za svaku tvrtku.\" "
+"groups=\"base.group_multi_company\" role=\"img\"/>"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_account_payable_id
@@ -463,6 +463,11 @@ msgid "Formatted Email"
 msgstr "Formatirani email"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__global_location_number
+msgid "GLN"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_latitude
 msgid "Geo Latitude"
 msgstr ""
@@ -470,6 +475,11 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_longitude
 msgid "Geo Longitude"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__global_location_number
+msgid "Global Location Number"
 msgstr ""
 
 #. module: brand
@@ -743,8 +753,8 @@ msgstr "Opcionalno"
 #: model:ir.model.fields,help:brand.field_res_brand__on_time_rate
 msgid ""
 "Over the past x days; the number of products received on time divided by the "
-"number of ordered products.x is either the System Parameter purchase_stock."
-"on_time_delivery_days or the default 365"
+"number of ordered products.x is either the System Parameter "
+"purchase_stock.on_time_delivery_days or the default 365"
 msgstr ""
 
 #. module: brand

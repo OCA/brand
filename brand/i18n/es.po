@@ -476,6 +476,11 @@ msgid "Formatted Email"
 msgstr "Correo Electrónico Formateado"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__global_location_number
+msgid "GLN"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_latitude
 msgid "Geo Latitude"
 msgstr "Latitud geográfica"
@@ -484,6 +489,11 @@ msgstr "Latitud geográfica"
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_longitude
 msgid "Geo Longitude"
 msgstr "Longitud geográfica"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__global_location_number
+msgid "Global Location Number"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__has_message
@@ -765,8 +775,8 @@ msgstr "Opcional"
 #: model:ir.model.fields,help:brand.field_res_brand__on_time_rate
 msgid ""
 "Over the past x days; the number of products received on time divided by the "
-"number of ordered products.x is either the System Parameter purchase_stock."
-"on_time_delivery_days or the default 365"
+"number of ordered products.x is either the System Parameter "
+"purchase_stock.on_time_delivery_days or the default 365"
 msgstr ""
 "Durante los últimos x días; la cantidad de productos recibidos a tiempo "
 "dividida por la cantidad de productos pedidos.x es el parámetro del sistema "
