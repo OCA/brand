@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-05-22 09:26+0000\n"
+"PO-Revision-Date: 2026-03-02 18:45+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10.4\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__supplier_invoice_count
@@ -473,7 +473,7 @@ msgstr "Email formattata"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__global_location_number
 msgid "GLN"
-msgstr ""
+msgstr "NUG"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_latitude
@@ -488,7 +488,7 @@ msgstr "Longitudine geografica"
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__global_location_number
 msgid "Global Location Number"
-msgstr ""
+msgstr "Numero ubicazione globale"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__has_message
