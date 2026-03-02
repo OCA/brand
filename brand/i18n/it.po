@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-06-19 14:25+0000\n"
+"PO-Revision-Date: 2026-03-02 18:45+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10.4\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__supplier_invoice_count
@@ -122,6 +122,8 @@ msgid ""
 "Automatically send a confirmation email to the vendor X days before the "
 "expected receipt date, asking him to confirm the exact date."
 msgstr ""
+"Invia automaticamente una email al fornitore X giorni prima della data "
+"fattura prevista, chiedendo la conferma della data."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__avatar_1920
@@ -223,7 +225,7 @@ msgstr "Marche"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__buyer_id
 msgid "Buyer"
-msgstr ""
+msgstr "Acquirente"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__channel_ids
@@ -384,7 +386,7 @@ msgstr "Data"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__reminder_date_before_receipt
 msgid "Days Before Receipt"
-msgstr ""
+msgstr "Giorni antecedenti la fattura"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__days_sales_outstanding
@@ -470,7 +472,7 @@ msgstr "Email formattata"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__global_location_number
 msgid "GLN"
-msgstr ""
+msgstr "NUG"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_latitude
@@ -485,7 +487,7 @@ msgstr "Longitudine geografica"
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__global_location_number
 msgid "Global Location Number"
-msgstr ""
+msgstr "Numero ubicazione globale"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__has_message
@@ -664,7 +666,7 @@ msgstr "Messaggio per fattura"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__purchase_warn_msg
 msgid "Message for Purchase Order"
-msgstr ""
+msgstr "Messaggio per ordine di acquisto"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_warn_msg
@@ -725,6 +727,7 @@ msgstr "Numero di azioni"
 #: model:ir.model.fields,help:brand.field_res_brand__reminder_date_before_receipt
 msgid "Number of days to send reminder email before the promised receipt date"
 msgstr ""
+"Numero di giorni per invio email promemoria prima della data fattura attesa"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_has_error_counter
@@ -826,17 +829,17 @@ msgstr "Listino prezzi"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__purchase_order_count
 msgid "Purchase Order Count"
-msgstr ""
+msgstr "Conteggio ordine di acquisto"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__purchase_warn
 msgid "Purchase Order Warning"
-msgstr ""
+msgstr "Avviso ordine acquisto"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__receipt_reminder_email
 msgid "Receipt Reminder"
-msgstr ""
+msgstr "Promemoria ricevuta"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__ref
@@ -989,7 +992,7 @@ msgstr "Indirizzo2"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_purchase_currency_id
 msgid "Supplier Currency"
-msgstr ""
+msgstr "Valuta fornitore"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__supplier_rank
@@ -1080,6 +1083,8 @@ msgid ""
 "This currency will be used, instead of the default one, for purchases from "
 "the current partner"
 msgstr ""
+"Questa valuta verrà utilizzata, al posto della predefinita, per gli acquisti "
+"dal fornitore corrente"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__email_normalized
