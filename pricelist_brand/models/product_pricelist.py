@@ -7,7 +7,6 @@ from odoo.osv import expression
 
 
 class ProductPricelist(models.Model):
-
     _inherit = "product.pricelist"
 
     def _get_applicable_rules_domain(self, products, date, **kwargs):
@@ -34,7 +33,6 @@ class ProductPricelist(models.Model):
 
 
 class ProductPricelistItem(models.Model):
-
     _inherit = "product.pricelist.item"
 
     product_brand_id = fields.Many2one(

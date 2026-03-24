@@ -1,3 +1,7 @@
+.. image:: https://odoo-community.org/readme-banner-image
+   :target: https://odoo-community.org/get-involved?utm_source=readme
+   :alt: Odoo Community Association
+
 ===============
 Pricelist Brand
 ===============
@@ -13,22 +17,23 @@ Pricelist Brand
 .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
     :target: https://odoo-community.org/page/development-status
     :alt: Beta
-.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fbrand-lightgray.png?logo=github
-    :target: https://github.com/OCA/brand/tree/16.0/pricelist_brand
+    :target: https://github.com/OCA/brand/tree/19.0/pricelist_brand
     :alt: OCA/brand
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/brand-16-0/brand-16-0-pricelist_brand
+    :target: https://translation.odoo-community.org/projects/brand-19-0/brand-19-0-pricelist_brand
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png
-    :target: https://runboat.odoo-community.org/builds?repo=OCA/brand&target_branch=16.0
+    :target: https://runboat.odoo-community.org/builds?repo=OCA/brand&target_branch=19.0
     :alt: Try me on Runboat
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This module allows to configure pricelist items so that they are applied on products of specific brands.
+This module allows to configure pricelist items so that they are applied
+on products of specific brands.
 
 **Table of contents**
 
@@ -40,12 +45,15 @@ Usage
 
 To apply pricelist items on branded products:
 
-#. See 'product_brand' module to learn how to configure brands on products.
-#. Go to *Sales > Pricelists* and open the pricelist of your choice or create a new one.
-#. Edit the pricelist and add a new item to it.
-#. Select *Brand* in the field *Applied On*.
-#. Select the product brand of your choice in the field *Brand*.
-#. Configure the rest of the rule the way you want, this rule will apply on any product from the brand you selected.
+1. See 'product_brand' module to learn how to configure brands on
+   products.
+2. Go to *Sales > Pricelists* and open the pricelist of your choice or
+   create a new one.
+3. Edit the pricelist and add a new item to it.
+4. Select *Brand* in the field *Applied On*.
+5. Select the product brand of your choice in the field *Brand*.
+6. Configure the rest of the rule the way you want, this rule will apply
+   on any product from the brand you selected.
 
 Bug Tracker
 ===========
@@ -53,7 +61,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/brand/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/brand/issues/new?body=module:%20pricelist_brand%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/brand/issues/new?body=module:%20pricelist_brand%0Aversion:%2019.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -61,17 +69,17 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * ACSONE SA/NV
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* Quentin Groulard <quentin.groulard@acsone.eu>
+- Quentin Groulard <quentin.groulard@acsone.eu>
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 
@@ -83,6 +91,6 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-This module is part of the `OCA/brand <https://github.com/OCA/brand/tree/16.0/pricelist_brand>`_ project on GitHub.
+This module is part of the `OCA/brand <https://github.com/OCA/brand/tree/19.0/pricelist_brand>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
