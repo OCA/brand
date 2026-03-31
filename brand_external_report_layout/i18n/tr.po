@@ -6,13 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-03-31 17:45+0000\n"
+"Last-Translator: Betül Öğmen <betulo@eska.biz>\n"
 "Language-Team: none\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: brand_external_report_layout
 #: model_terms:ir.ui.view,arch_db:brand_external_report_layout.res_brand_form_view
@@ -20,11 +22,13 @@ msgid ""
 "<i class=\"o_button_icon oi oi-fw oi-arrow-right me-1\"/>\n"
 "                        <span>Configure Document Layout</span>"
 msgstr ""
+"<i class=\"o_button_icon oi oi-fw oi-arrow-right me-1\"/>\n"
+"                        <span>Belge Düzenini Yapılandır</span>"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__account_number
 msgid "Account Number"
-msgstr ""
+msgstr "Hesap Numarası"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,help:brand_external_report_layout.field_brand_document_layout__report_header
@@ -33,112 +37,113 @@ msgid ""
 "Appears by default on the top right corner of your printed documents (report"
 " header)."
 msgstr ""
+"Varsayılan olarak çıktıların üst sağ köşesinde görünecek (çıktı başlığı)."
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__layout_background_image
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__layout_background_image
 msgid "Background Image"
-msgstr ""
+msgstr "Arkaplan Resmi"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields.selection,name:brand_external_report_layout.selection__res_brand__layout_background__blank
 msgid "Blank"
-msgstr ""
+msgstr "Boş"
 
 #. module: brand_external_report_layout
 #: model:ir.model,name:brand_external_report_layout.model_res_brand
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__brand_id
 msgid "Brand"
-msgstr ""
+msgstr "Marka"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__company_details
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__company_details
 msgid "Brand Details"
-msgstr ""
+msgstr "Marka Detayları"
 
 #. module: brand_external_report_layout
 #: model:ir.model,name:brand_external_report_layout.model_brand_document_layout
 msgid "Brand Document Layout"
-msgstr ""
+msgstr "Marka Belge Düzeni"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__logo
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__logo
 msgid "Brand Logo"
-msgstr ""
+msgstr "Marka Logosu"
 
 #. module: brand_external_report_layout
 #: model_terms:ir.ui.view,arch_db:brand_external_report_layout.brand_document_layout_form_view
 msgid "Brand document layout"
-msgstr ""
+msgstr "Marka belge düzeni"
 
 #. module: brand_external_report_layout
 #: model_terms:ir.ui.view,arch_db:brand_external_report_layout.res_brand_form_view
 msgid "Change Document Template"
-msgstr ""
+msgstr "Belge Şablonunu Değiştir"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__company_id
 msgid "Company"
-msgstr ""
+msgstr "Şirket"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__name
 msgid "Company Name"
-msgstr ""
+msgstr "Şirket Adı"
 
 #. module: brand_external_report_layout
 #. odoo-python
 #: code:addons/brand_external_report_layout/models/res_brand.py:0
 msgid "Configure your document layout"
-msgstr ""
+msgstr "Belge düzeninizi seçin"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__country_id
 msgid "Country"
-msgstr ""
+msgstr "Ülke"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Oluşturan"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Oluşturulma"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields.selection,name:brand_external_report_layout.selection__res_brand__layout_background__custom
 msgid "Custom"
-msgstr ""
+msgstr "Özel"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__custom_colors
 msgid "Custom Colors"
-msgstr ""
+msgstr "Özel Renkler"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Görünen Ad"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__qr_code
 msgid "Display QR-code on invoices"
-msgstr ""
+msgstr "Faturalarda QR kodunu görüntüle"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__external_report_layout_id
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__external_report_layout_id
 msgid "Document Template"
-msgstr ""
+msgstr "Belge Şablonu"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__email
 msgid "Email"
-msgstr ""
+msgstr "E-Posta"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields.selection,name:brand_external_report_layout.selection__res_brand__font__fira_mono
@@ -155,18 +160,18 @@ msgstr ""
 #: model:ir.model.fields,help:brand_external_report_layout.field_brand_document_layout__report_footer
 #: model:ir.model.fields,help:brand_external_report_layout.field_res_brand__report_footer
 msgid "Footer text displayed at the bottom of all reports."
-msgstr ""
+msgstr "Footer metin tüm çıktıların alt kısmında görüntülenir."
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__from_invoice
 msgid "From Invoice"
-msgstr ""
+msgstr "Faturadan"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,help:brand_external_report_layout.field_brand_document_layout__company_details
 #: model:ir.model.fields,help:brand_external_report_layout.field_res_brand__company_details
 msgid "Header text displayed at the top of all reports."
-msgstr ""
+msgstr "Tüm raporların en üstünde görüntülenen üstbilgi metni."
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__id
@@ -177,17 +182,17 @@ msgstr ""
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__is_company_details_empty
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__is_company_details_empty
 msgid "Is Company Details Empty"
-msgstr ""
+msgstr "Şirket Bilgileri Boş mu"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Son Güncelleyen"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Son Güncelleme"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields.selection,name:brand_external_report_layout.selection__res_brand__font__lato
@@ -198,17 +203,17 @@ msgstr ""
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__layout_background
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__layout_background
 msgid "Layout Background"
-msgstr ""
+msgstr "Serilim Arka Planı"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__logo_primary_color
 msgid "Logo Primary Color"
-msgstr ""
+msgstr "Logo Birincil Renk"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__logo_secondary_color
 msgid "Logo Secondary Color"
-msgstr ""
+msgstr "Logo İkincil Renk"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields.selection,name:brand_external_report_layout.selection__res_brand__font__montserrat
@@ -229,33 +234,33 @@ msgstr ""
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__paperformat_id
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__paperformat_id
 msgid "Paper format"
-msgstr ""
+msgstr "Kağıt formatı"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__partner_id
 msgid "Partner"
-msgstr ""
+msgstr "İş Ortağı"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__phone
 msgid "Phone"
-msgstr ""
+msgstr "Telefon"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__preview
 msgid "Preview"
-msgstr ""
+msgstr "Önizleme"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__preview_logo
 msgid "Preview logo"
-msgstr ""
+msgstr "Önizleme logosu"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__primary_color
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__primary_color
 msgid "Primary Color"
-msgstr ""
+msgstr "Birincil Renk"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields.selection,name:brand_external_report_layout.selection__res_brand__font__raleway
@@ -266,18 +271,18 @@ msgstr ""
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__report_footer
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__report_footer
 msgid "Report Footer"
-msgstr ""
+msgstr "Çıktı Footer"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__report_header
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__report_header
 msgid "Report Header"
-msgstr ""
+msgstr "Rapor Başlığı"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__report_layout_id
 msgid "Report Layout"
-msgstr ""
+msgstr "Rapor Düzeni"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields.selection,name:brand_external_report_layout.selection__res_brand__font__roboto
@@ -288,7 +293,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__secondary_color
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__secondary_color
 msgid "Secondary Color"
-msgstr ""
+msgstr "İkincil Renk"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields.selection,name:brand_external_report_layout.selection__res_brand__font__tajawal
@@ -298,7 +303,7 @@ msgstr ""
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__vat
 msgid "Tax ID"
-msgstr ""
+msgstr "Vergi No"
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,help:brand_external_report_layout.field_brand_document_layout__vat
@@ -307,8 +312,10 @@ msgid ""
 "country format. You can use '/' to indicate that the partner is not subject "
 "to tax."
 msgstr ""
+"Vergi Kimlik Numarası. Buradaki değerler ülke biçimine göre doğrulanır. "
+"Ortağın vergiye tabi olmadığını belirtmek için '/' kullanabilirsiniz."
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__website
 msgid "Website Link"
-msgstr ""
+msgstr "Website Linki"
