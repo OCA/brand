@@ -3,7 +3,7 @@
 
 from odoo import api, fields, models
 from odoo.exceptions import ValidationError
-from odoo.fields import Domain
+from odoo.osv import expression
 
 
 class ProductPricelist(models.Model):
@@ -19,7 +19,7 @@ class ProductPricelist(models.Model):
                 "in",
                 products.product_tmpl_id.product_brand_id.ids,
             )
-        res = Domain.AND(
+        res = expression.AND(
             [
                 res,
                 [
