@@ -1,2 +1,3 @@
 - Quentin Groulard \<quentin.groulard@acsone.eu\>
 - Alex Garcia \<alex@studio73.es\>
+- Thomas Binsfeld \<thomas.binsfeld@acsone.eu\>
