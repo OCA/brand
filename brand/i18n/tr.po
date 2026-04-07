@@ -6,100 +6,102 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-04-07 08:38+0000\n"
+"Last-Translator: Betül Öğmen <betulo@eska.biz>\n"
 "Language-Team: none\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__supplier_invoice_count
 msgid "# Vendor Bills"
-msgstr ""
+msgstr "# Tedarikçi Faturaları"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_account_payable_id
 msgid "Account Payable"
-msgstr ""
+msgstr "Borç Hesabı"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_account_receivable_id
 msgid "Account Receivable"
-msgstr ""
+msgstr "Alacak Hesabı"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_needaction
 msgid "Action Needed"
-msgstr ""
+msgstr "Eylem Gerekli"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__active
 msgid "Active"
-msgstr ""
+msgstr "Aktif"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__active_lang_count
 msgid "Active Lang Count"
-msgstr ""
+msgstr "Etkin Dil Sayısı"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_ids
 msgid "Activities"
-msgstr ""
+msgstr "Aktiviteler"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_exception_decoration
 msgid "Activity Exception Decoration"
-msgstr ""
+msgstr "Aktivite İstisnası Dekorasyonu"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_state
 msgid "Activity State"
-msgstr ""
+msgstr "Aktivite Durumu"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_type_icon
 msgid "Activity Type Icon"
-msgstr ""
+msgstr "Aktivite Simge Türü"
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "Address"
-msgstr ""
+msgstr "Adres"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__type
 msgid "Address Type"
-msgstr ""
+msgstr "Adres Türü"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__lang
 msgid ""
 "All the emails and documents sent to this contact will be translated in this"
 " language."
-msgstr ""
+msgstr "Bu kişiye gönderilen tüm e-postalar ve belgeler bu dilde çevrilecektir."
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "Archived"
-msgstr ""
+msgstr "Arşivlendi"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_attachment_count
 msgid "Attachment Count"
-msgstr ""
+msgstr "Ek Sayısı"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__autopost_bills
 msgid "Auto-post bills"
-msgstr ""
+msgstr "Otomatik gönderilen faturalar"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__autopost_bills
 msgid "Automatically post bills for this trusted partner"
-msgstr ""
+msgstr "Bu güvenilir iş ortağı için faturaları otomatik olarak gönder"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__receipt_reminder_email
@@ -107,6 +109,8 @@ msgid ""
 "Automatically send a confirmation email to the vendor X days before the "
 "expected receipt date, asking him to confirm the exact date."
 msgstr ""
+"Satıcıya beklenen giriş tarihinden X gün önce otomatik olarak bir onay e-"
+"postası göndererek kesin tarihi onaylamasını isteyin."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__avatar_1920
@@ -136,63 +140,63 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__bank_account_count
 msgid "Bank"
-msgstr ""
+msgstr "Banka"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__bank_ids
 msgid "Banks"
-msgstr ""
+msgstr "Bankalar"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__barcode
 msgid "Barcode"
-msgstr ""
+msgstr "Barkod"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_blacklisted
 msgid "Blacklist"
-msgstr ""
+msgstr "Karaliste"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_bounce
 msgid "Bounce"
-msgstr ""
+msgstr "İletilmeyen E-Posta"
 
 #. module: brand
 #: model:ir.model,name:brand.model_res_brand
 #: model:ir.model.fields,field_description:brand.field_res_brand_mixin__brand_id
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
 msgid "Brand"
-msgstr ""
+msgstr "Marka"
 
 #. module: brand
 #: model:ir.model,name:brand.model_res_brand_mixin
 msgid "Brand Mixin"
-msgstr ""
+msgstr "Marka Karıştırma"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand_mixin__brand_use_level
 #: model:ir.model.fields,field_description:brand.field_res_company__brand_use_level
 #: model:ir.model.fields,field_description:brand.field_res_config_settings__brand_use_level
 msgid "Brand Use Level"
-msgstr ""
+msgstr "Marka Kullanım Seviyesi"
 
 #. module: brand
 #. odoo-python
 #: code:addons/brand/models/res_brand_mixin.py:0
 msgid "Brand company must match document company for %s"
-msgstr ""
+msgstr "Marka şirketi %s için belge şirketiyle eşleşmelidir"
 
 #. module: brand
 #. odoo-python
 #: code:addons/brand/models/res_brand_mixin.py:0
 msgid "Brand is required"
-msgstr ""
+msgstr "Marka gereklidir"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand_mixin__brand_id
 msgid "Brand to use for this sale"
-msgstr ""
+msgstr "Bu satış için kullanılacak marka"
 
 #. module: brand
 #: model:ir.actions.act_window,name:brand.res_brand_act_window
@@ -200,99 +204,100 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_list_view
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_search_view
 msgid "Brands"
-msgstr ""
+msgstr "Markalar"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__buyer_id
 msgid "Buyer"
-msgstr ""
+msgstr "Alıcı"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__channel_ids
 msgid "Channels"
-msgstr ""
+msgstr "Kanallar"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__is_company
 msgid "Check if the contact is a company, otherwise it is a person"
 msgstr ""
+"Kişinin bir şirket olup olmadığını kontrol edin, aksi takdirde bir kişidir"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__employee
 msgid "Check this box if this contact is an Employee."
-msgstr ""
+msgstr "Bu kontak bir çalışan ise bu kutuyu işaretleyin."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__city
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "City"
-msgstr ""
+msgstr "Şehir"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__color
 msgid "Color Index"
-msgstr ""
+msgstr "Renk İndeksi"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__commercial_partner_id
 msgid "Commercial Entity"
-msgstr ""
+msgstr "Ticari Kayıt"
 
 #. module: brand
 #: model:ir.model,name:brand.model_res_company
 msgid "Companies"
-msgstr ""
+msgstr "Şirketler"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__ref_company_ids
 msgid "Companies that refers to partner"
-msgstr ""
+msgstr "İş Ortağını ilgilendiren şirketler"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__company_id
 #: model:ir.model.fields,field_description:brand.field_res_brand_mixin__company_id
 msgid "Company"
-msgstr ""
+msgstr "Şirket"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__company_registry
 msgid "Company ID"
-msgstr ""
+msgstr "Şirket ID"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__company_registry_label
 msgid "Company ID Label"
-msgstr ""
+msgstr "Şirket ID Etiketi"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__company_name
 msgid "Company Name"
-msgstr ""
+msgstr "Firma Adı"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__commercial_company_name
 msgid "Company Name Entity"
-msgstr ""
+msgstr "Firma Adı Varlığı"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__company_type
 msgid "Company Type"
-msgstr ""
+msgstr "Şirket Türü"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__contact_address
 msgid "Complete Address"
-msgstr ""
+msgstr "Tam Adres"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__complete_name
 msgid "Complete Name"
-msgstr ""
+msgstr "Personel Adı"
 
 #. module: brand
 #: model:ir.model,name:brand.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "Yapılandırma Ayarları"
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
@@ -300,127 +305,129 @@ msgid ""
 "Configure branding of customer facing business documents (SO, invoices, "
 "etc)."
 msgstr ""
+"Müşteriye yönelik iş belgelerinin (SO, faturalar, vb.) markasını "
+"yapılandırın."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__child_ids
 msgid "Contact"
-msgstr ""
+msgstr "Kontak"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
 msgid "Contracts"
-msgstr ""
+msgstr "Sözleşmeler"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_bounce
 msgid "Counter of the number of bounced emails for this contact"
-msgstr ""
+msgstr "Bu kişi için iletilmeyen e-posta sayısı"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__country_id
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "Country"
-msgstr ""
+msgstr "Ülke"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__country_code
 msgid "Country Code"
-msgstr ""
+msgstr "Ülke Kodu"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Oluşturan"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Oluşturulma"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__credit_limit
 msgid "Credit Limit"
-msgstr ""
+msgstr "Kredi Limiti"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__credit_to_invoice
 msgid "Credit To Invoice"
-msgstr ""
+msgstr "Faturaya Kredi"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__credit_limit
 msgid "Credit limit specific to this partner."
-msgstr ""
+msgstr "Bu iş ortağına özgü risk limiti."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__currency_id
 msgid "Currency"
-msgstr ""
+msgstr "Para Birimi"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_stock_customer
 msgid "Customer Location"
-msgstr ""
+msgstr "Müşteri Konumu"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__customer_payment_mode_id
 msgid "Customer Payment Mode"
-msgstr ""
+msgstr "Müşteri Ödeme Şekli"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_payment_term_id
 msgid "Customer Payment Terms"
-msgstr ""
+msgstr "Müşteri Ödeme Koşulları"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__customer_rank
 msgid "Customer Rank"
-msgstr ""
+msgstr "Müşteri Sıralaması"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__reminder_date_before_receipt
 msgid "Days Before Receipt"
-msgstr ""
+msgstr "Günler Önce Alındı"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__days_sales_outstanding
 msgid "Days Sales Outstanding (DSO)"
-msgstr ""
+msgstr "Alacak Tahsilatı Günleri (DSO)"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__trust
 msgid "Degree of trust you have in this debtor"
-msgstr ""
+msgstr "Bu borçlu için güven seviyesi"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__display_invoice_edi_format
 msgid "Display Invoice Edi Format"
-msgstr ""
+msgstr "Fatura EDI Formatını Görüntüle"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__display_invoice_template_pdf_report_id
 msgid "Display Invoice Template Pdf Report"
-msgstr ""
+msgstr "Fatura Şablonu PDF Raporunu Görüntüle"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Görünüm Adı"
 
 #. module: brand
 #: model:ir.model.fields.selection,name:brand.selection__res_company__brand_use_level__no
 msgid "Do not use brands on business document"
-msgstr ""
+msgstr "İş belgeleri üzerinde marka kullanmayın"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__duplicate_bank_partner_ids
 msgid "Duplicate Bank Partner"
-msgstr ""
+msgstr "Yinelenen Banka İş Ortağı"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__duplicated_bank_account_partners_count
 msgid "Duplicated Bank Account Partners Count"
-msgstr ""
+msgstr "Yinelenen Banka Hesabı İş Ortakları Sayısı"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__partner_share
@@ -429,36 +436,39 @@ msgid ""
 "partner is a customer without access or with a limited access created for "
 "sharing data."
 msgstr ""
+"Ya müşteri (kullanıcı değil), ya da paylaşılan kullanıcı. Mevcut iş "
+"ortağının erişimi olmayan veya veri paylaşımı için oluşturulmuş sınırlı "
+"erişime sahip bir müşteri olduğunu belirtir."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__email
 msgid "Email"
-msgstr ""
+msgstr "Eposta"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__employee
 msgid "Employee"
-msgstr ""
+msgstr "Personel"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__fiscal_country_codes
 msgid "Fiscal Country Codes"
-msgstr ""
+msgstr "Mali Ülke Kodları"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_account_position_id
 msgid "Fiscal Position"
-msgstr ""
+msgstr "Mali Koşul"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_follower_ids
 msgid "Followers"
-msgstr ""
+msgstr "Takipçiler"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_partner_ids
 msgid "Followers (Partners)"
-msgstr ""
+msgstr "Takipçiler (İş Ortakları)"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__activity_type_icon
@@ -473,7 +483,7 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__email_formatted
 msgid "Formatted Email"
-msgstr ""
+msgstr "Biçimlendirilmiş E-posta"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__global_location_number
@@ -483,22 +493,22 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_latitude
 msgid "Geo Latitude"
-msgstr ""
+msgstr "Coğrafi Enlem"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_longitude
 msgid "Geo Longitude"
-msgstr ""
+msgstr "Coğrafi Boylam"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__global_location_number
 msgid "Global Location Number"
-msgstr ""
+msgstr "Küresel Konum Numarası"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__has_message
 msgid "Has Message"
-msgstr ""
+msgstr "Mesaj Var"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__id
@@ -508,27 +518,27 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__im_status
 msgid "IM Status"
-msgstr ""
+msgstr "Anlık İleti Durumu"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_exception_icon
 msgid "Icon"
-msgstr ""
+msgstr "Simge"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__activity_exception_icon
 msgid "Icon to indicate an exception activity."
-msgstr ""
+msgstr "Bir istisna aktivite gösteren simge."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_needaction
 msgid "If checked, new messages require your attention."
-msgstr ""
+msgstr "İşaretliyse, yeni mesajlar dikkatinize sunulacak."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_has_error
 msgid "If checked, some messages have a delivery error."
-msgstr ""
+msgstr "İşaretli ise,bazı mesajlar gönderi hatası içermektedir."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__is_blacklisted
@@ -536,16 +546,18 @@ msgid ""
 "If the email address is on the blacklist, the contact won't receive mass "
 "mailing anymore, from any list"
 msgstr ""
+"Eğer e-posta adresi kara listede ise, bağlantı, toplu e-posta gönderiminde, "
+"herhangi bir listeden mail almayacaktır"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__ignore_abnormal_invoice_amount
 msgid "Ignore Abnormal Invoice Amount"
-msgstr ""
+msgstr "Anormal Fatura Tutarını Göz Ardı Et"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__ignore_abnormal_invoice_date
 msgid "Ignore Abnormal Invoice Date"
-msgstr ""
+msgstr "Anormal fatura tarihini dikkate alma"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__image_1920
@@ -575,192 +587,194 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__industry_id
 msgid "Industry"
-msgstr ""
+msgstr "Endüstri"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__contact_address_inline
 msgid "Inlined Complete Address"
-msgstr ""
+msgstr "Adresin tamamını satır içi olarak ekleyin"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_warn
 msgid "Invoice"
-msgstr ""
+msgstr "Fatura"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_edi_format_store
 msgid "Invoice Edi Format Store"
-msgstr ""
+msgstr "Fatura Edi Format Mağazası"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_sending_method
 msgid "Invoice sending"
-msgstr ""
+msgstr "Fatura gönderimi"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_template_pdf_report_id
 msgid "Invoice template"
-msgstr ""
+msgstr "Fatura şablonu"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_ids
 msgid "Invoices"
-msgstr ""
+msgstr "Faturalar"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand_mixin__is_brand_required
 msgid "Is Brand Required"
-msgstr ""
+msgstr "Marka Gerekli mi"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_coa_installed
 msgid "Is Coa Installed"
-msgstr ""
+msgstr "Hesap Planı Kurulu mu"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_is_follower
 msgid "Is Follower"
-msgstr ""
+msgstr "Takipçi"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_public
 msgid "Is Public"
-msgstr ""
+msgstr "Genel mi"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_company
 msgid "Is a Company"
-msgstr ""
+msgstr "Bu bir Firma mı"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__function
 msgid "Job Position"
-msgstr ""
+msgstr "İş Pozisyonu"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__journal_item_count
 msgid "Journal Items"
-msgstr ""
+msgstr "Yevmiye Kalemleri"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__lang
 msgid "Language"
-msgstr ""
+msgstr "Dil"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Son Güncelleyen"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Son Güncelleme"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_has_error
 msgid "Message Delivery error"
-msgstr ""
+msgstr "Mesaj Teslim hatası"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_warn_msg
 msgid "Message for Invoice"
-msgstr ""
+msgstr "Fatura Mesajı"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__purchase_warn_msg
 msgid "Message for Purchase Order"
-msgstr ""
+msgstr "Satınalma Siparişi için Mesaj"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_warn_msg
 msgid "Message for Sales Order"
-msgstr ""
+msgstr "Satış Siparişi için Mesaj"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__picking_warn_msg
 msgid "Message for Stock Picking"
-msgstr ""
+msgstr "Stok Transfer İçin Mesaj"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_ids
 msgid "Messages"
-msgstr ""
+msgstr "Mesajlar"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__mobile
 msgid "Mobile"
-msgstr ""
+msgstr "Mobil"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__my_activity_date_deadline
 msgid "My Activity Deadline"
-msgstr ""
+msgstr "Faaliyet Son Tarihim"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__name
 msgid "Name"
-msgstr ""
+msgstr "İsim"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_date_deadline
 msgid "Next Activity Deadline"
-msgstr ""
+msgstr "Sonraki Etkinlik Son Tarihi"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_summary
 msgid "Next Activity Summary"
-msgstr ""
+msgstr "Sonraki Etkinlik Özeti"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_type_id
 msgid "Next Activity Type"
-msgstr ""
+msgstr "Sonraki Etkinlik Türü"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__email_normalized
 msgid "Normalized Email"
-msgstr ""
+msgstr "Normalleştirilmiş E-Posta"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__comment
 msgid "Notes"
-msgstr ""
+msgstr "Notlar"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_needaction_counter
 msgid "Number of Actions"
-msgstr ""
+msgstr "Eylem Sayısı"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__reminder_date_before_receipt
 msgid "Number of days to send reminder email before the promised receipt date"
 msgstr ""
+"Söz verilen makbuz tarihinden önce hatırlatma e-postasının gönderileceği gün "
+"sayısı"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_has_error_counter
 msgid "Number of errors"
-msgstr ""
+msgstr "Hata adedi"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_needaction_counter
 msgid "Number of messages requiring action"
-msgstr ""
+msgstr "İşlem gerektiren mesaj sayısı"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_has_error_counter
 msgid "Number of messages with delivery error"
-msgstr ""
+msgstr "Teslimat hatası olan mesaj adedi"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__on_time_rate
 msgid "On-Time Delivery Rate"
-msgstr ""
+msgstr "Zamanında Teslim Oranı"
 
 #. module: brand
 #: model:ir.model.fields.selection,name:brand.selection__res_company__brand_use_level__optional
 msgid "Optional"
-msgstr ""
+msgstr "Seçenekli"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__on_time_rate
@@ -769,66 +783,69 @@ msgid ""
 " number of ordered products.x is either the System Parameter "
 "purchase_stock.on_time_delivery_days or the default 365"
 msgstr ""
+"Son x gün içinde zamanında teslim alınan ürün sayısının sipariş edilen ürün "
+"sayısına bölümü.x, sistem parametresi purchase_stock.on_time_delivery_days "
+"veya varsayılan 365'tir"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__parent_name
 msgid "Parent name"
-msgstr ""
+msgstr "Üst Adı"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_id
 msgid "Partner"
-msgstr ""
+msgstr "İş Ortağı"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_company_registry_placeholder
 msgid "Partner Company Registry Placeholder"
-msgstr ""
+msgstr "İş Ortağı Şirket Kayıt Defteri Yer Tutucusu"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__use_partner_credit_limit
 msgid "Partner Limit"
-msgstr ""
+msgstr "İş Ortağı Limiti"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_vat_placeholder
 msgid "Partner Vat Placeholder"
-msgstr ""
+msgstr "İş Ortağı KDV Yer Tutucu"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__same_company_registry_partner_id
 msgid "Partner with same Company Registry"
-msgstr ""
+msgstr "Aynı Şirket Siciline sahip ortak"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__same_vat_partner_id
 msgid "Partner with same Tax ID"
-msgstr ""
+msgstr "Aynı Vergi Numarasına sahip iş ortağı"
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "Partners"
-msgstr ""
+msgstr "İş Ortakları"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__debit_limit
 msgid "Payable Limit"
-msgstr ""
+msgstr "Borç Limit"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__payment_token_count
 msgid "Payment Token Count"
-msgstr ""
+msgstr "Ödeme Token Sayısı"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__payment_token_ids
 msgid "Payment Tokens"
-msgstr ""
+msgstr "Ödeme Token'ları"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__phone
 msgid "Phone"
-msgstr ""
+msgstr "Telefon"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_outbound_payment_method_line_id
@@ -836,6 +853,8 @@ msgid ""
 "Preferred payment method when buying from this vendor. This will be set by "
 "default on all outgoing payments created for this vendor"
 msgstr ""
+"Bu satıcıdan alışveriş yaparken tercih edilen ödeme yöntemi. Bu satıcı için "
+"oluşturulan tüm giden ödemelerde varsayılan olarak ayarlanacaktır"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_inbound_payment_method_line_id
@@ -843,101 +862,103 @@ msgid ""
 "Preferred payment method when selling to this customer. This will be set by "
 "default on all incoming payments created for this customer"
 msgstr ""
+"Bu müşteriye satış yaparken tercih edilen ödeme yöntemi. Bu müşteri için "
+"oluşturulan tüm gelen ödemelerde varsayılan olarak ayarlanacaktır"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_product_pricelist
 msgid "Pricelist"
-msgstr ""
+msgstr "Fiyat listesi"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_inbound_payment_method_line_id
 msgid "Property Inbound Payment Method Line"
-msgstr ""
+msgstr "Mülke Gelen Ödeme Yöntemi Satırı"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_outbound_payment_method_line_id
 msgid "Property Outbound Payment Method Line"
-msgstr ""
+msgstr "Mülk Giden Ödeme Yöntemi Satırı"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__purchase_contract_count
 msgid "Purchase Contracts"
-msgstr ""
+msgstr "Satın Alma Sözleşmeleri"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__purchase_line_ids
 msgid "Purchase Lines"
-msgstr ""
+msgstr "Satınalma Satırları"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__purchase_order_count
 msgid "Purchase Order Count"
-msgstr ""
+msgstr "Satınalma Siparişi Sayısı"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__purchase_warn
 msgid "Purchase Order Warning"
-msgstr ""
+msgstr "Satın Alma Siparişi Uyarısı"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__receipt_reminder_email
 msgid "Receipt Reminder"
-msgstr ""
+msgstr "Alım Hatırlatıcısı"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__ref
 msgid "Reference"
-msgstr ""
+msgstr "Referans"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__parent_id
 msgid "Related Company"
-msgstr ""
+msgstr "Firma Adı"
 
 #. module: brand
 #: model:ir.model.fields.selection,name:brand.selection__res_company__brand_use_level__required
 msgid "Required"
-msgstr ""
+msgstr "Gerekli"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_user_id
 msgid "Responsible User"
-msgstr ""
+msgstr "Sorumlu Kullanıcı"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_contract_count
 msgid "Sale Contracts"
-msgstr ""
+msgstr "Satış Sözleşmeleri"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_order_count
 msgid "Sale Order Count"
-msgstr ""
+msgstr "Sipariş Sayısı"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_order_ids
 msgid "Sales Order"
-msgstr ""
+msgstr "Satış Siparişi"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_warn
 msgid "Sales Warnings"
-msgstr ""
+msgstr "Satış Uyarıları"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__user_id
 msgid "Salesperson"
-msgstr ""
+msgstr "Satış Temsilcisi"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__customer_payment_mode_id
 msgid "Select the default payment mode for this customer."
-msgstr ""
+msgstr "Bu müşteri için varsayılan ödeme modunu seçin."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__supplier_payment_mode_id
 msgid "Select the default payment mode for this supplier."
-msgstr ""
+msgstr "Bu tedarikçi için varsayılan ödeme modunu seçin."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__invoice_warn
@@ -949,47 +970,51 @@ msgid ""
 "Selecting \"Blocking Message\" will throw an exception with the message and "
 "block the flow. The Message has to be written in the next field."
 msgstr ""
+"\"Uyarı\" seçeneğini seçmek, kullanıcıya mesajla bildirim gönderecektir. "
+"\"Engelleme Mesajı\"nı seçmek ise mesajla birlikte bir istisna fırlatacak ve "
+"akışı engelleyecektir. Mesaj, bir sonraki alana yazılmalıdır."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__self
 msgid "Self"
-msgstr ""
+msgstr "Kendin"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__use_partner_credit_limit
 msgid "Set a value greater than 0.0 to activate a credit limit check"
 msgstr ""
+"Kredi limiti kontrolünü etkinleştirmek için 0.0'dan büyük bir değer girin"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_share
 msgid "Share Partner"
-msgstr ""
+msgstr "Paylaşım İş Ortağı"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__show_credit_limit
 msgid "Show Credit Limit"
-msgstr ""
+msgstr "Kredi Limitini Göster"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__signup_type
 msgid "Signup Token Type"
-msgstr ""
+msgstr "Kayıt Olma Belirteçi Türü"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__specific_property_product_pricelist
 msgid "Specific Property Product Pricelist"
-msgstr ""
+msgstr "Özel Mülk Ürün Fiyat Listesi"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__starred_message_ids
 msgid "Starred Message"
-msgstr ""
+msgstr "Yıldızlı Mesaj"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__state_id
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "State"
-msgstr ""
+msgstr "Durum"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__activity_state
@@ -999,61 +1024,65 @@ msgid ""
 "Today: Activity date is today\n"
 "Planned: Future activities."
 msgstr ""
+"Aktivitelere göre durum\n"
+"Gecikmiş: Son tarih geçmiş\n"
+"Bugün: Aktivite tarihi bugün\n"
+"Planlanmış: Gelecekteki aktiviteler."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__picking_warn
 msgid "Stock Picking"
-msgstr ""
+msgstr "Stok Transfer"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__street
 msgid "Street"
-msgstr ""
+msgstr "Sokak"
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "Street 2..."
-msgstr ""
+msgstr "Sokak 2..."
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "Street..."
-msgstr ""
+msgstr "Sokak..."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__street2
 msgid "Street2"
-msgstr ""
+msgstr "Sokak2"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_purchase_currency_id
 msgid "Supplier Currency"
-msgstr ""
+msgstr "Tedarikçi Para Birimi"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__supplier_payment_mode_id
 msgid "Supplier Payment Mode"
-msgstr ""
+msgstr "Tedarikçi Ödeme Modu"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__supplier_rank
 msgid "Supplier Rank"
-msgstr ""
+msgstr "Tedarikçi Sıralaması"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__category_id
 msgid "Tags"
-msgstr ""
+msgstr "Etiketler"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__vat
 msgid "Tax ID"
-msgstr ""
+msgstr "Vergi No"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__vat_label
 msgid "Tax ID Label"
-msgstr ""
+msgstr "Vergi No Etiketi"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__country_code
@@ -1061,6 +1090,8 @@ msgid ""
 "The ISO country code in two chars. \n"
 "You can use this field for quick search."
 msgstr ""
+"İki karakterde ISO ülke kodu.\n"
+"Hızlı arama için bu alanı kullanabilirsiniz."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__vat
@@ -1069,17 +1100,19 @@ msgid ""
 "country format. You can use '/' to indicate that the partner is not subject "
 "to tax."
 msgstr ""
+"Vergi Kimlik Numarası. Buradaki değerler ülke biçimine göre doğrulanır. "
+"Ortağın vergiye tabi olmadığını belirtmek için '/' kullanabilirsiniz."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_account_position_id
 msgid ""
 "The fiscal position determines the taxes/accounts used for this contact."
-msgstr ""
+msgstr "Mali koşul, bu kontak için kullanılan vergileri / hesapları belirler."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__user_id
 msgid "The internal user in charge of this contact."
-msgstr ""
+msgstr "Bu kişiden sorumlu dahili kullanıcı."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__company_registry
@@ -1087,18 +1120,20 @@ msgid ""
 "The registry number of the company. Use it if it is different from the Tax "
 "ID. It must be unique across all partners of a same country"
 msgstr ""
+"Şirketin sicil numarası. Vergi Numarasından farklıysa kullanın. Aynı ülkenin "
+"tüm İş ortakları arasında benzersiz olmalıdır"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_stock_customer
 msgid ""
 "The stock location used as destination when sending goods to this contact."
-msgstr ""
+msgstr "Bu kişiye mal gönderilirken varış yeri olarak kullanılan stok yeri."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_stock_supplier
 msgid ""
 "The stock location used as source when receiving goods from this contact."
-msgstr ""
+msgstr "Bu kişiden mal alırken kaynak olarak kullanılan stok yeri."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_account_payable_id
@@ -1106,6 +1141,8 @@ msgid ""
 "This account will be used instead of the default one as the payable account "
 "for the current partner"
 msgstr ""
+"Bu hesap, geçerli iş ortağının ödemeler hesabında varsayılan yerine "
+"kullanılacaktır"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_account_receivable_id
@@ -1113,6 +1150,8 @@ msgid ""
 "This account will be used instead of the default one as the receivable "
 "account for the current partner"
 msgstr ""
+"Bu hesap, geçerli İş Ortağı için alacak hesabı olarak varsayılanın yerine "
+"kullanılacaktır"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_purchase_currency_id
@@ -1120,6 +1159,8 @@ msgid ""
 "This currency will be used, instead of the default one, for purchases from "
 "the current partner"
 msgstr ""
+"Bu para birimi varsayılan yerine bu tedarikçiden satın alma yaparken "
+"kullanılacaktır"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__email_normalized
@@ -1127,6 +1168,8 @@ msgid ""
 "This field is used to search on email address as the primary email field can"
 " contain more than strictly an email address."
 msgstr ""
+"Birincil e-posta alanı kesinlikle bir e-posta adresinden daha fazlasını "
+"içerebileceğinden, bu alan e-posta adresinde arama yapmak için kullanılır."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_supplier_payment_term_id
@@ -1134,6 +1177,8 @@ msgid ""
 "This payment term will be used instead of the default one for purchase "
 "orders and vendor bills"
 msgstr ""
+"Bu ödeme koşulu satınalma siparişleri ve satıcı faturaları için varsayılan "
+"fiyat yerine kullanılacaktır"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_payment_term_id
@@ -1141,6 +1186,8 @@ msgid ""
 "This payment term will be used instead of the default one for sales orders "
 "and customer invoices"
 msgstr ""
+"Bu ödeme koşulu, satış siparişleri ve müşteri faturaları için varsayılan "
+"olarak kullanılacaktır"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_product_pricelist
@@ -1148,91 +1195,93 @@ msgid ""
 "This pricelist will be used, instead of the default one, for sales to the "
 "current partner"
 msgstr ""
+"Bu fiyat listesi, mevcut iş ortağına yapılan satışlar için varsayılan fiyat "
+"listesi yerine kullanılacaktır"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__tz
 msgid "Timezone"
-msgstr ""
+msgstr "Saat dilimi"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__tz_offset
 msgid "Timezone offset"
-msgstr ""
+msgstr "Saat dilimi ofseti"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__title
 msgid "Title"
-msgstr ""
+msgstr "Başlık"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__total_invoiced
 msgid "Total Invoiced"
-msgstr ""
+msgstr "Toplam Faturalanan"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__debit
 msgid "Total Payable"
-msgstr ""
+msgstr "Toplam Borç"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__credit
 msgid "Total Receivable"
-msgstr ""
+msgstr "Toplam Alacak"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__credit
 msgid "Total amount this customer owes you."
-msgstr ""
+msgstr "Bu müşterinin size borçlu olduğu toplam tutar."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__debit
 msgid "Total amount you have to pay to this vendor."
-msgstr ""
+msgstr "Bu tedarikçi ödemeniz gereken toplam tutar."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__activity_exception_decoration
 msgid "Type of the exception activity on record."
-msgstr ""
+msgstr "Kayıttaki istisna etkinliğinin türü."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__barcode
 msgid "Use a barcode to identify this contact."
-msgstr ""
+msgstr "Bu kişiyi tanımlamak için bir barkod kullanın."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__user_ids
 msgid "Users"
-msgstr ""
+msgstr "Kullanıcılar"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_stock_supplier
 msgid "Vendor Location"
-msgstr ""
+msgstr "Tedarikçi Konumu"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_supplier_payment_term_id
 msgid "Vendor Payment Terms"
-msgstr ""
+msgstr "Tedarikçi Ödeme Koşulları"
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "Website"
-msgstr ""
+msgstr "Websitesi"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__website
 msgid "Website Link"
-msgstr ""
+msgstr "Website Linki"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__website_message_ids
 msgid "Website Messages"
-msgstr ""
+msgstr "Website Mesajları"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__website_message_ids
 msgid "Website communication history"
-msgstr ""
+msgstr "Web sitesi iletişim geçmişi"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__tz
@@ -1241,16 +1290,21 @@ msgid ""
 "If the timezone is not set, UTC (Coordinated Universal Time) is used.\n"
 "Anywhere else, time values are computed according to the time offset of your web client."
 msgstr ""
+"Belgeleri yazdırırken ve verileri dışa / içe aktarırken, zaman değerleri bu "
+"zaman dilimine göre hesaplanır.\n"
+"Saat dilimi ayarlanmamışsa UTC (Eşgüdümlü Evrensel Saat) kullanılır.\n"
+"Başka herhangi bir yerde, zaman değerleri web istemcinizin zaman ofsetine "
+"göre hesaplanır."
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "ZIP"
-msgstr ""
+msgstr "Posta Kodu"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__zip
 msgid "Zip"
-msgstr ""
+msgstr "Posta kodu"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__days_sales_outstanding
@@ -1258,6 +1312,8 @@ msgid ""
 "[(Total Receivable/Total Revenue) * number of days since the first invoice] "
 "for this customer"
 msgstr ""
+"Bu müşteri için [(Toplam Alacaklar/Toplam Gelir) * ilk faturadan bu yana "
+"geçen gün sayısı]"
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
