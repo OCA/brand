@@ -46,7 +46,7 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.res_partner_kanban_view" />
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='display_name']" position="before">
+            <xpath expr="//field[@name='complete_name']" position="before">
                 <field name="brand_logo" invisible="1" />
                 <span
                     title="This company is linked to a brand"
