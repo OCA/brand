@@ -1,7 +1,7 @@
 # Copyright 2019 ACSONE SA/NV
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import _, api, fields, models
+from odoo import api, fields, models
 from odoo.exceptions import ValidationError
 
 
@@ -48,7 +48,7 @@ class ResPartnerAccountBrand(models.Model):
                 and rec.account_id.account_type != rec.account_type
             ):
                 raise ValidationError(
-                    _("Please select an account of type %s") % rec.account_type
+                    self.env._("Please select an account of type %s", rec.account_type)
                 )
 
     @api.onchange("account_type")
