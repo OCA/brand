@@ -3,6 +3,7 @@
 
 from lxml import etree
 
+from odoo import Command
 from odoo.exceptions import ValidationError
 from odoo.tests import Form
 from odoo.tests.common import TransactionCase
@@ -14,6 +15,44 @@ class TestBrandMixin(TransactionCase):
     def setUp(self):
         super().setUp()
         self.partner = self.env.user.partner_id
+        self.account_receivable = self.env["account.account"].search(
+            [
+                ("account_type", "=", "asset_receivable"),
+                ("company_ids", "in", self.env.company.id),
+            ],
+            limit=1,
+        )
+        if not self.account_receivable:
+            self.account_receivable = self.env["account.account"].create(
+                {
+                    "name": "Receivable",
+                    "code": "RCV001",
+                    "account_type": "asset_receivable",
+                    "reconcile": True,
+                }
+            )
+        self.account_payable = self.env["account.account"].search(
+            [
+                ("account_type", "=", "liability_payable"),
+                ("company_ids", "in", self.env.company.id),
+            ],
+            limit=1,
+        )
+        if not self.account_payable:
+            self.account_payable = self.env["account.account"].create(
+                {
+                    "name": "Payable",
+                    "code": "PAY001",
+                    "account_type": "liability_payable",
+                    "reconcile": True,
+                }
+            )
+        self.partner.property_account_receivable_id = self.account_receivable
+        self.partner.property_account_payable_id = self.account_payable
+        self.product = self.env["product.product"].create({"name": "Test Product"})
+        self.account_revenue = self.env["account.account"].create(
+            {"name": "Test sale", "code": "XX.700", "account_type": "income"}
+        )
         self.company = self.env.user.company_id
         self.other_company = self.env["res.company"].create(
             {"name": "other company", "parent_id": self.company.id}
@@ -116,15 +155,14 @@ class TestBrandMixin(TransactionCase):
                 "partner_id": self.partner.id,
                 "brand_id": self.brand.id,
                 "invoice_line_ids": [
-                    (
-                        0,
-                        0,
+                    Command.create(
                         {
-                            "product_id": self.env.ref("product.product_product_1").id,
+                            "product_id": self.product.id,
                             "quantity": 40.0,
                             "name": "product test 1",
                             "discount": 10.00,
                             "price_unit": 2.27,
+                            "account_id": self.account_revenue.id,
                         },
                     )
                 ],

@@ -103,6 +103,9 @@ Contributors
 
 - Ammar Officewala <aofficewala@opensourceintegrators.com>
 - bosd <<c5e2fd43-d292-4c90-9d1f-74ff3436329a@anonaddy.me>
+- `Heliconia Solutions Pvt. Ltd. <https://www.heliconia.io>`__
+
+  - Bhavesh Heliconia
 
 Other credits
 -------------
