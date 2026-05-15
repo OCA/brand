@@ -8,9 +8,7 @@
     "version": "18.0.1.0.1",
     "category": "Accounting Management",
     "website": "https://github.com/OCA/brand",
-    "author": "Open Source Integrators,"
-    "ACSONE SA/NV,"
-    "Odoo Community Association (OCA)",
+    "author": "Open Source Integrators,ACSONE SA/NV,Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "depends": ["account", "brand"],
     "data": [
