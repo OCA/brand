@@ -31,13 +31,10 @@ class ResPartnerAccountBrand(models.Model):
         required=True,
     )
 
-    _sql_constraints = [
-        (
-            "unique_account_by_partner",
-            "unique(partner_id, account_id, brand_id, account_type)",
-            "Partner has already an account set for this brand!",
-        )
-    ]
+    _unique_account_by_partner = models.Constraint(
+        "unique(partner_id, account_id, brand_id, account_type)",
+        "Partner has already an account set for this brand!",
+    )
 
     @api.constrains("account_id", "account_type")
     def _check_account_type(self):
@@ -56,14 +53,14 @@ class ResPartnerAccountBrand(models.Model):
         self.ensure_one()
         self.update({"account_id": False})
         domain = [("id", "=", False)]
-        if self.account_type == "payable":
+        if self.account_type == "liability_payable":
             domain = [
-                ("internal_type", "=", "payable"),
+                ("account_type", "=", "liability_payable"),
                 ("deprecated", "=", False),
             ]
-        elif self.account_type == "receivable":
+        elif self.account_type == "asset_receivable":
             domain = [
-                ("internal_type", "=", "receivable"),
+                ("account_type", "=", "asset_receivable"),
                 ("deprecated", "=", False),
             ]
         return {"domain": {"account_id": domain}}

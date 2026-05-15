@@ -1,14 +1,17 @@
 # Copyright 2019 ACSONE SA/NV
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo.tests.common import TransactionCase
+from odoo import Command
+
+from odoo.addons.base.tests.common import BaseCommon
 
 
-class TestAccountMove(TransactionCase):
-    def setUp(self):
-        super().setUp()
-        self.product = self.env.ref("product.product_product_4")
-        self.account_receivable = self.env["account.account"].create(
+class TestAccountMove(BaseCommon):
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.product = cls.env["product.product"].create({"name": "Test Product"})
+        cls.account_receivable = cls.env["account.account"].create(
             {
                 "name": "Partner Receivable",
                 "code": "RCV00",
@@ -16,7 +19,7 @@ class TestAccountMove(TransactionCase):
                 "reconcile": True,
             }
         )
-        self.account_receivable_brand_default = self.env["account.account"].create(
+        cls.account_receivable_brand_default = cls.env["account.account"].create(
             {
                 "name": "Receivable Brand Default",
                 "code": "RCV01",
@@ -24,7 +27,7 @@ class TestAccountMove(TransactionCase):
                 "reconcile": True,
             }
         )
-        self.account_receivable_partner_brand_default = self.env[
+        cls.account_receivable_partner_brand_default = cls.env[
             "account.account"
         ].create(
             {
@@ -34,32 +37,38 @@ class TestAccountMove(TransactionCase):
                 "reconcile": True,
             }
         )
-        self.partner_id = self.env.ref("base.res_partner_12")
-        self.partner_id.property_account_receivable_id = self.account_receivable
-        self.account_revenue = self.env["account.account"].create(
+        cls.partner.property_account_receivable_id = cls.account_receivable
+        cls.account_revenue = cls.env["account.account"].create(
             {"name": "Test sale", "code": "XX.700", "account_type": "income"}
         )
-        self.move = self.env["account.move"].create(
+        cls.journal = cls.env["account.journal"].create(
             {
-                "partner_id": self.partner_id.id,
+                "name": "Sale Journal",
+                "code": "SAL",
+                "type": "sale",
+                "company_id": cls.env.company.id,
+            }
+        )
+        cls.move = cls.env["account.move"].create(
+            {
+                "journal_id": cls.journal.id,
+                "partner_id": cls.partner.id,
                 "move_type": "out_invoice",
                 "invoice_line_ids": [
-                    (
-                        0,
-                        0,
+                    Command.create(
                         {
-                            "product_id": self.product.id,
+                            "product_id": cls.product.id,
                             "quantity": 1,
                             "price_unit": 42,
                             "name": "something",
-                            "account_id": self.account_revenue.id,
+                            "account_id": cls.account_revenue.id,
                         },
                     )
                 ],
             }
         )
 
-        self.brand_id = self.env["res.brand"].create({"name": "Brand"})
+        cls.brand_id = cls.env["res.brand"].create({"name": "Brand"})
 
     def _get_receivable_account(self, move):
         return self.move.line_ids.filtered(
@@ -86,7 +95,7 @@ class TestAccountMove(TransactionCase):
         self.assertEqual(account, self.account_receivable_brand_default)
         partner_account_brand.update(
             {
-                "partner_id": self.partner_id.id,
+                "partner_id": self.partner.id,
                 "account_id": self.account_receivable_partner_brand_default.id,
             }
         )
@@ -98,7 +107,7 @@ class TestAccountMove(TransactionCase):
         )
         move = self.env["account.move"].create(
             {
-                "partner_id": self.partner_id.id,
+                "partner_id": self.partner.id,
                 "brand_id": self.brand_id.id,
                 "move_type": "out_invoice",
             }
