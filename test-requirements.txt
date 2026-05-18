@@ -1,0 +1,1 @@
+odoo-addon-account_brand @ git+https://github.com/OCA/brand.git@refs/pull/303/head#subdirectory=account_brand
