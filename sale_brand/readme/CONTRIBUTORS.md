@@ -4,3 +4,5 @@
 - Freni Patel \<<fpatel@opensourceintegrators.com>\>
 - [Obertix](https://www.obertix.net):
   - Vicent Cubells
+- [Heliconia Solutions Pvt. Ltd.](https://www.heliconia.io)
+  - Bhavesh Heliconia
