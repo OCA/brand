@@ -147,7 +147,7 @@ class TestStockPickingPartnerBrand(common.TransactionCase):
     def test_03_onchange_partner_without_brand_and_no_parent_brand(self):
         """Test brand is cleared if partner and its parent (if any) have no brand."""
         _logger.info(
-            "Running test_03_onchange_partner_without_brand_and_no_" "parent_brand..."
+            "Running test_03_onchange_partner_without_brand_and_no_parent_brand..."
         )
 
         # First, test with a standalone partner without a brand
@@ -167,7 +167,7 @@ class TestStockPickingPartnerBrand(common.TransactionCase):
         picking_form_no_brand_child._onchange_partner_id_set_brand()
         self.assertFalse(
             picking_form_no_brand_child.brand_id,
-            "Brand should be cleared for child contact whose parent has " "no brand.",
+            "Brand should be cleared for child contact whose parent has no brand.",
         )
         _logger.info("Test 03 Passed.")
 
@@ -186,14 +186,14 @@ class TestStockPickingPartnerBrand(common.TransactionCase):
         picking_form._onchange_partner_id_set_brand()
 
         self.assertFalse(
-            picking_form.brand_id, "Brand should be cleared when " "partner is removed."
+            picking_form.brand_id, "Brand should be cleared when partner is removed."
         )
         _logger.info("Test 04 Passed.")
 
     def test_05_create_picking_with_child_partner_gets_parent_brand(self):
         """Test brand is set from parent during direct creation with a child partner."""
         _logger.info(
-            "Running test_05_create_picking_with_child_partner_gets_" "parent_brand..."
+            "Running test_05_create_picking_with_child_partner_gets_parent_brand..."
         )
         picking = self.StockPicking.create(
             {
@@ -207,7 +207,7 @@ class TestStockPickingPartnerBrand(common.TransactionCase):
         self.assertEqual(
             picking.brand_id,
             self.parent_company_with_brand_alpha.brand_id,
-            "Picking brand should match parent company's brand " "on creation.",
+            "Picking brand should match parent company's brand on creation.",
         )
         _logger.info("Test 05 Passed.")
 
@@ -215,7 +215,7 @@ class TestStockPickingPartnerBrand(common.TransactionCase):
         """Test brand is set during direct creation with a standalone partner having a "
         "brand."""
         _logger.info(
-            "Running test_06_create_picking_with_standalone_" "partner_with_brand..."
+            "Running test_06_create_picking_with_standalone_partner_with_brand..."
         )
         picking = self.StockPicking.create(
             {
@@ -229,7 +229,7 @@ class TestStockPickingPartnerBrand(common.TransactionCase):
         self.assertEqual(
             picking.brand_id,
             self.standalone_partner_with_brand_beta.brand_id,
-            "Picking brand should match standalone partner's brand on " "creation.",
+            "Picking brand should match standalone partner's brand on creation.",
         )
         _logger.info("Test 06 Passed.")
 
@@ -249,7 +249,7 @@ class TestStockPickingPartnerBrand(common.TransactionCase):
         )
         self.assertFalse(
             picking.brand_id,
-            "Brand should not be set if partner " "(and parent) has no brand.",
+            "Brand should not be set if partner (and parent) has no brand.",
         )
         _logger.info("Test 07 Passed.")
 
@@ -288,6 +288,6 @@ class TestStockPickingPartnerBrand(common.TransactionCase):
             }
         )
         self.assertFalse(
-            picking.brand_id, "Brand should not be set if no partner " "is provided."
+            picking.brand_id, "Brand should not be set if no partner is provided."
         )
         _logger.info("Test 09 Passed.")
