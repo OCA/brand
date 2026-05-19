@@ -1,33 +1,29 @@
-from odoo.tests import common
+from odoo import Command
+
+from odoo.addons.base.tests.common import BaseCommon
 
 
-class TestSaleOrderStockPickingBrandID(common.TransactionCase):
-    @classmethod
-    def setUpClass(cls):
-        super().setUpClass()
-        cls.partner = cls.env["res.partner"].create({"name": "Test Partner"})
-
+class TestSaleOrderStockPickingBrandID(BaseCommon):
     def test_stock_picking_brand_id(self):
         """
         Test stock.picking brand_id is same as sale.order's brand_id
         """
-        product = self.env.ref("product.product_order_01")
+        product = self.env["product.product"].create(
+            {"name": "Test Product", "type": "consu"}
+        )
         brand_id = self.env["res.brand"].create({"name": "Brand1"})
-        product.type = "consu"
         vals = {
             "partner_id": self.partner.id,
             "partner_invoice_id": self.partner.id,
             "partner_shipping_id": self.partner.id,
             "brand_id": brand_id.id,
             "order_line": [
-                (
-                    0,
-                    0,
+                Command.create(
                     {
                         "name": product.name,
                         "product_id": product.id,
                         "product_uom_qty": 2,
-                        "product_uom": product.uom_id.id,
+                        "product_uom_id": product.uom_id.id,
                         "price_unit": product.list_price,
                     },
                 )
