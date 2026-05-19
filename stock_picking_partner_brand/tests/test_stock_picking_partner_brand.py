@@ -1,12 +1,10 @@
-import logging
+from odoo.tests import tagged
 
-from odoo.tests import common, tagged
-
-_logger = logging.getLogger(__name__)
+from odoo.addons.base.tests.common import BaseCommon
 
 
 @tagged("post_install", "-at_install", "stock_picking_partner_brand")
-class TestStockPickingPartnerBrand(common.TransactionCase):
+class TestStockPickingPartnerBrand(BaseCommon):
     """
     Test cases for the stock_picking_partner_brand module.
     Verifies that the brand_id on a Stock Picking is correctly updated
@@ -17,8 +15,6 @@ class TestStockPickingPartnerBrand(common.TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        cls.env = cls.env(context=dict(cls.env.context, tracking_disable=True))
-
         # Models
         cls.ResPartner = cls.env["res.partner"]
         cls.ResBrand = cls.env["res.brand"]
@@ -99,8 +95,6 @@ class TestStockPickingPartnerBrand(common.TransactionCase):
             {"name": "Generic Product", "type": "consu"}
         )
 
-        _logger.info("TestStockPickingPartnerBrand: setUpClass completed.")
-
     def _create_picking_form(self, partner_id=None):
         """
         Helper to simulate opening a new stock picking form with an optional partner.
@@ -112,8 +106,6 @@ class TestStockPickingPartnerBrand(common.TransactionCase):
 
     def test_01_onchange_child_contact_gets_parent_brand(self):
         """Test brand is set from parent company when a child contact is selected."""
-        _logger.info("Running test_01_onchange_child_contact_gets_parent_brand...")
-
         picking_form = self._create_picking_form(
             partner_id=self.child_contact_of_alpha.id
         )
@@ -125,12 +117,9 @@ class TestStockPickingPartnerBrand(common.TransactionCase):
             self.parent_company_with_brand_alpha.brand_id,
             "Picking brand should match the parent company's brand.",
         )
-        _logger.info("Test 01 Passed.")
 
     def test_02_onchange_standalone_partner_with_brand(self):
         """Test brand is set from a standalone partner who has a brand."""
-        _logger.info("Running test_02_onchange_standalone_partner_with_brand...")
-
         picking_form = self._create_picking_form(
             partner_id=self.standalone_partner_with_brand_beta.id
         )
@@ -142,14 +131,9 @@ class TestStockPickingPartnerBrand(common.TransactionCase):
             self.standalone_partner_with_brand_beta.brand_id,
             "Picking brand should match the standalone partner's brand.",
         )
-        _logger.info("Test 02 Passed.")
 
     def test_03_onchange_partner_without_brand_and_no_parent_brand(self):
         """Test brand is cleared if partner and its parent (if any) have no brand."""
-        _logger.info(
-            "Running test_03_onchange_partner_without_brand_and_no_parent_brand..."
-        )
-
         # First, test with a standalone partner without a brand
         picking_form_no_brand_standalone = self._create_picking_form(
             partner_id=self.partner_without_brand.id
@@ -169,12 +153,9 @@ class TestStockPickingPartnerBrand(common.TransactionCase):
             picking_form_no_brand_child.brand_id,
             "Brand should be cleared for child contact whose parent has no brand.",
         )
-        _logger.info("Test 03 Passed.")
 
     def test_04_onchange_partner_cleared(self):
         """Test brand is cleared when the partner is removed from the picking."""
-        _logger.info("Running test_04_onchange_partner_cleared...")
-
         picking_form = self._create_picking_form(
             partner_id=self.parent_company_with_brand_alpha.id
         )
@@ -188,13 +169,9 @@ class TestStockPickingPartnerBrand(common.TransactionCase):
         self.assertFalse(
             picking_form.brand_id, "Brand should be cleared when partner is removed."
         )
-        _logger.info("Test 04 Passed.")
 
     def test_05_create_picking_with_child_partner_gets_parent_brand(self):
         """Test brand is set from parent during direct creation with a child partner."""
-        _logger.info(
-            "Running test_05_create_picking_with_child_partner_gets_parent_brand..."
-        )
         picking = self.StockPicking.create(
             {
                 "partner_id": self.child_contact_of_alpha.id,
@@ -209,14 +186,10 @@ class TestStockPickingPartnerBrand(common.TransactionCase):
             self.parent_company_with_brand_alpha.brand_id,
             "Picking brand should match parent company's brand on creation.",
         )
-        _logger.info("Test 05 Passed.")
 
     def test_06_create_picking_with_standalone_partner_with_brand(self):
         """Test brand is set during direct creation with a standalone partner having a "
         "brand."""
-        _logger.info(
-            "Running test_06_create_picking_with_standalone_partner_with_brand..."
-        )
         picking = self.StockPicking.create(
             {
                 "partner_id": self.standalone_partner_with_brand_beta.id,
@@ -231,14 +204,12 @@ class TestStockPickingPartnerBrand(common.TransactionCase):
             self.standalone_partner_with_brand_beta.brand_id,
             "Picking brand should match standalone partner's brand on creation.",
         )
-        _logger.info("Test 06 Passed.")
 
     def test_07_create_picking_with_partner_without_brand(self):
         """
         Test brand is not set during direct creation if partner (and parent)
         has no brand.
         """
-        _logger.info("Running test_07_create_picking_with_partner_without_brand...")
         picking = self.StockPicking.create(
             {
                 "partner_id": self.partner_without_brand.id,
@@ -251,14 +222,9 @@ class TestStockPickingPartnerBrand(common.TransactionCase):
             picking.brand_id,
             "Brand should not be set if partner (and parent) has no brand.",
         )
-        _logger.info("Test 07 Passed.")
 
     def test_08_create_picking_with_explicit_brand_overrides_partner_brand(self):
         """Test that an explicitly provided brand_id in create vals is respected."""
-        _logger.info(
-            "Running test_08_create_picking_with_explicit_brand_overrides_"
-            "partner_brand..."
-        )
         picking = self.StockPicking.create(
             {
                 "partner_id": self.parent_company_with_brand_alpha.id,
@@ -275,11 +241,9 @@ class TestStockPickingPartnerBrand(common.TransactionCase):
             "Explicitly provided brand_id in create vals should override "
             "partner's brand.",
         )
-        _logger.info("Test 08 Passed.")
 
     def test_09_create_picking_without_partner(self):
         """Test creating a picking without a partner_id."""
-        _logger.info("Running test_09_create_picking_without_partner...")
         picking = self.StockPicking.create(
             {
                 "picking_type_id": self.picking_type_out.id,
@@ -290,4 +254,3 @@ class TestStockPickingPartnerBrand(common.TransactionCase):
         self.assertFalse(
             picking.brand_id, "Brand should not be set if no partner is provided."
         )
-        _logger.info("Test 09 Passed.")
