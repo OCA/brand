@@ -6,23 +6,25 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-05-23 07:45+0000\n"
+"Last-Translator: Pablo Castelo <pablocv@gmx.es>\n"
 "Language-Team: none\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__account_id
 msgid "Account"
-msgstr ""
+msgstr "Conta"
 
 #. module: account_brand
 #: model:ir.model,name:account_brand.model_account_move_reversal
 msgid "Account Move Reversal"
-msgstr ""
+msgstr "Reversión de Movemento de Conta"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_account_bank_statement_line__brand_id
@@ -30,105 +32,105 @@ msgstr ""
 #: model:ir.model.fields,field_description:account_brand.field_account_payment__brand_id
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__brand_id
 msgid "Brand"
-msgstr ""
+msgstr "Marca"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_account_move__brand_use_level
 msgid "Brand Use Level"
-msgstr ""
+msgstr "Nivel de uso da marca"
 
 #. module: account_brand
 #: model:ir.model.fields,help:account_brand.field_account_bank_statement_line__brand_id
 #: model:ir.model.fields,help:account_brand.field_account_move__brand_id
 #: model:ir.model.fields,help:account_brand.field_account_payment__brand_id
 msgid "Brand to use for this sale"
-msgstr ""
+msgstr "Marca a usar nesta venda"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_account_move__company_id
 msgid "Company"
-msgstr ""
+msgstr "Compañía"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Creado por"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Creado o"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Mostrar Nome"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__id
 msgid "ID"
-msgstr ""
+msgstr "ID (identificación)"
 
 #. module: account_brand
 #: model:ir.model,name:account_brand.model_account_move
 msgid "Journal Entry"
-msgstr ""
+msgstr "Entrada Diaria"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Última Modificación o"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Última Actualización Por"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Última Actualización o"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__partner_id
 msgid "Partner"
-msgstr ""
+msgstr "Socio"
 
 #. module: account_brand
 #: model:ir.actions.act_window,name:account_brand.res_partner_account_brand_act_window
 #: model:ir.ui.menu,name:account_brand.res_partner_account_brand_menu
 msgid "Partner Accounts by Brand"
-msgstr ""
+msgstr "Contas Asociadas por Marca"
 
 #. module: account_brand
 #: code:addons/account_brand/models/res_partner_account_brand.py:0
 #: model:ir.model.constraint,message:account_brand.constraint_res_partner_account_brand_unique_account_by_partner
 #, python-format
 msgid "Partner has already an account set for this brand!"
-msgstr ""
+msgstr "O Socio xa ten unha conta configurada para esta marca!"
 
 #. module: account_brand
 #: model:ir.model.fields.selection,name:account_brand.selection__res_partner_account_brand__account_type__payable
 msgid "Payable"
-msgstr ""
+msgstr "Pagadero"
 
 #. module: account_brand
 #: code:addons/account_brand/models/res_partner_account_brand.py:0
 #, python-format
 msgid "Please select an account of type %s"
-msgstr ""
+msgstr "Por favor selecciona unha conta de tipo %s"
 
 #. module: account_brand
 #: model:ir.model.fields.selection,name:account_brand.selection__res_partner_account_brand__account_type__receivable
 msgid "Receivable"
-msgstr ""
+msgstr "A cobrar"
 
 #. module: account_brand
 #: model:ir.model,name:account_brand.model_res_partner_account_brand
 msgid "Receivable/Payable Partner Account By Brand"
-msgstr ""
+msgstr "Conta de socio Debedora/Pagadora Por Marca"
 
 #. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__account_type
 msgid "Type"
-msgstr ""
+msgstr "Tipo"
