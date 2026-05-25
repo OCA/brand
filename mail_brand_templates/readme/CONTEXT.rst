@@ -1,0 +1,3 @@
+Organizations operating with multiple brands often struggle to maintain consistent and accurate brand representation across all customer communications, particularly in automated and transactional emails.
+
+There is a need for a system that can seamlessly apply the correct branding – including logos, sender details, and potentially communication styles – to emails based on the specific brand context, ensuring a unified and professional customer experience. Furthermore, restricting the use of email templates to those aligned with the brand of the originating communication ensures brand compliance and reduces the risk of sending out off-brand or irrelevant content.
