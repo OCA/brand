@@ -1,7 +1,7 @@
 # Copyright 2023 ACSONE SA/NV
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import _, api, fields, models
+from odoo import api, fields, models
 from odoo.exceptions import ValidationError
 
 
@@ -24,7 +24,7 @@ class ResBrand(models.Model):
                 and record.partner_id != record.partner_bank_id.partner_id
             ):
                 raise ValidationError(
-                    _(
+                    self.env._(
                         "The account selected for invoices payment does not "
                         "belong to the same partner as this brand."
                     )
