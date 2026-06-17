@@ -2,3 +2,4 @@
 - [Landoo, Sistemas de Información, S.L.](https://www.landoo.es):
   - Vicent Cubells \<<vicent@vcubells.net>\>
 - Freni Patel \<<fpatel@opensourceintegrators.com>\>
+- Frederic Grall \<<fgr@apik.cloud>>
