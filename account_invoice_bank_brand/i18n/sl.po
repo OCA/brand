@@ -6,7 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-06-22 12:46+0000\n"
+"Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
 "Language-Team: none\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -14,11 +15,12 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: account_invoice_bank_brand
 #: model:ir.model.fields,field_description:account_invoice_bank_brand.field_res_brand__partner_bank_id
 msgid "Bank Account"
-msgstr ""
+msgstr "Bančni račun"
 
 #. module: account_invoice_bank_brand
 #: model:ir.model.fields,help:account_invoice_bank_brand.field_res_brand__partner_bank_id
@@ -26,21 +28,23 @@ msgid ""
 "Bank Account Number to which the invoices of this brand will be paid (for "
 "Customer Invoice and Vendor Credit Note)"
 msgstr ""
+"Številka bančnega računa, na katerega se bodo nakazovali zneski iz računov "
+"te blagovne znamke (za izdane račune in prejete dobropise)"
 
 #. module: account_invoice_bank_brand
 #: model:ir.model,name:account_invoice_bank_brand.model_res_brand
 msgid "Brand"
-msgstr ""
+msgstr "Blagovna znamka"
 
 #. module: account_invoice_bank_brand
 #: model_terms:ir.ui.view,arch_db:account_invoice_bank_brand.res_brand_form_view
 msgid "Invoices"
-msgstr ""
+msgstr "Računi"
 
 #. module: account_invoice_bank_brand
 #: model:ir.model,name:account_invoice_bank_brand.model_account_move
 msgid "Journal Entry"
-msgstr ""
+msgstr "Temeljnica"
 
 #. module: account_invoice_bank_brand
 #. odoo-python
@@ -49,3 +53,5 @@ msgid ""
 "The account selected for invoices payment does not belong to the same "
 "partner as this brand."
 msgstr ""
+"Račun, izbran za plačilo računov, ne pripada istemu partnerju kot ta "
+"blagovna znamka."
