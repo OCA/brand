@@ -6,7 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-06-22 12:46+0000\n"
+"Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
 "Language-Team: none\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -14,48 +15,49 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: contract_forecast_brand
 #: model:ir.model.fields,field_description:contract_forecast_brand.field_contract_line_forecast_period__allowed_payment_mode_ids
 msgid "Allowed Payment Mode"
-msgstr ""
+msgstr "Dovoljeni način plačila"
 
 #. module: contract_forecast_brand
 #: model:ir.model.fields,field_description:contract_forecast_brand.field_contract_line_forecast_period__brand_id
 msgid "Brand"
-msgstr ""
+msgstr "Blagovna znamka"
 
 #. module: contract_forecast_brand
 #: model:ir.model.fields,field_description:contract_forecast_brand.field_contract_line_forecast_period__brand_use_level
 msgid "Brand Use Level"
-msgstr ""
+msgstr "Nivo rabe znamke"
 
 #. module: contract_forecast_brand
 #: model:ir.model.fields,help:contract_forecast_brand.field_contract_line_forecast_period__brand_id
 msgid "Brand to use for this sale"
-msgstr ""
+msgstr "Blagovna znamka, namenjena tej prodaji"
 
 #. module: contract_forecast_brand
 #: model:ir.model.fields,field_description:contract_forecast_brand.field_contract_line_forecast_period__company_id
 msgid "Company"
-msgstr ""
+msgstr "Družba"
 
 #. module: contract_forecast_brand
 #: model:ir.model,name:contract_forecast_brand.model_contract_contract
 msgid "Contract"
-msgstr ""
+msgstr "Pogodba"
 
 #. module: contract_forecast_brand
 #: model:ir.model,name:contract_forecast_brand.model_contract_line
 msgid "Contract Line"
-msgstr ""
+msgstr "Postavka pogodbe"
 
 #. module: contract_forecast_brand
 #: model:ir.model,name:contract_forecast_brand.model_contract_line_forecast_period
 msgid "Contract Line Forecast Period"
-msgstr ""
+msgstr "Obdobje napovedi postavke pogodbe"
 
 #. module: contract_forecast_brand
 #: model:ir.model.fields,field_description:contract_forecast_brand.field_contract_line_forecast_period__is_brand_required
 msgid "Is Brand Required"
-msgstr ""
+msgstr "Je znamka obvezna"
