@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2026-06-22 10:15+0000\n"
+"PO-Revision-Date: 2026-06-25 17:46+0000\n"
 "Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
 "Language-Team: none\n"
 "Language: sl\n"
@@ -228,7 +228,7 @@ msgstr "Označi, če je stik pravna oseba, v nasprotnem primeru je fizična oseb
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__employee
 msgid "Check this box if this contact is an Employee."
-msgstr "Označite to polje, če je ta kontakt zaposleni."
+msgstr "Označite, če je stik kader."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__city
@@ -254,7 +254,7 @@ msgstr "Družbe"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__ref_company_ids
 msgid "Companies that refers to partner"
-msgstr "Podjetja, ki se nanašajo na partnerja"
+msgstr "Družbe, ki so povezane s partnerjem"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__company_id
@@ -425,7 +425,7 @@ msgstr "V poslovnih dokumentih ne uporabljajte blagovnih znamk"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__duplicate_bank_partner_ids
 msgid "Duplicate Bank Partner"
-msgstr "Podvojeni bančni partnerji"
+msgstr "Podvoji bančnega partnerja"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__duplicated_bank_account_partners_count
