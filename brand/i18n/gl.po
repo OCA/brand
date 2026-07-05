@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2026-05-23 17:46+0000\n"
-"Last-Translator: Pablo Castelo <pablocv@gmx.es>\n"
+"PO-Revision-Date: 2026-07-05 21:46+0000\n"
+"Last-Translator: Cándido Martínez <candido@supermercadoscooperativos.com>\n"
 "Language-Team: none\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
@@ -470,7 +470,7 @@ msgstr "Correo Electrónico Formatado"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__global_location_number
 msgid "GLN"
-msgstr ""
+msgstr "GLN"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_latitude
@@ -485,7 +485,7 @@ msgstr "Lonxitude xeográfica"
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__global_location_number
 msgid "Global Location Number"
-msgstr ""
+msgstr "Número de localización global"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__has_message
@@ -588,7 +588,7 @@ msgstr "Facturas"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_coa_installed
 msgid "Is Coa Installed"
-msgstr ""
+msgstr "Is Coa Installed"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_is_follower
@@ -847,7 +847,7 @@ msgstr "Reconto de ordes de compra"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__purchase_warn
 msgid "Purchase Order Warning"
-msgstr ""
+msgstr "Alerta do pedido de compra"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__receipt_reminder_email
@@ -921,7 +921,7 @@ msgstr "Propio"
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__use_partner_credit_limit
 msgid "Set a value greater than 0.0 to activate a credit limit check"
-msgstr ""
+msgstr "Introduce un valor superior a 0.0 para activar o límite de crédito"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_share
