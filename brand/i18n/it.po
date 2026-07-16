@@ -972,17 +972,6 @@ msgstr ""
 "Si può utilizzare per ricerche rapide."
 
 #. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__vat
-msgid ""
-"The Tax Identification Number. Values here will be validated based on the "
-"country format. You can use '/' to indicate that the partner is not subject "
-"to tax."
-msgstr ""
-"Il numero identificazione imposta. I valori verranno validati nel formato "
-"della nazione. Si può utilizzare '/' per indicare che il partner non è "
-"soggetto all'imposta."
-
-#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_account_position_id
 msgid ""
 "The fiscal position determines the taxes/accounts used for this contact."
@@ -1139,6 +1128,11 @@ msgstr ""
 "del client web."
 
 #. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__vat
+msgid "You can use '/' to indicate that the customer has no Tax ID."
+msgstr ""
+
+#. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "ZIP"
 msgstr "CAP"
@@ -1171,6 +1165,15 @@ msgstr "es. https://www.odoo.com"
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_edi_format
 msgid "eInvoice format"
 msgstr "Formato fattura elettronica"
+
+#~ msgid ""
+#~ "The Tax Identification Number. Values here will be validated based on the "
+#~ "country format. You can use '/' to indicate that the partner is not "
+#~ "subject to tax."
+#~ msgstr ""
+#~ "Il numero identificazione imposta. I valori verranno validati nel formato "
+#~ "della nazione. Si può utilizzare '/' per indicare che il partner non è "
+#~ "soggetto all'imposta."
 
 #~ msgid "Available Peppol Eas"
 #~ msgstr "EAS Peppol disponibile"
