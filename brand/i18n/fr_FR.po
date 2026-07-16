@@ -971,14 +971,6 @@ msgstr ""
 "Vous pouvez utiliser ce champ pour la recherche rapide."
 
 #. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__vat
-msgid ""
-"The Tax Identification Number. Values here will be validated based on the "
-"country format. You can use '/' to indicate that the partner is not subject "
-"to tax."
-msgstr ""
-
-#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_account_position_id
 msgid ""
 "The fiscal position determines the taxes/accounts used for this contact."
@@ -1125,6 +1117,11 @@ msgstr ""
 "Si le fuseau horaire n'est pas défini, l'UTC (Temps Universel) est utilisé.\n"
 "Partout ailleurs, les valeurs temporelles sont calculées en fonction du "
 "décalage temporel de votre client Web."
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__vat
+msgid "You can use '/' to indicate that the customer has no Tax ID."
+msgstr ""
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view

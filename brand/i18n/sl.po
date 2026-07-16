@@ -90,8 +90,8 @@ msgstr "Opis tipa naslova"
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__lang
 msgid ""
-"All the emails and documents sent to this contact will be translated in this"
-" language."
+"All the emails and documents sent to this contact will be translated in this "
+"language."
 msgstr ""
 "Vsa e-poštna sporočila in dokumenti, poslani tej kontaktni osebi, bodo "
 "prevedeni v ta jezik."
@@ -315,8 +315,7 @@ msgstr "Nastavitve"
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
 msgid ""
-"Configure branding of customer facing business documents (SO, invoices, "
-"etc)."
+"Configure branding of customer facing business documents (SO, invoices, etc)."
 msgstr ""
 "Nastavite oblikovanje poslovnih dokumentov, namenjenih strankam "
 "(naročilnice, računi itd.)."
@@ -975,16 +974,6 @@ msgstr ""
 "To polje lahko uporabite za hitro iskanje."
 
 #. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__vat
-msgid ""
-"The Tax Identification Number. Values here will be validated based on the "
-"country format. You can use '/' to indicate that the partner is not subject "
-"to tax."
-msgstr ""
-"Davčna identifikacijska številka. Vrednosti bodo preverjene glede na obliko "
-"države. Za označitev, da partner ni davčni zavezanec, lahko uporabite '/'."
-
-#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_account_position_id
 msgid ""
 "The fiscal position determines the taxes/accounts used for this contact."
@@ -1026,8 +1015,8 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__email_normalized
 msgid ""
-"This field is used to search on email address as the primary email field can"
-" contain more than strictly an email address."
+"This field is used to search on email address as the primary email field can "
+"contain more than strictly an email address."
 msgstr ""
 "To polje se uporablja za iskanje po e-poštnem naslovu, saj lahko primarno "
 "polje e-pošte vsebuje več kot le e-poštni naslov."
@@ -1120,16 +1109,23 @@ msgstr "Kronologija komunikacij spletne strani"
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__tz
 msgid ""
-"When printing documents and exporting/importing data, time values are computed according to this timezone.\n"
+"When printing documents and exporting/importing data, time values are "
+"computed according to this timezone.\n"
 "If the timezone is not set, UTC (Coordinated Universal Time) is used.\n"
-"Anywhere else, time values are computed according to the time offset of your web client."
+"Anywhere else, time values are computed according to the time offset of your "
+"web client."
 msgstr ""
 "Pri tiskanju dokumentov in izvozu/uvozu podatkov se časovne vrednosti "
 "izračunajo glede na ta časovni pas.\n"
-"Če časovni pas ni nastavljen, se uporablja UTC (koordinirani univerzalni čas)"
-".\n"
+"Če časovni pas ni nastavljen, se uporablja UTC (koordinirani univerzalni "
+"čas).\n"
 "Drugod se časovne vrednosti izračunajo glede na časovni odmik vašega "
 "spletnega odjemalca."
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__vat
+msgid "You can use '/' to indicate that the customer has no Tax ID."
+msgstr ""
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
@@ -1164,3 +1160,12 @@ msgstr "npr. https://www.odoo.com"
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_edi_format
 msgid "eInvoice format"
 msgstr "format e-računa"
+
+#~ msgid ""
+#~ "The Tax Identification Number. Values here will be validated based on the "
+#~ "country format. You can use '/' to indicate that the partner is not "
+#~ "subject to tax."
+#~ msgstr ""
+#~ "Davčna identifikacijska številka. Vrednosti bodo preverjene glede na "
+#~ "obliko države. Za označitev, da partner ni davčni zavezanec, lahko "
+#~ "uporabite '/'."

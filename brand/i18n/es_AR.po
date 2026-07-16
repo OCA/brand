@@ -974,17 +974,6 @@ msgstr ""
 "Puede usar este campo para búsqueda rápida."
 
 #. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__vat
-msgid ""
-"The Tax Identification Number. Values here will be validated based on the "
-"country format. You can use '/' to indicate that the partner is not subject "
-"to tax."
-msgstr ""
-"El Número de Identificación Fiscal. Los valores aquí se validarán según el "
-"formato del país. Puede utilizar '/' para indicar que el contacto no está "
-"sujeto a impuestos."
-
-#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_account_position_id
 msgid ""
 "The fiscal position determines the taxes/accounts used for this contact."
@@ -1140,6 +1129,11 @@ msgstr ""
 "desplazamiento de tiempo de su cliente web."
 
 #. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__vat
+msgid "You can use '/' to indicate that the customer has no Tax ID."
+msgstr ""
+
+#. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "ZIP"
 msgstr "Código Postal"
@@ -1172,6 +1166,15 @@ msgstr "ej. https://www.odoo.com"
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_edi_format
 msgid "eInvoice format"
 msgstr ""
+
+#~ msgid ""
+#~ "The Tax Identification Number. Values here will be validated based on the "
+#~ "country format. You can use '/' to indicate that the partner is not "
+#~ "subject to tax."
+#~ msgstr ""
+#~ "El Número de Identificación Fiscal. Los valores aquí se validarán según "
+#~ "el formato del país. Puede utilizar '/' para indicar que el contacto no "
+#~ "está sujeto a impuestos."
 
 #~ msgid "Blacklisted Phone is Phone"
 #~ msgstr "El Teléfono de la Lista Negra es Fijo"
