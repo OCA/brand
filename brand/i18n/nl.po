@@ -972,17 +972,6 @@ msgstr ""
 "U kunt dit veld gebruiken voor snel zoeken."
 
 #. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__vat
-msgid ""
-"The Tax Identification Number. Values here will be validated based on the "
-"country format. You can use '/' to indicate that the partner is not subject "
-"to tax."
-msgstr ""
-"Het btw-identificatienummer. Waarden hier worden gevalideerd op basis van "
-"het landformaat. U kunt '/' gebruiken om aan te geven dat de partner niet "
-"belastingplichtig is."
-
-#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_account_position_id
 msgid ""
 "The fiscal position determines the taxes/accounts used for this contact."
@@ -1133,6 +1122,11 @@ msgstr ""
 "Elders worden tijdwaarden berekend volgens de tijdoffset van uw webclient."
 
 #. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__vat
+msgid "You can use '/' to indicate that the customer has no Tax ID."
+msgstr ""
+
+#. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "ZIP"
 msgstr "Postcode"
@@ -1165,6 +1159,15 @@ msgstr "bijv. https://www.odoo.com"
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_edi_format
 msgid "eInvoice format"
 msgstr "eFactuur formaat"
+
+#~ msgid ""
+#~ "The Tax Identification Number. Values here will be validated based on the "
+#~ "country format. You can use '/' to indicate that the partner is not "
+#~ "subject to tax."
+#~ msgstr ""
+#~ "Het btw-identificatienummer. Waarden hier worden gevalideerd op basis van "
+#~ "het landformaat. U kunt '/' gebruiken om aan te geven dat de partner niet "
+#~ "belastingplichtig is."
 
 #~ msgid "Blacklisted Phone is Phone"
 #~ msgstr "Zwarte lijst Telefoon is Telefoon"
