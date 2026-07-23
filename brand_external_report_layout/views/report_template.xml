@@ -35,9 +35,9 @@
             <t t-set="primary" t-value="brand.primary_color or 'black'" />
             <t t-set="secondary" t-value="brand.secondary_color or 'black'" />
             <t
-            t-set="layout"
-            t-value="brand.external_report_layout_id.key or 'web.external_layout_standard'"
-        />
+                t-set="layout"
+                t-value="brand.external_report_layout_id.key or 'web.external_layout_standard'"
+            />
                 // Simplified color-contrast function to replicate bootstrap in report preview.
                 @function preview-color-contrast($background) {
                     @if (lightness($background) &gt; 50) {

@@ -56,9 +56,10 @@ class TestBrandExternalReportLayout(TransactionCase):
         self.env.invalidate_all()
         wizard._onchange_brand_id()
         # Get the expected colors from the logo
-        expected_primary, expected_secondary = (
-            wizard.extract_image_primary_secondary_colors(wizard.logo)
-        )
+        (
+            expected_primary,
+            expected_secondary,
+        ) = wizard.extract_image_primary_secondary_colors(wizard.logo)
         self.assertEqual(wizard.primary_color, expected_primary)
         self.assertEqual(wizard.secondary_color, expected_secondary)
 
@@ -75,9 +76,10 @@ class TestBrandExternalReportLayout(TransactionCase):
         wizard._onchange_brand_id()
 
         # Extract colors from the logo
-        expected_primary, expected_secondary = (
-            wizard.extract_image_primary_secondary_colors(wizard.logo)
-        )
+        (
+            expected_primary,
+            expected_secondary,
+        ) = wizard.extract_image_primary_secondary_colors(wizard.logo)
 
         self.assertEqual(wizard.primary_color, expected_primary)
         self.assertEqual(wizard.secondary_color, expected_secondary)
