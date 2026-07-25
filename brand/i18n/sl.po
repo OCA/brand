@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2026-07-01 12:46+0000\n"
+"PO-Revision-Date: 2026-07-25 07:46+0000\n"
 "Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
 "Language-Team: none\n"
 "Language: sl\n"
@@ -119,7 +119,7 @@ msgstr "Samodejno knjiži prejete račune za tega zanesljivega partnerja"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__available_invoice_template_pdf_report_ids
 msgid "Available Invoice Template Pdf Report"
-msgstr ""
+msgstr "Razpoložljivo poročilo PDF predloge računa"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__avatar_1920
@@ -194,7 +194,7 @@ msgstr "Nivo rabe znamke"
 #. odoo-python
 #: code:addons/brand/models/res_brand_mixin.py:0
 msgid "Brand company must match document company for %(doc_name)s"
-msgstr ""
+msgstr "Družba blagovne znamke mora ustrezati družbi dokumenta za %(doc_name)s"
 
 #. module: brand
 #. odoo-python
@@ -218,7 +218,7 @@ msgstr "Znamke"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__channel_member_ids
 msgid "Channel Member"
-msgstr ""
+msgstr "Član kanala"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__channel_ids
@@ -290,7 +290,7 @@ msgstr "Naziv družbe subjekta"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__company_registry_placeholder
 msgid "Company Registry Placeholder"
-msgstr ""
+msgstr "Ograda registra podjetij"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__company_type
@@ -453,7 +453,7 @@ msgstr "Davčne kode držav"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__fiscal_country_group_codes
 msgid "Fiscal Country Group Codes"
-msgstr ""
+msgstr "Kode fiskalnih skupin držav"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_account_position_id
@@ -597,7 +597,7 @@ msgstr "Shranjeni EDI format računa"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_template_pdf_report_id
 msgid "Invoice report"
-msgstr ""
+msgstr "Poročilo računa"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_sending_method
@@ -622,7 +622,7 @@ msgstr "Je sledilec"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_in_call
 msgid "Is In Call"
-msgstr ""
+msgstr "Je v klicu"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__is_public
@@ -737,7 +737,7 @@ msgstr "Število sporočil, ki niso bila pravilno dostavljena"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__offline_since
 msgid "Offline since"
-msgstr ""
+msgstr "Brez povezave od"
 
 #. module: brand
 #: model:ir.model.fields.selection,name:brand.selection__res_company__brand_use_level__optional
@@ -817,7 +817,7 @@ msgstr "Lastnosti"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__properties_base_definition_id
 msgid "Properties Base Definition"
-msgstr ""
+msgstr "Osnovna definicija lastnosti"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_inbound_payment_method_line_id
@@ -852,7 +852,7 @@ msgstr "Odgovorni uporabnik"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__rtc_session_ids
 msgid "Rtc Session"
-msgstr ""
+msgstr "Seja RTC"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_order_count
@@ -909,7 +909,7 @@ msgstr "Stanje"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__application_statistics
 msgid "Stats"
-msgstr ""
+msgstr "Statistika"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__activity_state
@@ -1011,6 +1011,8 @@ msgid ""
 "There can be several users related to the same partner. When a single user "
 "is needed, this field attempts to find the most appropriate one."
 msgstr ""
+"Z istim partnerjem je lahko povezanih več uporabnikov. Kadar je potreben en "
+"uporabnik, to polje poskuša najti najprimernejšega."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__email_normalized
@@ -1069,7 +1071,7 @@ msgstr "Uporabite črtno kodo za identifikacijo tega stika."
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_product_pricelist
 msgid "Used for sales to the current partner"
-msgstr ""
+msgstr "Uporablja se za prodajo trenutnemu partnerju"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__user_ids
@@ -1125,7 +1127,7 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__vat
 msgid "You can use '/' to indicate that the customer has no Tax ID."
-msgstr ""
+msgstr "Znak '/' lahko uporabite za označitev, da kupec nima davčne številke."
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
