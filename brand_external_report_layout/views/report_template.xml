@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2019 ACSONE SA/NV
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <template id="brand_external_layout" inherit_id="web.external_layout">
+        <xpath expr="//t[@t-if='not company']" position="after">
+            <t t-if="doc and not o" t-set="o" t-value="doc" />
+            <t t-if="brand" t-set="brand_id" t-value="brand.id" />
+            <t
+                t-elif="o and 'brand_id' in o.fields_get() and o.brand_id and o.brand_id.external_report_layout_id"
+                t-set="brand_id"
+                t-value="o.brand_id.id"
+            />
+            <t t-else="" t-set="brand_id" t-value="0" />
+            <t
+                t-if="o and 'brand_id' in o.fields_get() and o.brand_id and o.brand_id.external_report_layout_id"
+                t-call="{{o.brand_id.external_report_layout_id.sudo().key}}"
+            >
+                <t t-set="company" t-value="o.brand_id.sudo()" />
+                <t t-out="0" />
+            </t>
+            <t t-else="else" name="brand_not_set" />
+        </xpath>
+        <xpath expr="//t[@name='brand_not_set']" position="inside">
+            <xpath
+                expr="//t[@t-if='company.external_report_layout_id']"
+                position="move"
+            />
+            <xpath expr="//t[@t-call='web.external_layout_standard']" position="move" />
+        </xpath>
+    </template>
+    <template id="styles_brand_report">
+        <t t-foreach="brand_ids" t-as="brand" t-translation="off">
+            <t t-set="font" t-value="brand.font or 'Lato'" />
+            <t t-set="primary" t-value="brand.primary_color or 'black'" />
+            <t t-set="secondary" t-value="brand.secondary_color or 'black'" />
+            <t
+            t-set="layout"
+            t-value="brand.external_report_layout_id.key or 'web.external_layout_standard'"
+        />
+                // Simplified color-contrast function to replicate bootstrap in report preview.
+                @function preview-color-contrast($background) {
+                    @if (lightness($background) &gt; 50) {
+                        @return black;
+                    } @else {
+                        @return white;
+                    }
+                }
+
+            .o_brand_<t t-esc='brand.id' />_layout {
+                font-family:<t t-esc="font" />;
+                    h2 {
+                        color: <t t-esc="primary" />;
+                    }
+
+                    #informations strong {
+                        color: <t t-esc="secondary" />;
+                    }
+
+                    .o_total strong {
+                        color: <t t-esc="primary" />;
+                    }
+
+                    .o_company_tagline {
+                        color: <t t-esc="primary" />
+                    }
+
+            <t t-if="layout == 'web.external_layout_boxed'">
+                &amp;.o_report_layout_boxed {
+                    #total .o_total td {
+                        background-color: <t t-esc="primary" />;
+
+                        strong {
+                            color: preview-color-contrast(<t t-esc="primary" />);
+                        }
+                    }
+                }
+            </t>
+            <t t-elif="layout == 'web.external_layout_bold'">
+                &amp;.o_report_layout_bold {
+                    .o_main_table {
+                        thead th {
+                            border-top: 3px solid <t t-esc="secondary" />;
+                        }
+
+                        tbody tr:last-child td {
+                            border-bottom: 3px solid <t t-esc="secondary" />;
+                        }
+                    }
+                }
+            </t>
+            <t t-elif="layout == 'web.external_layout_folder'">
+                &amp; .o_folder_header_container {
+                    rect, path {
+                        fill: mix(white, <t t-esc="primary" />, 92%);
+                    }
+                }
+
+                &amp;.o_report_layout_folder_footer {
+                    border-top: 1px solid <t t-esc="secondary" />;
+                }
+            </t>
+            <t t-elif="layout == 'web.external_layout_wave'">
+                &amp;.o_report_layout_wave {
+                    #informations {
+                        border-color: <t t-esc="secondary" />;
+                        background-color: mix(white, <t t-esc="secondary" />, 92%);
+                    }
+                }
+            </t>
+            <t t-elif="layout == 'web.external_layout_bubble'">
+                &amp;.o_report_layout_bubble {
+                    #informations {
+                        border-color: <t t-esc="secondary" />;
+                        background-color: mix(white, <t t-esc="secondary" />, 92%);
+                    }
+
+                    thead th, #total .o_total td {
+                        background-color: <t t-esc="primary" />;
+                        color: preview-color-contrast(<t t-esc="primary" />);
+
+                        strong {
+                            color: preview-color-contrast(<t t-esc="primary" />);
+                        }
+                    }
+                }
+            </t>
+            }
+        </t>
+    </template>
+
+    <template id="external_layout_boxed" inherit_id="web.external_layout_boxed">
+        <xpath expr="//div[contains(@t-attf-class, 'header')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >header o_brand_#{brand_id}_layout o_company_#{company.id}_layout</attribute>
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'article')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >article o_report_layout_boxed o_table_boxed o_brand_#{brand_id}_layout o_company_#{company.id}_layout o_snail_mail {{'o_report_layout_background' if company.layout_background != 'Blank' else ''}}']</attribute>
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >footer o_brand_#{brand_id}_layout o_company_#{company.id}_layout {{report_type != 'pdf' and 'position-relative mt-auto mx-n5'}}</attribute>
+        </xpath>
+    </template>
+    <template id="external_layout_striped" inherit_id="web.external_layout_striped">
+        <xpath expr="//div[contains(@t-attf-class, 'header')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >o_brand_#{brand_id}_layout o_company_#{company.id}_layout header</attribute>
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'article')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >o_brand_#{brand_id}_layout o_company_#{company.id}_layout article o_report_layout_striped o_table_striped o_snail_mail {{'o_report_layout_background' if company.layout_background != 'Blank' else ''}}</attribute>
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >o_brand_#{brand_id}_layout o_company_#{company.id}_layout footer {{report_type != 'pdf' and 'mt-auto'}}"</attribute>
+        </xpath>
+    </template>
+
+    <template id="external_layout_bold" inherit_id="web.external_layout_bold">
+        <xpath expr="//div[contains(@t-attf-class, 'header')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >header o_brand_#{brand_id}_layout o_company_#{company.id}_layout</attribute>
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'article')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >article o_report_layout_bold o_brand_#{brand_id}_layout o_company_#{company.id}_layout {{'o_report_layout_background' if company.layout_background != 'Blank' else ''}}']</attribute>
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >footer o_brand_#{brand_id}_layout o_company_#{company.id}_layout {{report_type != 'pdf' and 'mt-auto'}}</attribute>
+        </xpath>
+    </template>
+
+    <template id="external_layout_bubble" inherit_id="web.external_layout_bubble">
+        <xpath expr="//div[contains(@t-attf-class, 'header')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >header o_brand_#{brand_id}_layout o_company_#{company.id}_layout</attribute>
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'article')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >article o_report_layout_bubble o_table_boxed-rounded o_brand_#{brand_id}_layout o_company_#{company.id}_layout {{'o_report_layout_background' if company.layout_background != 'Blank' else ''}}']</attribute>
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >footer o_brand_#{brand_id}_layout o_company_#{company.id}_layout {{report_type != 'pdf' and 'position-relative mt-auto mx-n5'}}</attribute>
+        </xpath>
+    </template>
+
+    <template id="external_layout_wave" inherit_id="web.external_layout_wave">
+        <xpath expr="//div[contains(@t-attf-class, 'header')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >header o_brand_#{brand_id}_layout o_company_#{company.id}_layout</attribute>
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'article')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >article o_report_layout_wave o_table_striped o_brand_#{brand_id}_layout o_company_#{company.id}_layout {{'o_report_layout_background' if company.layout_background != 'Blank' else ''}}']</attribute>
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >footer o_brand_#{brand_id}_layout o_company_#{company.id}_layout  {{report_type != 'pdf' and 'position-relative mt-auto mx-n5'}}</attribute>
+        </xpath>
+    </template>
+
+    <template id="external_layout_folder" inherit_id="web.external_layout_folder">
+        <xpath expr="//div[contains(@t-attf-class, 'header')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >header o_brand_#{brand_id}_layout o_company_#{company.id}_layout</attribute>
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'article')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >article o_report_layout_folder o_table_striped o_brand_#{brand_id}_layout o_company_#{company.id}_layout {{'o_report_layout_background' if company.layout_background != 'Blank' else ''}}']</attribute>
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >footer o_brand_#{brand_id}_layout o_company_#{company.id}_layout {{report_type != 'pdf' and 'position-relative mt-auto mx-n5'}}</attribute>
+        </xpath>
+    </template>
+
+    <template id="external_layout_standard" inherit_id="web.external_layout_standard">
+        <xpath expr="//div[contains(@t-attf-class, 'header')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >header o_brand_#{brand_id}_layout o_company_#{company.id}_layout</attribute>
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'article')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >article o_report_layout_standard o_table_standard o_brand_#{brand_id}_layout o_company_#{company.id}_layout o_snail_mail {{'o_report_layout_background' if company.layout_background != 'Blank' else ''}}']</attribute>
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >footer o_brand_#{brand_id}_layout o_company_#{company.id}_layout {{report_type != 'pdf' and 'mt-auto'}}</attribute>
+        </xpath>
+    </template>
+
+    <record id="asset_styles_brand_report" model="ir.attachment">
+        <field name="datas" model="res.brand" eval="obj()._get_asset_style_b64()" />
+        <field name="mimetype">text/scss</field>
+        <field name="name">res.brand.scss</field>
+        <field name="type">binary</field>
+        <field
+            name="url"
+        >/brand_external_report_layout/static/src/legacy/scss/asset_styles_brand_report.scss</field>
+    </record>
+</odoo>
