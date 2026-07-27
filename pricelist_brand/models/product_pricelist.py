@@ -10,7 +10,7 @@ class ProductPricelist(models.Model):
     _inherit = "product.pricelist"
 
     def _get_applicable_rules_domain(self, products, date, **kwargs):
-        res = super()._get_applicable_rules_domain(products, date)
+        res = super()._get_applicable_rules_domain(products, date, **kwargs)
         if products._name == "product.template":
             brand_domain = ("product_brand_id", "in", products.product_brand_id.ids)
         else:
