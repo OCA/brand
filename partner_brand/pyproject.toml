@@ -1,0 +1,9 @@
+[build-system]
+requires = ["whool"]
+build-backend = "whool.buildapi"
+[project]
+name = "odoo-addons-oca-partner_brand"
+version = "19.0.20251106.0"
+dependencies = [
+"odoo-addon-brand @ git+https://github.com/OCA/brand.git@refs/pull/270/head#subdirectory=brand",
+]
