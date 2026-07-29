@@ -1,0 +1,1 @@
+This module streamlines the branding of shipping documents. It ensures that the brand selected on a sale order is automatically applied to the corresponding stock picking documents, providing consistent branding on delivery slips and other related paperwork.
