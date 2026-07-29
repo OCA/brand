@@ -1,0 +1,40 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* analytic_brand
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2025-08-07 15:25+0000\n"
+"Last-Translator: Miquel Romera <mromera@pmsastro.es>\n"
+"Language-Team: none\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10.4\n"
+
+#. module: analytic_brand
+#: model:ir.model.fields,field_description:analytic_brand.field_res_brand__analytic_distribution
+msgid "Analytic Distribution"
+msgstr "Distribución analítica"
+
+#. module: analytic_brand
+#: model:ir.model.fields,field_description:analytic_brand.field_res_brand__analytic_precision
+msgid "Analytic Precision"
+msgstr "Precisión analítica"
+
+#. module: analytic_brand
+#: model:ir.model,name:analytic_brand.model_res_brand
+msgid "Brand"
+msgstr "Marca"
+
+#. module: analytic_brand
+#: model:ir.model.fields,field_description:analytic_brand.field_res_brand__distribution_analytic_account_ids
+msgid "Distribution Analytic Account"
+msgstr "Cuenta analítica de distribución"
+
+#~ msgid "Analytic Account"
+#~ msgstr "Cuenta Analítica"
