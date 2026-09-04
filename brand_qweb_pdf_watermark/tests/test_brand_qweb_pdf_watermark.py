@@ -45,10 +45,8 @@ class TestBrandQwebPdfWatermark(TransactionCase):
         )
 
     def test_watermark_field_on_brand(self):
-        """Test that pdf_watermark field is correctly stored and retrieved on res.brand."""
-        self.assertEqual(
-            self.brand_with_watermark.pdf_watermark, self.b64_watermark_1
-        )
+        """Test that pdf_watermark is correctly stored and retrieved on res.brand."""
+        self.assertEqual(self.brand_with_watermark.pdf_watermark, self.b64_watermark_1)
         self.assertFalse(self.brand_no_watermark.pdf_watermark)
 
     def test_get_watermark_no_docids(self):
@@ -66,7 +64,7 @@ class TestBrandQwebPdfWatermark(TransactionCase):
         self.assertIsNone(watermark)
 
     def test_get_watermark_single_brand_with_watermark(self):
-        """When documents belong to a single brand with watermark, return decoded watermark."""
+        """When documents belong to a single brand, return decoded watermark."""
         mock_doc = MagicMock()
         mock_doc.brand_id = self.brand_with_watermark
         mock_docs = MagicMock()
@@ -82,7 +80,7 @@ class TestBrandQwebPdfWatermark(TransactionCase):
             self.assertEqual(watermark, self.raw_watermark_1)
 
     def test_get_watermark_multiple_docs_same_brand(self):
-        """When multiple documents belong to the same brand, return decoded watermark."""
+        """When multiple docs belong to the same brand, return decoded watermark."""
         mock_doc1 = MagicMock()
         mock_doc1.brand_id = self.brand_with_watermark
         mock_doc2 = MagicMock()
@@ -145,9 +143,7 @@ class TestBrandQwebPdfWatermark(TransactionCase):
             type(self.env["res.company"]), "browse", return_value=mock_docs
         ):
             with self.assertRaises(UserError) as cm:
-                self.env["ir.actions.report"]._get_watermark(
-                    self.report, docids=[1, 2]
-                )
+                self.env["ir.actions.report"]._get_watermark(self.report, docids=[1, 2])
             self.assertIn(
                 "Cannot print documents belonging to different brands",
                 str(cm.exception),
@@ -167,13 +163,11 @@ class TestBrandQwebPdfWatermark(TransactionCase):
             type(self.env["res.company"]), "browse", return_value=mock_docs
         ):
             with self.assertRaises(UserError) as cm:
-                self.env["ir.actions.report"]._get_watermark(
-                    self.report, docids=[1, 2]
-                )
+                self.env["ir.actions.report"]._get_watermark(self.report, docids=[1, 2])
             self.assertIn("No Brand", str(cm.exception))
 
     def test_get_report_injects_brand_watermark(self):
-        """When res_ids in context has brand watermark, _get_report injects it into report_sudo."""
+        """When res_ids has brand watermark, _get_report injects it into report_sudo."""
         mock_doc = MagicMock()
         mock_doc.brand_id = self.brand_with_watermark
         mock_docs = MagicMock()
@@ -188,9 +182,7 @@ class TestBrandQwebPdfWatermark(TransactionCase):
                 .with_context(res_ids=[1])
                 ._get_report(self.report)
             )
-            self.assertEqual(
-                report_sudo.pdf_watermark, self.b64_watermark_1
-            )
+            self.assertEqual(report_sudo.pdf_watermark, self.b64_watermark_1)
 
     def test_get_report_preserves_existing_report_watermark(self):
         """When report already has pdf_watermark, it is preserved and not overridden."""
@@ -216,6 +208,4 @@ class TestBrandQwebPdfWatermark(TransactionCase):
                 .with_context(res_ids=[1])
                 ._get_report(report_with_watermark)
             )
-            self.assertEqual(
-                report_sudo.pdf_watermark, self.b64_watermark_2
-            )
+            self.assertEqual(report_sudo.pdf_watermark, self.b64_watermark_2)

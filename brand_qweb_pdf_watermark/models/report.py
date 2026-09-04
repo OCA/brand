@@ -41,8 +41,9 @@ class Report(models.Model):
             if "brand_id" in docs._fields:
                 distinct_brands = set(doc.brand_id for doc in docs)
                 if len(distinct_brands) > 1:
+                    no_brand_name = _("No Brand")
                     brand_names = ", ".join(
-                        b.name if b else _("No Brand") for b in distinct_brands
+                        b.name if b else no_brand_name for b in distinct_brands
                     )
                     raise UserError(
                         _(
