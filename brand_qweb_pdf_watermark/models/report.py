@@ -1,4 +1,4 @@
-# Copyright 2024 CIT-Services
+# Copyright 2026 CIT-Services
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
 import base64
@@ -12,26 +12,24 @@ class Report(models.Model):
 
     def _get_watermark(self, report_ref, docids=False):
         report_sudo = super()._get_report(report_ref)
-        if docids and report_sudo.model and report_sudo.model in self.env:
+        if "brand_id" in self.env[report_sudo.model]._fields:
             docs = self.env[report_sudo.model].browse(docids)
-
-            if "brand_id" in docs._fields:
-                distinct_brands = set(doc.brand_id for doc in docs)
-                if len(distinct_brands) > 1:
-                    no_brand_name = _("No Brand")
-                    brand_names = ", ".join(
-                        b.name if b else no_brand_name for b in distinct_brands
+            brands = docs.mapped("brand_id")
+            if len(brands) > 1:
+                brand_names = ", ".join(brands.mapped("name"))
+                raise UserError(
+                    _(
+                        "Cannot print documents belonging to "
+                        "different brands (%s) together."
                     )
-                    raise UserError(
-                        _(
-                            "Cannot print documents belonging to "
-                            "different brands (%s) together."
-                        )
-                        % brand_names
-                    )
-                if docs:
-                    brand = docs[0].brand_id
-                    if brand and brand.pdf_watermark:
-                        return base64.b64decode(brand.pdf_watermark)
+                    % brand_names
+                )
+            if brands and any(not doc.brand_id for doc in docs):
+                raise UserError(
+                    _("Some of the documents do not have a brand linked to it.")
+                )
+            brand = docs and docs[0].brand_id
+            if brand and brand.pdf_watermark:
+                return base64.b64decode(brand.pdf_watermark)
 
         return super()._get_watermark(report_ref, docids=docids)
