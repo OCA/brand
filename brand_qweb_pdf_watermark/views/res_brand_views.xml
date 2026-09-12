@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_brand_view_form_inherit_watermark" model="ir.ui.view">
+        <field name="name">res.brand.view.form.inherit.watermark</field>
+        <field name="model">res.brand</field>
+        <field name="inherit_id" ref="brand.res_brand_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='website']" position="after">
+                <field
+                    name="pdf_watermark"
+                    widget="pdf_viewer"
+                    string="PDF Watermark"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>
