@@ -19,6 +19,11 @@ msgid "Analytic Distribution Model"
 msgstr ""
 
 #. module: analytic_brand
+#: model:ir.model,name:analytic_brand.model_analytic_mixin
+msgid "Analytic Mixin"
+msgstr ""
+
+#. module: analytic_brand
 #: model:ir.model.fields,field_description:analytic_brand.field_account_analytic_distribution_model__brand_id
 msgid "Brand"
 msgstr ""
