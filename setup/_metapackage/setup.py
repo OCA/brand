@@ -12,6 +12,7 @@ setuptools.setup(
         'odoo-addon-analytic_brand>=16.0dev,<16.1dev',
         'odoo-addon-brand>=16.0dev,<16.1dev',
         'odoo-addon-brand_external_report_layout>=16.0dev,<16.1dev',
+        'odoo-addon-contract_brand>=16.0dev,<16.1dev',
         'odoo-addon-partner_brand>=16.0dev,<16.1dev',
         'odoo-addon-product_brand>=16.0dev,<16.1dev',
         'odoo-addon-product_brand_mrp>=16.0dev,<16.1dev',
