@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 18.0\n"
+"Project-Id-Version: Odoo Server 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -64,12 +64,16 @@ msgid "Created on"
 msgstr ""
 
 #. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand__display_name
 #: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__display_name
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag_mixin__display_name
 msgid "Display Name"
 msgstr ""
 
 #. module: product_brand_tag
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand__id
 #: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__id
+#: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag_mixin__id
 msgid "ID"
 msgstr ""
 
