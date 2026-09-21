@@ -29,6 +29,7 @@ addon | version | maintainers | summary
 [product_brand_purchase](product_brand_purchase/) | 19.0.1.0.0 |  | This module allows to work with product_brand in purchase reports.
 [product_brand_stock](product_brand_stock/) | 19.0.1.0.0 |  | This module allows to work with product_brand in Stock.
 [product_brand_stock_account](product_brand_stock_account/) | 19.0.1.0.0 |  | This module allows to work with product_brand in Stock Account.
+[product_brand_tag](product_brand_tag/) | 19.0.1.0.0 |  | Add tags to product brand
 
 [//]: # (end addons)
 
