@@ -1,0 +1,5 @@
+- Quentin Groulard \<<quentin.groulard@acsone.eu>\>
+- [Ooops404](https://www.ooops404.com):
+  - Ilyas \<<irazor147@gmail.com>\>
+- [Heliconia Solutions Pvt. Ltd.](https://www.heliconia.io)
+  - Bhavesh Heliconia
