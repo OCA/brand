@@ -1,0 +1,301 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* brand_external_report_layout
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-07-31 18:09+0000\n"
+"Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
+"Language-Team: none\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,help:brand_external_report_layout.field_brand_document_layout__report_header
+#: model:ir.model.fields,help:brand_external_report_layout.field_res_brand__report_header
+msgid ""
+"Appears by default on the top right corner of your printed documents (report "
+"header)."
+msgstr ""
+"Aparece por defecto en la esquina superior derecha de los documentos "
+"impresos (cabecera del informe)."
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__layout_background_image
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__layout_background_image
+msgid "Background Image"
+msgstr "Imagen de fondo"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields.selection,name:brand_external_report_layout.selection__res_brand__layout_background__blank
+msgid "Blank"
+msgstr "En blanco"
+
+#. module: brand_external_report_layout
+#: model:ir.model,name:brand_external_report_layout.model_res_brand
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__brand_id
+msgid "Brand"
+msgstr "Marca"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__company_details
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__company_details
+msgid "Brand Details"
+msgstr "Detalles de la marca"
+
+#. module: brand_external_report_layout
+#: model:ir.model,name:brand_external_report_layout.model_brand_document_layout
+msgid "Brand Document Layout"
+msgstr "Diseño del documento de marca"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__logo
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__logo
+msgid "Brand Logo"
+msgstr "Logotipo de la marca"
+
+#. module: brand_external_report_layout
+#: model_terms:ir.ui.view,arch_db:brand_external_report_layout.brand_document_layout_form_view
+msgid "Brand document layout"
+msgstr "Diseño del documento de marca"
+
+#. module: brand_external_report_layout
+#: model_terms:ir.ui.view,arch_db:brand_external_report_layout.res_brand_form_view
+msgid "Change Document Template"
+msgstr "Plantilla de documento de modificación"
+
+#. module: brand_external_report_layout
+#. odoo-python
+#: code:addons/brand_external_report_layout/models/res_brand.py:0
+#, python-format
+msgid "Choose Your Document Layout"
+msgstr "Elija el diseño de su documento"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__company_id
+msgid "Company"
+msgstr "Companía"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__name
+msgid "Company Name"
+msgstr "Nombre de la Compañía"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__country_id
+msgid "Country"
+msgstr "País"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields.selection,name:brand_external_report_layout.selection__res_brand__layout_background__custom
+msgid "Custom"
+msgstr "Personalizar"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__custom_colors
+msgid "Custom Colors"
+msgstr "Colores Personalizados"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__display_name
+msgid "Display Name"
+msgstr "Nombre a Mostrar"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__external_report_layout_id
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__external_report_layout_id
+msgid "Document Template"
+msgstr "Plantilla de documento"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__email
+msgid "Email"
+msgstr "Correo Electrónico"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__font
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__font
+msgid "Font"
+msgstr "Fuente"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,help:brand_external_report_layout.field_brand_document_layout__report_footer
+#: model:ir.model.fields,help:brand_external_report_layout.field_res_brand__report_footer
+msgid "Footer text displayed at the bottom of all reports."
+msgstr ""
+"Texto a pie de página que aparece en la parte inferior de todos los informes."
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields.selection,name:brand_external_report_layout.selection__res_brand__layout_background__geometric
+msgid "Geometric"
+msgstr "Geométrico"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,help:brand_external_report_layout.field_brand_document_layout__company_details
+#: model:ir.model.fields,help:brand_external_report_layout.field_res_brand__company_details
+msgid "Header text displayed at the top of all reports."
+msgstr ""
+"Texto de cabecera que aparece en la parte superior de todos los informes."
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__id
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__is_company_details_empty
+msgid "Is Company Details Empty"
+msgstr "Están vacíos los detalles de la empresa"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout____last_update
+msgid "Last Modified on"
+msgstr "Última Modificación el"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__write_uid
+msgid "Last Updated by"
+msgstr "Actualizado por última vez por"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__write_date
+msgid "Last Updated on"
+msgstr "Última Actualización el"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields.selection,name:brand_external_report_layout.selection__res_brand__font__lato
+msgid "Lato"
+msgstr "Lato"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__layout_background
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__layout_background
+msgid "Layout Background"
+msgstr "Diseño de fondo"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__logo_primary_color
+msgid "Logo Primary Color"
+msgstr "Color primario del logotipo"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__logo_secondary_color
+msgid "Logo Secondary Color"
+msgstr "Color secundario del logotipo"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields.selection,name:brand_external_report_layout.selection__res_brand__font__montserrat
+msgid "Montserrat"
+msgstr "Montserrat"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields.selection,name:brand_external_report_layout.selection__res_brand__font__open_sans
+msgid "Open Sans"
+msgstr "Abrir sans"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields.selection,name:brand_external_report_layout.selection__res_brand__font__oswald
+msgid "Oswald"
+msgstr "Osvaldo"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__paperformat_id
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__paperformat_id
+msgid "Paper format"
+msgstr "Formato del papel"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__partner_id
+msgid "Partner"
+msgstr "Proveedor"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__phone
+msgid "Phone"
+msgstr "Teléfono"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__preview
+msgid "Preview"
+msgstr "Previsualización"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__preview_logo
+msgid "Preview logo"
+msgstr "Vista previa del logotipo"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__primary_color
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__primary_color
+msgid "Primary Color"
+msgstr "Color primario"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields.selection,name:brand_external_report_layout.selection__res_brand__font__raleway
+msgid "Raleway"
+msgstr "Carretera"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__report_footer
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__report_footer
+msgid "Report Footer"
+msgstr "Pie de página del informe"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__report_header
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__report_header
+msgid "Report Header"
+msgstr "Encabezado del informe"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__report_layout_id
+msgid "Report Layout"
+msgstr "Diseño del informe"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields.selection,name:brand_external_report_layout.selection__res_brand__font__roboto
+msgid "Roboto"
+msgstr "Roboto"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__secondary_color
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__secondary_color
+msgid "Secondary Color"
+msgstr "Color secundario"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__vat
+msgid "Tax ID"
+msgstr "Número de identificación fiscal"
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,help:brand_external_report_layout.field_brand_document_layout__vat
+msgid ""
+"The Tax Identification Number. Values here will be validated based on the "
+"country format. You can use '/' to indicate that the partner is not subject "
+"to tax."
+msgstr ""
+"El número de identificación fiscal. Los valores aquí se validarán en función "
+"del formato del país. Puede utilizar '/' para indicar que el socio no está "
+"sujeto a impuestos."
+
+#. module: brand_external_report_layout
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__website
+msgid "Website Link"
+msgstr "Enlace a página web"
