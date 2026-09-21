@@ -321,6 +321,11 @@ msgid "Contact"
 msgstr "Contact"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
+msgid "Contracts"
+msgstr "Contrats"
+
+#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_bounce
 msgid "Counter of the number of bounced emails for this contact"
 msgstr "Compteur du nombre d'emails rejetés pour ce contact"
@@ -772,11 +777,6 @@ msgid "Partner"
 msgstr "Partenaire"
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
-msgid "Partner Contracts"
-msgstr "Contrats du partenaire"
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__use_partner_credit_limit
 msgid "Partner Limit"
 msgstr ""
@@ -822,6 +822,11 @@ msgid "Pricelist"
 msgstr "Liste de prix"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_contract_count
+msgid "Purchase Contracts"
+msgstr "Contrats d'Achat"
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__purchase_line_ids
 msgid "Purchase Lines"
 msgstr ""
@@ -860,6 +865,11 @@ msgstr "Obligatoire"
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_user_id
 msgid "Responsible User"
 msgstr "Utilisateur responsable"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__sale_contract_count
+msgid "Sale Contracts"
+msgstr "Contrats de vente"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_order_count
@@ -1254,6 +1264,9 @@ msgstr "e.g. BFR0477472701"
 msgid "e.g. https://www.odoo.com"
 msgstr "e.g. https://www.odoo.com"
 
+#~ msgid "Partner Contracts"
+#~ msgstr "Contrats du partenaire"
+
 #~ msgid "Additional info"
 #~ msgstr "Info complémentaires"
 
@@ -1320,9 +1333,6 @@ msgstr "e.g. https://www.odoo.com"
 #~ "Le numéro de TVA. Remplissez-le si le contact est soumis à des taxes "
 #~ "gouvernementales. Utilisé dans certaines déclarations juridiques."
 
-#~ msgid "Contracts"
-#~ msgstr "Contrats"
-
 #~ msgid ""
 #~ "Invoice & Delivery addresses are used in sales orders. Private addresses "
 #~ "are only visible by authorized users."
@@ -1347,12 +1357,6 @@ msgstr "e.g. https://www.odoo.com"
 #~ "préféré pour enregistrer les paiements en masse. Cas d'utilisation : "
 #~ "créer des fichiers bancaires pour les virements par lots, vérifier les "
 #~ "exécutions."
-
-#~ msgid "Purchase Contracts"
-#~ msgstr "Contrats d'Achat"
-
-#~ msgid "Sale Contracts"
-#~ msgstr "Contrats de vente"
 
 #~ msgid "Unread Messages"
 #~ msgstr "Message non lus"

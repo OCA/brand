@@ -106,8 +106,8 @@ msgid ""
 "All the emails and documents sent to this contact will be translated in this "
 "language."
 msgstr ""
-"سيتم ترجمة جميع رسائل البريد الإلكتروني والمستندات المرسلة إلى جهة الاتصال هذه "
-"إلى هذه اللغة."
+"سيتم ترجمة جميع رسائل البريد الإلكتروني والمستندات المرسلة إلى جهة الاتصال "
+"هذه إلى هذه اللغة."
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
@@ -314,6 +314,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:brand.field_res_brand__child_ids
 msgid "Contact"
 msgstr "جهة اتصال"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
+msgid "Contracts"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_bounce
@@ -765,11 +770,6 @@ msgid "Partner"
 msgstr "الجهة المرتبطة"
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
-msgid "Partner Contracts"
-msgstr "عقود الجهة المرتبطة"
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__use_partner_credit_limit
 msgid "Partner Limit"
 msgstr "حد الجهة المرتبطة"
@@ -815,6 +815,11 @@ msgid "Pricelist"
 msgstr "قائمة الأسعار"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_contract_count
+msgid "Purchase Contracts"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__purchase_line_ids
 msgid "Purchase Lines"
 msgstr ""
@@ -853,6 +858,11 @@ msgstr "إلزامي"
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_user_id
 msgid "Responsible User"
 msgstr "المستخدم المسؤول"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__sale_contract_count
+msgid "Sale Contracts"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_order_count
@@ -1102,7 +1112,8 @@ msgid ""
 "This payment term will be used instead of the default one for purchase "
 "orders and vendor bills"
 msgstr ""
-"سيتم استخدام شرط الدفع هذا بدلًا من الافتراضي في أوامر الشراء وفواتير الموردين."
+"سيتم استخدام شرط الدفع هذا بدلًا من الافتراضي في أوامر الشراء وفواتير "
+"الموردين."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_payment_term_id
@@ -1118,8 +1129,8 @@ msgid ""
 "This pricelist will be used, instead of the default one, for sales to the "
 "current partner"
 msgstr ""
-"سيتم استخدام قائمة الأسعار هذه بدلًا من الافتراضية في عمليات البيع لجهة الاتصال "
-"الحالية."
+"سيتم استخدام قائمة الأسعار هذه بدلًا من الافتراضية في عمليات البيع لجهة "
+"الاتصال الحالية."
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__tz
@@ -1222,8 +1233,8 @@ msgid ""
 msgstr ""
 "عند طباعة المستندات وتصدير/استيراد البيانات، يتم احتساب قيم الوقت وفقًا لهذه "
 "المنطقة الزمنية.\n"
-"إذا لم يتم تعيين المنطقة الزمنية، فسيتم استخدام UTC (التوقيت العالمي المنسق)"
-".\n"
+"إذا لم يتم تعيين المنطقة الزمنية، فسيتم استخدام UTC (التوقيت العالمي "
+"المنسق).\n"
 "في أي موضع آخر، يتم احتساب قيم الوقت وفقًا لفارق التوقيت الخاص بعميل الويب "
 "الخاص بك."
 
@@ -1246,3 +1257,6 @@ msgstr "مثال: BE0477472701"
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "e.g. https://www.odoo.com"
 msgstr "مثال: https://www.odoo.com"
+
+#~ msgid "Partner Contracts"
+#~ msgstr "عقود الجهة المرتبطة"

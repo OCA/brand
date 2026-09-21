@@ -329,6 +329,11 @@ msgid "Contact"
 msgstr "Kontakt"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
+msgid "Contracts"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_bounce
 msgid "Counter of the number of bounced emails for this contact"
 msgstr "Brojač svih odbijenih mailova za ovaj kontakt"
@@ -768,11 +773,6 @@ msgid "Partner"
 msgstr ""
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
-msgid "Partner Contracts"
-msgstr "Kontakti partnera"
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__use_partner_credit_limit
 msgid "Partner Limit"
 msgstr "Ograničenje partnera"
@@ -818,6 +818,11 @@ msgid "Pricelist"
 msgstr "Cjenik"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_contract_count
+msgid "Purchase Contracts"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__purchase_line_ids
 msgid "Purchase Lines"
 msgstr ""
@@ -856,6 +861,11 @@ msgstr "Obavezno"
 #: model:ir.model.fields,field_description:brand.field_res_brand__activity_user_id
 msgid "Responsible User"
 msgstr "Odgovorni korisnik"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__sale_contract_count
+msgid "Sale Contracts"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_order_count
@@ -1218,6 +1228,9 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
 msgid "e.g. https://www.odoo.com"
 msgstr ""
+
+#~ msgid "Partner Contracts"
+#~ msgstr "Kontakti partnera"
 
 #~ msgid "Additional info"
 #~ msgstr "Dodatne informacije"
