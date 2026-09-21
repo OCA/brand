@@ -117,6 +117,13 @@ msgid "Automatically post bills for this trusted partner"
 msgstr "Rechnungen für diesen vertrauenswürdigen Partner automatisch buchen"
 
 #. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__receipt_reminder_email
+msgid ""
+"Automatically send a confirmation email to the vendor X days before the "
+"expected receipt date, asking him to confirm the exact date."
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__available_invoice_template_pdf_report_ids
 msgid "Available Invoice Template Pdf Report"
 msgstr "Verfügbare Abrechnungsvorlage (PDF)"
@@ -216,6 +223,11 @@ msgstr "zu verwendende Marke für diesen Verkauf"
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_search_view
 msgid "Brands"
 msgstr "Marken"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__buyer_id
+msgid "Buyer"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__channel_member_ids
@@ -389,6 +401,11 @@ msgstr "Zahlungsbedingungen (Kunde)"
 #: model:ir.model.fields,field_description:brand.field_res_brand__customer_rank
 msgid "Customer Rank"
 msgstr "Kundenbewertung"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__reminder_date_before_receipt
+msgid "Days Before Receipt"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__days_sales_outstanding
@@ -669,6 +686,11 @@ msgid "Message Delivery error"
 msgstr "Nachrichtenübertragungsfehler"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_warn_msg
+msgid "Message for Purchase Order"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_warn_msg
 msgid "Message for Sales Order"
 msgstr "Mitteilung für Verkaufsauftrag"
@@ -722,6 +744,11 @@ msgstr "Notizen"
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_needaction_counter
 msgid "Number of Actions"
 msgstr "Anzahl der Aktionen"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__reminder_date_before_receipt
+msgid "Number of days to send reminder email before the promised receipt date"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_has_error_counter
@@ -832,6 +859,16 @@ msgstr "Zeile der Eingangszahlungsmethode für Vermögen"
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_outbound_payment_method_line_id
 msgid "Property Outbound Payment Method Line"
 msgstr "Zeile der Ausgangszahlungsmethode für Vermögen"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_order_count
+msgid "Purchase Order Count"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__receipt_reminder_email
+msgid "Receipt Reminder"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__ref
@@ -950,6 +987,11 @@ msgid "Street2"
 msgstr "Straße 2"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__property_purchase_currency_id
+msgid "Supplier Currency"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__supplier_rank
 msgid "Supplier Rank"
 msgstr "Lieferanten-Rang"
@@ -1026,6 +1068,11 @@ msgstr ""
 "Es kann mehrere Nutzer geben, die dem selben Partner zugeordnet sind. Wenn "
 "ein einziger Nutzer erfordert ist, versucht dieses Feld, den passendsten zu "
 "finden."
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__property_purchase_currency_id
+msgid "This currency will be used for purchases from the current partner"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__email_normalized
