@@ -116,6 +116,13 @@ msgid "Automatically post bills for this trusted partner"
 msgstr ""
 
 #. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__receipt_reminder_email
+msgid ""
+"Automatically send a confirmation email to the vendor X days before the "
+"expected receipt date, asking him to confirm the exact date."
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__available_invoice_template_pdf_report_ids
 msgid "Available Invoice Template Pdf Report"
 msgstr ""
@@ -213,6 +220,11 @@ msgstr "Koristi Brand u ovoj prodaji"
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_search_view
 msgid "Brands"
 msgstr "Brandovi"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__buyer_id
+msgid "Buyer"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__channel_member_ids
@@ -384,6 +396,11 @@ msgstr "Uvjeti plaćanja kupca"
 #: model:ir.model.fields,field_description:brand.field_res_brand__customer_rank
 msgid "Customer Rank"
 msgstr "Rang kupca"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__reminder_date_before_receipt
+msgid "Days Before Receipt"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__days_sales_outstanding
@@ -657,6 +674,11 @@ msgid "Message Delivery error"
 msgstr ""
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_warn_msg
+msgid "Message for Purchase Order"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_warn_msg
 msgid "Message for Sales Order"
 msgstr ""
@@ -710,6 +732,11 @@ msgstr "Bilješke"
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_needaction_counter
 msgid "Number of Actions"
 msgstr "Broj radnji"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__reminder_date_before_receipt
+msgid "Number of days to send reminder email before the promised receipt date"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_has_error_counter
@@ -819,6 +846,16 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_outbound_payment_method_line_id
 msgid "Property Outbound Payment Method Line"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_order_count
+msgid "Purchase Order Count"
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__receipt_reminder_email
+msgid "Receipt Reminder"
 msgstr ""
 
 #. module: brand
@@ -932,6 +969,11 @@ msgid "Street2"
 msgstr "Ulica2"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__property_purchase_currency_id
+msgid "Supplier Currency"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__supplier_rank
 msgid "Supplier Rank"
 msgstr "Rang dobavljača"
@@ -993,6 +1035,11 @@ msgstr ""
 msgid ""
 "There can be several users related to the same partner. When a single user "
 "is needed, this field attempts to find the most appropriate one."
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__property_purchase_currency_id
+msgid "This currency will be used for purchases from the current partner"
 msgstr ""
 
 #. module: brand
