@@ -369,6 +369,11 @@ msgid "Currency"
 msgstr "Valuta"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__property_stock_customer
+msgid "Customer Location"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_payment_term_id
 msgid "Customer Payment Terms"
 msgstr "Termini pagamento cliente"
@@ -674,6 +679,11 @@ msgid "Message for Sales Order"
 msgstr "Messaggio per ordine di vendita"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__picking_warn_msg
+msgid "Message for Stock Picking"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_ids
 msgid "Messages"
 msgstr "Messaggi"
@@ -745,9 +755,22 @@ msgid "Number of messages with delivery error"
 msgstr "Numero di messaggi con errore di consegna"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__on_time_rate
+msgid "On-Time Delivery Rate"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields.selection,name:brand.selection__res_company__brand_use_level__optional
 msgid "Optional"
 msgstr "Opzionale"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__on_time_rate
+msgid ""
+"Over the past x days; the number of products received on time divided by the "
+"number of ordered products.x is either the System Parameter "
+"purchase_stock.on_time_delivery_days or the default 365"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__parent_name
@@ -827,6 +850,11 @@ msgid "Pricelist"
 msgstr "Listino prezzi"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_line_ids
+msgid "Purchase Lines"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__purchase_order_count
 msgid "Purchase Order Count"
 msgstr "Conteggio ordine di acquisto"
@@ -888,6 +916,7 @@ msgstr "Addetto vendite"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__invoice_warn
+#: model:ir.model.fields,help:brand.field_res_brand__picking_warn
 #: model:ir.model.fields,help:brand.field_res_brand__purchase_warn
 #: model:ir.model.fields,help:brand.field_res_brand__sale_warn
 msgid ""
@@ -968,6 +997,11 @@ msgstr ""
 "Scaduto: la data richiesta è trascorsa\n"
 "Oggi: la data attività è oggi\n"
 "Pianificato: attività future."
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__picking_warn
+msgid "Stock Picking"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__street
@@ -1058,6 +1092,18 @@ msgid ""
 msgstr ""
 "Il numero registro dell'azienda. Utilizzare se è diverso dalla partita IVA. "
 "Deve essere univoco tra tutti i partner della stessa nazione"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__property_stock_customer
+msgid ""
+"The stock location used as destination when sending goods to this contact."
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__property_stock_supplier
+msgid ""
+"The stock location used as source when receiving goods from this contact."
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_account_payable_id
@@ -1176,6 +1222,11 @@ msgstr "Utilizza un codice a barre per identificare questo contatto."
 #: model:ir.model.fields,field_description:brand.field_res_brand__user_ids
 msgid "Users"
 msgstr "Utenti"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__property_stock_supplier
+msgid "Vendor Location"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_supplier_payment_term_id

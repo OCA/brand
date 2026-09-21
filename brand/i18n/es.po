@@ -372,6 +372,11 @@ msgid "Currency"
 msgstr "Divisa"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__property_stock_customer
+msgid "Customer Location"
+msgstr "Ubicación del Cliente"
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_payment_term_id
 msgid "Customer Payment Terms"
 msgstr "Términos de Pago del Cliente"
@@ -678,6 +683,11 @@ msgid "Message for Sales Order"
 msgstr "Mensaje para la orden de venta"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__picking_warn_msg
+msgid "Message for Stock Picking"
+msgstr "Mensaje para albarán de existencias"
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_ids
 msgid "Messages"
 msgstr "Mensajes"
@@ -750,9 +760,25 @@ msgid "Number of messages with delivery error"
 msgstr "Número de mensajes con error de entrega"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__on_time_rate
+msgid "On-Time Delivery Rate"
+msgstr "Porcentaje de Entregas a Tiempo"
+
+#. module: brand
 #: model:ir.model.fields.selection,name:brand.selection__res_company__brand_use_level__optional
 msgid "Optional"
 msgstr "Opcional"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__on_time_rate
+msgid ""
+"Over the past x days; the number of products received on time divided by the "
+"number of ordered products.x is either the System Parameter "
+"purchase_stock.on_time_delivery_days or the default 365"
+msgstr ""
+"Durante los últimos x días; la cantidad de productos recibidos a tiempo "
+"dividida por la cantidad de productos pedidos.x es el parámetro del sistema "
+"buy_stock.on_time_delivery_days o el 365 predeterminado"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__parent_name
@@ -832,6 +858,11 @@ msgid "Pricelist"
 msgstr "Lista de Precio"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_line_ids
+msgid "Purchase Lines"
+msgstr "Líneas de Compra"
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__purchase_order_count
 msgid "Purchase Order Count"
 msgstr "Recuento de órdenes de compra"
@@ -893,6 +924,7 @@ msgstr "Vendedor/a"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__invoice_warn
+#: model:ir.model.fields,help:brand.field_res_brand__picking_warn
 #: model:ir.model.fields,help:brand.field_res_brand__purchase_warn
 #: model:ir.model.fields,help:brand.field_res_brand__sale_warn
 msgid ""
@@ -973,6 +1005,11 @@ msgstr ""
 "Atrasada: La fecha de vencimiento ya ha pasado\n"
 "Hoy: La fecha de la actividad es hoy\n"
 "Planificada: Actividades futuras."
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__picking_warn
+msgid "Stock Picking"
+msgstr "Albarán de Existencias"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__street
@@ -1064,6 +1101,22 @@ msgid ""
 msgstr ""
 "El número de registro de la empresa. Utilícelo si es diferente del NIF. Debe "
 "ser único para todos los socios de un mismo país"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__property_stock_customer
+msgid ""
+"The stock location used as destination when sending goods to this contact."
+msgstr ""
+"La ubicación del almacén utilizada como destino al enviar mercancías a este "
+"contacto."
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__property_stock_supplier
+msgid ""
+"The stock location used as source when receiving goods from this contact."
+msgstr ""
+"La ubicación del almacén utilizada como origen al recibir mercancías de este "
+"contacto."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_account_payable_id
@@ -1183,6 +1236,11 @@ msgstr "Utilice un código de barras para identificar este contacto."
 #: model:ir.model.fields,field_description:brand.field_res_brand__user_ids
 msgid "Users"
 msgstr "Usuarios"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__property_stock_supplier
+msgid "Vendor Location"
+msgstr "Localización del vendedor"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_supplier_payment_term_id
@@ -1377,53 +1435,14 @@ msgstr "Por ej. https://www.odoo.com"
 #~ "here are company-specific.\" groups=\"base.group_multi_company\" "
 #~ "role=\"img\"/>"
 
-#~ msgid "Customer Location"
-#~ msgstr "Ubicación del Cliente"
-
 #~ msgid "Last Modified on"
 #~ msgstr "Última Modificación el"
 
 #~ msgid "Main Attachment"
 #~ msgstr "Archivo adjunto principal"
 
-#~ msgid "Message for Stock Picking"
-#~ msgstr "Mensaje para albarán de existencias"
-
-#~ msgid "On-Time Delivery Rate"
-#~ msgstr "Porcentaje de Entregas a Tiempo"
-
-#~ msgid ""
-#~ "Over the past x days; the number of products received on time divided by "
-#~ "the number of ordered products.x is either the System Parameter "
-#~ "purchase_stock.on_time_delivery_days or the default 365"
-#~ msgstr ""
-#~ "Durante los últimos x días; la cantidad de productos recibidos a tiempo "
-#~ "dividida por la cantidad de productos pedidos.x es el parámetro del "
-#~ "sistema buy_stock.on_time_delivery_days o el 365 predeterminado"
-
-#~ msgid "Purchase Lines"
-#~ msgstr "Líneas de Compra"
-
 #~ msgid "Purchase Order"
 #~ msgstr "Orden de Compra"
-
-#~ msgid "Stock Picking"
-#~ msgstr "Albarán de Existencias"
-
-#~ msgid ""
-#~ "The stock location used as destination when sending goods to this contact."
-#~ msgstr ""
-#~ "La ubicación del almacén utilizada como destino al enviar mercancías a "
-#~ "este contacto."
-
-#~ msgid ""
-#~ "The stock location used as source when receiving goods from this contact."
-#~ msgstr ""
-#~ "La ubicación del almacén utilizada como origen al recibir mercancías de "
-#~ "este contacto."
-
-#~ msgid "Vendor Location"
-#~ msgstr "Localización del vendedor"
 
 #~ msgid "Number of messages which requires an action"
 #~ msgstr "Número de mensajes que requieren una acción"

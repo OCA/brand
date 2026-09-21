@@ -25,13 +25,16 @@ msgstr "# فواتير الموردين"
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__type
 msgid ""
-"- Contact: Use this to organize the contact details of employees of a given company (e.g. CEO, CFO, ...).\n"
-"- Invoice Address: Preferred address for all invoices. Selected by default when you invoice an order that belongs to this company.\n"
-"- Delivery Address: Preferred address for all deliveries. Selected by default when you deliver an order that belongs to this company.\n"
+"- Contact: Use this to organize the contact details of employees of a given "
+"company (e.g. CEO, CFO, ...).\n"
+"- Invoice Address: Preferred address for all invoices. Selected by default "
+"when you invoice an order that belongs to this company.\n"
+"- Delivery Address: Preferred address for all deliveries. Selected by "
+"default when you deliver an order that belongs to this company.\n"
 "- Other: Other address for the company (e.g. subsidiary, ...)"
 msgstr ""
-"- جهة اتصال: يُستخدم هذا الخيار لتنظيم بيانات الاتصال الخاصة بموظفي شركة معينة "
-"(مثل المدير التنفيذي، المدير المالي، ...).\n"
+"- جهة اتصال: يُستخدم هذا الخيار لتنظيم بيانات الاتصال الخاصة بموظفي شركة "
+"معينة (مثل المدير التنفيذي، المدير المالي، ...).\n"
 "- عنوان الفاتورة: العنوان المفضل لجميع الفواتير. يتم اختياره افتراضيًا عند "
 "إصدار فاتورة لأمر يخص هذه الشركة.\n"
 "- عنوان التسليم: العنوان المفضل لجميع عمليات التسليم. يتم اختياره افتراضيًا "
@@ -96,11 +99,11 @@ msgstr "نوع العنوان"
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__lang
 msgid ""
-"All the emails and documents sent to this contact will be translated in this"
-" language."
+"All the emails and documents sent to this contact will be translated in this "
+"language."
 msgstr ""
-"سيتم ترجمة جميع رسائل البريد الإلكتروني والمستندات المرسلة إلى جهة الاتصال هذه "
-"إلى هذه اللغة."
+"سيتم ترجمة جميع رسائل البريد الإلكتروني والمستندات المرسلة إلى جهة الاتصال "
+"هذه إلى هذه اللغة."
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
@@ -307,8 +310,7 @@ msgstr "إعدادات التهيئة"
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
 msgid ""
-"Configure branding of customer facing business documents (SO, invoices, "
-"etc)."
+"Configure branding of customer facing business documents (SO, invoices, etc)."
 msgstr ""
 "تهيئة العلامة التجارية للمستندات التجارية الموجهة للعملاء (أوامر البيع، "
 "الفواتير، وغيرها)."
@@ -363,6 +365,11 @@ msgstr "حد الائتمان المخصص لهذه الجهة المرتبطة.
 #: model:ir.model.fields,field_description:brand.field_res_brand__currency_id
 msgid "Currency"
 msgstr "العملة"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__property_stock_customer
+msgid "Customer Location"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_payment_term_id
@@ -670,6 +677,11 @@ msgid "Message for Sales Order"
 msgstr "رسالة أمر البيع"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__picking_warn_msg
+msgid "Message for Stock Picking"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_ids
 msgid "Messages"
 msgstr "الرسائل"
@@ -740,9 +752,22 @@ msgid "Number of messages with delivery error"
 msgstr "عدد الرسائل التي تحتوي على خطأ في التسليم"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__on_time_rate
+msgid "On-Time Delivery Rate"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields.selection,name:brand.selection__res_company__brand_use_level__optional
 msgid "Optional"
 msgstr "اختياري"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__on_time_rate
+msgid ""
+"Over the past x days; the number of products received on time divided by the "
+"number of ordered products.x is either the System Parameter "
+"purchase_stock.on_time_delivery_days or the default 365"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__parent_name
@@ -821,6 +846,11 @@ msgid "Pricelist"
 msgstr "قائمة الأسعار"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_line_ids
+msgid "Purchase Lines"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__purchase_order_count
 msgid "Purchase Order Count"
 msgstr "عدد أوامر الشراء"
@@ -882,6 +912,7 @@ msgstr "مندوب المبيعات"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__invoice_warn
+#: model:ir.model.fields,help:brand.field_res_brand__picking_warn
 #: model:ir.model.fields,help:brand.field_res_brand__purchase_warn
 #: model:ir.model.fields,help:brand.field_res_brand__sale_warn
 msgid ""
@@ -961,6 +992,11 @@ msgstr ""
 "متأخر: تاريخ الاستحقاق قد مضى\n"
 "اليوم: تاريخ النشاط هو اليوم\n"
 "مخطط: أنشطة مستقبلية."
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__picking_warn
+msgid "Stock Picking"
+msgstr ""
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__street
@@ -1051,12 +1087,25 @@ msgstr ""
 "يكون فريدًا بين جميع جهات الاتصال داخل نفس الدولة"
 
 #. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__property_stock_customer
+msgid ""
+"The stock location used as destination when sending goods to this contact."
+msgstr ""
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__property_stock_supplier
+msgid ""
+"The stock location used as source when receiving goods from this contact."
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_account_payable_id
 msgid ""
 "This account will be used instead of the default one as the payable account "
 "for the current partner"
 msgstr ""
-"سيتم استخدام هذا الحساب بدلًا من الحساب الافتراضي كحساب دائن لجهة الاتصال الحالية"
+"سيتم استخدام هذا الحساب بدلًا من الحساب الافتراضي كحساب دائن لجهة الاتصال "
+"الحالية"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_account_receivable_id
@@ -1064,7 +1113,8 @@ msgid ""
 "This account will be used instead of the default one as the receivable "
 "account for the current partner"
 msgstr ""
-"سيتم استخدام هذا الحساب بدلًا من الحساب الافتراضي كحساب مدين لجهة الاتصال الحالية"
+"سيتم استخدام هذا الحساب بدلًا من الحساب الافتراضي كحساب مدين لجهة الاتصال "
+"الحالية"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_purchase_currency_id
@@ -1078,8 +1128,8 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__email_normalized
 msgid ""
-"This field is used to search on email address as the primary email field can"
-" contain more than strictly an email address."
+"This field is used to search on email address as the primary email field can "
+"contain more than strictly an email address."
 msgstr ""
 "يُستخدم هذا الحقل للبحث باستخدام عنوان البريد الإلكتروني، حيث قد يحتوي حقل "
 "البريد الإلكتروني الأساسي على أكثر من مجرد عنوان بريد إلكتروني."
@@ -1106,8 +1156,8 @@ msgid ""
 "This pricelist will be used, instead of the default one, for sales to the "
 "current partner"
 msgstr ""
-"سيتم استخدام قائمة الأسعار هذه بدلًا من الافتراضية في عمليات البيع لجهة الاتصال "
-"الحالية"
+"سيتم استخدام قائمة الأسعار هذه بدلًا من الافتراضية في عمليات البيع لجهة "
+"الاتصال الحالية"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__tz
@@ -1165,6 +1215,11 @@ msgid "Users"
 msgstr "المستخدمون"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__property_stock_supplier
+msgid "Vendor Location"
+msgstr ""
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_supplier_payment_term_id
 msgid "Vendor Payment Terms"
 msgstr "شروط دفع المورد"
@@ -1192,14 +1247,16 @@ msgstr "سجل تواصل الموقع الإلكتروني"
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__tz
 msgid ""
-"When printing documents and exporting/importing data, time values are computed according to this timezone.\n"
+"When printing documents and exporting/importing data, time values are "
+"computed according to this timezone.\n"
 "If the timezone is not set, UTC (Coordinated Universal Time) is used.\n"
-"Anywhere else, time values are computed according to the time offset of your web client."
+"Anywhere else, time values are computed according to the time offset of your "
+"web client."
 msgstr ""
 "عند طباعة المستندات وتصدير/استيراد البيانات، يتم احتساب قيم الوقت وفقًا لهذه "
 "المنطقة الزمنية.\n"
-"إذا لم يتم تعيين المنطقة الزمنية، فسيتم استخدام UTC (التوقيت العالمي المنسق)"
-".\n"
+"إذا لم يتم تعيين المنطقة الزمنية، فسيتم استخدام UTC (التوقيت العالمي "
+"المنسق).\n"
 "في أي موضع آخر، يتم احتساب قيم الوقت وفقًا لفارق التوقيت الخاص بعميل الويب "
 "الخاص بك."
 

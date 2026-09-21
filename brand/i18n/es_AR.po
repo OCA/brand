@@ -375,6 +375,11 @@ msgid "Currency"
 msgstr "Moneda"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__property_stock_customer
+msgid "Customer Location"
+msgstr "Ubicación del Cliente"
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_payment_term_id
 msgid "Customer Payment Terms"
 msgstr "Términos de Pago del Cliente"
@@ -680,6 +685,11 @@ msgid "Message for Sales Order"
 msgstr "Mensaje para los Pedidos de Venta"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__picking_warn_msg
+msgid "Message for Stock Picking"
+msgstr "Mensaje para Movimientos de Inventario"
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_ids
 msgid "Messages"
 msgstr "Mensajes"
@@ -752,9 +762,25 @@ msgid "Number of messages with delivery error"
 msgstr "Número de mensajes con error de entrega"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__on_time_rate
+msgid "On-Time Delivery Rate"
+msgstr "Tasa de Entrega a Tiempo"
+
+#. module: brand
 #: model:ir.model.fields.selection,name:brand.selection__res_company__brand_use_level__optional
 msgid "Optional"
 msgstr "Opcional"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__on_time_rate
+msgid ""
+"Over the past x days; the number of products received on time divided by the "
+"number of ordered products.x is either the System Parameter "
+"purchase_stock.on_time_delivery_days or the default 365"
+msgstr ""
+"Durante los últimos x días; la cantidad de productos recibidos a tiempo "
+"dividida por la cantidad de productos pedidos. X es el parámetro del sistema "
+"buy_stock.on_time_delivery_days o el valor predeterminado 365"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__parent_name
@@ -834,6 +860,11 @@ msgid "Pricelist"
 msgstr "Lista de Precios"
 
 #. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__purchase_line_ids
+msgid "Purchase Lines"
+msgstr "Líneas de Compra"
+
+#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__purchase_order_count
 msgid "Purchase Order Count"
 msgstr "Cuenta de los Pedidos de Compra"
@@ -895,6 +926,7 @@ msgstr "Vendedor"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__invoice_warn
+#: model:ir.model.fields,help:brand.field_res_brand__picking_warn
 #: model:ir.model.fields,help:brand.field_res_brand__purchase_warn
 #: model:ir.model.fields,help:brand.field_res_brand__sale_warn
 msgid ""
@@ -975,6 +1007,11 @@ msgstr ""
 "Atrasado: la fecha de vencimiento ya pasó\n"
 "Hoy: la fecha de actividad es hoy\n"
 "Planificado: Actividades futuras."
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__picking_warn
+msgid "Stock Picking"
+msgstr "Movimiento de Inventario"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__street
@@ -1066,6 +1103,21 @@ msgstr ""
 "El número de registro de la compañía. Úselo si es diferente del número de "
 "identificación fiscal. Debe ser único entre todos los contactos de un mismo "
 "país"
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__property_stock_customer
+msgid ""
+"The stock location used as destination when sending goods to this contact."
+msgstr ""
+"La ubicación de stock usada como destino cuando se envían bienes a este "
+"contacto."
+
+#. module: brand
+#: model:ir.model.fields,help:brand.field_res_brand__property_stock_supplier
+msgid ""
+"The stock location used as source when receiving goods from this contact."
+msgstr ""
+"La ubicación de stock usada como origen al recibir bienes de este contacto."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_account_payable_id
@@ -1185,6 +1237,11 @@ msgstr "Usar un código de barras para identificar a este contacto."
 #: model:ir.model.fields,field_description:brand.field_res_brand__user_ids
 msgid "Users"
 msgstr "Usuarios"
+
+#. module: brand
+#: model:ir.model.fields,field_description:brand.field_res_brand__property_stock_supplier
+msgid "Vendor Location"
+msgstr "Ubicación del Proveedor"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_supplier_payment_term_id
@@ -1378,53 +1435,14 @@ msgstr "ej. https://www.odoo.com"
 #~ "aria-label=\"Los valores configurados acá serán específicos de la "
 #~ "compañía.\" groups=\"base.group_multi_company\" role=\"img\"/>"
 
-#~ msgid "Customer Location"
-#~ msgstr "Ubicación del Cliente"
-
 #~ msgid "Last Modified on"
 #~ msgstr "Última modificación el"
 
 #~ msgid "Main Attachment"
 #~ msgstr "Adjunto Principal"
 
-#~ msgid "Message for Stock Picking"
-#~ msgstr "Mensaje para Movimientos de Inventario"
-
-#~ msgid "On-Time Delivery Rate"
-#~ msgstr "Tasa de Entrega a Tiempo"
-
-#~ msgid ""
-#~ "Over the past x days; the number of products received on time divided by "
-#~ "the number of ordered products.x is either the System Parameter "
-#~ "purchase_stock.on_time_delivery_days or the default 365"
-#~ msgstr ""
-#~ "Durante los últimos x días; la cantidad de productos recibidos a tiempo "
-#~ "dividida por la cantidad de productos pedidos. X es el parámetro del "
-#~ "sistema buy_stock.on_time_delivery_days o el valor predeterminado 365"
-
-#~ msgid "Purchase Lines"
-#~ msgstr "Líneas de Compra"
-
 #~ msgid "Purchase Order"
 #~ msgstr "Pedido de Compra"
-
-#~ msgid "Stock Picking"
-#~ msgstr "Movimiento de Inventario"
-
-#~ msgid ""
-#~ "The stock location used as destination when sending goods to this contact."
-#~ msgstr ""
-#~ "La ubicación de stock usada como destino cuando se envían bienes a este "
-#~ "contacto."
-
-#~ msgid ""
-#~ "The stock location used as source when receiving goods from this contact."
-#~ msgstr ""
-#~ "La ubicación de stock usada como origen al recibir bienes de este "
-#~ "contacto."
-
-#~ msgid "Vendor Location"
-#~ msgstr "Ubicación del Proveedor"
 
 #~ msgid "Number of messages which requires an action"
 #~ msgstr "Número de mensajes que requieren una acción"
