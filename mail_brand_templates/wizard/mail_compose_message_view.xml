@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="email_compose_message_wizard_form_mail_brand">
+        <field name="name">mail.compose.message.form.brand.domain</field>
+        <field name="model">mail.compose.message</field>
+        <field name="inherit_id" ref="mail.email_compose_message_wizard_form" />
+        <field name="arch" type="xml">
+            <field name="template_id" position="attributes">
+                <attribute name="domain">
+                    [('model', '=', model),
+                    '|',
+                    ('brand_id', '=', brand_id),
+                    ('brand_id', '=', False)]
+                </attribute>
+            </field>
+        </field>
+    </record>
+</odoo>
