@@ -39,7 +39,7 @@ class Report(models.Model):
             record = self.env[model_name].browse(first_record_id)
             if (
                 self.use_brand_watermark or report_sudo.use_brand_watermark
-            ) and hasattr(record, "brand_id"):
+            and brand_id" in record._fields:
                 brand = record.brand_id
                 if brand and brand.pdf_watermark:
                     watermark = b64decode(brand.pdf_watermark)
