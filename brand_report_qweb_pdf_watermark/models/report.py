@@ -34,7 +34,6 @@ class Report(models.Model):
         docids = self.env.context.get("res_ids", False)
         report_sudo = self._get_report(kwargs.get("report_ref", False))
         if docids:
-            kwargs.get("report_ref", False)
             model_name = self.model or report_sudo.model
             first_record_id = docids[0]
             record = self.env[model_name].browse(first_record_id)
