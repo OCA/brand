@@ -93,8 +93,5 @@ class TestAccountMoveLine(TransactionCase):
         ]
         self.assertEqual(
             self.invoice.line_ids.analytic_distribution,
-            {
-                str(self.analytic_account.id): 100.0,
-                str(self.analytic_account2.id): 100.0,
-            },
+            {f"{self.analytic_account2.id},{self.analytic_account.id}": 100.0},
         )
