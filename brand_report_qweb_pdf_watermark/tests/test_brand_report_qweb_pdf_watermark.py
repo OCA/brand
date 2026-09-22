@@ -16,7 +16,7 @@ class TestBrandReportWatermark(common.TransactionCase):
         cls.loader = FakeModelLoader(cls.env, cls.__module__)
         cls.loader.backup_registry()
 
-        from .test_brand_report_qweb_pdf_watermakr_tester import (
+        from .test_brand_report_qweb_pdf_watermark_tester import (
             BrandReportQwebPdfWatermarkTester,
         )
 
