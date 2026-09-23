@@ -13,7 +13,7 @@ def migrate(env, version):
         env.cr,
         """
         ALTER TABLE res_brand
-        ADD analytic_distribution jsonb;
+        ADD COLUMN IF NOT EXISTS analytic_distribution jsonb;
         """,
     )
     openupgrade.logged_query(
