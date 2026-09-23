@@ -10,7 +10,11 @@ class BaseModel(models.AbstractModel):
     def get_base_url(self):
         if not self:
             return super().get_base_url()
-        if "brand_id" in self and "website_id" in self.brand_id:
-            return self.brand_id.website_website_id.domain
+        if (
+            "brand_id" in self
+            and "website_id" in self.brand_id
+            and self.brand_id.website_id.domain
+        ):
+            return self.brand_id.website_id.domain
         else:
             return super().get_base_url()
