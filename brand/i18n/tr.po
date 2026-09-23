@@ -79,9 +79,10 @@ msgstr "Adres Türü"
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__lang
 msgid ""
-"All the emails and documents sent to this contact will be translated in this"
-" language."
-msgstr "Bu kişiye gönderilen tüm e-postalar ve belgeler bu dilde çevrilecektir."
+"All the emails and documents sent to this contact will be translated in this "
+"language."
+msgstr ""
+"Bu kişiye gönderilen tüm e-postalar ve belgeler bu dilde çevrilecektir."
 
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_brand_form_view
@@ -302,8 +303,7 @@ msgstr "Yapılandırma Ayarları"
 #. module: brand
 #: model_terms:ir.ui.view,arch_db:brand.res_config_settings_view_form
 msgid ""
-"Configure branding of customer facing business documents (SO, invoices, "
-"etc)."
+"Configure branding of customer facing business documents (SO, invoices, etc)."
 msgstr ""
 "Müşteriye yönelik iş belgelerinin (SO, faturalar, vb.) markasını "
 "yapılandırın."
@@ -486,11 +486,6 @@ msgid "Formatted Email"
 msgstr "Biçimlendirilmiş E-posta"
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__global_location_number
-msgid "GLN"
-msgstr ""
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_latitude
 msgid "Geo Latitude"
 msgstr "Coğrafi Enlem"
@@ -499,11 +494,6 @@ msgstr "Coğrafi Enlem"
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_longitude
 msgid "Geo Longitude"
 msgstr "Coğrafi Boylam"
-
-#. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__global_location_number
-msgid "Global Location Number"
-msgstr "Küresel Konum Numarası"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__has_message
@@ -779,8 +769,8 @@ msgstr "Seçenekli"
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__on_time_rate
 msgid ""
-"Over the past x days; the number of products received on time divided by the"
-" number of ordered products.x is either the System Parameter "
+"Over the past x days; the number of products received on time divided by the "
+"number of ordered products.x is either the System Parameter "
 "purchase_stock.on_time_delivery_days or the default 365"
 msgstr ""
 "Son x gün içinde zamanında teslim alınan ürün sayısının sipariş edilen ürün "
@@ -1165,8 +1155,8 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__email_normalized
 msgid ""
-"This field is used to search on email address as the primary email field can"
-" contain more than strictly an email address."
+"This field is used to search on email address as the primary email field can "
+"contain more than strictly an email address."
 msgstr ""
 "Birincil e-posta alanı kesinlikle bir e-posta adresinden daha fazlasını "
 "içerebileceğinden, bu alan e-posta adresinde arama yapmak için kullanılır."
@@ -1286,9 +1276,11 @@ msgstr "Web sitesi iletişim geçmişi"
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__tz
 msgid ""
-"When printing documents and exporting/importing data, time values are computed according to this timezone.\n"
+"When printing documents and exporting/importing data, time values are "
+"computed according to this timezone.\n"
 "If the timezone is not set, UTC (Coordinated Universal Time) is used.\n"
-"Anywhere else, time values are computed according to the time offset of your web client."
+"Anywhere else, time values are computed according to the time offset of your "
+"web client."
 msgstr ""
 "Belgeleri yazdırırken ve verileri dışa / içe aktarırken, zaman değerleri bu "
 "zaman dilimine göre hesaplanır.\n"
@@ -1329,3 +1321,6 @@ msgstr ""
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_edi_format
 msgid "eInvoice format"
 msgstr ""
+
+#~ msgid "Global Location Number"
+#~ msgstr "Küresel Konum Numarası"

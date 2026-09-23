@@ -487,11 +487,6 @@ msgid "Formatted Email"
 msgstr "Email formattata"
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__global_location_number
-msgid "GLN"
-msgstr "NUG"
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_latitude
 msgid "Geo Latitude"
 msgstr "Latitudine geografica"
@@ -500,11 +495,6 @@ msgstr "Latitudine geografica"
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_longitude
 msgid "Geo Longitude"
 msgstr "Longitudine geografica"
-
-#. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__global_location_number
-msgid "Global Location Number"
-msgstr "Numero ubicazione globale"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__has_message
@@ -780,8 +770,8 @@ msgstr "Opzionale"
 #: model:ir.model.fields,help:brand.field_res_brand__on_time_rate
 msgid ""
 "Over the past x days; the number of products received on time divided by the "
-"number of ordered products.x is either the System Parameter purchase_stock."
-"on_time_delivery_days or the default 365"
+"number of ordered products.x is either the System Parameter "
+"purchase_stock.on_time_delivery_days or the default 365"
 msgstr ""
 "Negli ultimi X giorni; il numero di prodotti ricevuti puntualmente diviso "
 "per il numero di prodotti ordinati. X è il parametro di sistema "
@@ -1340,6 +1330,12 @@ msgstr "es. https://www.odoo.com"
 msgid "eInvoice format"
 msgstr "Formato fattura elettronica"
 
+#~ msgid "GLN"
+#~ msgstr "NUG"
+
+#~ msgid "Global Location Number"
+#~ msgstr "Numero ubicazione globale"
+
 #~ msgid "Available Peppol Eas"
 #~ msgstr "EAS Peppol disponibile"
 
@@ -1351,8 +1347,8 @@ msgstr "Formato fattura elettronica"
 #~ msgstr ""
 #~ "Codice utilizzato per identificare l'endpoint per BIS Billing 3.0 e suoi "
 #~ "derivati.\n"
-#~ "             Elenco disponibile a https://docs.peppol.eu/poacc/"
-#~ "billing/3.0/codelist/eas/"
+#~ "             Elenco disponibile a https://docs.peppol.eu/poacc/billing/"
+#~ "3.0/codelist/eas/"
 
 #~ msgid "Is Peppol Edi Format"
 #~ msgstr "È un formato EDI Peppol"

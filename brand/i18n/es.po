@@ -491,11 +491,6 @@ msgid "Formatted Email"
 msgstr "Correo Electrónico Formateado"
 
 #. module: brand
-#: model:ir.model.fields,field_description:brand.field_res_brand__global_location_number
-msgid "GLN"
-msgstr "GLN"
-
-#. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_latitude
 msgid "Geo Latitude"
 msgstr "Latitud geográfica"
@@ -504,11 +499,6 @@ msgstr "Latitud geográfica"
 #: model:ir.model.fields,field_description:brand.field_res_brand__partner_longitude
 msgid "Geo Longitude"
 msgstr "Longitud geográfica"
-
-#. module: brand
-#: model:ir.model.fields,help:brand.field_res_brand__global_location_number
-msgid "Global Location Number"
-msgstr "Número de ubicación global"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__has_message
@@ -785,8 +775,8 @@ msgstr "Opcional"
 #: model:ir.model.fields,help:brand.field_res_brand__on_time_rate
 msgid ""
 "Over the past x days; the number of products received on time divided by the "
-"number of ordered products.x is either the System Parameter purchase_stock."
-"on_time_delivery_days or the default 365"
+"number of ordered products.x is either the System Parameter "
+"purchase_stock.on_time_delivery_days or the default 365"
 msgstr ""
 "Durante los últimos x días; la cantidad de productos recibidos a tiempo "
 "dividida por la cantidad de productos pedidos.x es el parámetro del sistema "
@@ -1347,6 +1337,12 @@ msgstr "Por ej. https://www.odoo.com"
 #: model:ir.model.fields,field_description:brand.field_res_brand__invoice_edi_format
 msgid "eInvoice format"
 msgstr "Formato de factura electrónica"
+
+#~ msgid "GLN"
+#~ msgstr "GLN"
+
+#~ msgid "Global Location Number"
+#~ msgstr "Número de ubicación global"
 
 #~ msgid ""
 #~ "Code used to identify the Endpoint for BIS Billing 3.0 and its "
