@@ -31,6 +31,7 @@ addon | version | maintainers | summary
 [product_brand_stock](product_brand_stock/) | 19.0.1.0.0 |  | This module allows to work with product_brand in Stock.
 [product_brand_stock_account](product_brand_stock_account/) | 19.0.1.0.0 |  | This module allows to work with product_brand in Stock Account.
 [product_brand_tag](product_brand_tag/) | 19.0.1.0.0 |  | Add tags to product brand
+[sale_brand](sale_brand/) | 19.0.1.0.0 | <a href='https://github.com/osi-scampbell'><img src='https://github.com/osi-scampbell.png' width='32' height='32' style='border-radius:50%;' alt='osi-scampbell'/></a> <a href='https://github.com/sbejaoui'><img src='https://github.com/sbejaoui.png' width='32' height='32' style='border-radius:50%;' alt='sbejaoui'/></a> | Send branded sales orders
 
 [//]: # (end addons)
 
