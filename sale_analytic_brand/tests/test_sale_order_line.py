@@ -80,8 +80,5 @@ class TestSaleOrderLine(TransactionCase):
         self.order.order_line = [Command.create({"product_id": self.product.id})]
         self.assertEqual(
             self.order.order_line.analytic_distribution,
-            {
-                str(self.analytic_account.id): 100.0,
-                str(self.analytic_account2.id): 100.0,
-            },
+            {f"{self.analytic_account2.id},{self.analytic_account.id}": 100.0},
         )
