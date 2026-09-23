@@ -6,7 +6,7 @@
     "summary": """
         This addon allows to define analytic distribution models using
         brands in their domains.""",
-    "version": "18.0.3.0.1",
+    "version": "18.0.3.0.2",
     "license": "AGPL-3",
     "author": "ACSONE SA/NV," "Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/brand",
