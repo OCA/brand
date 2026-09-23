@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="product_view_kanban_catalog" model="ir.ui.view">
+        <field name="name">product variant kanban catalog view: add brand</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_view_kanban_catalog" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']/.." position="after">
+                <div>
+                    <a t-if="record.product_brand_id" type="open">
+                        <field name="product_brand_id" widget="many2one" />
+                    </a>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
