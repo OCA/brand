@@ -36,7 +36,7 @@ def _find_company_from_analytic_distribution(env, analytic_distribution):
 def migrate(env, version):
     _logger.info("Delete res.brand form view")
     openupgrade.delete_records_safely_by_xml_id(
-        env, "analytic_brand.res_brand_form_view"
+        env, ["analytic_brand.res_brand_form_view"]
     )
     _logger.info("Create analytic distribution models for brands")
     openupgrade.logged_query(
