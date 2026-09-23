@@ -133,7 +133,7 @@
                         <field
                             name="image_128"
                             widget="image"
-                            class="h-100"
+                            class="h-100 me-2"
                             options="{'img_class': 'object-fit-cover'}"
                         />
                         <main class="ps-2 ps-md-0">
