@@ -80,6 +80,11 @@ msgid "Journal Entry"
 msgstr "Registrazione contabile"
 
 #. module: account_brand
+#: model:ir.model,name:account_brand.model_account_move_line
+msgid "Journal Item"
+msgstr ""
+
+#. module: account_brand
 #: model:ir.model.fields,field_description:account_brand.field_res_partner_account_brand__write_uid
 msgid "Last Updated by"
 msgstr "Ultimo aggiornamento di"
