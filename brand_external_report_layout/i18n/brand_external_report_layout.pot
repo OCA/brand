@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 18.0\n"
+"Project-Id-Version: Odoo Server 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -120,6 +120,7 @@ msgstr ""
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__display_name
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__display_name
 msgid "Display Name"
 msgstr ""
 
@@ -169,6 +170,7 @@ msgstr ""
 
 #. module: brand_external_report_layout
 #: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__id
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_res_brand__id
 msgid "ID"
 msgstr ""
 
@@ -300,14 +302,11 @@ msgid "Tax ID"
 msgstr ""
 
 #. module: brand_external_report_layout
-#: model:ir.model.fields,help:brand_external_report_layout.field_brand_document_layout__vat
-msgid ""
-"The Tax Identification Number. Values here will be validated based on the "
-"country format. You can use '/' to indicate that the partner is not subject "
-"to tax."
+#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__website
+msgid "Website Link"
 msgstr ""
 
 #. module: brand_external_report_layout
-#: model:ir.model.fields,field_description:brand_external_report_layout.field_brand_document_layout__website
-msgid "Website Link"
+#: model:ir.model.fields,help:brand_external_report_layout.field_brand_document_layout__vat
+msgid "You can use '/' to indicate that the customer has no Tax ID."
 msgstr ""
