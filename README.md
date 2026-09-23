@@ -28,6 +28,7 @@ addon | version | maintainers | summary
 [brand_external_report_layout](brand_external_report_layout/) | 16.0.1.0.3 | <a href='https://github.com/sbejaoui'><img src='https://github.com/sbejaoui.png' width='32' height='32' style='border-radius:50%;' alt='sbejaoui'/></a> | This module allows you to have a different layout by brand for your external reports.
 [contract_brand](contract_brand/) | 16.0.1.0.0 | <a href='https://github.com/sbejaoui'><img src='https://github.com/sbejaoui.png' width='32' height='32' style='border-radius:50%;' alt='sbejaoui'/></a> | This module allows you to manage branded contracts. It adds a brand field on the contract and propagate the value on the invoices.
 [partner_brand](partner_brand/) | 16.0.1.0.0 | <a href='https://github.com/bealdav'><img src='https://github.com/bealdav.png' width='32' height='32' style='border-radius:50%;' alt='bealdav'/></a> | Define registered mark in partners according to brand settings
+[pricelist_brand](pricelist_brand/) | 16.0.1.0.0 |  | This module allows to apply pricelist items on brand
 [product_brand](product_brand/) | 16.0.1.0.4 |  | Product Brand Manager
 [product_brand_mrp](product_brand_mrp/) | 16.0.1.0.0 |  | This module allows to work with product_brand in MRP.
 [product_brand_purchase](product_brand_purchase/) | 16.0.1.0.0 |  | This module allows to work with product_brand in purchase reports.
