@@ -4,6 +4,7 @@ from lxml import etree
 
 from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
+from odoo.osv import expression
 
 from odoo.addons.base.models import ir_ui_view
 
@@ -57,8 +58,24 @@ class ResBrandMixin(models.AbstractModel):
         attributes = ["invisible", "readonly", "required"]
         if field is not None:
             ir_ui_view.transfer_field_to_modifiers(field, modifiers, attributes)
+            if self.is_brand_id_field(field) and self._get_brand_id_readonly_domain():
+                if isinstance(modifiers["readonly"], list):
+                    modifiers["readonly"] = expression.OR(
+                        [
+                            modifiers["readonly"],
+                            self._get_brand_id_readonly_domain(),
+                        ]
+                    )
+                else:
+                    modifiers["readonly"] = self._get_brand_id_readonly_domain()
         ir_ui_view.transfer_node_to_modifiers(node, modifiers)
         ir_ui_view.transfer_modifiers_to_node(modifiers, node)
+
+    def is_brand_id_field(self, field):
+        return field == self.fields_get(["brand_id"])["brand_id"]
+
+    def _get_brand_id_readonly_domain(self):
+        return False
 
     @api.model
     def get_view(self, view_id=None, view_type="form", **options):
