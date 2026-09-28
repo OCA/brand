@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2026-03-02 18:45+0000\n"
+"PO-Revision-Date: 2026-09-28 08:10+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -371,7 +371,7 @@ msgstr "Valuta"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_stock_customer
 msgid "Customer Location"
-msgstr ""
+msgstr "Località cliente"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_payment_term_id
@@ -681,7 +681,7 @@ msgstr "Messaggio per ordine di vendita"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__picking_warn_msg
 msgid "Message for Stock Picking"
-msgstr ""
+msgstr "Messaggio per prelievo di magazzino"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__message_ids
@@ -757,7 +757,7 @@ msgstr "Numero di messaggi con errore di consegna"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__on_time_rate
 msgid "On-Time Delivery Rate"
-msgstr ""
+msgstr "Tasso puntualità consegna"
 
 #. module: brand
 #: model:ir.model.fields.selection,name:brand.selection__res_company__brand_use_level__optional
@@ -771,6 +771,9 @@ msgid ""
 "number of ordered products.x is either the System Parameter "
 "purchase_stock.on_time_delivery_days or the default 365"
 msgstr ""
+"Negli ultimi X giorni; il numero di prodotti ricevuti puntualmente diviso "
+"per il numero di prodotti ordinati. X è il parametro di sistema "
+"purchase_stock.on_time_delivery_days o il predefinito 365"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__parent_name
@@ -852,7 +855,7 @@ msgstr "Listino prezzi"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__purchase_line_ids
 msgid "Purchase Lines"
-msgstr ""
+msgstr "Righe acquisti"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__purchase_order_count
@@ -1001,7 +1004,7 @@ msgstr ""
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__picking_warn
 msgid "Stock Picking"
-msgstr ""
+msgstr "Prelievo di magazzino"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__street
@@ -1098,12 +1101,16 @@ msgstr ""
 msgid ""
 "The stock location used as destination when sending goods to this contact."
 msgstr ""
+"L'ubicazione di magazzino utilizzata come destinazione quando si spedisce "
+"merce a questo contatto."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_stock_supplier
 msgid ""
 "The stock location used as source when receiving goods from this contact."
 msgstr ""
+"L'ubicazione di magazzino utilizzata quando si riceve merce da questo "
+"contatto."
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__property_account_payable_id
@@ -1226,7 +1233,7 @@ msgstr "Utenti"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_stock_supplier
 msgid "Vendor Location"
-msgstr ""
+msgstr "Località fornitore"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_supplier_payment_term_id
