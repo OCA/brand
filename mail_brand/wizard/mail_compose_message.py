@@ -1,5 +1,7 @@
 from odoo import api, fields, models
 
+from odoo.addons.mail.tools.parser import parse_res_ids
+
 
 class MailComposeMessageExt(models.TransientModel):
     _inherit = "mail.compose.message"
@@ -9,15 +11,19 @@ class MailComposeMessageExt(models.TransientModel):
     @api.model
     def default_get(self, fields):
         result = super().default_get(fields)
-        model = result.get("model")
-        res_id = result.get("res_id")
+        if "brand_id" not in fields:
+            return result
 
-        if model and res_id and "brand_id" in fields:
-            model_object = self.env[model].browse(res_id)
-            if hasattr(model_object, "brand_id") and model_object.brand_id:
-                result["brand_id"] = model_object.brand_id.id
-        else:
-            result["brand_id"] = self.brand_id
+        # In v18 res_id (integer) was replaced by res_ids (Text, JSON list);
+        # the chatter passes default_res_ids/default_model instead of active_id.
+        model = result.get("model")
+        res_ids_raw = result.get("res_ids")
+        if model and res_ids_raw:
+            res_ids = parse_res_ids(res_ids_raw, self.env)
+            if res_ids:
+                model_object = self.env[model].browse(res_ids[0])
+                if hasattr(model_object, "brand_id") and model_object.brand_id:
+                    result["brand_id"] = model_object.brand_id.id
 
         return result
 
