@@ -9,14 +9,7 @@ class AccountMove(models.Model):
     _name = "account.move"
     _inherit = ["account.move", "res.brand.mixin"]
 
-    brand_id = fields.Many2one(
-        states={
-            "open": [("readonly", True)],
-            "in_payment": [("readonly", True)],
-            "paid": [("readonly", True)],
-            "cancel": [("readonly", True)],
-        }
-    )
+    brand_id = fields.Many2one()
 
     def _is_brand_required(self):
         self.ensure_one()

@@ -1,6 +1,10 @@
 # Copyright 2019 ACSONE SA/NV
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
+import json
+
+from lxml import etree
+
 from odoo.tests.common import TransactionCase
 
 
@@ -48,3 +52,13 @@ class TestSaleOrder(TransactionCase):
         sale.brand_id = brand.id
         sale._onchange_team_id()
         self.assertEqual(sale.brand_id, brand)
+
+    def test_get_view_keeps_view_readonly(self):
+        view = self.env["sale.order"].get_view(
+            view_id=self.env.ref("sale.view_order_form").id,
+            view_type="form",
+        )
+        doc = etree.XML(view["arch"])
+        brand_node = doc.xpath("//field[@name='brand_id']")[0]
+        modifiers = json.loads(brand_node.get("modifiers"))
+        self.assertEqual(modifiers["readonly"], [["state", "!=", "draft"]])
