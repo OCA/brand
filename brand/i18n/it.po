@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2026-03-02 18:45+0000\n"
+"PO-Revision-Date: 2026-09-28 07:31+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -336,7 +336,7 @@ msgstr "Contatto"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
 msgid "Contracts"
-msgstr ""
+msgstr "Contratti"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_bounce
@@ -382,7 +382,7 @@ msgstr "Valuta"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_stock_customer
 msgid "Customer Location"
-msgstr "Ubicazione cliente"
+msgstr "Località cliente"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__property_payment_term_id
@@ -839,7 +839,7 @@ msgstr "Listino prezzi"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__purchase_contract_count
 msgid "Purchase Contracts"
-msgstr ""
+msgstr "Contratti di acquisto"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__purchase_line_ids
@@ -884,7 +884,7 @@ msgstr "Utente responsabile"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_contract_count
 msgid "Sale Contracts"
-msgstr ""
+msgstr "Contratti di vendita"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_order_count
