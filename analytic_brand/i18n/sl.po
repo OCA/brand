@@ -1,0 +1,40 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* analytic_brand
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-06-22 10:27+0000\n"
+"Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
+"Language-Team: none\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 5.15.2\n"
+
+#. module: analytic_brand
+#: model:ir.model,name:analytic_brand.model_account_analytic_distribution_model
+msgid "Analytic Distribution Model"
+msgstr "Model analitične porazdelitve"
+
+#. module: analytic_brand
+#: model:ir.model.fields,field_description:analytic_brand.field_account_analytic_distribution_model__brand_id
+msgid "Brand"
+msgstr "Blagovna znamka"
+
+#. module: analytic_brand
+#: model:ir.model.fields,help:analytic_brand.field_account_analytic_distribution_model__brand_id
+msgid ""
+"Select a brand for which the analytic distribution will be used (e.g. create"
+" new customer invoice or Sales order linked to this brand, it will "
+"automatically take this as an analytic account)"
+msgstr ""
+"Izberite blagovno znamko, za katero se bo uporabljala analitična "
+"porazdelitev (npr. ob ustvarjanju novega računa za stranko ali prodajnega "
+"naročila, povezanega s to blagovno znamko, se bo ta samodejno upoštevala kot "
+"analitični račun)"

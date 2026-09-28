@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2020 ACSONE SA/NV
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="account_analytic_distribution_model_tree_view">
+        <field name="model">account.analytic.distribution.model</field>
+        <field
+            name="inherit_id"
+            ref="analytic.account_analytic_distribution_model_tree_view"
+        />
+        <field name="arch" type="xml">
+            <field name="partner_category_id" position="after">
+                <field name="brand_id" optional="show" />
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="account_analytic_distribution_model_form_view">
+        <field name="model">account.analytic.distribution.model</field>
+        <field
+            name="inherit_id"
+            ref="analytic.account_analytic_distribution_model_form_view"
+        />
+        <field name="arch" type="xml">
+            <field name="partner_category_id" position="after">
+                <field name="brand_id" options="{'no_create': True, 'no_edit': True}" />
+            </field>
+        </field>
+    </record>
+</odoo>
