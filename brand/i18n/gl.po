@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2026-07-05 21:46+0000\n"
+"PO-Revision-Date: 2026-09-29 10:46+0000\n"
 "Last-Translator: Cándido Martínez <candido@supermercadoscooperativos.com>\n"
 "Language-Team: none\n"
 "Language: gl\n"
@@ -338,7 +338,7 @@ msgstr "Contacto"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__contract_ids
 msgid "Contracts"
-msgstr ""
+msgstr "Contratos"
 
 #. module: brand
 #: model:ir.model.fields,help:brand.field_res_brand__message_bounce
@@ -842,7 +842,7 @@ msgstr "Lista de Prezo"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__purchase_contract_count
 msgid "Purchase Contracts"
-msgstr ""
+msgstr "Contratos de compra"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__purchase_line_ids
@@ -887,7 +887,7 @@ msgstr "Usuario Responsable"
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_contract_count
 msgid "Sale Contracts"
-msgstr ""
+msgstr "Contratos de venta"
 
 #. module: brand
 #: model:ir.model.fields,field_description:brand.field_res_brand__sale_order_count
