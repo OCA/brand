@@ -8,14 +8,7 @@ class SaleOrder(models.Model):
     _name = "sale.order"
     _inherit = ["sale.order", "res.brand.mixin"]
 
-    brand_id = fields.Many2one(
-        states={
-            "sent": [("readonly", True)],
-            "sale": [("readonly", True)],
-            "done": [("readonly", True)],
-            "cancel": [("readonly", True)],
-        }
-    )
+    brand_id = fields.Many2one()
 
     def _prepare_invoice(self):
         invoice_vals = {}

@@ -1,5 +1,7 @@
 # Copyright 2019 ACSONE SA/NV
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+import json
+
 from lxml import etree
 
 from odoo import _, api, fields, models
@@ -57,6 +59,7 @@ class ResBrandMixin(models.AbstractModel):
         attributes = ["invisible", "readonly", "required"]
         if field is not None:
             ir_ui_view.transfer_field_to_modifiers(field, modifiers, attributes)
+        modifiers.update(json.loads(node.get("modifiers") or "{}"))
         ir_ui_view.transfer_node_to_modifiers(node, modifiers)
         ir_ui_view.transfer_modifiers_to_node(modifiers, node)
 
