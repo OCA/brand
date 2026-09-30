@@ -19,7 +19,10 @@ class ResPartnerAccountBrand(models.Model):
         comodel_name="account.account",
         string="Account",
         required=True,
-        domain="[('account_type', 'in', ('liability_payable', 'asset_receivable'))]",
+        domain=(
+            "[('account_type', '=', account_type), ('deprecated', '=', False)] "
+            "if account_type else [('id', '=', False)]"
+        ),
     )
     brand_id = fields.Many2one(comodel_name="res.brand", string="Brand", required=True)
     account_type = fields.Selection(
@@ -53,20 +56,7 @@ class ResPartnerAccountBrand(models.Model):
 
     @api.onchange("account_type")
     def _onchange_account_type(self):
-        self.ensure_one()
-        self.update({"account_id": False})
-        domain = [("id", "=", False)]
-        if self.account_type == "payable":
-            domain = [
-                ("internal_type", "=", "payable"),
-                ("deprecated", "=", False),
-            ]
-        elif self.account_type == "receivable":
-            domain = [
-                ("internal_type", "=", "receivable"),
-                ("deprecated", "=", False),
-            ]
-        return {"domain": {"account_id": domain}}
+        self.account_id = False
 
     @api.model
     def _get_partner_account_by_brand(self, account_type, brand, partner):
