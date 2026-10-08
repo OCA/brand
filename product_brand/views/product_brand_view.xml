@@ -34,7 +34,7 @@
                             name="%(action_open_brand_products)d"
                             type="action"
                             class="oe_stat_button"
-                            icon="fa-cubes"
+                            icon="view_list"
                             context="{'default_product_brand_id': id}"
                         >
                             <field
@@ -94,7 +94,7 @@
                                 name="%(product_brand.action_open_brand_products)d"
                                 type="action"
                             >
-                                <t t-esc="record.products_count.value" />
+                                <t t-out="record.products_count.value" />
                                 Products
                             </a>
                         </main>
@@ -192,6 +192,7 @@
         id="menu_product_brand"
         name="Product Brands"
         action="action_product_brand"
-        parent="sale.prod_config_main"
+        parent="sale.product_menu_catalog"
+        groups="sales_team.group_sale_manager"
     />
 </odoo>
