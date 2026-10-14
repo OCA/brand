@@ -1,0 +1,23 @@
+[project]
+name = "odoo-addons-oca-brand"
+version = "20.0.20261014.0"
+dependencies = [
+    "odoo-addon-account_brand==20.0.*",
+    "odoo-addon-brand==20.0.*",
+    "odoo-addon-brand_external_report_layout==20.0.*",
+    "odoo-addon-partner_brand==20.0.*",
+    "odoo-addon-pricelist_brand==20.0.*",
+    "odoo-addon-product_brand==20.0.*",
+    "odoo-addon-product_brand_mrp==20.0.*",
+    "odoo-addon-product_brand_purchase==20.0.*",
+    "odoo-addon-product_brand_stock==20.0.*",
+    "odoo-addon-product_brand_stock_account==20.0.*",
+    "odoo-addon-product_brand_tag==20.0.*",
+    "odoo-addon-sale_brand==20.0.*",
+    "odoo-addon-stock_brand==20.0.*",
+]
+classifiers=[
+    "Programming Language :: Python",
+    "Framework :: Odoo",
+    "Framework :: Odoo :: 20.0",
+]
