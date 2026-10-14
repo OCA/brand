@@ -1,5 +1,5 @@
 
-target-version = "py310"
+target-version = "py312"
 fix = true
 
 [lint]
