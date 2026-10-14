@@ -1,30 +1,16 @@
 # Copyright 2019 ACSONE SA/NV
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-import base64
-import os
-
-import odoo
 from odoo import api, fields, models, tools
+from odoo.tools import BinaryBytes
 
 
 class ResBrand(models.Model):
     _inherit = "res.brand"
 
     def _get_default_brand_logo(self):
-        return base64.b64encode(
-            open(
-                os.path.join(
-                    odoo.__path__[0],
-                    "addons",
-                    "base",
-                    "static",
-                    "img",
-                    "res_company_logo.png",
-                ),
-                "rb",
-            ).read()
-        )
+        with tools.file_open("base/static/img/res_company_logo.png", "rb") as logo:
+            return BinaryBytes(logo.read(), filename="logo.png")
 
     logo = fields.Binary(
         related="partner_id.image_1920",
@@ -50,7 +36,20 @@ class ResBrand(models.Model):
             "base.paperformat_euro", raise_if_not_found=False
         ),
     )
-
+    report_tables_id = fields.Selection(
+        [
+            ("light", "Light"),
+            ("boxed", "Boxed"),
+            ("bold", "Bold"),
+            ("striped", "Striped"),
+            ("bubble", "Bubble"),
+            ("column", "Column"),
+            ("compact", "Compact"),
+        ],
+        string="Table Design",
+        default="light",
+        required=True,
+    )
     font = fields.Selection(
         [
             ("Lato", "Lato"),
@@ -60,7 +59,7 @@ class ResBrand(models.Model):
             ("Oswald", "Oswald"),
             ("Raleway", "Raleway"),
             ("Tajawal", "Tajawal"),
-            ("Fira_Mono", "Fira Mono"),
+            ("Noto_Sans_Mono", "Noto Sans Mono"),
         ],
         default="Lato",
     )
@@ -71,12 +70,6 @@ class ResBrand(models.Model):
         help="Header text displayed at the top of all reports.",
     )
     is_company_details_empty = fields.Boolean(compute="_compute_empty_company_details")
-    layout_background = fields.Selection(
-        [("Blank", "Blank"), ("Custom", "Custom")],
-        default="Blank",
-        required=True,
-    )
-    layout_background_image = fields.Binary("Background Image")
 
     @api.depends("company_details")
     def _compute_empty_company_details(self):
@@ -87,24 +80,28 @@ class ResBrand(models.Model):
 
     def change_report_template(self):
         self.ensure_one()
-        context = {"default_brand_id": self.id, "dialog_size": "extra-large"}
-        context.update(self.env.context)
         return {
             "name": self.env._("Configure your document layout"),
             "type": "ir.actions.act_window",
             "view_mode": "form",
             "target": "new",
             "res_model": "brand.document.layout",
-            "context": context,
+            "context": dict(
+                self.env.context, default_brand_id=self.id, dialog_size="extra-large"
+            ),
         }
 
-    def _get_asset_style_b64(self):
+    def _get_asset_style_binary(self):
         brand_styles = self.env["ir.qweb"]._render(
             "brand_external_report_layout.styles_brand_report",
-            {"brand_ids": self.sudo().search([], limit=False)},
+            {
+                "brand_ids": self.sudo()
+                .with_context(active_test=False)
+                .search([], limit=False)
+            },
             raise_if_not_found=False,
         )
-        return base64.b64encode(brand_styles.encode())
+        return BinaryBytes(brand_styles.encode())
 
     def _update_asset_style(self):
         asset_attachment = self.env.ref(
@@ -114,25 +111,33 @@ class ResBrand(models.Model):
         if not asset_attachment:
             return
         asset_attachment = asset_attachment.sudo()
-        b64_val = self._get_asset_style_b64()
-        if b64_val != asset_attachment.datas:
-            asset_attachment.write({"datas": b64_val})
+        styles = self._get_asset_style_binary()
+        if styles.content != asset_attachment.raw.content:
+            asset_attachment.write({"raw": styles})
 
     @api.model
     def _get_style_fields(self):
-        return {"external_report_layout_id", "font", "primary_color", "secondary_color"}
+        return {
+            "external_report_layout_id",
+            "report_tables_id",
+            "font",
+            "primary_color",
+            "secondary_color",
+        }
 
     @api.model_create_multi
     def create(self, vals_list):
-        companies = super().create(vals_list)
-        style_fields = self._get_style_fields()
-        if any(not style_fields.isdisjoint(values) for values in vals_list):
-            self._update_asset_style()
-        return companies
+        brands = super().create(vals_list)
+        self._update_asset_style()
+        return brands
 
     def write(self, values):
         res = super().write(values)
-        style_fields = self._get_style_fields()
-        if not style_fields.isdisjoint(values):
+        if not self._get_style_fields().isdisjoint(values):
             self._update_asset_style()
+        return res
+
+    def unlink(self):
+        res = super().unlink()
+        self._update_asset_style()
         return res
