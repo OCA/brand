@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!-- Copyright 2019 ACSONE SA/NV
      License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0). -->
 <odoo>
-    <record model="ir.ui.view" id="res_brand_form_view">
+    <record id="res_brand_form_view" model="ir.ui.view">
         <field name="model">res.brand</field>
         <field name="inherit_id" eval="False" />
         <field name="mode">primary</field>
@@ -89,7 +89,7 @@
             </form>
         </field>
     </record>
-    <record model="ir.ui.view" id="res_brand_search_view">
+    <record id="res_brand_search_view" model="ir.ui.view">
         <field name="model">res.brand</field>
         <field name="inherit_id" ref="base.view_res_partner_filter" />
         <field name="mode">primary</field>
@@ -99,7 +99,7 @@
             </xpath>
         </field>
     </record>
-    <record model="ir.ui.view" id="res_brand_kanban_view">
+    <record id="res_brand_kanban_view" model="ir.ui.view">
         <field name="model">res.brand</field>
         <field name="inherit_id" eval="False" />
         <field name="mode">primary</field>
@@ -154,7 +154,7 @@
             </kanban>
         </field>
     </record>
-    <record model="ir.ui.view" id="res_brand_list_view">
+    <record id="res_brand_list_view" model="ir.ui.view">
         <field name="name">res.brand.list (in partner_brand)</field>
         <field name="model">res.brand</field>
         <field name="inherit_id" ref="base.view_partner_tree" />
@@ -165,14 +165,14 @@
             </xpath>
         </field>
     </record>
-    <record model="ir.actions.act_window" id="res_brand_act_window">
+    <record id="res_brand_act_window" model="ir.actions.act_window">
         <field name="name">Brands</field>
         <field name="res_model">res.brand</field>
         <field name="view_mode">kanban,list,form</field>
         <field name="context">{'default_customer': 0, 'default_supplier': 0,}
         </field>
     </record>
-    <record model="ir.ui.menu" id="res_brand_menu">
+    <record id="res_brand_menu" model="ir.ui.menu">
         <field name="name">Brands</field>
         <field name="parent_id" ref="base.menu_users" />
         <field name="action" ref="res_brand_act_window" />

@@ -13,8 +13,8 @@ To make a branded object, you need to:
 1.  Inherit from the res.brand.mixin
     ``` python
     class YourModel(models.Model):
-        _name = 'your.model'
-        _inherit = ['your.model', 'res.brand.mixin']
+        _name = "your.model"
+        _inherit = ["your.model", "res.brand.mixin"]
     ```
 
 2.  Add the brand field to the object form or tree view. The mixin will

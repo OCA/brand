@@ -13,7 +13,6 @@ class ResBrandMixin(models.AbstractModel):
 
     brand_id = fields.Many2one(
         comodel_name="res.brand",
-        string="Brand",
         help="Brand to use for this sale",
     )
     brand_use_level = fields.Selection(
@@ -27,7 +26,7 @@ class ResBrandMixin(models.AbstractModel):
         compute="_compute_is_brand_required",
     )
 
-    @api.depends("company_id")
+    @api.depends("company_id.brand_use_level")
     def _compute_is_brand_required(self):
         for record in self:
             record.is_brand_required = record._is_brand_required()
@@ -74,13 +73,13 @@ class ResBrandMixin(models.AbstractModel):
             )
 
             if brand_node is not None:
-                brand_node.set(
-                    "invisible",
-                    f"brand_use_level == '{BRAND_USE_LEVEL_NO_USE_LEVEL}'",
-                )
+                invisible = f"brand_use_level == '{BRAND_USE_LEVEL_NO_USE_LEVEL}'"
+                if brand_node.get("invisible"):
+                    invisible = f"({brand_node.get('invisible')}) or ({invisible})"
+                brand_node.set("invisible", invisible)
                 if not brand_node.get("required"):
                     brand_node.set(
                         "required",
-                        f"brand_use_level == '{BRAND_USE_LEVEL_REQUIRED_LEVEL}'",
+                        "is_brand_required",
                     )
         return arch, view
