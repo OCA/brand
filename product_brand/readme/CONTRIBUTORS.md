@@ -19,3 +19,5 @@
 - [Trobz](https://trobz.com):
   - Thao Le \<<thaolt@trobz.com>\>
   - Do Anh Duy \<<duyda@trobz.com>\>
+- Juliano Henriquez \<<juliano@consultoriahenca.com>\> - Santo Domingo, República Dominicana
+- Jose Cano Gil \<<jose.canogil@dynapps.eu>\>

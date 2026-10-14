@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <record id="product_brand_search_form_view" model="ir.ui.view">
         <field name="name">product.brand.search.form</field>
@@ -94,7 +94,7 @@
                                 name="%(product_brand.action_open_brand_products)d"
                                 type="action"
                             >
-                                <t t-esc="record.products_count.value" />
+                                <t t-out="record.products_count.value" />
                                 Products
                             </a>
                         </main>
@@ -183,15 +183,15 @@
             </field>
         </field>
     </record>
-    <record model="ir.actions.act_window" id="action_product_brand">
+    <record id="action_product_brand" model="ir.actions.act_window">
         <field name="name">Brand</field>
         <field name="res_model">product.brand</field>
         <field name="view_mode">kanban,form,list</field>
     </record>
     <menuitem
-        name="Product Brands"
         id="menu_product_brand"
+        name="Product Brands"
         action="action_product_brand"
-        parent="sale.prod_config_main"
+        parent="sale.product_menu_catalog"
     />
 </odoo>
