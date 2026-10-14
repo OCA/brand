@@ -6,6 +6,7 @@
 from psycopg2 import IntegrityError
 
 from odoo import Command
+from odoo.exceptions import AccessError
 from odoo.tools import mute_logger
 
 from odoo.addons.product_brand.tests.common import CommonCase
@@ -25,6 +26,13 @@ class TestBrandTags(CommonCase):
             }
         )
 
+        cls.other_company = cls.env["res.company"].create(
+            {"name": "Other Brand Company"}
+        )
+        cls.other_company_tag = cls.env["product.brand.tag"].create(
+            {"name": "Other company tag", "company_id": cls.other_company.id}
+        )
+
     def test_brand_rel(self):
         self.assertEqual(self.product_brand.tag_ids, self.tag)
         self.assertEqual(self.product_brand2.tag_ids, self.tag)
@@ -41,13 +49,24 @@ class TestBrandTags(CommonCase):
 
     @mute_logger("odoo.sql_db")
     def test_product_template_tag_uniq(self):
-        with self.assertRaises(IntegrityError):
-            with self.cr.savepoint():
-                self.env["product.brand.tag"].create({"name": "Test Tag"})
+        with self.assertRaises(IntegrityError), self.cr.savepoint():
+            self.env["product.brand.tag"].create({"name": "Test Tag"})
 
-        self.env["product.brand.tag"].create(
+        self.env["product.brand.tag"].sudo().create(
             {
                 "name": "Test Tag",
-                "company_id": self.env.company.create({"name": "Foo"}).id,
+                "company_id": self.env.company.sudo().create({"name": "Foo"}).id,
             }
         )
+
+    def test_company_access(self):
+        other_tag = self.other_company_tag
+        shared_tag = self.env["product.brand.tag"].create(
+            {"name": "Shared tag", "company_id": False}
+        )
+        visible_tags = self.env["product.brand.tag"].search(
+            [("id", "in", (self.tag | other_tag | shared_tag).ids)]
+        )
+        self.assertEqual(set(visible_tags.ids), set((self.tag | shared_tag).ids))
+        with self.assertRaises(AccessError):
+            other_tag.with_env(self.env).read(["name"])
