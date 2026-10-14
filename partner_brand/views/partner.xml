@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <record id="view_partner_form" model="ir.ui.view">
         <field name="model">res.partner</field>
@@ -46,7 +46,7 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.res_partner_kanban_view" />
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='complete_name']" position="before">
+            <xpath expr="//templates//field[@name='name']" position="before">
                 <field name="brand_logo" invisible="1" />
                 <span
                     title="This company is linked to a brand"
@@ -56,7 +56,7 @@
         </field>
     </record>
 
-    <record model="ir.ui.menu" id="res_brand_menu">
+    <record id="res_brand_menu" model="ir.ui.menu">
         <field name="name">Brands</field>
         <field name="parent_id" ref="contacts.res_partner_menu_config" />
         <field name="action" ref="brand.res_brand_act_window" />
