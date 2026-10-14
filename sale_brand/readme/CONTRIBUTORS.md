@@ -6,3 +6,4 @@
   - Vicent Cubells
 - [Heliconia Solutions Pvt. Ltd.](https://www.heliconia.io)
   - Bhavesh Heliconia
+- Juliano Henriquez \<<juliano@consultoriahenca.com>\> - Santo Domingo, República Dominicana
