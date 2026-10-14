@@ -1,2 +1,3 @@
 - Quentin Groulard \<quentin.groulard@acsone.eu\>
 - Alex Garcia \<alex@studio73.es\>
+- Juliano Henriquez \<<juliano@consultoriahenca.com>\> - Santo Domingo, República Dominicana
