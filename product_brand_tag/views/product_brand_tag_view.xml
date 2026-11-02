@@ -40,15 +40,15 @@
         </field>
     </record>
 
-    <record model="ir.actions.act_window" id="action_product_brand_tags">
+    <record id="action_product_brand_tags" model="ir.actions.act_window">
         <field name="name">Brand tags</field>
         <field name="res_model">product.brand.tag</field>
         <field name="view_mode">list</field>
     </record>
 
     <menuitem
-        name="Product Brands Tags"
         id="menu_product_brand_tags"
+        name="Product Brands Tags"
         action="action_product_brand_tags"
         parent="sale.prod_config_main"
     />

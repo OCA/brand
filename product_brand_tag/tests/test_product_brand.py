@@ -41,9 +41,8 @@ class TestBrandTags(CommonCase):
 
     @mute_logger("odoo.sql_db")
     def test_product_template_tag_uniq(self):
-        with self.assertRaises(IntegrityError):
-            with self.cr.savepoint():
-                self.env["product.brand.tag"].create({"name": "Test Tag"})
+        with self.assertRaises(IntegrityError), self.cr.savepoint():
+            self.env["product.brand.tag"].create({"name": "Test Tag"})
 
         self.env["product.brand.tag"].create(
             {
