@@ -1,6 +1,6 @@
 To create a new brand:
 
-1.  Go to **Sales \> Configuration \> Products \> Product Brands**.
+1.  Go to **Sales \> Products \> Product Brands**.
 2.  You can set its logo, associate a partner and add a description.
 
 *Note:* You must have the **Sales** addon installed.
