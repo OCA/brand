@@ -52,7 +52,8 @@ class AccountMove(models.Model):
                     account_id = rec_account
                 if account_id:
                     self.line_ids.filtered(
-                        lambda line, a=account_id: line.account_id.account_type
-                        == a.account_type
+                        lambda line, a=account_id: (
+                            line.account_id.account_type == a.account_type
+                        )
                     ).update({"account_id": account_id.id})
         return res
