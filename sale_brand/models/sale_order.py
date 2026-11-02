@@ -11,11 +11,13 @@ class SaleOrder(models.Model):
     brand_id = fields.Many2one()
 
     def _prepare_invoice(self):
-        invoice_vals = {}
-        for order in self:
-            invoice_vals = super(SaleOrder, order)._prepare_invoice()
-            invoice_vals.update({"brand_id": order.brand_id.id})
+        self.ensure_one()
+        invoice_vals = super()._prepare_invoice()
+        invoice_vals["brand_id"] = self.brand_id.id
         return invoice_vals
+
+    def _get_invoice_grouping_keys(self):
+        return super()._get_invoice_grouping_keys() + ["brand_id"]
 
     @api.onchange("team_id")
     def _onchange_team_id(self):
