@@ -3,6 +3,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from psycopg2 import sql
+from slugify import slugify
 
 from odoo import api, fields, models
 
@@ -25,7 +26,6 @@ class ProductBrandTag(models.AbstractModel):
     brands_count = fields.Integer(string="# of brands", compute="_compute_brands_count")
     company_id = fields.Many2one(
         comodel_name="res.company",
-        string="Company",
         default=lambda self: self.env.company.id,
     )
 
@@ -37,12 +37,12 @@ class ProductBrandTag(models.AbstractModel):
     @api.depends("name")
     def _compute_code(self):
         for rec in self:
-            rec.code = self.env["ir.http"]._slugify(rec.name or "")
+            rec.code = slugify(rec.name or "", allow_unicode=False)
 
     def _inverse_code(self):
         for rec in self:
             # Make sure is always normalized
-            rec.code = self.env["ir.http"]._slugify(rec.code)
+            rec.code = slugify(rec.code or "", allow_unicode=False)
 
     @api.depends("product_brand_ids")
     def _compute_brands_count(self):
