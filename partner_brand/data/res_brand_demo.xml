@@ -4,7 +4,7 @@
         <field name="name">Carrefour</field>
         <field
             name="image_1920"
-            type="base64"
+            type="bytes"
             file="partner_brand/static/description/carrouf.png"
         />
     </record>
@@ -13,7 +13,7 @@
         <field name="name">Walmart</field>
         <field
             name="image_1920"
-            type="base64"
+            type="bytes"
             file="partner_brand/static/description/walmart.png"
         />
     </record>
