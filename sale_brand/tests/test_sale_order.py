@@ -110,3 +110,18 @@ class TestSaleOrder(TransactionCase):
         sale.brand_id = brand.id
         sale._onchange_team_id()
         self.assertEqual(sale.brand_id, brand)
+
+    def test_grouped_invoices_keep_brands_separate(self):
+        other_brand = self.env["res.brand"].create({"name": "Other brand"})
+        other_sale = self.sale.copy({"brand_id": other_brand.id})
+        other_sale.action_confirm()
+        invoices = (self.sale | other_sale)._create_invoices()
+        self.assertEqual(len(invoices), 2)
+        self.assertEqual(invoices.brand_id, self.brand | other_brand)
+
+    def test_grouped_invoices_with_same_brand(self):
+        other_sale = self.sale.copy()
+        other_sale.action_confirm()
+        invoices = (self.sale | other_sale)._create_invoices()
+        self.assertEqual(len(invoices), 1)
+        self.assertEqual(invoices.brand_id, self.brand)
