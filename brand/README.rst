@@ -21,13 +21,13 @@ Brand
     :target: http://www.gnu.org/licenses/lgpl-3.0-standalone.html
     :alt: License: LGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fbrand-lightgray.png?logo=github
-    :target: https://github.com/OCA/brand/tree/19.0/brand
+    :target: https://github.com/OCA/brand/tree/20.0/brand
     :alt: OCA/brand
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/brand-19-0/brand-19-0-brand
+    :target: https://translation.odoo-community.org/projects/brand-20-0/brand-20-0-brand
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png
-    :target: https://runboat.odoo-community.org/builds?repo=OCA/brand&target_branch=19.0
+    :target: https://runboat.odoo-community.org/builds?repo=OCA/brand&target_branch=20.0
     :alt: Try me on Runboat
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
@@ -60,8 +60,8 @@ To make a branded object, you need to:
    .. code:: python
 
       class YourModel(models.Model):
-          _name = 'your.model'
-          _inherit = ['your.model', 'res.brand.mixin']
+          _name = "your.model"
+          _inherit = ["your.model", "res.brand.mixin"]
 
 2. Add the brand field to the object form or tree view. The mixin will
    add the brand use level field automatically to the view and set the
@@ -78,7 +78,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/brand/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/brand/issues/new?body=module:%20brand%0Aversion:%2019.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/brand/issues/new?body=module:%20brand%0Aversion:%2020.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -99,6 +99,8 @@ Contributors
   - Vicent Cubells
 
 - Ammar Officewala <aofficewala@opensourceintegrators.com>
+- Juliano Henriquez <juliano@consultoriahenca.com> - Santo Domingo,
+  República Dominicana
 
 Other credits
 -------------
@@ -126,6 +128,6 @@ Current `maintainer <https://odoo-community.org/page/maintainer-role>`__:
 
 |maintainer-sbejaoui| 
 
-This module is part of the `OCA/brand <https://github.com/OCA/brand/tree/19.0/brand>`_ project on GitHub.
+This module is part of the `OCA/brand <https://github.com/OCA/brand/tree/20.0/brand>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
