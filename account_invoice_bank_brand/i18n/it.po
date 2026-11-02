@@ -1,0 +1,56 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_invoice_bank_brand
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2025-07-30 12:05+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10.4\n"
+
+#. module: account_invoice_bank_brand
+#: model:ir.model.fields,field_description:account_invoice_bank_brand.field_res_brand__partner_bank_id
+msgid "Bank Account"
+msgstr "Conto bancario"
+
+#. module: account_invoice_bank_brand
+#: model:ir.model.fields,help:account_invoice_bank_brand.field_res_brand__partner_bank_id
+msgid ""
+"Bank Account Number to which the invoices of this brand will be paid (for "
+"Customer Invoice and Vendor Credit Note)"
+msgstr ""
+"Numero del conto bancario su cui verranno pagate le fatture di questa marca ("
+"per fattura cliente e note di credito fornitore)"
+
+#. module: account_invoice_bank_brand
+#: model:ir.model,name:account_invoice_bank_brand.model_res_brand
+msgid "Brand"
+msgstr "Marca"
+
+#. module: account_invoice_bank_brand
+#: model_terms:ir.ui.view,arch_db:account_invoice_bank_brand.res_brand_form_view
+msgid "Invoices"
+msgstr "Fatture"
+
+#. module: account_invoice_bank_brand
+#: model:ir.model,name:account_invoice_bank_brand.model_account_move
+msgid "Journal Entry"
+msgstr "Registrazione contabile"
+
+#. module: account_invoice_bank_brand
+#. odoo-python
+#: code:addons/account_invoice_bank_brand/models/res_brand.py:0
+msgid ""
+"The account selected for invoices payment does not belong to the same "
+"partner as this brand."
+msgstr ""
+"Il conto selezionato per il pagamento delle fatture non appartiene allo "
+"stesso partner della marca."
