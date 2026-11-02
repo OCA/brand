@@ -1,7 +1,7 @@
 {
     "name": "Partner Brand",
     "summary": "Define registered mark in partners according to brand settings",
-    "version": "19.0.1.0.0",
+    "version": "20.0.1.0.0",
     "author": "Odoo Community Association (OCA), Akretion",
     "development_status": "Alpha",
     "category": "Product",
