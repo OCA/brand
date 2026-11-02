@@ -3,3 +3,4 @@
   - Vicent Cubells \<<vicent@vcubells.net>\>
 - Freni Patel \<<fpatel@opensourceintegrators.com>\>
 - Frederic Grall \<<fgr@apik.cloud>>
+- Juliano Henriquez \<<juliano@consultoriahenca.com>\> - Santo Domingo, República Dominicana

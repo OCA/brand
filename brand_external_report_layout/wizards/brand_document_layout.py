@@ -1,10 +1,11 @@
 # Copyright 2022 ACSONE SA/NV
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-import markupsafe
+from markupsafe import Markup
 
-from odoo import api, fields, models, tools
+from odoo import api, fields, models
 
+from odoo.addons.base.models.ir_qweb_fields import nl2br_enclose
 from odoo.addons.web.models.base_document_layout import (
     DEFAULT_PRIMARY,
     DEFAULT_SECONDARY,
@@ -20,22 +21,30 @@ class BrandDocumentLayout(models.TransientModel):
 
     logo = fields.Binary(related="brand_id.logo", readonly=False)
     report_header = fields.Html(related="brand_id.report_header", readonly=False)
-    report_footer = fields.Html(related="brand_id.report_footer", readonly=False)
+    report_footer = fields.Html(
+        related="brand_id.report_footer", readonly=False, default=None
+    )
     paperformat_id = fields.Many2one(related="brand_id.paperformat_id", readonly=False)
     external_report_layout_id = fields.Many2one(
         related="brand_id.external_report_layout_id", readonly=False
     )
-
+    report_tables_id = fields.Selection(
+        related="brand_id.report_tables_id", readonly=False
+    )
     font = fields.Selection(related="brand_id.font", readonly=False)
     primary_color = fields.Char(related="brand_id.primary_color", readonly=False)
     secondary_color = fields.Char(related="brand_id.secondary_color", readonly=False)
-    company_details = fields.Html(related="brand_id.company_details", readonly=False)
-    layout_background = fields.Selection(
-        related="brand_id.layout_background", readonly=False
+    company_details = fields.Html(
+        related="brand_id.company_details", readonly=False, default=None
     )
-    layout_background_image = fields.Binary(
-        related="brand_id.layout_background_image", readonly=False
-    )
+
+    partner_id = fields.Many2one(related="brand_id.partner_id", readonly=True)
+    phone = fields.Char(related="brand_id.phone", readonly=True)
+    email = fields.Char(related="brand_id.email", readonly=True)
+    website = fields.Char(related="brand_id.website", readonly=True)
+    vat = fields.Char(related="brand_id.vat", readonly=True)
+    name = fields.Char(related="brand_id.name", readonly=True)
+    country_id = fields.Many2one(related="brand_id.country_id", readonly=True)
 
     @api.onchange("company_id")
     def _onchange_company_id(self):
@@ -44,25 +53,31 @@ class BrandDocumentLayout(models.TransientModel):
     @api.onchange("brand_id")
     def _onchange_brand_id(self):
         for wizard in self:
-            wizard.logo = wizard.brand_id.logo
-            wizard.report_header = wizard.brand_id.report_header
+            brand = wizard.brand_id
+            wizard.logo = brand.logo
+            wizard.report_header = brand.report_header
             wizard.report_footer = (
-                wizard.brand_id.report_footer
-                if isinstance(wizard.brand_id.report_footer, str)
-                else wizard.report_footer
+                brand.report_footer
+                if isinstance(brand.report_footer, str)
+                else Markup(" ").join(
+                    value
+                    for value in (brand.phone, brand.email, brand.website, brand.vat)
+                    if value
+                )
             )
             wizard.company_details = (
-                wizard.brand_id.company_details
-                if isinstance(wizard.brand_id.company_details, str)
-                else wizard.company_details
+                brand.company_details
+                if isinstance(brand.company_details, str)
+                else nl2br_enclose(brand.partner_id.contact_address or "", "div")
             )
-            wizard.paperformat_id = wizard.brand_id.paperformat_id
-            wizard.external_report_layout_id = wizard.brand_id.external_report_layout_id
-            wizard.font = wizard.brand_id.font
-            wizard.primary_color = wizard.brand_id.primary_color
-            wizard.secondary_color = wizard.brand_id.secondary_color
+            wizard.paperformat_id = brand.paperformat_id
+            wizard.external_report_layout_id = brand.external_report_layout_id
+            wizard.report_tables_id = brand.report_tables_id
+            wizard.font = brand.font
+            wizard.primary_color = brand.primary_color
+            wizard.secondary_color = brand.secondary_color
             wizard_layout = wizard.env["report.layout"].search(
-                [("view_id.key", "=", wizard.brand_id.external_report_layout_id.key)]
+                [("view_id", "=", brand.external_report_layout_id.id)], limit=1
             )
             wizard.report_layout_id = wizard_layout or wizard_layout.search([], limit=1)
 
@@ -78,7 +93,7 @@ class BrandDocumentLayout(models.TransientModel):
         for wizard in self:
             brand = wizard.brand_id
             if (
-                wizard.logo == brand.logo
+                wizard.logo.content == brand.logo.content
                 and brand.primary_color
                 and brand.secondary_color
             ):
@@ -96,38 +111,5 @@ class BrandDocumentLayout(models.TransientModel):
             raise_if_not_found=False,
         )
 
-    @api.depends(
-        "report_layout_id",
-        "logo",
-        "font",
-        "primary_color",
-        "secondary_color",
-        "report_header",
-        "report_footer",
-        "layout_background",
-        "layout_background_image",
-        "company_details",
-    )
-    def _compute_preview(self):
-        styles = self._get_asset_style()
-        for wizard in self:
-            if wizard.report_layout_id:
-                if wizard.env.context.get("bin_size"):
-                    wizard_with_logo = wizard.with_context(bin_size=False)
-                else:
-                    wizard_with_logo = wizard
-                preview_css = markupsafe.Markup(
-                    self._get_css_for_preview(styles, wizard_with_logo.id)
-                )
-                ir_ui_view = wizard_with_logo.env["ir.ui.view"]
-                wizard.preview = ir_ui_view._render_template(
-                    "web.report_invoice_wizard_preview",
-                    {
-                        "brand": wizard_with_logo,
-                        "company": wizard_with_logo,
-                        "preview_css": preview_css,
-                        "is_html_empty": tools.is_html_empty,
-                    },
-                )
-            else:
-                wizard.preview = False
+    def _get_render_information(self, styles):
+        return dict(super()._get_render_information(styles), brand=self)
