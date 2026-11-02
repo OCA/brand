@@ -5,6 +5,8 @@ from odoo.addons.base.tests.common import BaseCommon
 
 
 class TestPurchaseReport(BaseCommon):
+    _test_user_groups = ("purchase.group_purchase_manager",)
+
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -31,6 +33,10 @@ class TestPurchaseReport(BaseCommon):
                 "product_qty": 1.0,
             }
         )
+        cls.unbranded_product = cls.product.copy({"product_brand_id": False})
+        cls.purchase_order_line.copy(
+            {"product_id": cls.unbranded_product.id, "product_qty": 2}
+        )
         cls.purchase_order.button_confirm()
 
     def test_purchase_report_brand(self):
@@ -44,4 +50,15 @@ class TestPurchaseReport(BaseCommon):
             report[0].product_brand_id,
             self.brand,
             "The product brand in the report should match the created brand.",
+        )
+
+    def test_purchase_report_group_by_brand(self):
+        groups = self.env["purchase.report"]._read_group(
+            [("order_id", "=", self.purchase_order.id)],
+            ["product_brand_id"],
+            ["qty_ordered:sum", "untaxed_total:sum"],
+        )
+        self.assertEqual(
+            {brand.id: (qty, total) for brand, qty, total in groups},
+            {self.brand.id: (1, 100), False: (2, 200)},
         )
