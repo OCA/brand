@@ -113,13 +113,12 @@ class ProductPricelistItem(models.Model):
                     values.update(
                         dict(product_id=False, product_tmpl_id=False, categ_id=False)
                     )
-                elif applied_on == "3_global":
-                    values.update(dict(product_brand_id=False))
-                elif applied_on == "2_product_category":
-                    values.update(dict(product_brand_id=False))
-                elif applied_on == "1_product":
-                    values.update(dict(product_brand_id=False))
-                elif applied_on == "0_product_variant":
+                elif (
+                    applied_on == "3_global"
+                    or applied_on == "2_product_category"
+                    or applied_on == "1_product"
+                    or applied_on == "0_product_variant"
+                ):
                     values.update(dict(product_brand_id=False))
         return super().create(vals_list)
 
@@ -131,12 +130,11 @@ class ProductPricelistItem(models.Model):
                 values.update(
                     dict(product_id=False, product_tmpl_id=False, categ_id=False)
                 )
-            elif applied_on == "3_global":
-                values.update(dict(product_brand_id=False))
-            elif applied_on == "2_product_category":
-                values.update(dict(product_brand_id=False))
-            elif applied_on == "1_product":
-                values.update(dict(product_brand_id=False))
-            elif applied_on == "0_product_variant":
+            elif (
+                applied_on == "3_global"
+                or applied_on == "2_product_category"
+                or applied_on == "1_product"
+                or applied_on == "0_product_variant"
+            ):
                 values.update(dict(product_brand_id=False))
         return super().write(values)
