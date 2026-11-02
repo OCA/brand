@@ -3,7 +3,7 @@
 {
     "name": "Product brand tags",
     "summary": "Add tags to product brand",
-    "version": "19.0.1.0.0",
+    "version": "20.0.1.0.0",
     "author": "Camptocamp, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "category": "Product",
@@ -12,10 +12,10 @@
     ],
     "website": "https://github.com/OCA/brand",
     "data": [
-        "security/ir.model.access.csv",
-        "security/ir_rule.xml",
+        "security/ir.access.csv",
         "views/product_brand_view.xml",
         "views/product_brand_tag_view.xml",
     ],
+    "external_dependencies": {"python": ["python-slugify"]},
     "installable": True,
 }

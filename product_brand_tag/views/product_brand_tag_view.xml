@@ -50,6 +50,6 @@
         id="menu_product_brand_tags"
         name="Product Brands Tags"
         action="action_product_brand_tags"
-        parent="sale.prod_config_main"
+        parent="sale.product_menu_catalog"
     />
 </odoo>
