@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <record model="ir.ui.view" id="view_mrp_production_filter">
+    <record id="view_mrp_production_filter" model="ir.ui.view">
         <field name="name">mrp.production.select</field>
         <field name="model">mrp.production</field>
         <field name="inherit_id" ref="mrp.view_mrp_production_filter" />
