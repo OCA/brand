@@ -3,9 +3,8 @@
 
 {
     "name": "Product Brand MRP",
-    "summary": """
-        This module allows to work with product_brand in MRP.""",
-    "version": "19.0.1.0.0",
+    "summary": "This module allows to work with product_brand in MRP.",
+    "version": "20.0.1.0.0",
     "license": "AGPL-3",
     "author": "Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/brand",
