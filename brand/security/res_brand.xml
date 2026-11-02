@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!-- Copyright 2019 ACSONE SA/NV
      License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0). -->
 <odoo>
-    <record model="ir.model.access" id="res_brand_access_all">
+    <record id="res_brand_access_all" model="ir.model.access">
         <field name="name">res.brand access all</field>
         <field name="model_id" ref="model_res_brand" />
         <field name="perm_read" eval="1" />
@@ -10,7 +10,7 @@
         <field name="perm_write" eval="0" />
         <field name="perm_unlink" eval="0" />
     </record>
-    <record model="ir.model.access" id="res_brand_access_manager">
+    <record id="res_brand_access_manager" model="ir.model.access">
         <field name="name">res.brand manager access</field>
         <field name="model_id" ref="model_res_brand" />
         <field name="group_id" ref="base.group_system" />
