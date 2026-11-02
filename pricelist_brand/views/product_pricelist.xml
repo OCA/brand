@@ -7,13 +7,22 @@
         <field name="model">product.pricelist.item</field>
         <field name="inherit_id" ref="product.product_pricelist_item_form_view" />
         <field name="arch" type="xml">
-            <field name="display_applied_on" position="after">
+            <field name="categ_id" position="before">
                 <field
                     name="product_brand_id"
-                    invisible="display_applied_on != '25_brand'"
-                    required="display_applied_on == '25_brand'"
+                    readonly="categ_id or product_tmpl_id or product_id"
                     options="{'no_create': True}"
+                    placeholder="All brands"
                 />
+            </field>
+            <field name="categ_id" position="attributes">
+                <attribute name="readonly" add="product_brand_id" separator=" or " />
+            </field>
+            <field name="product_tmpl_id" position="attributes">
+                <attribute name="readonly" add="product_brand_id" separator=" or " />
+            </field>
+            <field name="product_id" position="attributes">
+                <attribute name="readonly" add="product_brand_id" separator=" or " />
             </field>
         </field>
     </record>

@@ -1,7 +1,6 @@
 # Copyright 2020 ACSONE SA/NV
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo.exceptions import ValidationError
 from odoo.tests.common import TransactionCase
 from odoo.tools import float_compare
 
@@ -43,7 +42,7 @@ class TestProductPricelist(TransactionCase):
                         0,
                         {
                             "name": "Default pricelist",
-                            "compute_price": "formula",
+                            "compute_price": "discount",
                             "base": "pricelist",
                             "base_pricelist_id": cls.list0.id,
                         },
@@ -55,7 +54,7 @@ class TestProductPricelist(TransactionCase):
                             "name": "10% Discount on Test Brand",
                             "applied_on": "25_brand",
                             "product_brand_id": cls.product_brand.id,
-                            "compute_price": "formula",
+                            "compute_price": "discount",
                             "base": "list_price",
                             "price_discount": 10,
                         },
@@ -65,20 +64,19 @@ class TestProductPricelist(TransactionCase):
         )
 
     def test_ensure_pricelist_item_consistency(self):
-        with self.assertRaises(ValidationError):
-            self.env["product.pricelist.item"].create(
-                {
-                    "pricelist_id": self.pricelist.id,
-                    "base": "list_price",
-                    "compute_price": "formula",
-                    "applied_on": "25_brand",
-                }
-            )
+        global_item = self.env["product.pricelist.item"].create(
+            {
+                "pricelist_id": self.pricelist.id,
+                "base": "list_price",
+                "compute_price": "discount",
+            }
+        )
+        self.assertEqual(global_item.applied_on, "3_global")
         pricelist_item = self.env["product.pricelist.item"].create(
             {
                 "pricelist_id": self.pricelist.id,
                 "base": "list_price",
-                "compute_price": "formula",
+                "compute_price": "discount",
                 "applied_on": "25_brand",
                 "product_brand_id": self.product_brand.id,
             }
@@ -93,7 +91,7 @@ class TestProductPricelist(TransactionCase):
             {
                 "pricelist_id": self.pricelist.id,
                 "base": "list_price",
-                "compute_price": "formula",
+                "compute_price": "discount",
                 "applied_on": "2_product_category",
                 "categ_id": self.product_categ.id,
                 "product_brand_id": self.product_brand.id,
@@ -104,7 +102,7 @@ class TestProductPricelist(TransactionCase):
             {
                 "pricelist_id": self.pricelist.id,
                 "base": "list_price",
-                "compute_price": "formula",
+                "compute_price": "discount",
                 "applied_on": "1_product",
                 "product_tmpl_id": self.product.product_tmpl_id.id,
                 "product_brand_id": self.product_brand.id,
@@ -115,7 +113,7 @@ class TestProductPricelist(TransactionCase):
             {
                 "pricelist_id": self.pricelist.id,
                 "base": "list_price",
-                "compute_price": "formula",
+                "compute_price": "discount",
                 "applied_on": "0_product_variant",
                 "product_id": self.product.id,
                 "product_brand_id": self.product_brand.id,
@@ -166,25 +164,79 @@ class TestProductPricelist(TransactionCase):
             {
                 "pricelist_id": self.pricelist.id,
                 "base": "list_price",
-                "compute_price": "formula",
+                "compute_price": "discount",
                 "applied_on": "3_global",
                 "product_brand_id": self.product_brand.id,
             }
         )
         self.assertFalse(pricelist_item_global.product_brand_id)
 
-        # Lines 85-96: _onchange_display_applied_on
-        item_onchange_1 = self.env["product.pricelist.item"].new({})
-        item_onchange_1.display_applied_on = "25_brand"
-        item_onchange_1._onchange_display_applied_on()
-        self.assertEqual(item_onchange_1.applied_on, "25_brand")
-        self.assertFalse(item_onchange_1.product_id)
+    def test_brand_target_is_computed(self):
+        item = self.env["product.pricelist.item"].create(
+            {
+                "pricelist_id": self.pricelist.id,
+                "product_brand_id": self.product_brand.id,
+                "compute_price": "fixed",
+                "fixed_price": 80,
+            }
+        )
+        self.assertEqual(item.applied_on, "25_brand")
+        item.product_brand_id = False
+        self.assertEqual(item.applied_on, "3_global")
+        item.write(
+            {
+                "product_id": self.product.id,
+                "product_tmpl_id": self.product.product_tmpl_id.id,
+            }
+        )
+        self.assertEqual(item.applied_on, "0_product_variant")
+        item.product_brand_id = self.product_brand
+        self.assertEqual(item.applied_on, "25_brand")
+        self.assertFalse(item.product_id)
+        self.assertFalse(item.product_tmpl_id)
+        item.categ_id = self.product_categ
+        self.assertEqual(item.applied_on, "2_product_category")
+        self.assertFalse(item.product_brand_id)
 
-        # Lines 100-104: _onchange_rule_content
-        item_onchange_2 = self.env["product.pricelist.item"].new({})
-        item_onchange_2.product_brand_id = self.product_brand.id
-        item_onchange_2._onchange_rule_content()
-        self.assertEqual(item_onchange_2.applied_on, "25_brand")
+    def test_brand_rule_quantity_and_uom(self):
+        item = self.pricelist.item_ids.filtered("product_brand_id")
+        item.min_quantity = 5
+        self.assertFalse(
+            item._is_applicable_for(self.product, 1, uom=self.product.uom_id)
+        )
+        self.assertTrue(
+            item._is_applicable_for(self.product, 5, uom=self.product.uom_id)
+        )
+        self.assertFalse(
+            item._is_applicable_for(self.product_2, 5, uom=self.product_2.uom_id)
+        )
+        self.assertEqual(
+            self.pricelist._get_product_price(self.product, 5, uom=self.product.uom_id),
+            90,
+        )
+        self.assertEqual(
+            self.pricelist._get_product_price(self.product, 1, uom=self.product.uom_id),
+            100,
+        )
+
+    def test_brand_rule_quantity_in_different_uom(self):
+        pack = self.env["uom.uom"].create(
+            {
+                "name": "Brand pack of six",
+                "relative_uom_id": self.product.uom_id.id,
+                "relative_factor": 6,
+            }
+        )
+        item = self.pricelist.item_ids.filtered("product_brand_id")
+        item.min_quantity = 6
+        self.assertTrue(item._is_applicable_for(self.product, 1, uom=pack))
+        self.assertFalse(item._is_applicable_for(self.product, 0.5, uom=pack))
+        self.assertEqual(
+            self.pricelist._get_product_price(self.product, 1, uom=pack), 540
+        )
+        self.assertEqual(
+            self.pricelist._get_product_price(self.product, 0.5, uom=pack), 600
+        )
 
     def test_calculation_price_of_products_pricelist(self):
         """Test calculation of product price based on pricelist"""
@@ -246,3 +298,23 @@ class TestProductPricelist(TransactionCase):
         # Line 55: super() returns False
         brand_item.min_quantity = 5.0
         self.assertFalse(brand_item._is_applicable_for(self.product, 1.0))
+
+    def test_brand_rule_precedence(self):
+        self.env["product.pricelist.item"].create(
+            {
+                "pricelist_id": self.pricelist.id,
+                "categ_id": self.product_categ.id,
+                "compute_price": "fixed",
+                "fixed_price": 80,
+            }
+        )
+        self.assertEqual(self.pricelist._get_product_price(self.product, 1), 90)
+        self.env["product.pricelist.item"].create(
+            {
+                "pricelist_id": self.pricelist.id,
+                "product_tmpl_id": self.product.product_tmpl_id.id,
+                "compute_price": "fixed",
+                "fixed_price": 70,
+            }
+        )
+        self.assertEqual(self.pricelist._get_product_price(self.product, 1), 70)
