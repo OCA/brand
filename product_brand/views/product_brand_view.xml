@@ -154,7 +154,7 @@
         <field name="model">product.product</field>
         <field name="inherit_id" ref="product.product_kanban_view" />
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='name']/.." position="after">
+            <xpath expr="//field[@name='name']/../.." position="after">
                 <div>
                     <a t-if="record.product_brand_id" type="open">
                         <field name="product_brand_id" widget="many2one" />
