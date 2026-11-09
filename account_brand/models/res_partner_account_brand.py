@@ -12,16 +12,13 @@ class ResPartnerAccountBrand(models.Model):
     _name = "res.partner.account.brand"
     _description = "Receivable/Payable Partner Account By Brand"
 
-    partner_id = fields.Many2one(
-        comodel_name="res.partner", string="Partner", required=False
-    )
+    partner_id = fields.Many2one(comodel_name="res.partner", required=False)
     account_id = fields.Many2one(
         comodel_name="account.account",
-        string="Account",
         required=True,
         domain="[('account_type', 'in', ('liability_payable', 'asset_receivable'))]",
     )
-    brand_id = fields.Many2one(comodel_name="res.brand", string="Brand", required=True)
+    brand_id = fields.Many2one(comodel_name="res.brand", required=True)
     account_type = fields.Selection(
         string="Type",
         selection=[

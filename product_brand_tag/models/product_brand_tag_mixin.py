@@ -25,7 +25,6 @@ class ProductBrandTag(models.AbstractModel):
     brands_count = fields.Integer(string="# of brands", compute="_compute_brands_count")
     company_id = fields.Many2one(
         comodel_name="res.company",
-        string="Company",
         default=lambda self: self.env.company.id,
     )
 

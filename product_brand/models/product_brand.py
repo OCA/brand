@@ -17,7 +17,6 @@ class ProductBrand(models.Model):
     description = fields.Text(translate=True)
     partner_id = fields.Many2one(
         "res.partner",
-        string="Partner",
         help="Select a partner for this brand if any.",
         ondelete="restrict",
     )
