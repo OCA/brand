@@ -13,7 +13,6 @@ class ResBrandMixin(models.AbstractModel):
 
     brand_id = fields.Many2one(
         comodel_name="res.brand",
-        string="Brand",
         help="Brand to use for this sale",
     )
     brand_use_level = fields.Selection(
