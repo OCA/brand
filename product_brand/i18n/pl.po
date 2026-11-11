@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2022-07-22 12:06+0000\n"
-"Last-Translator: Jacek Michalski <michalski.jck@gmail.com>\n"
+"PO-Revision-Date: 2026-11-11 12:46+0000\n"
+"Last-Translator: leszekszczepkowski <leszekszczepkowski@gmail.com>\n"
 "Language-Team: none\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.3.2\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: product_brand
 #: model_terms:ir.ui.view,arch_db:product_brand.view_product_brand_kanban
@@ -50,7 +50,7 @@ msgstr "Produkty marki"
 #. module: product_brand
 #: model:ir.model.fields,field_description:product_brand.field_product_brand__create_uid
 msgid "Created by"
-msgstr "Stworzone przez"
+msgstr "Utworzył(a)"
 
 #. module: product_brand
 #: model:ir.model.fields,field_description:product_brand.field_product_brand__create_date
@@ -66,7 +66,7 @@ msgstr "Opis"
 #. module: product_brand
 #: model:ir.model.fields,field_description:product_brand.field_product_brand__display_name
 msgid "Display Name"
-msgstr "Wyświetlana nazwa"
+msgstr "Nazwa wyświetlana"
 
 #. module: product_brand
 #: model:ir.model.fields,field_description:product_brand.field_product_brand__id
@@ -76,17 +76,17 @@ msgstr "ID"
 #. module: product_brand
 #: model:ir.model,name:product_brand.model_account_invoice_report
 msgid "Invoices Statistics"
-msgstr "Statystyki faktur"
+msgstr "Statystyka faktur"
 
 #. module: product_brand
 #: model:ir.model.fields,field_description:product_brand.field_product_brand__write_uid
 msgid "Last Updated by"
-msgstr "Ostatnia aktualizacja przez"
+msgstr "Ostatnio aktualizowane przez"
 
 #. module: product_brand
 #: model:ir.model.fields,field_description:product_brand.field_product_brand__write_date
 msgid "Last Updated on"
-msgstr "Ostatnia aktualizacja"
+msgstr "Data ostatniej aktualizacji"
 
 #. module: product_brand
 #: model:ir.model.fields,field_description:product_brand.field_product_brand__logo
@@ -101,12 +101,12 @@ msgstr "Liczba produktów"
 #. module: product_brand
 #: model:ir.model.fields,field_description:product_brand.field_product_brand__partner_id
 msgid "Partner"
-msgstr "Partner"
+msgstr "Kontrahent"
 
 #. module: product_brand
 #: model:ir.model,name:product_brand.model_product_template
 msgid "Product"
-msgstr ""
+msgstr "Produkt"
 
 #. module: product_brand
 #: model:ir.actions.act_window,name:product_brand.action_open_single_product_brand
@@ -129,7 +129,7 @@ msgstr "Produkty"
 #. module: product_brand
 #: model:ir.model,name:product_brand.model_sale_report
 msgid "Sales Analysis Report"
-msgstr "Raport analizy sprzedaży"
+msgstr "Raport analityczny sprzedaży"
 
 #. module: product_brand
 #: model:ir.model.fields,help:product_brand.field_product_product__product_brand_id
@@ -140,7 +140,7 @@ msgstr "Wybierz markę dla tego produktu"
 #. module: product_brand
 #: model:ir.model.fields,help:product_brand.field_product_brand__partner_id
 msgid "Select a partner for this brand if any."
-msgstr "Wybierz partnera dla tej marki, jeśli istnieje."
+msgstr "Wybierz kontrahenta dla tej marki, jeśli jest."
 
 #~ msgid "Logo"
 #~ msgstr "Logo"
