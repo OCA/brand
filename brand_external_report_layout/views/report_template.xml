@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2019 ACSONE SA/NV
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <template id="brand_external_layout" inherit_id="web.external_layout">
+        <xpath expr="//t[@t-if='not company']" position="after">
+            <t
+                t-if="not brand and o and 'brand_id' in o and o.brand_id.external_report_layout_id"
+                t-set="brand"
+                t-value="o.brand_id.sudo()"
+            />
+            <t t-if="brand" t-set="company" t-value="brand" />
+            <t t-set="brand_id" t-value="brand.id if brand else False" />
+        </xpath>
+    </template>
+
+    <template id="styles_brand_report">
+        <t t-set="brand_styles">
+            <t t-call="web.styles_company_report" company_ids="brand_ids" />
+        </t>
+        <t
+            t-out="brand_styles.replace('.o_company_', '.o_brand_').replace('.o_color_company_', '.o_color_brand_')"
+        />
+    </template>
+
+    <template id="external_layout_body" inherit_id="web.external_layout_body">
+        <xpath expr="//div[contains(@t-attf-class, 'article')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+                remove="o_company_#{company.id}_layout"
+                add="o_#{'brand' if brand_id else 'company'}_#{brand_id or company.id}_layout"
+                separator=" "
+            />
+        </xpath>
+    </template>
+
+    <template id="external_layout_standard" inherit_id="web.external_layout_standard">
+        <xpath expr="//div[contains(@t-attf-class, 'header')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+                remove="o_company_#{company.id}_layout"
+                add="o_#{'brand' if brand_id else 'company'}_#{brand_id or company.id}_layout"
+                separator=" "
+            />
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+                remove="o_company_#{company.id}_layout"
+                add="o_#{'brand' if brand_id else 'company'}_#{brand_id or company.id}_layout"
+                separator=" "
+            />
+        </xpath>
+    </template>
+
+    <template id="external_layout_wave" inherit_id="web.external_layout_wave">
+        <xpath expr="//div[contains(@t-attf-class, 'header')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+                remove="o_company_#{company.id}_layout"
+                add="o_#{'brand' if brand_id else 'company'}_#{brand_id or company.id}_layout"
+                separator=" "
+            />
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+                remove="o_company_#{company.id}_layout"
+                add="o_#{'brand' if brand_id else 'company'}_#{brand_id or company.id}_layout"
+                separator=" "
+            />
+        </xpath>
+    </template>
+
+    <template id="external_layout_bubble" inherit_id="web.external_layout_bubble">
+        <xpath expr="//div[contains(@t-attf-class, 'header')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+                remove="o_company_#{company.id}_layout"
+                add="o_#{'brand' if brand_id else 'company'}_#{brand_id or company.id}_layout"
+                separator=" "
+            />
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+                remove="o_company_#{company.id}_layout"
+                add="o_#{'brand' if brand_id else 'company'}_#{brand_id or company.id}_layout"
+                separator=" "
+            />
+        </xpath>
+    </template>
+
+    <template id="external_layout_folder" inherit_id="web.external_layout_folder">
+        <xpath expr="//div[contains(@t-attf-class, 'header')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+                remove="o_company_#{company.id}_layout"
+                add="o_#{'brand' if brand_id else 'company'}_#{brand_id or company.id}_layout"
+                separator=" "
+            />
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+                remove="o_company_#{company.id}_layout"
+                add="o_#{'brand' if brand_id else 'company'}_#{brand_id or company.id}_layout"
+                separator=" "
+            />
+        </xpath>
+    </template>
+
+    <template id="external_layout_center" inherit_id="web.external_layout_center">
+        <xpath expr="//div[contains(@t-attf-class, 'header')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+                remove="o_company_#{company.id}_layout"
+                add="o_#{'brand' if brand_id else 'company'}_#{brand_id or company.id}_layout"
+                separator=" "
+            />
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+                remove="o_company_#{company.id}_layout"
+                add="o_#{'brand' if brand_id else 'company'}_#{brand_id or company.id}_layout"
+                separator=" "
+            />
+        </xpath>
+    </template>
+
+    <template id="external_layout_dual" inherit_id="web.external_layout_dual">
+        <xpath expr="//div[contains(@t-attf-class, 'header')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+                remove="o_company_#{company.id}_layout"
+                add="o_#{'brand' if brand_id else 'company'}_#{brand_id or company.id}_layout"
+                separator=" "
+            />
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+                remove="o_company_#{company.id}_layout"
+                add="o_#{'brand' if brand_id else 'company'}_#{brand_id or company.id}_layout"
+                separator=" "
+            />
+        </xpath>
+    </template>
+
+    <template id="external_layout_lines" inherit_id="web.external_layout_lines">
+        <xpath expr="//div[contains(@t-attf-class, 'header')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+                remove="o_company_#{company.id}_layout"
+                add="o_#{'brand' if brand_id else 'company'}_#{brand_id or company.id}_layout"
+                separator=" "
+            />
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+                remove="o_company_#{company.id}_layout"
+                add="o_#{'brand' if brand_id else 'company'}_#{brand_id or company.id}_layout"
+                separator=" "
+            />
+        </xpath>
+    </template>
+
+    <template id="external_layout_compact" inherit_id="web.external_layout_compact">
+        <xpath expr="//div[contains(@t-attf-class, 'header')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+                remove="o_company_#{company.id}_layout"
+                add="o_#{'brand' if brand_id else 'company'}_#{brand_id or company.id}_layout"
+                separator=" "
+            />
+        </xpath>
+        <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="attributes">
+            <attribute
+                name="t-attf-class"
+                remove="o_company_#{company.id}_layout"
+                add="o_#{'brand' if brand_id else 'company'}_#{brand_id or company.id}_layout"
+                separator=" "
+            />
+        </xpath>
+    </template>
+
+    <record id="asset_styles_brand_report" model="ir.attachment">
+        <field name="raw" model="res.brand" eval="obj()._get_asset_style_binary()" />
+        <field name="mimetype">text/scss</field>
+        <field name="name">res.brand.scss</field>
+        <field name="type">binary</field>
+        <field
+            name="url"
+        >/brand_external_report_layout/static/src/legacy/scss/asset_styles_brand_report.scss</field>
+    </record>
+</odoo>
