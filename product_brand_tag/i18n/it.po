@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-09-18 10:06+0000\n"
+"PO-Revision-Date: 2026-11-15 14:46+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,13 +14,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 2026.11.2\n"
 
 #. module: product_brand_tag
 #: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag__brands_count
 #: model:ir.model.fields,field_description:product_brand_tag.field_product_brand_tag_mixin__brands_count
 msgid "# of brands"
-msgstr "# di marche"
+msgstr "N° di marche"
 
 #. module: product_brand_tag
 #: model:ir.actions.act_window,name:product_brand_tag.action_product_brand_tags
