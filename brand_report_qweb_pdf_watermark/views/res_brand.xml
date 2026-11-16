@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_brand_form" model="ir.ui.view">
+        <field name="model">res.brand</field>
+        <field name="inherit_id" ref="brand.res_brand_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <group name="pdf_watermark" string="Report Watermark">
+                    <field
+                        name="pdf_watermark"
+                        widget="pdf_viewer"
+                        help="Upload a pdf file to use as a brand specific watermark. You need to activate the setting 'Use Brand Watermark' on the reports where you want to use it."
+                    />
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
