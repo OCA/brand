@@ -15,14 +15,6 @@ class ResBrand(models.Model):
 
     logo_web = fields.Binary(compute="_compute_logo_web", store=True, attachment=False)
 
-    @api.model
-    def write(self, vals):
-        if "image_1920" in vals:
-            for rec in self:
-                brands = self.env["res.brand"].search([("partner_id", "=", rec.id)])
-                brands._compute_logo_web()
-        return super().write(vals)
-
     @api.depends("partner_id.image_1920")
     def _compute_logo_web(self):
         for brand in self:
