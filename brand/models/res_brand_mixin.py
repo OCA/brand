@@ -33,8 +33,12 @@ class ResBrandMixin(models.AbstractModel):
         defaults = super().default_get(fields_list)
         if "company_id" in fields_list and not defaults.get("company_id"):
             company_field = self._fields.get("company_id")
-            if company_field is not None and not (
-                company_field.related and company_field.readonly
+            # A computed company (e.g. the one of an account.move, computed
+            # from its journal) must not be forced to the current company.
+            if (
+                company_field is not None
+                and not (company_field.related and company_field.readonly)
+                and not company_field.compute
             ):
                 defaults["company_id"] = self.env.company.id
         return defaults
