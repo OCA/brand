@@ -253,6 +253,30 @@ class TestStockPickingPartnerBrand(common.TransactionCase):
         )
         _logger.info("Test 07 Passed.")
 
+    def test_07b_create_picking_logs_the_values(self):
+        """The log messages show the partner and brand names, not placeholders."""
+        vals = {
+            "picking_type_id": self.picking_type_out.id,
+            "location_id": self.picking_type_out.default_location_src_id.id,
+            "location_dest_id": self.picking_type_out.default_location_dest_id.id,
+        }
+        logger = "odoo.addons.stock_picking_partner_brand.models.stock_picking"
+        with self.assertLogs(logger, "INFO") as logs:
+            self.StockPicking.create(
+                dict(vals, partner_id=self.child_contact_of_alpha.id)
+            )
+        message = logs.records[0].getMessage()
+        self.assertIn("'Child Contact of Alpha'", message)
+        self.assertIn("'Parent Co Alpha': 'Test Brand Alpha'", message)
+        self.assertNotIn("{", message)
+        with self.assertLogs(logger, "INFO") as logs:
+            self.StockPicking.create(
+                dict(vals, partner_id=self.partner_without_brand.id)
+            )
+        message = logs.records[0].getMessage()
+        self.assertIn(self.partner_without_brand.name, message)
+        self.assertNotIn("{", message)
+
     def test_08_create_picking_with_explicit_brand_overrides_partner_brand(self):
         """Test that an explicitly provided brand_id in create vals is respected."""
         _logger.info(

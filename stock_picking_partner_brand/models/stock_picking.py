@@ -85,11 +85,12 @@ class StockPicking(models.Model):
                         if "brand_id" in self._fields:
                             vals["brand_id"] = partner_for_brand_check.brand_id.id
                             _logger.info(
-                                f"Create Stock Picking: Partner"
-                                " '{partner.name}' provided. "
-                                f"Using brand from '{partner_for_brand_check.name}': "
-                                "'{partner_for_brand_check.brand_id.name}'. "
-                                f"Setting brand_id in creation vals."
+                                "Create Stock Picking: Partner '%s' provided. "
+                                "Using brand from '%s': '%s'. "
+                                "Setting brand_id in creation vals.",
+                                partner.name,
+                                partner_for_brand_check.name,
+                                partner_for_brand_check.brand_id.name,
                             )
                         else:
                             _logger.warning(
@@ -99,10 +100,11 @@ class StockPicking(models.Model):
                             )
                     else:
                         _logger.info(
-                            f"Create Stock Picking: Partner '{partner.name}' provided. "
-                            f"Neither partner nor its commercial entity "
-                            "'{partner_for_brand_check.name}' has a brand. "
-                            f"brand_id not set from partner."
+                            "Create Stock Picking: Partner '%s' provided. "
+                            "Neither partner nor its commercial entity '%s' has a "
+                            "brand. brand_id not set from partner.",
+                            partner.name,
+                            partner_for_brand_check.name,
                         )
 
         records = super().create(vals_list)
