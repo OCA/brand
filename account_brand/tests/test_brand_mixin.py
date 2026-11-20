@@ -1,6 +1,8 @@
 # Copyright 2019 ACSONE SA/NV
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
+import json
+
 from lxml import etree
 
 from odoo.exceptions import ValidationError
@@ -102,6 +104,20 @@ class TestBrandMixin(TransactionCase):
         )
         doc = etree.XML(view["arch"])
         self.assertTrue(doc.xpath("//field[@name='brand_use_level']"))
+
+    def test_get_view_keeps_view_readonly(self):
+        view = self.env["account.move"].get_view(
+            view_id=self.env.ref("account.view_move_form").id,
+            view_type="form",
+        )
+        doc = etree.XML(view["arch"])
+        brand_node = doc.xpath("//field[@name='brand_id']")[0]
+        modifiers = json.loads(brand_node.get("modifiers"))
+        self.assertEqual(modifiers["readonly"], [["state", "!=", "draft"]])
+        self.assertEqual(
+            modifiers["required"],
+            [["brand_use_level", "=", BRAND_USE_LEVEL_REQUIRED_LEVEL]],
+        )
 
     def test_reverse_move(self):
         move = self.env["account.move"].create(
