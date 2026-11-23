@@ -126,7 +126,7 @@
         <field name="inherit_id" ref="product.product_template_form_view" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='sale_ok']/.." position="before">
-                <field name="product_brand_id" placeholder="Brand" />
+                <field name="product_brand_id" placeholder="Brand" class="me-2" />
             </xpath>
         </field>
     </record>
