@@ -187,3 +187,8 @@ class TestBrandExternalReportLayout(TransactionCase):
         )
         result = wizard._get_asset_style()
         self.assertIsInstance(result, markupsafe.Markup)
+
+    def test_asset_style_not_empty_without_brand(self):
+        self.env["res.brand"].search([]).unlink()
+        content = base64.b64decode(self.env["res.brand"]._get_asset_style_b64())
+        self.assertTrue(content.strip())

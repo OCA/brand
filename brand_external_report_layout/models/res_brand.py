@@ -103,6 +103,10 @@ class ResBrand(models.Model):
             {"brand_ids": self.sudo().search([])},
             raise_if_not_found=False,
         )
+        # An empty attachment cannot be read by the assets compiler,
+        # which breaks the report assets when there is no brand yet.
+        if not brand_styles.strip():
+            brand_styles = "/* No brand-specific styles configured */"
         return base64.b64encode(brand_styles.encode())
 
     def _update_asset_style(self):
