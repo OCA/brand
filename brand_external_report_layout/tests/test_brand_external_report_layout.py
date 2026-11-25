@@ -6,6 +6,7 @@ import os
 from unittest.mock import patch
 
 import markupsafe
+from lxml import etree
 
 from odoo.tests.common import TransactionCase, tagged
 
@@ -187,3 +188,27 @@ class TestBrandExternalReportLayout(TransactionCase):
         )
         result = wizard._get_asset_style()
         self.assertIsInstance(result, markupsafe.Markup)
+
+    def test_layouts_keep_odoo_classes(self):
+        """Each layout keeps Odoo's classes and gets the brand class."""
+        for layout in (
+            "standard",
+            "boxed",
+            "bold",
+            "striped",
+            "bubble",
+            "wave",
+            "folder",
+        ):
+            view = self.env.ref(f"web.external_layout_{layout}")
+            original = etree.fromstring(view.arch_db)
+            combined = etree.fromstring(view.get_combined_arch())
+            for part in ("header", "article", "footer"):
+                xpath = f"//div[contains(@t-attf-class, '{part}')]"
+                expected = original.xpath(xpath)[0].get("t-attf-class")
+                classes = combined.xpath(xpath)[0].get("t-attf-class")
+                self.assertEqual(
+                    set(classes.split()),
+                    {*expected.split(), "o_brand_#{brand_id}_layout"},
+                    f"{layout} {part}: {classes}",
+                )

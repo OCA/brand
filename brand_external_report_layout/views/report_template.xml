@@ -133,34 +133,46 @@
         <xpath expr="//div[contains(@t-attf-class, 'header')]" position="attributes">
             <attribute
                 name="t-attf-class"
-            >header o_brand_#{brand_id}_layout o_company_#{company.id}_layout</attribute>
+                add="o_brand_#{brand_id}_layout"
+                separator=" "
+            />
         </xpath>
         <xpath expr="//div[contains(@t-attf-class, 'article')]" position="attributes">
             <attribute
                 name="t-attf-class"
-            >article o_report_layout_boxed o_table_boxed o_brand_#{brand_id}_layout o_company_#{company.id}_layout o_snail_mail {{'o_report_layout_background' if company.layout_background != 'Blank' else ''}}']</attribute>
+                add="o_brand_#{brand_id}_layout"
+                separator=" "
+            />
         </xpath>
         <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="attributes">
             <attribute
                 name="t-attf-class"
-            >footer o_brand_#{brand_id}_layout o_company_#{company.id}_layout {{report_type != 'pdf' and 'position-relative mt-auto mx-n5'}}</attribute>
+                add="o_brand_#{brand_id}_layout"
+                separator=" "
+            />
         </xpath>
     </template>
     <template id="external_layout_striped" inherit_id="web.external_layout_striped">
         <xpath expr="//div[contains(@t-attf-class, 'header')]" position="attributes">
             <attribute
                 name="t-attf-class"
-            >o_brand_#{brand_id}_layout o_company_#{company.id}_layout header</attribute>
+                add="o_brand_#{brand_id}_layout"
+                separator=" "
+            />
         </xpath>
         <xpath expr="//div[contains(@t-attf-class, 'article')]" position="attributes">
             <attribute
                 name="t-attf-class"
-            >o_brand_#{brand_id}_layout o_company_#{company.id}_layout article o_report_layout_striped o_table_striped o_snail_mail {{'o_report_layout_background' if company.layout_background != 'Blank' else ''}}</attribute>
+                add="o_brand_#{brand_id}_layout"
+                separator=" "
+            />
         </xpath>
         <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="attributes">
             <attribute
                 name="t-attf-class"
-            >o_brand_#{brand_id}_layout o_company_#{company.id}_layout footer {{report_type != 'pdf' and 'mt-auto'}}"</attribute>
+                add="o_brand_#{brand_id}_layout"
+                separator=" "
+            />
         </xpath>
     </template>
 
@@ -168,17 +180,23 @@
         <xpath expr="//div[contains(@t-attf-class, 'header')]" position="attributes">
             <attribute
                 name="t-attf-class"
-            >header o_brand_#{brand_id}_layout o_company_#{company.id}_layout</attribute>
+                add="o_brand_#{brand_id}_layout"
+                separator=" "
+            />
         </xpath>
         <xpath expr="//div[contains(@t-attf-class, 'article')]" position="attributes">
             <attribute
                 name="t-attf-class"
-            >article o_report_layout_bold o_brand_#{brand_id}_layout o_company_#{company.id}_layout {{'o_report_layout_background' if company.layout_background != 'Blank' else ''}}']</attribute>
+                add="o_brand_#{brand_id}_layout"
+                separator=" "
+            />
         </xpath>
         <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="attributes">
             <attribute
                 name="t-attf-class"
-            >footer o_brand_#{brand_id}_layout o_company_#{company.id}_layout {{report_type != 'pdf' and 'mt-auto'}}</attribute>
+                add="o_brand_#{brand_id}_layout"
+                separator=" "
+            />
         </xpath>
     </template>
 
@@ -186,17 +204,23 @@
         <xpath expr="//div[contains(@t-attf-class, 'header')]" position="attributes">
             <attribute
                 name="t-attf-class"
-            >header o_brand_#{brand_id}_layout o_company_#{company.id}_layout</attribute>
+                add="o_brand_#{brand_id}_layout"
+                separator=" "
+            />
         </xpath>
         <xpath expr="//div[contains(@t-attf-class, 'article')]" position="attributes">
             <attribute
                 name="t-attf-class"
-            >article o_report_layout_bubble o_table_boxed-rounded o_brand_#{brand_id}_layout o_company_#{company.id}_layout {{'o_report_layout_background' if company.layout_background != 'Blank' else ''}}']</attribute>
+                add="o_brand_#{brand_id}_layout"
+                separator=" "
+            />
         </xpath>
         <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="attributes">
             <attribute
                 name="t-attf-class"
-            >footer o_brand_#{brand_id}_layout o_company_#{company.id}_layout {{report_type != 'pdf' and 'position-relative mt-auto mx-n5'}}</attribute>
+                add="o_brand_#{brand_id}_layout"
+                separator=" "
+            />
         </xpath>
     </template>
 
@@ -204,17 +228,23 @@
         <xpath expr="//div[contains(@t-attf-class, 'header')]" position="attributes">
             <attribute
                 name="t-attf-class"
-            >header o_brand_#{brand_id}_layout o_company_#{company.id}_layout</attribute>
+                add="o_brand_#{brand_id}_layout"
+                separator=" "
+            />
         </xpath>
         <xpath expr="//div[contains(@t-attf-class, 'article')]" position="attributes">
             <attribute
                 name="t-attf-class"
-            >article o_report_layout_wave o_table_striped o_brand_#{brand_id}_layout o_company_#{company.id}_layout {{'o_report_layout_background' if company.layout_background != 'Blank' else ''}}']</attribute>
+                add="o_brand_#{brand_id}_layout"
+                separator=" "
+            />
         </xpath>
         <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="attributes">
             <attribute
                 name="t-attf-class"
-            >footer o_brand_#{brand_id}_layout o_company_#{company.id}_layout  {{report_type != 'pdf' and 'position-relative mt-auto mx-n5'}}</attribute>
+                add="o_brand_#{brand_id}_layout"
+                separator=" "
+            />
         </xpath>
     </template>
 
@@ -222,17 +252,23 @@
         <xpath expr="//div[contains(@t-attf-class, 'header')]" position="attributes">
             <attribute
                 name="t-attf-class"
-            >header o_brand_#{brand_id}_layout o_company_#{company.id}_layout</attribute>
+                add="o_brand_#{brand_id}_layout"
+                separator=" "
+            />
         </xpath>
         <xpath expr="//div[contains(@t-attf-class, 'article')]" position="attributes">
             <attribute
                 name="t-attf-class"
-            >article o_report_layout_folder o_table_striped o_brand_#{brand_id}_layout o_company_#{company.id}_layout {{'o_report_layout_background' if company.layout_background != 'Blank' else ''}}']</attribute>
+                add="o_brand_#{brand_id}_layout"
+                separator=" "
+            />
         </xpath>
         <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="attributes">
             <attribute
                 name="t-attf-class"
-            >footer o_brand_#{brand_id}_layout o_company_#{company.id}_layout {{report_type != 'pdf' and 'position-relative mt-auto mx-n5'}}</attribute>
+                add="o_brand_#{brand_id}_layout"
+                separator=" "
+            />
         </xpath>
     </template>
 
@@ -240,17 +276,23 @@
         <xpath expr="//div[contains(@t-attf-class, 'header')]" position="attributes">
             <attribute
                 name="t-attf-class"
-            >header o_brand_#{brand_id}_layout o_company_#{company.id}_layout</attribute>
+                add="o_brand_#{brand_id}_layout"
+                separator=" "
+            />
         </xpath>
         <xpath expr="//div[contains(@t-attf-class, 'article')]" position="attributes">
             <attribute
                 name="t-attf-class"
-            >article o_report_layout_standard o_table_standard o_brand_#{brand_id}_layout o_company_#{company.id}_layout o_snail_mail {{'o_report_layout_background' if company.layout_background != 'Blank' else ''}}']</attribute>
+                add="o_brand_#{brand_id}_layout"
+                separator=" "
+            />
         </xpath>
         <xpath expr="//div[contains(@t-attf-class, 'footer')]" position="attributes">
             <attribute
                 name="t-attf-class"
-            >footer o_brand_#{brand_id}_layout o_company_#{company.id}_layout {{report_type != 'pdf' and 'mt-auto'}}</attribute>
+                add="o_brand_#{brand_id}_layout"
+                separator=" "
+            />
         </xpath>
     </template>
 
