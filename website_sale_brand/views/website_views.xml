@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2026 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="view_website_form" model="ir.ui.view">
+        <field name="name">website.form.inherit.brand</field>
+        <field name="model">website</field>
+        <field name="inherit_id" ref="website.view_website_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='company_id']" position="after">
+                <field name="brand_id" options="{'no_create': True}" />
+            </xpath>
+        </field>
+    </record>
+</odoo>
