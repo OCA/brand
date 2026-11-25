@@ -12,7 +12,6 @@ class ResBrand(models.Model):
 
     partner_id = fields.Many2one(
         comodel_name="res.partner",
-        string="Partner",
         required=True,
         index=True,
         delegate=True,

@@ -7,4 +7,4 @@ from odoo import fields, models
 class CrmTeam(models.Model):
     _inherit = "crm.team"
 
-    brand_id = fields.Many2one(comodel_name="res.brand", string="Brand")
+    brand_id = fields.Many2one(comodel_name="res.brand")
