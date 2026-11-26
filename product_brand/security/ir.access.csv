@@ -1,0 +1,5 @@
+id,name,model_id,group_id/id,operation,domain
+access_product_brand_product_manager,product.brand,product.brand,base.group_partner_manager,crud,
+access_product_brand_user,product.brand.user,product.brand,base.group_user,r,
+access_product_brand_portal,product.brand.portal,product.brand,base.group_portal,r,
+access_product_brand_public,product.brand.public,product.brand,base.group_public,r,
